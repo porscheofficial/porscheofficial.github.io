@@ -1,0 +1,9 @@
+.next/
+out/
+build/
+.jest-test-results.json
+intl/**
+src/generated/
+pact/pacts
+graphqlrc.js
+.yarn
