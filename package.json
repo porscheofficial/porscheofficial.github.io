@@ -1,0 +1,39 @@
+{
+  "name": "porscheofficial",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "yarn@3.5.1",
+  "prettier": "@porscheofficial/prettier-config-porschedigital",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages",
+    "lint:ci": "eslint src/ --ext .js,.jsx,.tsx,.ts -f stylish",
+    "lint:fix": "eslint src/ --fix --ext .js,.jsx,.tsx,.ts  -f stylish --quiet",
+    "prettier:ci": "prettier --check ./",
+    "prettier:fix": "prettier --write ./",
+    "test:ci": "yarn prettier:ci && yarn tsc --noEmit --noEmitHelpers && yarn lint:ci"
+  },
+  "dependencies": {
+    "@types/node": "20.1.2",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "next": "13.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@mdx-js/loader": "2.3.0",
+    "@mdx-js/react": "2.3.0",
+    "@next/eslint-plugin-next": "13.4.1",
+    "@next/mdx": "13.4.1",
+    "@porscheofficial/eslint-config-porschedigital-react": "3.0.1",
+    "@porscheofficial/prettier-config-porschedigital": "3.0.1",
+    "@types/mdx": "2.0.5",
+    "eslint": "8.40.0",
+    "prettier": "2.8.8"
+  }
+}
