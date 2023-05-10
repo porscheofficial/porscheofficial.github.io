@@ -253,6 +253,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@porsche-design-system/components-js@npm:3.0.0-rc.2":
+  version: 3.0.0-rc.2
+  resolution: "@porsche-design-system/components-js@npm:3.0.0-rc.2"
+  checksum: b8a1413c4939aedf3a4408d63efc3170800a9d697f4b1784af8c2235477f1cfbcb8fa6f511d318b462ed925825fe80572fe99d9d14e9f051e117d9b06d891d66
+  languageName: node
+  linkType: hard
+
+"@porsche-design-system/components-react@npm:3.0.0-rc.2":
+  version: 3.0.0-rc.2
+  resolution: "@porsche-design-system/components-react@npm:3.0.0-rc.2"
+  dependencies:
+    "@porsche-design-system/components-js": 3.0.0-rc.2
+  peerDependencies:
+    react: ">=17.0.0 <19.0.0"
+    react-dom: ">=17.0.0 <19.0.0"
+  bin:
+    patchRemixRunProcessBrowserGlobalIdentifier: bin/patchRemixRunProcessBrowserGlobalIdentifier.js
+  checksum: 99d4d67e732a228485cf6e7469bce0b88f0b98ccd8dd4fa8b6d93088ddc1d996a2b582ebf85ed1e623d8c02b63572e7916cd93c3c26314d581a812e4da4906fb
+  languageName: node
+  linkType: hard
+
 "@porscheofficial/eslint-config-porschedigital-base@npm:3.0.1":
   version: 3.0.1
   resolution: "@porscheofficial/eslint-config-porschedigital-base@npm:3.0.1"
@@ -3240,6 +3261,7 @@ __metadata:
     "@mdx-js/react": 2.3.0
     "@next/eslint-plugin-next": 13.4.1
     "@next/mdx": 13.4.1
+    "@porsche-design-system/components-react": 3.0.0-rc.2
     "@porscheofficial/eslint-config-porschedigital-react": 3.0.1
     "@porscheofficial/prettier-config-porschedigital": 3.0.1
     "@types/mdx": 2.0.5

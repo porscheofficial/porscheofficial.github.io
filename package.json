@@ -17,6 +17,7 @@
     "test:ci": "yarn prettier:ci && yarn tsc --noEmit --noEmitHelpers && yarn lint:ci"
   },
   "dependencies": {
+    "@porsche-design-system/components-react": "3.0.0-rc.2",
     "@types/node": "20.1.2",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",

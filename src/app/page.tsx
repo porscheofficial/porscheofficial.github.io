@@ -1,10 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Heading } from "../components/01_atoms/Heading";
 
 const Home: React.FC = () => {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+        <Heading size="large">Hello</Heading>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
