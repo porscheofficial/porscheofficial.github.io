@@ -1,9 +1,11 @@
 module.exports = {
+  root: true,
   extends: [
     "@porscheofficial/eslint-config-porschedigital-react",
     "plugin:@next/next/core-web-vitals",
   ],
   parserOptions: {
+    tsconfigRootDir: __dirname,
     project: "./tsconfig.json",
   },
   rules: {
