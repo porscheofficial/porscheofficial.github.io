@@ -1,5 +1,25 @@
-import "./globals.css";
+import {
+  getInitialStyles,
+  getFontFaceStylesheet,
+  getFontLinks,
+  getComponentChunkLinks,
+  getIconLinks,
+  getMetaTagsAndIconLinks,
+  getDSRPonyfill,
+  getCookiesFallbackScript,
+  getBrowserSupportFallbackScript,
+} from "@porsche-design-system/components-react/partials";
+import Link from "next/link";
 import { AppProvider } from "../components/AppProvider";
+import { PageLayout } from "../components/04_templates/pageLayout/PageLayout";
+import { HeaderLogo } from "../components/02_molecules/header/HeaderLogo";
+import porscheLogo from "./porsche-logo-r2d.svg";
+import "./globals.css";
+
+interface SvgImport {
+  src: string;
+  [key: string]: unknown;
+}
 
 export const metadata = {
   title: "Create Next App",
@@ -9,8 +29,47 @@ export const metadata = {
 const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en">
+      <head>
+        {/* necessary for SSR support, injects stylesheet which defines visibility of pre-hydrated PDS components */}
+        {getInitialStyles({ format: "jsx" })}
+        {/* injects stylesheet which defines Porsche Next CSS font-face definition (=> minimize FOUT) */}
+        {getFontFaceStylesheet({ format: "jsx" })}
+        {/* preloads Porsche Next font (=> minimize FOUT) */}
+        {getFontLinks({ format: "jsx" })}
+        {/* preloads PDS component core chunk from CDN for PDS component hydration (=> improve loading performance) */}
+        {getComponentChunkLinks({ format: "jsx" })}
+        {/* preloads Porsche icons (=> minimize FOUC) */}
+        {getIconLinks({ format: "jsx" })}
+        {/* injects favicon, apple touch icons, android touch icons, etc. */}
+        {getMetaTagsAndIconLinks({
+          appTitle: "Sample Project Next.js",
+          format: "jsx",
+        })}
+      </head>
       <body>
-        <AppProvider>{children}</AppProvider>
+        <AppProvider>
+          <PageLayout
+            logo={
+              <Link href="/">
+                <HeaderLogo
+                  src={(porscheLogo as SvgImport).src}
+                  alt="Porsche R2D Logo"
+                />
+              </Link>
+            }
+            secondaryHeaderContent={
+              <span style={{ color: "white" }}>Some more header content</span>
+            }
+          >
+            {children}
+          </PageLayout>
+        </AppProvider>
+        {/* necessary for SSR support, enables declarative shadow dom support for Safari and Firefox */}
+        {getDSRPonyfill({ format: "jsx" })}
+        {/* shows a cookie fallback overlay and blocks the page, in case cookies are disabled */}
+        {getCookiesFallbackScript({ format: "jsx" })}
+        {/* shows a browser fallback overlay and blocks the page, in case browser is not supported (e.g. IE11) */}
+        {getBrowserSupportFallbackScript({ format: "jsx" })}
       </body>
     </html>
   );
