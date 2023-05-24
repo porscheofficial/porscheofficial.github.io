@@ -4,6 +4,7 @@ const nextConfig = {
   pageExtensions: ["tsx", "mdx"],
   experimental: {
     mdxRs: true,
+    typedRoutes: true,
   },
 };
 
