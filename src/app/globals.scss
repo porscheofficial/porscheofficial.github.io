@@ -1,0 +1,42 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+:root {
+  --app-background: #{$pds-theme-dark-background-base};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-background: #{$pds-theme-light-background-base};
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  color: $pds-theme-dark-primary;
+  background: var(--app-background);
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
