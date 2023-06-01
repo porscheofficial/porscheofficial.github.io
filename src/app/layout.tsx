@@ -9,16 +9,11 @@ import {
   getCookiesFallbackScript,
   getBrowserSupportFallbackScript,
 } from "@porsche-design-system/components-react/partials";
-import Link from "next/link";
 import { AppProvider } from "../components/AppProvider";
 import { PageLayout } from "../components/04_templates/pageLayout/PageLayout";
-import "./globals.css";
+import "./globals.scss";
 import { BurgerMenu } from "../components/01_atoms/BurgerMenu";
 
-interface SvgImport {
-  src: string;
-  [key: string]: unknown;
-}
 
 export const metadata = {
   title: "Create Next App",
