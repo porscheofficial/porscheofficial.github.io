@@ -12,9 +12,8 @@ import {
 import Link from "next/link";
 import { AppProvider } from "../components/AppProvider";
 import { PageLayout } from "../components/04_templates/pageLayout/PageLayout";
-import { HeaderLogo } from "../components/02_molecules/header/HeaderLogo";
-import porscheLogo from "./porsche-logo-r2d.svg";
 import "./globals.css";
+import { BurgerMenu } from "../components/01_atoms/BurgerMenu";
 
 interface SvgImport {
   src: string;
@@ -48,21 +47,7 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
       </head>
       <body>
         <AppProvider>
-          <PageLayout
-            logo={
-              <Link href="/">
-                <HeaderLogo
-                  src={(porscheLogo as SvgImport).src}
-                  alt="Porsche R2D Logo"
-                />
-              </Link>
-            }
-            secondaryHeaderContent={
-              <span style={{ color: "white" }}>Some more header content</span>
-            }
-          >
-            {children}
-          </PageLayout>
+          <PageLayout menu={<BurgerMenu />}>{children}</PageLayout>
         </AppProvider>
         {/* necessary for SSR support, enables declarative shadow dom support for Safari and Firefox */}
         {getDSRPonyfill({ format: "jsx" })}

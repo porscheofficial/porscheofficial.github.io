@@ -3,17 +3,17 @@ import { Header } from "../../02_molecules/header/Header";
 
 export interface PageLayoutProps {
   children: React.ReactNode;
-  logo: JSX.Element;
-  secondaryHeaderContent?: React.ReactNode;
+  logo?: JSX.Element;
+  menu: JSX.Element;
 }
 
 export const PageLayout = ({
   children,
   logo,
-  secondaryHeaderContent,
+  menu,
 }: PageLayoutProps): JSX.Element => (
   <>
-    <Header logo={logo}>{secondaryHeaderContent}</Header>
+    <Header logo={logo} menu={menu}/>
     {children}
   </>
 );

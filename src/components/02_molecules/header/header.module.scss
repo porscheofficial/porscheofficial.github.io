@@ -1,70 +1,45 @@
 @use "@porsche-design-system/components-js/styles" as *;
 
 .header-container {
-  @mixin centered-layout-header {
-    & > * {
-      grid-column: $pds-grid-wide-column-start / $pds-grid-wide-column-end;
-    }
-  }
-  @mixin split-layout-header {
-    & > *:first-of-type {
-      grid-column: $pds-grid-wide-column-start / span 11;
-    }
-
-    & > *:nth-child(2) {
-      grid-column: span 5 / $pds-grid-wide-column-end;
-      justify-self: end;
-    }
-  }
-
   @include pds-grid;
   align-items: center;
-  background: $pds-theme-dark-background-base;
   z-index: 99;
   position: relative;
-  height: 4.375rem;
+  height: 5rem;
 
-  @include centered-layout-header;
+  @include pds-media-query-min("s") {
+    height: 6.25rem;
+  }
 
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    p-crest {
+      @include pds-media-query-min("s") {
+        display: none;
+      }
+    }
+
+    p-wordmark {
+      @include pds-media-query-max("s") {
+        display: none;
+      }
+    }
+  }
   & > * {
     grid-row: 1;
   }
 
-  &.with-split-layout {
-    @include split-layout-header;
-  }
-
-  @include pds-media-query-min("xl") {
-    height: 5rem;
+  & > *:nth-child(2) {
+    grid-column: $pds-grid-wide-column-start / auto;
   }
 }
 
-.header-logo {
-  display: block;
-  width: auto;
-  height: 1rem;
-  &.as-link {
-    cursor: pointer;
-  }
-
-  @include pds-media-query-min("s") {
-    height: 1.14rem;
-  }
-
-  @include pds-media-query-min("m") {
-    height: 1.4875rem;
-  }
-
-  @include pds-media-query-min("l") {
-    height: 1.7rem;
-  }
-}
-
-.secondary-header-content {
-  display: flex;
-  gap: 1.5rem;
-
-  @include pds-media-query-min("s") {
-    gap: 3rem;
-  }
+.link-container {
+  display: inline-flex;
 }
