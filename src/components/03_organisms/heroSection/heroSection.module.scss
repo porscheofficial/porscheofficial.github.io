@@ -1,0 +1,50 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.hero-container {
+  @include pds-grid;
+  margin-top: -5rem;
+  position: relative;
+  height: min(100vh, 33.75rem);
+  width: 100%;
+  align-content: end;
+  grid-auto-rows: min-content;
+
+  @include pds-media-query-min("s") {
+    margin-top: -6.25rem;
+    height: min(100vh, 67.5rem);
+  }
+
+  .background-image-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: calc(100% - 100px);
+    .hero-image {
+      object-fit: cover;
+      object-position: left center;
+    }
+    .image-overlay {
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0) 50%
+      );
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .subtitle,
+  .title {
+    z-index: 1;
+    grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
+  }
+  .subtitle {
+    grid-row: 1;
+  }
+  .title {
+    grid-row: 2;
+  }
+}

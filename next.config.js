@@ -6,6 +6,10 @@ const nextConfig = {
     mdxRs: true,
     typedRoutes: true,
   },
+  images: {
+    formats: ["image/avif", "image/webp"],
+    unoptimized: true // TODO: investigate SSG + optimized images
+  },
 };
 
 const withMDX = require("@next/mdx")();
