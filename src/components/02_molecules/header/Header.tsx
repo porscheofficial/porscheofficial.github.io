@@ -23,7 +23,9 @@ export const Header = ({ logo, menu }: HeaderProps): JSX.Element => {
           )}
         </Link>
       </div>
-      {menu}
+      <div className={s["menu-container"]}>
+        {menu}
+      </div>
     </header>
   );
 };

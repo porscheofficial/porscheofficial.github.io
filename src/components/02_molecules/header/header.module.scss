@@ -3,10 +3,8 @@
 .header-container {
   @include pds-grid;
   background: linear-gradient(180deg, #1F1F1F 0%, rgba(31, 31, 31, 0.9) 0.01%, rgba(31, 31, 31, 0.9) 11.28%, rgba(31, 31, 31, 0.852589) 20.64%, rgba(32, 32, 32, 0.76) 31.34%, rgba(33, 33, 33, 0.66) 40%, rgba(34, 34, 34, 0.55) 46.67%, rgba(35, 35, 35, 0.44) 53.33%, rgba(36, 36, 36, 0.33) 60%, rgba(37, 37, 37, 0.23) 66.67%, rgba(38, 38, 38, 0.14) 73.33%, rgba(39, 39, 39, 0.08) 80%, rgba(39, 39, 39, 0.03) 86.67%, rgba(39, 39, 39, 8.6e-05) 93.33%, rgba(39, 39, 39, 0) 100%, rgba(39, 39, 39, 0) 100%);
-
   align-items: center;
   z-index: 99;
-  position: relative;
   min-height: 5rem;
 
   @include pds-media-query-min("s") {
@@ -16,10 +14,12 @@
   .logo-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 100%;
     position: absolute;
+
+    .link-container {
+      display: inline-flex;
+    }
 
     p-crest {
       @include pds-media-query-min("s") {
@@ -33,15 +33,8 @@
       }
     }
   }
-  & > * {
-    grid-row: 1;
-  }
-
-  & > *:nth-child(2) {
-    grid-column-start: $pds-grid-wide-column-start;
-  }
 }
 
-.link-container {
-  display: inline-flex;
+.menu-container {
+  grid-column-start: $pds-grid-wide-column-start;
 }
