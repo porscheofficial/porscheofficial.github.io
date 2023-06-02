@@ -1,6 +1,5 @@
 /* eslint-disable react/require-default-props */
 import Link from "next/link";
-import c from "classnames";
 import s from "./header.module.scss";
 import { Wordmark } from "../../01_atoms/Wordmark";
 import { Crest } from "../../01_atoms/Marquee";
@@ -12,7 +11,7 @@ export interface HeaderProps {
 
 export const Header = ({ logo, menu }: HeaderProps): JSX.Element => {
   return (
-    <header className={c(s["header-container"])}>
+    <header className={s["header-container"]}>
       <div className={s["logo-container"]}>
         <Link className={s["link-container"]} href="/">
           {logo ?? (
