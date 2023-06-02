@@ -4,13 +4,16 @@
   @include pds-grid;
   margin-top: -5rem;
   position: relative;
-  height: min(100vh, 33.75rem);
+  aspect-ratio: 390 / 520;
   align-content: end;
   grid-auto-rows: min-content;
 
+  @include pds-media-query-min("m") {
+    aspect-ratio: 1920 / 900;
+  }
+
   @include pds-media-query-min("s") {
     margin-top: -6.25rem;
-    height: min(100vh, 67.5rem);
   }
 
   .background-image-container {
