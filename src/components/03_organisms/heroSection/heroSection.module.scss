@@ -5,7 +5,6 @@
   margin-top: -5rem;
   position: relative;
   height: min(100vh, 33.75rem);
-  width: 100%;
   align-content: end;
   grid-auto-rows: min-content;
 
@@ -15,24 +14,18 @@
   }
 
   .background-image-container {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: calc(100% - 100px);
     .hero-image {
       object-fit: cover;
-      object-position: left center;
+      object-position: right center;
     }
     .image-overlay {
       background: linear-gradient(
         0deg,
-        rgba(0, 0, 0, 0.9) 0%,
+        var(--app-background) 10%,
         rgba(0, 0, 0, 0) 50%
       );
       position: absolute;
       inset: 0;
-      width: 100%;
-      height: 100%;
     }
   }
 
@@ -46,5 +39,6 @@
   }
   .title {
     grid-row: 2;
+    margin-bottom: 2rem;
   }
 }
