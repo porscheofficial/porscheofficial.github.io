@@ -13,7 +13,7 @@ export const PageLayout = ({
   menu,
 }: PageLayoutProps): JSX.Element => (
   <>
-    <Header logo={logo} menu={menu}/>
+    <Header logo={logo} menu={menu} />
     {children}
   </>
 );
