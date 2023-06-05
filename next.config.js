@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
   pageExtensions: ["tsx", "mdx"],
   experimental: {
     mdxRs: true,
@@ -8,7 +7,6 @@ const nextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
-    unoptimized: true, // TODO: investigate SSG + optimized images
   },
 };
 
