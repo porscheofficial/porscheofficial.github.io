@@ -7,8 +7,8 @@ const Home: React.FC = () => {
       <HeroSection
         title="Porsche Open Source Platform"
         subtitle="FOSS@Porsche"
-        imageSrc="/assets/heroImage.png"
-        imageAlt="AI generated 911"
+        imageSrc="/assets/heroImage2.png"
+        imageAlt="AI generated Porsche Taycan"
       />
     </main>
   );
