@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import s from "./heroSection.module.scss";
 import { Heading } from "../../01_atoms/Heading";
 
@@ -18,7 +18,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section className={s["hero-container"]}>
       <div className={s["background-image-container"]}>
-        <Image className={s["hero-image"]} src={imageSrc} alt={imageAlt} fill />
+        <ExportedImage className={s["hero-image"]} src={imageSrc} alt={imageAlt} layout="responsive" />
         <div className={s["image-overlay"]} />
       </div>
       <Heading
