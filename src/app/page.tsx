@@ -5,7 +5,12 @@ import heroImg from "../assets/heroImage.png";
 const Home: React.FC = () => {
   return (
     <main className={s.main}>
-      <HeroSection title="Porsche Open Source Platform" subtitle="FOSS@Porsche" imageSrc={heroImg} imageAlt="AI generated 911"/>
+      <HeroSection
+        title="Porsche Open Source Platform"
+        subtitle="FOSS@Porsche"
+        imageSrc={heroImg}
+        imageAlt="AI generated 911"
+      />
     </main>
   );
 };
