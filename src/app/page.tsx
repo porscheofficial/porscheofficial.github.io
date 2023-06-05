@@ -1,6 +1,6 @@
 import { HeroSection } from "../components/03_organisms/heroSection/HeroSection";
 import s from "./page.module.scss";
-import heroImg from "../assets/heroImage.png";
+import heroImg from "../../public/assets/heroImage.png";
 
 const Home: React.FC = () => {
   return (
