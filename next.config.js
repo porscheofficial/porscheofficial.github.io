@@ -8,6 +8,7 @@ const nextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
+    unoptimized: true, // TODO: investigate SSG + optimized images
   },
 };
 
