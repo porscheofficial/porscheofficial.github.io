@@ -160,9 +160,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/mdx@npm:13.4.1":
-  version: 13.4.1
-  resolution: "@next/mdx@npm:13.4.1"
+"@next/mdx@npm:13.4.4":
+  version: 13.4.4
+  resolution: "@next/mdx@npm:13.4.4"
   dependencies:
     source-map: ^0.7.0
   peerDependencies:
@@ -173,7 +173,7 @@ __metadata:
       optional: true
     "@mdx-js/react":
       optional: true
-  checksum: 83b3e22a10bbd8c2803ef876d4891474351dfa4a4efb35a3ece0c56ca7926451acfb861fd5623282be2a6beb8dd54d4b6e158e86d27260a27f6a2b633f9ca57e
+  checksum: b381b0971c4a764faccbe178150d38d14a8960451b8292aa8ddcfd7f21316872c0d25e4130ac647219775e9a668a1e0265b3775ff9bc9a1d33b94fff3a2f9b40
   languageName: node
   linkType: hard
 
@@ -4050,7 +4050,7 @@ __metadata:
     "@mdx-js/loader": 2.3.0
     "@mdx-js/react": 2.3.0
     "@next/eslint-plugin-next": 13.4.1
-    "@next/mdx": 13.4.1
+    "@next/mdx": 13.4.4
     "@porsche-design-system/components-js": 3.0.0
     "@porsche-design-system/components-react": 3.0.0
     "@porscheofficial/eslint-config-porschedigital-react": 3.0.1
