@@ -1,6 +1,5 @@
 import { HeroSection } from "../components/03_organisms/heroSection/HeroSection";
 import s from "./page.module.scss";
-import heroImg from "../../public/assets/heroImage.png";
 
 const Home: React.FC = () => {
   return (
@@ -8,7 +7,7 @@ const Home: React.FC = () => {
       <HeroSection
         title="Porsche Open Source Platform"
         subtitle="FOSS@Porsche"
-        imageSrc={heroImg}
+        imageSrc="/assets/heroImage.png"
         imageAlt="AI generated 911"
       />
     </main>

@@ -1,11 +1,11 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import s from "./heroSection.module.scss";
 import { Heading } from "../../01_atoms/Heading";
 
 interface HeroSectionProps {
   title?: string;
   subtitle?: string;
-  imageSrc: StaticImageData;
+  imageSrc: string;
   imageAlt: string;
 }
 
