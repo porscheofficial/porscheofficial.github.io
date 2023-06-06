@@ -1,0 +1,81 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.menu-container {
+  grid-column-start: $pds-grid-wide-column-start;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  padding: $pds-spacing-static-xx-large $pds-spacing-static-large
+    $pds-spacing-static-large $pds-spacing-static-large;
+  transition: left ease-in-out 0.3s;
+
+  @include pds-media-query-min("s") {
+    width: 300px;
+    left: -300px;
+  }
+
+  &.active {
+    left: 0;
+  }
+
+  .btn-close-mobile {
+    position: absolute;
+    right: $pds-spacing-static-large;
+    top: 20px;
+    z-index: 5;
+
+    @include pds-media-query-min("s") {
+      display: none;
+    }
+  }
+
+  .btn-close {
+    position: absolute;
+    right: -100px;
+    top: 20px;
+    z-index: 5;
+    display: none;
+
+    @include pds-media-query-min("s") {
+      display: block;
+    }
+  }
+
+  .content {
+    position: relative;
+    height: 100vh;
+  }
+
+  .item {
+    margin-top: $pds-spacing-static-medium;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.backdrop {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  opacity: 0;
+
+  &.active {
+    transition: opacity ease-in-out 0.3s;
+    opacity: 0.8;
+  }
+}

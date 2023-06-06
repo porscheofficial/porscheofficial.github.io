@@ -12,7 +12,6 @@ import {
 import { AppProvider } from "../components/AppProvider";
 import { PageLayout } from "../components/04_templates/pageLayout/PageLayout";
 import "./globals.scss";
-import { BurgerMenu } from "../components/01_atoms/BurgerMenu";
 
 export const metadata = {
   title: "Porsche Open Source Platform",
@@ -41,7 +40,7 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
       </head>
       <body>
         <AppProvider>
-          <PageLayout menu={<BurgerMenu />}>{children}</PageLayout>
+          <PageLayout>{children}</PageLayout>
         </AppProvider>
         {/* necessary for SSR support, enables declarative shadow dom support for Safari and Firefox */}
         {getDSRPonyfill({ format: "jsx" })}

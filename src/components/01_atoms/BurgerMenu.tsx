@@ -5,15 +5,17 @@ interface BurgerMenuProps {
   label?: string;
   icon?: LinkButtonIconName;
   theme?: "light" | "dark";
+  onClick: () => void;
 }
 
 export const BurgerMenu: React.FC<BurgerMenuProps> = ({
   label = "Menu",
   icon = "menu-lines",
   theme = "dark",
+  onClick,
 }) => {
   return (
-    <ButtonPure theme={theme} icon={icon}>
+    <ButtonPure theme={theme} icon={icon} type="button" onClick={onClick}>
       {label}
     </ButtonPure>
   );
