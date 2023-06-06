@@ -1,6 +1,9 @@
 "use client";
 
-import { PTextList, PTextListItem } from "@porsche-design-system/components-react/ssr";
+import {
+  PTextList,
+  PTextListItem,
+} from "@porsche-design-system/components-react/ssr";
 import { ComponentProps } from "react";
 
 export const TextList: React.FC<
