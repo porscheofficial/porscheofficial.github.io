@@ -31,6 +31,7 @@ module.exports = {
         "import/no-default-export": "off",
         "import/prefer-default-export": "error",
         "no-underscore-dangle": "off",
+        "@typescript-eslint/no-unsafe-assignment": "warn",
       },
     },
   ],
