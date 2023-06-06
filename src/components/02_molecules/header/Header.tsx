@@ -3,13 +3,13 @@ import Link from "next/link";
 import s from "./header.module.scss";
 import { Wordmark } from "../../01_atoms/Wordmark";
 import { Crest } from "../../01_atoms/Marquee";
+import { Navigation } from "../navigation/Navigation";
 
 export interface HeaderProps {
   logo?: JSX.Element;
-  menu: JSX.Element;
 }
 
-export const Header = ({ logo, menu }: HeaderProps): JSX.Element => {
+export const Header = ({ logo }: HeaderProps): JSX.Element => {
   return (
     <header className={s["header-container"]}>
       <div className={s["logo-container"]}>
@@ -22,7 +22,8 @@ export const Header = ({ logo, menu }: HeaderProps): JSX.Element => {
           )}
         </Link>
       </div>
-      <div className={s["menu-container"]}>{menu}</div>
+
+      <Navigation />
     </header>
   );
 };
