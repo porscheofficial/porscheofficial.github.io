@@ -4,22 +4,8 @@
   @include pds-grid;
   background: linear-gradient(
     180deg,
-    #1f1f1f 0%,
-    rgba(31, 31, 31, 0.9) 0.01%,
-    rgba(31, 31, 31, 0.9) 11.28%,
-    rgba(31, 31, 31, 0.852589) 20.64%,
-    rgba(32, 32, 32, 0.76) 31.34%,
-    rgba(33, 33, 33, 0.66) 40%,
-    rgba(34, 34, 34, 0.55) 46.67%,
-    rgba(35, 35, 35, 0.44) 53.33%,
-    rgba(36, 36, 36, 0.33) 60%,
-    rgba(37, 37, 37, 0.23) 66.67%,
-    rgba(38, 38, 38, 0.14) 73.33%,
-    rgba(39, 39, 39, 0.08) 80%,
-    rgba(39, 39, 39, 0.03) 86.67%,
-    rgba(39, 39, 39, 8.6e-5) 93.33%,
-    rgba(39, 39, 39, 0) 100%,
-    rgba(39, 39, 39, 0) 100%
+    var(--app-background) 0%,
+    rgba(0, 0, 0, 0) 50%
   );
   align-items: center;
   z-index: 99;
@@ -30,12 +16,11 @@
   }
 
   .logo-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    position: absolute;
+    grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
+    place-self: center;
+    grid-row: 1;
 
-    .link-container {
+    a {
       display: inline-flex;
     }
 
