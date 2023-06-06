@@ -17,19 +17,30 @@
 
   .left {
     @include pds-media-query-min("s") {
-      grid-column: $pds-grid-wide-column-start / span 3;
+      grid-column: $pds-grid-wide-column-start / span 6;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #company-links {
+      column-count: 2;
+      column-gap: 0;
     }
   }
 
   .middle {
     @include pds-media-query-min("s") {
-      grid-column: span 4 / span 6;
+      grid-column: span 3;
+      display: flex;
+      flex-direction: column;
     }
   }
 
   .right {
     @include pds-media-query-min("s") {
       grid-column: span 6 / $pds-grid-wide-column-end;
+      display: flex;
+      flex-direction: column;
     }
   }
 
