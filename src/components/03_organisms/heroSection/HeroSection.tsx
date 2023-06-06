@@ -1,7 +1,7 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
 import s from "./heroSection.module.scss";
-import { Heading } from "../../01_atoms/Heading";
+import { Text } from "../../01_atoms/Text";
 import { Display } from "../../01_atoms/Display";
 
 interface HeroSectionProps {
@@ -28,15 +28,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         />
         <div className={s["image-overlay"]} />
       </div>
-      <Heading
-        size={{ base: "small", s: "medium" }}
+      <Text
+        size="small"
         align="center"
         theme="dark"
-        tag="h5"
         className={s.subtitle}
       >
         {subtitle}
-      </Heading>
+      </Text>
       <Display
         size="medium"
         align="center"
