@@ -4,15 +4,16 @@
   @include pds-grid;
   margin-top: -5rem;
   position: relative;
-  aspect-ratio: 390 / 520;
+  aspect-ratio: 4 / 5;
   align-content: end;
   grid-auto-rows: min-content;
 
-  @include pds-media-query-min("m") {
-    aspect-ratio: 1920 / 900;
+  @include pds-media-query-min("xs") {
+    aspect-ratio: 5 / 4;
   }
 
   @include pds-media-query-min("s") {
+    aspect-ratio: 16 / 9;
     margin-top: -6.25rem;
   }
 
@@ -42,6 +43,6 @@
   }
   .title {
     grid-row: 2;
-    margin-bottom: 2rem;
+    margin-bottom: $pds-spacing-fluid-medium;
   }
 }
