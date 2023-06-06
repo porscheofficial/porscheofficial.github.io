@@ -11,20 +11,28 @@ import { Icon } from "../../01_atoms/Icon";
 export const Footer = (): JSX.Element => {
   const links = [
     {
-      url: "/test",
-      name: "Text",
+      url: "https://www.porsche.com/international/aboutporsche/overview/",
+      name: "Porsche at a Glance",
     },
     {
-      url: "/test",
-      name: "Text",
+      url: "https://www.porsche.com/international/aboutporsche/jobs/",
+      name: "Jobs & Careers",
     },
     {
-      url: "/test",
-      name: "Text",
+      url: "https://newsroom.porsche.com/en.html",
+      name: "Newsroom",
     },
     {
-      url: "/test",
-      name: "Text",
+      url: "https://www.porsche.com/international/modelstart/",
+      name: "Build your Porsche",
+    },
+    {
+      url: "https://www.porsche.com/international/models/?compare=",
+      name: "Compare Models",
+    },
+    {
+      url: "https://www.porsche.com/international/models/?compare=",
+      name: "Search Pre-Owned",
     },
   ];
 
@@ -67,7 +75,7 @@ export const Footer = (): JSX.Element => {
         <Text size="large" theme="dark">
           Company
         </Text>
-        <ul className={s.content}>
+        <ul className={s.content} id={s["company-links"]}>
           {links.map((link) => (
             <li>
               <LinkPure theme="dark" icon="none">
@@ -93,7 +101,7 @@ export const Footer = (): JSX.Element => {
         <Text size="large" theme="dark">
           Social Media
         </Text>
-        <Text theme="dark">Get in touch with us on soc ial media.</Text>
+        <Text theme="dark">Get in touch with us on social media.</Text>
 
         <ul className={s.content}>
           {linksSocial.map((link) => (
