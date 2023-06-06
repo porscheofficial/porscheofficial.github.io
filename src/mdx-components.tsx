@@ -31,18 +31,8 @@ export const useMDXComponents = (components: MDXComponents): MDXComponents => {
         {children}
       </Heading>
     ),
-    ul: ({ children }) => (
-      <TextList
-        theme="dark"
-      >
-        {children}
-      </TextList>
-    ),
-    li: ({ children }) => (
-      <TextListItem>
-        {children}
-      </TextListItem>
-    ),
+    ul: ({ children }) => <TextList theme="dark">{children}</TextList>,
+    li: ({ children }) => <TextListItem>{children}</TextListItem>,
     ...components,
   };
 };
