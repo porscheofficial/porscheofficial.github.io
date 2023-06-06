@@ -2,6 +2,7 @@ import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
 import s from "./heroSection.module.scss";
 import { Heading } from "../../01_atoms/Heading";
+import { Display } from "../../01_atoms/Display";
 
 interface HeroSectionProps {
   title?: string;
@@ -36,15 +37,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       >
         {subtitle}
       </Heading>
-      <Heading
-        size="xxl"
+      <Display
+        size="medium"
         align="center"
         theme="dark"
         tag="h1"
         className={s.title}
       >
         {title}
-      </Heading>
+      </Display>
     </section>
   );
 };
