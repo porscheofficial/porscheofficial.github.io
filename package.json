@@ -8,8 +8,7 @@
   "prettier": "@porscheofficial/prettier-config-porschedigital",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next build && next export && next-image-export-optimizer",
+    "build": "next build && next-image-export-optimizer --nextConfigPath ./next.config.js",
     "lint:ci": "eslint src/ --ext .js,.jsx,.tsx,.ts -f stylish",
     "lint:fix": "eslint src/ --fix --ext .js,.jsx,.tsx,.ts  -f stylish --quiet",
     "prettier:ci": "prettier --check ./",
