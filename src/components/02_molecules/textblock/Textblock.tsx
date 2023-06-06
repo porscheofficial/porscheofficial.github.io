@@ -8,7 +8,7 @@ export const Textblock: React.FC<
   // eslint-disable-next-line react/jsx-props-no-spreading
   return (
     <section className={s["textblock-container"]}>
-      <div className={s["textblock"]}>{children}</div>
+      <div className={s.textblock}>{children}</div>
     </section>
   );
 };
