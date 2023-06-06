@@ -1,0 +1,12 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.textblock-container {
+  @include pds-grid;
+  display: block;
+  grid-column: $pds-grid-wide-column-start / $pds-grid-wide-column-end;
+
+  h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
