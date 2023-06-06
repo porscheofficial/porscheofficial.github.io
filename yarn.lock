@@ -303,17 +303,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@porsche-design-system/components-react@npm:3.0.0":
-  version: 3.0.0
-  resolution: "@porsche-design-system/components-react@npm:3.0.0"
+"@porsche-design-system/components-js@npm:3.1.0-rc.1":
+  version: 3.1.0-rc.1
+  resolution: "@porsche-design-system/components-js@npm:3.1.0-rc.1"
+  checksum: c47a8aad7b59af2d3824bdcc3ac75024f8e854784aef4b11bfa99f8c5993751c8179119efdc98656b3f15b18c73eb35d263bf2117059e6ed13d6118fb01681f1
+  languageName: node
+  linkType: hard
+
+"@porsche-design-system/components-react@npm:3.1.0-rc.1":
+  version: 3.1.0-rc.1
+  resolution: "@porsche-design-system/components-react@npm:3.1.0-rc.1"
   dependencies:
-    "@porsche-design-system/components-js": 3.0.0
+    "@porsche-design-system/components-js": 3.1.0-rc.1
   peerDependencies:
     react: ">=17.0.0 <19.0.0"
     react-dom: ">=17.0.0 <19.0.0"
   bin:
     patchRemixRunProcessBrowserGlobalIdentifier: bin/patchRemixRunProcessBrowserGlobalIdentifier.js
-  checksum: 025d6567721340f2e6fae774a84afa57f34e8bcaa249e191d5d19878dc0af4e2019160f95b3cf528dd5090f353c19fc67bd668cb3be15a6aa17272872ac097c5
+  checksum: 26aea2cd2dcd8e0958387a5eb3a9e96f48fa05c4e24a4b995ac8f858bd945a94a34343eb867d28049d4e114e73b97a0cc0e667011a62374517efc481b23d530b
   languageName: node
   linkType: hard
 
@@ -4392,7 +4399,7 @@ __metadata:
     "@next/eslint-plugin-next": 13.4.1
     "@next/mdx": 13.4.4
     "@porsche-design-system/components-js": 3.0.0
-    "@porsche-design-system/components-react": 3.0.0
+    "@porsche-design-system/components-react": 3.1.0-rc.1
     "@porscheofficial/eslint-config-porschedigital-react": 3.0.1
     "@porscheofficial/prettier-config-porschedigital": 3.0.1
     "@types/mdx": 2.0.5
