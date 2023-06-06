@@ -11,8 +11,12 @@ import { Icon } from "../../01_atoms/Icon";
 export const Footer = (): JSX.Element => {
   const links = [
     {
+      url: "https://investorrelations.porsche.com/en/",
+      name: "Investors Relations",
+    },
+    {
       url: "https://www.porsche.com/international/aboutporsche/overview/",
-      name: "Porsche at a Glance",
+      name: "At a Glance",
     },
     {
       url: "https://www.porsche.com/international/aboutporsche/jobs/",
@@ -20,50 +24,38 @@ export const Footer = (): JSX.Element => {
     },
     {
       url: "https://newsroom.porsche.com/en.html",
-      name: "Newsroom",
-    },
-    {
-      url: "https://www.porsche.com/international/modelstart/",
-      name: "Build your Porsche",
-    },
-    {
-      url: "https://www.porsche.com/international/models/?compare=",
-      name: "Compare Models",
-    },
-    {
-      url: "https://www.porsche.com/international/models/?compare=",
-      name: "Search Pre-Owned",
+      name: "Newsroom & Press",
     },
   ];
 
   const linksSocial: linkSocial[] = [
     {
-      url: "/test",
+      url: "https://www.facebook.com/porsche/",
       name: "facebook",
       icon: "logo-facebook",
     },
     {
-      url: "/test",
+      url: "https://www.instagram.com/porsche/",
       name: "instagram",
       icon: "logo-instagram",
     },
     {
-      url: "/test",
+      url: "https://www.pinterest.com/porsche/",
       name: "pinterest",
       icon: "logo-pinterest",
     },
     {
-      url: "/test",
+      url: "https://www.youtube.com/user/Porsche/",
       name: "youtube",
       icon: "logo-youtube",
     },
     {
-      url: "/test",
+      url: "https://twitter.com/Porsche/",
       name: "twitter",
       icon: "logo-twitter",
     },
     {
-      url: "/test",
+      url: "https://www.linkedin.com/company/porsche-ag/",
       name: "linkedin",
       icon: "logo-linkedin",
     },
@@ -73,7 +65,7 @@ export const Footer = (): JSX.Element => {
     <footer className={s.footer}>
       <div className={s.left}>
         <Text size="large" theme="dark">
-          Company
+          Porsche Company
         </Text>
         <ul className={s.content} id={s["company-links"]}>
           {links.map((link) => (
@@ -92,7 +84,11 @@ export const Footer = (): JSX.Element => {
         <div className={s.content}>
           <Text theme="dark">Do you have any questions?</Text>
 
-          <LinkButton href="mailto: " theme="dark" variant="secondary">
+          <LinkButton
+            href="mailto:open_source_office@porsche.de"
+            theme="dark"
+            variant="secondary"
+          >
             Contact Us
           </LinkButton>
         </div>

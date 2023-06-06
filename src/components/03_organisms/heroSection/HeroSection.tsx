@@ -28,12 +28,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         />
         <div className={s["image-overlay"]} />
       </div>
-      <Text
-        size="small"
-        align="center"
-        theme="dark"
-        className={s.subtitle}
-      >
+      <Text size="small" align="center" theme="dark" className={s.subtitle}>
         {subtitle}
       </Text>
       <Display
