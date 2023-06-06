@@ -1,5 +1,6 @@
 /* eslint-disable react/require-default-props */
 import { Header } from "../../02_molecules/header/Header";
+import { Footer } from "../../02_molecules/footer/Footer";
 
 export interface PageLayoutProps {
   children: React.ReactNode;
@@ -13,5 +14,6 @@ export const PageLayout = ({
   <>
     <Header logo={logo} />
     {children}
+    <Footer />
   </>
 );

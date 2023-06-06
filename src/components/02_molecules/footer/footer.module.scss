@@ -1,0 +1,59 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.footer {
+  @include pds-grid;
+  padding-top: $pds-spacing-fluid-xx-large;
+  padding-bottom: $pds-spacing-fluid-x-large;
+
+  .left,
+  .middle,
+  .right {
+    grid-column: $pds-grid-wide-column-start / $pds-grid-wide-column-end;
+
+    @include pds-media-query-max("s") {
+      margin-top: $pds-spacing-static-medium;
+    }
+  }
+
+  .left {
+    @include pds-media-query-min("s") {
+      grid-column: $pds-grid-wide-column-start / span 3;
+    }
+  }
+
+  .middle {
+    @include pds-media-query-min("s") {
+      grid-column: span 4 / span 6;
+    }
+  }
+
+  .right {
+    @include pds-media-query-min("s") {
+      grid-column: span 6 / $pds-grid-wide-column-end;
+    }
+  }
+
+  .content {
+    margin-top: $pds-spacing-static-medium;
+
+    p-link {
+      width: 100%;
+      margin-top: $pds-spacing-static-medium;
+    }
+  }
+
+  .inline {
+    display: inline-block;
+    margin-right: $pds-spacing-static-medium;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .made-with {
+    grid-column: $pds-grid-wide-column-start / $pds-grid-wide-column-end;
+    text-align: center;
+    padding-top: $pds-spacing-fluid-large;
+  }
+}

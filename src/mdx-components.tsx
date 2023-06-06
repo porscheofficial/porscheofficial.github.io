@@ -10,12 +10,16 @@ import { Heading } from "./components/01_atoms/Heading";
 export const useMDXComponents = (components: MDXComponents): MDXComponents => {
   return {
     // Allows customizing built-in components, e.g. to add styling.
-    h2: ({ children }) => <Heading
-      size={{ base: "small", s: "medium" }}
-      align="center"
-      theme="dark"
-      tag="h5"
-    >{children}</Heading>,
+    h2: ({ children }) => (
+      <Heading
+        size={{ base: "small", s: "medium" }}
+        align="center"
+        theme="dark"
+        tag="h5"
+      >
+        {children}
+      </Heading>
+    ),
     ...components,
   };
 };
