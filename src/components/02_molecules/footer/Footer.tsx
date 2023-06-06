@@ -114,7 +114,7 @@ export const Footer = (): JSX.Element => {
       </div>
 
       <div className={s["made-with"]}>
-        <Icon name="heart-filled" theme="dark" color="notification-error" />
+        <Icon name="arrow-double-right" theme="dark" color="notification-error" />
         Made with Free Open Source Software and{" "}
         <a
           href="https://designsystem.porsche.com/latest/about/introduction"
