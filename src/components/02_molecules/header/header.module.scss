@@ -10,6 +10,7 @@
   align-items: center;
   z-index: 99;
   min-height: 5rem;
+  position: relative;
 
   @include pds-media-query-min("s") {
     min-height: 6.25rem;
