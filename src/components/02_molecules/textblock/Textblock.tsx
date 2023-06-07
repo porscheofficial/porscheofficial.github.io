@@ -11,8 +11,8 @@ export const Textblock: React.FC<React.PropsWithChildren<TextblockProps>> = (
   props: TextblockProps
 ) => {
   // eslint-disable-next-line react/jsx-props-no-spreading
-  const {id} = props;
-  const {children} = props;
+  const { id } = props;
+  const { children } = props;
 
   return (
     <section className={s["textblock-container"]}>
