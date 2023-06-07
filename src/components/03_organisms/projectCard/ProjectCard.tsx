@@ -1,6 +1,6 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
-import s from "./card.module.scss";
+import s from "./projectCard.module.scss";
 import { Tag } from "../../01_atoms/Tag";
 import { LinkPure } from "../../01_atoms/LinkPure";
 import { Heading } from "../../01_atoms/Heading";
@@ -41,15 +41,15 @@ export const Card: React.FC<CardProps> = ({
           {subtitle}
         </Text>
         <div className={s.actions}>
-          <Tag color="background-base">{status}</Tag>
+          <Tag color="background-base" className={s.status}>{status}</Tag>
 
-          <div>
-            <Icon name="star" theme="dark" />
+          <div className={s.stars}>
+            <Icon source="/assets/octicons/star-24.svg" theme="dark" />
             {stars}
           </div>
 
-          <div>
-            <Icon name="share" theme="dark" />
+          <div className={s.forks}>
+          <Icon source="/assets/octicons/repo-forked-24.svg" theme="dark" />
             {fork}
           </div>
         </div>

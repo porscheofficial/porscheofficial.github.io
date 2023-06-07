@@ -7,7 +7,7 @@ import s from "./page.module.scss";
 import heroImage from "../../public/assets/heroImage2.png";
 import { Textblock } from "../components/02_molecules/textblock/Textblock";
 import FOSSMovement from "./FOSS_MOVEMENT.mdx";
-import { Card } from "../components/03_organisms/card/Card";
+import { ProjectCard } from "../components/03_organisms/projectCard/ProjectCard";
 import { Carousel } from "../components/01_atoms/Carousel";
 import { Section } from "../components/02_molecules/section/section";
 import { Projects } from "../types/general";
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
           alignHeader="center"
         >
           {projects.items.map((project) => (
-            <Card
+            <ProjectCard
               title={project.title}
               url={project.url}
               imageAlt={project.imageAlt}
