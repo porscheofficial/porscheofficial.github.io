@@ -7,10 +7,11 @@
   .image {
     position: relative;
     aspect-ratio: 4/3;
-
+    
     img {
       border-radius: $pds-border-radius-medium $pds-border-radius-medium 0 0;
       object-fit: contain;
+      padding: $pds-spacing-static-medium;
     }
   }
 
