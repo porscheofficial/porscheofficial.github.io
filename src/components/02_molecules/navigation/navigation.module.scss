@@ -15,7 +15,8 @@
   background: #fff;
   padding: $pds-spacing-static-xx-large $pds-spacing-static-large
     $pds-spacing-static-large $pds-spacing-static-large;
-  transition: left ease-in-out 0.3s;
+  transition: left ease-in-out 0.3s, visibility ease-in-out 0.3s;
+  visibility: hidden;
 
   @include pds-media-query-min("s") {
     width: 300px;
@@ -24,6 +25,7 @@
 
   &.active {
     left: 0;
+    visibility: visible;
   }
 
   .btn-close-mobile {
