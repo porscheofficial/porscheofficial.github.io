@@ -1,0 +1,34 @@
+heading: Projects
+items:
+  - title: cookie-consent-banner
+    subtitle: Lorem ipsum...
+    url: https://github.com/porscheofficial/cookie-consent-banner
+    imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
+    imageAlt: Lorem ipsum...
+    stars: 12
+    fork: 3
+    status: Public
+  - title: cookie-consent-banner
+    subtitle: Lorem ipsum...
+    url: https://github.com/porscheofficial/cookie-consent-banner
+    imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
+    imageAlt: Lorem ipsum...
+    stars: 12
+    fork: 3
+    status: Public
+  - title: cookie-consent-banner
+    subtitle: Lorem ipsum...
+    url: https://github.com/porscheofficial/cookie-consent-banner
+    imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
+    imageAlt: Lorem ipsum...
+    stars: 12
+    fork: 3
+    status: Public
+  - title: cookie-consent-banner
+    subtitle: Lorem ipsum...
+    url: https://github.com/porscheofficial/cookie-consent-banner
+    imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
+    imageAlt: Lorem ipsum...
+    stars: 12
+    fork: 3
+    status: Public
