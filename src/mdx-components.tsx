@@ -12,12 +12,7 @@ export const useMDXComponents = (components: MDXComponents): MDXComponents => {
   return {
     // Allows customizing built-in components, e.g. to add styling.
     h1: ({ children }) => (
-      <Heading
-        size={{ base: "large", s: "x-large" }}
-        align="center"
-        theme="dark"
-        tag="h1"
-      >
+      <Heading size={{ base: "large", s: "x-large" }} theme="dark" tag="h1">
         {children}
       </Heading>
     ),
