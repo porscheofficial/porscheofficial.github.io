@@ -30,6 +30,24 @@
     display: flex;
     gap: $pds-spacing-static-medium;
     margin-top: $pds-spacing-static-medium;
+
+    .status {
+      display: none;
+      @include pds-media-query-min("s") {
+        display: flex;
+      }
+    }
+
+    .stars, .forks {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      p-icon {
+        margin-right: $pds-spacing-static-x-small;
+      }
+    }
   }
 
   .link {

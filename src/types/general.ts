@@ -1,5 +1,5 @@
 import { PIconProps } from "@porsche-design-system/components-react";
-import { CardProps } from "../components/03_organisms/card/Card";
+import { CardProps } from "../components/03_organisms/projectCard/ProjectCard";
 
 export interface linkSocial {
   url: string;
