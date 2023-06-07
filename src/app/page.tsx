@@ -1,10 +1,20 @@
+// eslint-disable-next-line import/no-webpack-loader-syntax,import/no-unresolved
+// @ts-expect-error TODO
+// eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
+import importProjects from "js-yaml-loader!./../data/projects.yml";
 import { HeroSection } from "../components/03_organisms/heroSection/HeroSection";
 import s from "./page.module.scss";
 import heroImage from "../../public/assets/heroImage2.png";
 import { Textblock } from "../components/02_molecules/textblock/Textblock";
 import FOSSMovement from "./FOSS_MOVEMENT.mdx";
+import { Card } from "../components/03_organisms/card/Card";
+import { Carousel } from "../components/01_atoms/Carousel";
+import { Section } from "../components/02_molecules/section/section";
+import { Projects } from "../types/general";
 
 const Home: React.FC = () => {
+  const projects: Projects = importProjects;
+
   return (
     <main className={s.main}>
       <HeroSection
@@ -13,9 +23,32 @@ const Home: React.FC = () => {
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"
       />
-      <Textblock>
-        <FOSSMovement />
-      </Textblock>
+      <Section>
+        <Textblock>
+          <FOSSMovement />
+        </Textblock>
+      </Section>
+      <Section>
+        <Carousel
+          slidesPerPage={3}
+          heading={projects.heading}
+          theme="dark"
+          alignHeader="center"
+        >
+          {projects.items.map((project) => (
+            <Card
+              title={project.title}
+              url={project.url}
+              imageAlt={project.imageAlt}
+              imageSrc={project.imageSrc}
+              fork={project.fork}
+              subtitle={project.subtitle}
+              stars={project.stars}
+              status={project.status}
+            />
+          ))}
+        </Carousel>
+      </Section>
     </main>
   );
 };

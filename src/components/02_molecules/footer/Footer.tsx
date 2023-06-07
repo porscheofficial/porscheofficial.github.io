@@ -1,5 +1,4 @@
 /* eslint-disable react/require-default-props */
-
 import Link from "next/link";
 import s from "./footer.module.scss";
 import { Text } from "../../01_atoms/Text";
