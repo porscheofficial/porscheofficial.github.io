@@ -2,6 +2,7 @@
 // @ts-expect-error TODO
 // eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
 import importProjects from "js-yaml-loader!./../data/projects.yml";
+import { Text } from "../components/01_atoms/Text";
 import { HeroSection } from "../components/03_organisms/heroSection/HeroSection";
 import s from "./page.module.scss";
 import heroImage from "../../public/assets/heroImage2.png";
@@ -11,7 +12,6 @@ import { ProjectCard } from "../components/03_organisms/projectCard/ProjectCard"
 import { Carousel } from "../components/01_atoms/Carousel";
 import { Section } from "../components/02_molecules/section/section";
 import { Projects } from "../types/general";
-import { Text } from "src/components/01_atoms/Text";
 
 const Home: React.FC = () => {
   const projects: Projects = importProjects;
