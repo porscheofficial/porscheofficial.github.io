@@ -18,7 +18,7 @@ export interface CardProps {
   fork: number;
 }
 
-export const Card: React.FC<CardProps> = ({
+export const ProjectCard: React.FC<CardProps> = ({
   title,
   subtitle,
   imageSrc,
@@ -41,7 +41,9 @@ export const Card: React.FC<CardProps> = ({
           {subtitle}
         </Text>
         <div className={s.actions}>
-          <Tag color="background-base" className={s.status}>{status}</Tag>
+          <Tag color="background-base" className={s.status}>
+            {status}
+          </Tag>
 
           <div className={s.stars}>
             <Icon source="/assets/octicons/star-24.svg" theme="dark" />
@@ -49,7 +51,7 @@ export const Card: React.FC<CardProps> = ({
           </div>
 
           <div className={s.forks}>
-          <Icon source="/assets/octicons/repo-forked-24.svg" theme="dark" />
+            <Icon source="/assets/octicons/repo-forked-24.svg" theme="dark" />
             {fork}
           </div>
         </div>
