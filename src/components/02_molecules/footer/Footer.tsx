@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable react/require-default-props */
 import Link from "next/link";
 import s from "./footer.module.scss";
