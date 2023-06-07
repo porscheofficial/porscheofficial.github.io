@@ -30,10 +30,11 @@ const Home: React.FC = () => {
       </Section>
       <Section>
         <Carousel
-          slidesPerPage={3}
+          slidesPerPage={{ base: 1, s: 3 }}
           heading={projects.heading}
           theme="dark"
           alignHeader="center"
+          rewind={false}
         >
           {projects.items.map((project) => (
             <ProjectCard
