@@ -11,6 +11,7 @@ import { ProjectCard } from "../components/03_organisms/projectCard/ProjectCard"
 import { Carousel } from "../components/01_atoms/Carousel";
 import { Section } from "../components/02_molecules/section/section";
 import { Projects } from "../types/general";
+import { Text } from "src/components/01_atoms/Text";
 
 const Home: React.FC = () => {
   const projects: Projects = importProjects;
@@ -23,6 +24,12 @@ const Home: React.FC = () => {
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"
       />
+      <Textblock id={s.intro}>
+        <Text theme="dark" size="large" align="center">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt.
+        </Text>
+      </Textblock>
       <Section>
         <Textblock id={s["foss-movement"]}>
           <FOSSMovement />
