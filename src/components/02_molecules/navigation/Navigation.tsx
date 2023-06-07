@@ -14,12 +14,8 @@ export const Navigation = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const links = [
     {
-      url: "/about",
-      name: "About",
-    },
-    {
-      url: "/imprint",
-      name: "Imprint",
+      url: "https://github.com/porscheofficial",
+      name: "GitHub",
     },
   ];
 
