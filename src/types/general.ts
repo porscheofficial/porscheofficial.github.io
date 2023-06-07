@@ -11,3 +11,8 @@ export interface Projects {
   heading: string;
   items: CardProps[];
 }
+
+export interface linkNotice {
+  url: string;
+  name: string;
+}

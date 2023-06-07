@@ -2,10 +2,13 @@
 import Link from "next/link";
 import s from "./footer.module.scss";
 import { Text } from "../../01_atoms/Text";
+import { Divider } from "../../01_atoms/Divider";
 import { LinkPure } from "../../01_atoms/LinkPure";
 import { LinkButton } from "../../01_atoms/LinkButton";
-import { linkSocial } from "../../../types/general";
+import { Textblock } from "../textblock/Textblock";
+import { linkSocial, linkNotice } from "../../../types/general";
 import { Icon } from "../../01_atoms/Icon";
+import WLTP from "./WLTP.mdx";
 
 export const Footer = (): JSX.Element => {
   const links = [
@@ -24,6 +27,14 @@ export const Footer = (): JSX.Element => {
     {
       url: "https://newsroom.porsche.com/en.html",
       name: "Newsroom & Press",
+    },
+    {
+      url: "https://www.porsche.com/international/aboutporsche/innovation/",
+      name: "Innovation",
+    },
+    {
+      url: "https://www.porsche.com/international/aboutporsche/75years/",
+      name: "75 Years",
     },
   ];
 
@@ -60,6 +71,29 @@ export const Footer = (): JSX.Element => {
     },
   ];
 
+  const linksNotice: linkNotice[] = [
+    {
+      url: "https://www.porsche.com/international/legal-notice/",
+      name: "Legal notice",
+    },
+    {
+      url: "https://www.porsche.com/international/privacy/",
+      name: "Privacy Policy",
+    },
+    {
+      url: "https://www.porsche.com/international/fuel-consumption/",
+      name: "Consumption/Emissions",
+    },
+    {
+      url: "https://www.porsche.com/licenses",
+      name: "Open Source Software Notice",
+    },
+    {
+      url: "https://www.porsche.com/international/aboutporsche/overview/compliance/whistleblower-system/",
+      name: "Whistleblower System",
+    },
+  ];
+
   return (
     <footer className={s.footer}>
       <div className={s.left}>
@@ -76,7 +110,7 @@ export const Footer = (): JSX.Element => {
           ))}
         </ul>
       </div>
-      <div className={`${s.middle}`}>
+      <div className={s.middle}>
         <Text size="large" theme="dark">
           Contact
         </Text>
@@ -115,21 +149,50 @@ export const Footer = (): JSX.Element => {
           ))}
         </ul>
       </div>
-
+      <Divider className={s.divider} theme="dark" />
+      <div className={s.notice}>
+        © 2023 Dr. Ing. h.c. F. Porsche AG.{" "}
+        {linksNotice.map((link) => (
+          <LinkPure theme="dark" icon="none" underline>
+            <Link href={{ pathname: link.url }}>{link.name}.</Link>
+          </LinkPure>
+        ))}
+        <Textblock id={s.wltp}>
+          <WLTP />
+        </Textblock>
+      </div>
       <div className={s["made-with"]}>
         <Icon
           name="arrow-double-right"
           theme="dark"
           color="notification-error"
         />
-        Made with Free Open Source Software and{" "}
-        <a
-          href="https://designsystem.porsche.com/latest/about/introduction"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Porsche Design System
-        </a>
+        Made with{" "}
+        <LinkPure theme="dark" icon="none">
+          <Link
+            href={{
+              pathname:
+                "https://github.com/porscheofficial/porscheofficial.github.io",
+            }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Free Open Source Software
+          </Link>
+        </LinkPure>{" "}
+        and{" "}
+        <LinkPure theme="dark" icon="none">
+          <Link
+            href={{
+              pathname:
+                "https://designsystem.porsche.com/latest/about/introduction",
+            }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Porsche Design System
+          </Link>
+        </LinkPure>
       </div>
     </footer>
   );

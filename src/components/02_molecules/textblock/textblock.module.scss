@@ -6,20 +6,4 @@
   .textblock {
     grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
   }
-
-  p-heading {
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
-  }
-
-  code {
-    /* Dark/Neutral Color/contrast-low[dark] */
-    background: #404044;
-    color: #fbfcff;
-    /* frosted-glass */
-    backdrop-filter: blur(16px);
-    /* Note: backdrop-filter has minimal browser support */
-    border-radius: 4px;
-    padding: 2px 6px;
-  }
 }

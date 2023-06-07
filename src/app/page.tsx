@@ -24,7 +24,7 @@ const Home: React.FC = () => {
         imageAlt="AI generated Porsche Taycan"
       />
       <Section>
-        <Textblock>
+        <Textblock id={s["foss-movement"]}>
           <FOSSMovement />
         </Textblock>
       </Section>
