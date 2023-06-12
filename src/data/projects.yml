@@ -1,7 +1,16 @@
 heading: Projects
 items:
+  - title: Porsche Design System
+    subtitle: Find all the fundamental UXI guidelines and pattern-based web components to build brand driven, consistent and intuitive designs for digital Porsche products.
+    url: https://github.com/porsche-design-system/porsche-design-system
+    moreUrl: https://designsystem.porsche.com/v3/
+    imageSrc: https://designsystem.porsche.com/v3/img/tablet.14384970.png
+    imageAlt: Lorem ipsum...
+    stars: 41
+    fork: 7
+    status: Public
   - title: OSS Review Toolkit
-    subtitle: The OSS Review Toolkit (ORT) is a FOSS policy automation and orchestration toolkit which you can use to manage your (open source) software dependencies in a strategic, safe and efficient manner.
+    subtitle: A suite of tools to assist with reviewing Open Source Software dependencies.
     url: https://github.com/oss-review-toolkit/ort
     imageSrc: https://raw.githubusercontent.com/oss-review-toolkit/ort/main/logos/logo.png
     imageAlt: Lorem ipsum...
@@ -9,7 +18,7 @@ items:
     fork: 240
     status: Upstream
   - title: cookie-consent-banner
-    subtitle: Sometimes it's not possible to avoid cookies for which we need consent of the visitors of our web applications. For that, some kind of component might help which provides a sleek, but customizable UI with an easy to use API. That's where the Cookie Consent Banner comes in.
+    subtitle: The lightweight and flexible Cookie Consent Banner
     url: https://github.com/porscheofficial/cookie-consent-banner
     imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
     imageAlt: Lorem ipsum...
