@@ -7,7 +7,7 @@ import { Heading } from "../../01_atoms/Heading";
 import { Text } from "../../01_atoms/Text";
 import { Icon } from "../../01_atoms/Icon";
 
-export interface CardProps {
+export interface ProjectCardProps {
   title: string;
   subtitle: string;
   url: string;
@@ -18,7 +18,7 @@ export interface CardProps {
   fork: number;
 }
 
-export const ProjectCard: React.FC<CardProps> = ({
+export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   subtitle,
   imageSrc,

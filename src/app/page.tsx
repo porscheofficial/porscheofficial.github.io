@@ -2,6 +2,7 @@
 // @ts-expect-error TODO
 // eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
 import importProjects from "js-yaml-loader!./../data/projects.yml";
+import importNews from "js-yaml-loader!./../data/news.yml";
 import { Text } from "../components/01_atoms/Text";
 import { HeroSection } from "../components/03_organisms/heroSection/HeroSection";
 import s from "./page.module.scss";
@@ -9,12 +10,14 @@ import heroImage from "../../public/assets/heroImage2.png";
 import { Textblock } from "../components/02_molecules/textblock/Textblock";
 import FOSSMovement from "./FOSS_MOVEMENT.mdx";
 import { ProjectCard } from "../components/03_organisms/projectCard/ProjectCard";
+import { NewsCard } from "../components/03_organisms/newsCard/NewsCard";
 import { Carousel } from "../components/01_atoms/Carousel";
 import { Section } from "../components/02_molecules/section/section";
-import { Projects } from "../types/general";
+import { Projects, News } from "../types/general";
 
 const Home: React.FC = () => {
   const projects: Projects = importProjects;
+  const news: News = importNews;
 
   return (
     <main className={s.main}>
@@ -53,6 +56,25 @@ const Home: React.FC = () => {
               subtitle={project.subtitle}
               stars={project.stars}
               status={project.status}
+            />
+          ))}
+        </Carousel>
+      </Section>
+      <Section>
+        <Carousel
+          slidesPerPage={{ base: 1, s: 2 }}
+          heading={news.heading}
+          theme="dark"
+          alignHeader="center"
+          rewind={false}
+        >
+          {news.items.map((news) => (
+            <NewsCard
+              title={news.title}
+              url={news.url}
+              imageAlt={news.imageAlt}
+              imageSrc={news.imageSrc}
+              subtitle={news.subtitle}
             />
           ))}
         </Carousel>
