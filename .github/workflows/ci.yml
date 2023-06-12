@@ -1,17 +1,16 @@
 # This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Deploy
+name: CI
 
-on:
-  push:
-    branches: [main]
+on: [push]
 
 jobs:
   # ==============================================================================
   # JOB: TEST
   # ==============================================================================
-  tests:
+  test:
+    name: Automated Tests and Linting
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,11 +26,13 @@ jobs:
         uses: actions/cache@v3
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: yarn-cache-folder-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
+          path: |
+            ${{ steps.yarn-cache-dir-path.outputs.dir }}
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
-            yarn-cache-folder-
-      - run: yarn install --immutable
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}-
+      - run: yarn install --immutable --immutable-cache --check-cache
       - run: yarn --version
       - name: Run test:ci
         run: yarn run test:ci
