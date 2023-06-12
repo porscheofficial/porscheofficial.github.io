@@ -19,14 +19,12 @@
     margin-bottom: 1.2rem;
   }
 
-  code {
-    /* Dark/Neutral Color/contrast-low[dark] */
-    background: #404044;
-    color: #fbfcff;
-    /* frosted-glass */
-    backdrop-filter: blur(16px);
-    /* Note: backdrop-filter has minimal browser support */
-    border-radius: 4px;
-    padding: 2px 6px;
+  p-text-list-item {
+    margin-bottom: 1rem;
+  }
+
+  p-tag {
+    vertical-align: baseline;
+    padding: 0px;
   }
 }
