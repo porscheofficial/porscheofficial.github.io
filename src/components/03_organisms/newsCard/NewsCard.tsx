@@ -18,11 +18,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({
 }) => {
   return (
     <div className={s.card}>
-      <LinkTile
-        label="Read more"
-        description={title}
-        href={url}
-      >
+      <LinkTile label="Read more" description={title} href={url}>
         <ExportedImage src={imageSrc} alt={imageAlt} fill />
       </LinkTile>
     </div>
