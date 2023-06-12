@@ -132,24 +132,26 @@ export const Footer = (): JSX.Element => {
         <Text size="large" theme="dark">
           Social Media
         </Text>
-        <Text theme="dark">Get in touch with us on social media.</Text>
+        <div className={s.content}>
+          <Text theme="dark">Get in touch with us on social media.</Text>
 
-        <ul className={s.content}>
-          {linksSocial.map((link) => (
-            <li className={s.inline}>
-              <LinkButton
-                href={link.url}
-                theme="dark"
-                variant="secondary"
-                icon={link.icon}
-                hideLabel
-                className={s.content}
-              >
-                {link.name}
-              </LinkButton>
-            </li>
-          ))}
-        </ul>
+          <ul>
+            {linksSocial.map((link) => (
+              <li className={s.inline}>
+                <LinkButton
+                  href={link.url}
+                  theme="dark"
+                  variant="secondary"
+                  icon={link.icon}
+                  hideLabel
+                  className={s.content}
+                >
+                  {link.name}
+                </LinkButton>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <Divider className={s.divider} theme="dark" />
       <div className={s.notice}>
