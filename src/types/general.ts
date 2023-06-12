@@ -10,12 +10,12 @@ export interface linkSocial {
 
 export interface Projects {
   heading: string;
-  items: CardProps[];
+  items: ProjectCardProps[];
 }
 
 export interface News {
   heading: string;
-  items: CardProps[];
+  items: NewsCardProps[];
 }
 
 export interface linkNotice {
