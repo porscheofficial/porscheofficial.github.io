@@ -1,7 +1,8 @@
-// eslint-disable-next-line import/no-webpack-loader-syntax,import/no-unresolved
 // @ts-expect-error TODO
 // eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
 import importProjects from "js-yaml-loader!./../data/projects.yml";
+// @ts-expect-error TODO
+// eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
 import importNews from "js-yaml-loader!./../data/news.yml";
 import { Text } from "../components/01_atoms/Text";
 import { HeroSection } from "../components/03_organisms/heroSection/HeroSection";
@@ -68,13 +69,12 @@ const Home: React.FC = () => {
           alignHeader="center"
           rewind={false}
         >
-          {news.items.map((news) => (
+          {news.items.map((media) => (
             <NewsCard
-              title={news.title}
-              url={news.url}
-              imageAlt={news.imageAlt}
-              imageSrc={news.imageSrc}
-              subtitle={news.subtitle}
+              title={media.title}
+              url={media.url}
+              imageAlt={media.imageAlt}
+              imageSrc={media.imageSrc}
             />
           ))}
         </Carousel>
