@@ -11,7 +11,11 @@
 # next.js
 /.next/
 /out/
+
+# Next Export Image Optimizer
 **/nextImageExportOptimizer
+**/next-image-export-optimizer-hashes.json
+/remoteImagesForOptimization/
 
 # production
 /build
