@@ -1,6 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 import { Heading } from "./components/01_atoms/Heading";
 import { TextList, TextListItem } from "./components/01_atoms/TextList";
+import { Tag } from "./components/01_atoms/Tag";
 
 // This file allows you to provide custom React components
 // to be used in MDX files. You can import and use any
@@ -28,6 +29,11 @@ export const useMDXComponents = (components: MDXComponents): MDXComponents => {
     ),
     ul: ({ children }) => <TextList theme="dark">{children}</TextList>,
     li: ({ children }) => <TextListItem>{children}</TextListItem>,
+    code: ({ children }) => (
+      <Tag theme="dark" color="background-surface">
+        {children}
+      </Tag>
+    ),
     ...components,
   };
 };
