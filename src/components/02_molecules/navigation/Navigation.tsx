@@ -62,7 +62,7 @@ export const Navigation = (): JSX.Element => {
             <nav>
               <ul>
                 {links.map((link) => (
-                  <li className={s.item}>
+                  <li className={s.item} key={link.name}>
                     <LinkPure
                       size="medium"
                       alignLabel="left"
