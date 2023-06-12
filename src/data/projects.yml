@@ -3,32 +3,16 @@ items:
   - title: OSS Review Toolkit
     subtitle: The OSS Review Toolkit (ORT) is a FOSS policy automation and orchestration toolkit which you can use to manage your (open source) software dependencies in a strategic, safe and efficient manner.
     url: https://github.com/oss-review-toolkit/ort
-    imageSrc: https://raw.githubusercontent.com/oss-review-toolkit/ort/main/logos/ort.png
+    imageSrc: https://raw.githubusercontent.com/oss-review-toolkit/ort/main/logos/logo.png
     imageAlt: Lorem ipsum...
     stars: 1.2k
     fork: 240
     status: Upstream
   - title: cookie-consent-banner
-    subtitle: Lorem ipsum...
+    subtitle: Sometimes it's not possible to avoid cookies for which we need consent of the visitors of our web applications. For that, some kind of component might help which provides a sleek, but customizable UI with an easy to use API. That's where the Cookie Consent Banner comes in.
     url: https://github.com/porscheofficial/cookie-consent-banner
     imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
     imageAlt: Lorem ipsum...
-    stars: 12
-    fork: 3
-    status: Public
-  - title: cookie-consent-banner
-    subtitle: Lorem ipsum...
-    url: https://github.com/porscheofficial/cookie-consent-banner
-    imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
-    imageAlt: Lorem ipsum...
-    stars: 12
-    fork: 3
-    status: Public
-  - title: cookie-consent-banner
-    subtitle: Lorem ipsum...
-    url: https://github.com/porscheofficial/cookie-consent-banner
-    imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
-    imageAlt: Lorem ipsum...
-    stars: 12
-    fork: 3
+    stars: 51
+    fork: 5
     status: Public
