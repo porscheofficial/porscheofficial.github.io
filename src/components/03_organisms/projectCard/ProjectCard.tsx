@@ -11,7 +11,6 @@ export interface ProjectCardProps {
   title: string;
   subtitle: string;
   url: string;
-  moreUrl: string;
   status: string;
   imageSrc: string | StaticImageData;
   imageAlt: string;
@@ -26,7 +25,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   imageAlt,
   stars,
   url,
-  moreUrl,
   status,
   fork,
 }) => {
@@ -59,11 +57,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
         {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
         <a className={s["link-overlay"]} aria-hidden href={url} tabIndex={-1} />
-        <LinkPure
-          href={moreUrl}
-          theme="dark"
-          className={`${s.link} ${moreUrl ? s.active : ""}`}
-        >
+        <LinkPure href={url} theme="dark" className={s.link}>
           Learn more
         </LinkPure>
       </div>

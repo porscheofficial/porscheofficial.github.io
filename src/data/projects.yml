@@ -3,7 +3,6 @@ items:
   - title: Porsche Design System
     subtitle: Find all the fundamental UXI guidelines and pattern-based web components to build brand driven, consistent and intuitive designs for digital Porsche products.
     url: https://github.com/porsche-design-system/porsche-design-system
-    moreUrl: https://designsystem.porsche.com/v3/
     imageSrc: https://avatars.githubusercontent.com/u/45687195?s=400&v=4
     imageAlt: Porsche Design System Avatar
     stars: 41
