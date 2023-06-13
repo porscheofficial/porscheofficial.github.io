@@ -1,26 +1,18 @@
 heading: Projects
 items:
   - title: Porsche Design System
-    subtitle: Find all the fundamental UXI guidelines and pattern-based web components to build brand driven, consistent and intuitive designs for digital Porsche products.
-    url: https://github.com/porsche-design-system/porsche-design-system
+    repo: porsche-design-system/porsche-design-system
     imageSrc: https://avatars.githubusercontent.com/u/45687195?s=400&v=4
     imageAlt: Porsche Design System Avatar
-    stars: 41
-    fork: 7
     status: Public
   - title: OSS Review Toolkit
-    subtitle: A suite of tools to assist with reviewing Open Source Software dependencies.
-    url: https://github.com/oss-review-toolkit/ort
+    repo: oss-review-toolkit/ort
     imageSrc: https://raw.githubusercontent.com/oss-review-toolkit/ort/main/logos/logo.png
     imageAlt: OSS Review Toolkit Avatar
-    stars: 1.2k
-    fork: 240
     status: Upstream
-  - title: cookie-consent-banner
+  - title: Cookie Consent Banner
+    repo: porscheofficial/cookie-consent-banner
     subtitle: The lightweight and flexible Cookie Consent Banner
-    url: https://github.com/porscheofficial/cookie-consent-banner
     imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
     imageAlt: Cookie Consent Banner Avatar
-    stars: 51
-    fork: 5
     status: Public
