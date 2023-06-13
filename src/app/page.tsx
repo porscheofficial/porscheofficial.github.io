@@ -28,19 +28,20 @@ const Home: React.FC = () => {
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"
       />
-      <Textblock id={s.intro}>
+      <Textblock className={s.intro}>
         <Text theme="dark" size="large" align="center">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt.
         </Text>
       </Textblock>
       <Section>
-        <Textblock id={s["foss-movement"]} className="mdx-content">
+        <Textblock id="foss-movement" className="mdx-content">
           <FOSSMovement />
         </Textblock>
       </Section>
       <Section>
         <Carousel
+          id="projects"
           slidesPerPage={{ base: 1, s: 3 }}
           heading={projects.heading}
           theme="dark"
@@ -63,6 +64,7 @@ const Home: React.FC = () => {
       </Section>
       <Section>
         <Carousel
+          id="news"
           slidesPerPage={{ base: 1, s: 2 }}
           heading={news.heading}
           theme="dark"
