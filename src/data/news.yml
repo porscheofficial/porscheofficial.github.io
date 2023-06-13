@@ -1,5 +1,9 @@
 heading: News & Media
 items:
+  - title: The Porsche OSPO Journey
+    url: https://todogroup.org/guides/casestudies/porsche/
+    imageSrc: /assets/cover4.png
+    imageAlt: Photo by Arnold Francisca on Unsplash
   - title: Porsche Launches New Open Source Initiative
     url: https://medium.com/next-level-german-engineering/porsche-open-source-initiative-93f1f9b4471e
     imageSrc: https://miro.medium.com/v2/resize:fit:720/0*Bz4OjfKbqsXSsfAI
