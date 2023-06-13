@@ -25,4 +25,5 @@ export const Textblock: React.FC<React.PropsWithChildren<TextblockProps>> = (
 
 Textblock.defaultProps = {
   className: undefined,
+  id: undefined,
 };
