@@ -4,7 +4,7 @@ import heroImage from "../../../public/assets/heroImage2.png";
 import { Textblock } from "../../components/02_molecules/textblock/Textblock";
 import FOSSDoc from "./FOSS_DOC.mdx";
 
-const Doc: React.FC = () => {
+const Docs: React.FC = () => {
   return (
     <>
       <HeroSection
@@ -15,7 +15,7 @@ const Doc: React.FC = () => {
       />
 
       <Section>
-        <Textblock id="doc" className="mdx-content">
+        <Textblock id="docs" className="mdx-content">
           <FOSSDoc />
         </Textblock>
       </Section>
@@ -23,4 +23,4 @@ const Doc: React.FC = () => {
   );
 };
 
-export default Doc;
+export default Docs;

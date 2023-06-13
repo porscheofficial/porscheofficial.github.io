@@ -20,12 +20,12 @@ export const Navigation = (): JSX.Element => {
 
   const links = [
     {
-      url: "https://github.com/porscheofficial",
-      name: "GitHub",
+      url: "/docs",
+      name: "Documentation",
     },
     {
-      url: "/doc",
-      name: "Documentation",
+      url: "https://github.com/porscheofficial",
+      name: "GitHub",
     },
   ];
 
