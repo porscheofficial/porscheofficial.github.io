@@ -7,6 +7,7 @@ module.exports = {
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: "./tsconfig.json",
+    warnOnUnsupportedTypeScriptVersion: false,
   },
   rules: {
     // See https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js

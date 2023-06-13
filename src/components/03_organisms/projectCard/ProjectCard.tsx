@@ -7,27 +7,37 @@ import { Heading } from "../../01_atoms/Heading";
 import { Text } from "../../01_atoms/Text";
 import { Icon } from "../../01_atoms/Icon";
 
+interface GithubResponse {
+  description: string;
+  html_url: string;
+  stargazers_count: string;
+  forks: string;
+}
+
+export const getGitHubData = async (repo: string): Promise<GithubResponse> => {
+  const res = await fetch(`https://api.github.com/repos/${repo}`);
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json() as Promise<GithubResponse>;
+};
+
 export interface ProjectCardProps {
   title: string;
-  subtitle: string;
-  url: string;
+  repo: string;
   status: string;
   imageSrc: string | StaticImageData;
   imageAlt: string;
-  stars: number;
-  fork: number;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({
+export const ProjectCard: React.FC<ProjectCardProps> = async ({
   title,
-  subtitle,
+  repo,
   imageSrc,
   imageAlt,
-  stars,
-  url,
   status,
-  fork,
 }) => {
+  const githubData: GithubResponse = await getGitHubData(repo);
   return (
     <div className={s.card}>
       <div className={s.image}>
@@ -38,7 +48,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           {title}
         </Heading>
         <Text ellipsis size="small" theme="dark" className={s.subtitle}>
-          {subtitle}
+          {githubData.description}
         </Text>
         <div className={s.actions}>
           <Tag color="background-base" className={s.status}>
@@ -47,17 +57,22 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
           <div className={s.stars}>
             <Icon source="/assets/octicons/star-24.svg" theme="dark" />
-            {stars}
+            {githubData.stargazers_count}
           </div>
 
           <div className={s.forks}>
             <Icon source="/assets/octicons/repo-forked-24.svg" theme="dark" />
-            {fork}
+            {githubData.forks}
           </div>
         </div>
         {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-        <a className={s["link-overlay"]} aria-hidden href={url} tabIndex={-1} />
-        <LinkPure href={url} theme="dark" className={s.link}>
+        <a
+          className={s["link-overlay"]}
+          aria-hidden
+          href={githubData.html_url}
+          tabIndex={-1}
+        />
+        <LinkPure href={githubData.html_url} theme="dark" className={s.link}>
           Learn more
         </LinkPure>
       </div>

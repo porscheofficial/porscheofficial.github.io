@@ -17,8 +17,8 @@ import { Section } from "../components/02_molecules/section/section";
 import { Projects, News } from "../types/general";
 
 const Home: React.FC = () => {
-  const projects: Projects = importProjects;
-  const news: News = importNews;
+  const projects: Projects = importProjects as Projects;
+  const news: News = importNews as News;
 
   return (
     <main className={s.main}>
@@ -51,12 +51,9 @@ const Home: React.FC = () => {
           {projects.items.map((project) => (
             <ProjectCard
               title={project.title}
-              url={project.url}
+              repo={project.repo}
               imageAlt={project.imageAlt}
               imageSrc={project.imageSrc}
-              fork={project.fork}
-              subtitle={project.subtitle}
-              stars={project.stars}
               status={project.status}
             />
           ))}
