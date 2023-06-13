@@ -6,11 +6,7 @@
   flex: 1;
 }
 
-#intro {
-  grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
+.intro {
+  grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end !important;
   margin-top: $pds-spacing-fluid-large;
-}
-
-#foss-movement {
-  grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
 }
