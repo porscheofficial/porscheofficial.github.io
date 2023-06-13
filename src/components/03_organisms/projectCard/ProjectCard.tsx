@@ -37,7 +37,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <Heading size="medium" theme="dark" className={s.title} tag="h3">
           {title}
         </Heading>
-        <Text size="small" theme="dark" className={s.subtitle}>
+        <Text ellipsis={true} size="small" theme="dark" className={s.subtitle}>
           {subtitle}
         </Text>
         <div className={s.actions}>
