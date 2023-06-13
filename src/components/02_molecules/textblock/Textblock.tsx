@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import s from "./textblock.module.scss";
 
 interface TextblockProps {
-  id: string;
+  id?: React.HTMLAttributes<HTMLElement>["id"];
   children: ReactNode;
   className?: React.HTMLAttributes<HTMLElement>["className"];
 }
