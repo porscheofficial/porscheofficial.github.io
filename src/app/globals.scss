@@ -40,3 +40,27 @@ a {
 ul {
   list-style: none;
 }
+
+.mdx-content {
+  p-heading {
+    margin-top: $pds-spacing-static-medium;
+    margin-bottom: $pds-spacing-static-medium;
+  }
+
+  p-text-list-item {
+    margin-bottom: $pds-spacing-static-medium;
+
+    p-text-list-item {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    margin-bottom: $pds-spacing-static-medium;
+  }
+
+  p-tag {
+    vertical-align: baseline;
+    padding: 0px;
+  }
+}

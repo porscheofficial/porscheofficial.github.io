@@ -13,18 +13,4 @@
 
 #foss-movement {
   grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
-
-  p-heading {
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
-  }
-
-  p-text-list-item {
-    margin-bottom: 1rem;
-  }
-
-  p-tag {
-    vertical-align: baseline;
-    padding: 0px;
-  }
 }

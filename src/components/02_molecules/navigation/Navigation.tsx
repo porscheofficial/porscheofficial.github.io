@@ -1,7 +1,8 @@
 "use client";
 /* eslint-disable react/require-default-props */
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import s from "./navigation.module.scss";
 import { BurgerMenu } from "../../01_atoms/BurgerMenu";
 import { LinkPure } from "../../01_atoms/LinkPure";
@@ -15,12 +16,22 @@ export const Navigation = (): JSX.Element => {
   const onDismiss = useCallback(() => {
     setIsMenuOpen(false);
   }, []);
+  const pathname = usePathname();
+
   const links = [
     {
       url: "https://github.com/porscheofficial",
       name: "GitHub",
     },
+    {
+      url: "/doc",
+      name: "Documentation",
+    },
   ];
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   return (
     <div className={s["menu-container"]}>
