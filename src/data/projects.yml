@@ -4,8 +4,8 @@ items:
     subtitle: Find all the fundamental UXI guidelines and pattern-based web components to build brand driven, consistent and intuitive designs for digital Porsche products.
     url: https://github.com/porsche-design-system/porsche-design-system
     moreUrl: https://designsystem.porsche.com/v3/
-    imageSrc: https://designsystem.porsche.com/v3/img/tablet.14384970.png
-    imageAlt: Lorem ipsum...
+    imageSrc: https://avatars.githubusercontent.com/u/45687195?s=400&v=4
+    imageAlt: Porsche Design System Avatar
     stars: 41
     fork: 7
     status: Public
@@ -13,7 +13,7 @@ items:
     subtitle: A suite of tools to assist with reviewing Open Source Software dependencies.
     url: https://github.com/oss-review-toolkit/ort
     imageSrc: https://raw.githubusercontent.com/oss-review-toolkit/ort/main/logos/logo.png
-    imageAlt: Lorem ipsum...
+    imageAlt: OSS Review Toolkit Avatar
     stars: 1.2k
     fork: 240
     status: Upstream
@@ -21,7 +21,7 @@ items:
     subtitle: The lightweight and flexible Cookie Consent Banner
     url: https://github.com/porscheofficial/cookie-consent-banner
     imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
-    imageAlt: Lorem ipsum...
+    imageAlt: Cookie Consent Banner Avatar
     stars: 51
     fork: 5
     status: Public
