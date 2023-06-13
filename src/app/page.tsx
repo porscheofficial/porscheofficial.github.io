@@ -51,7 +51,6 @@ const Home: React.FC = () => {
             <ProjectCard
               title={project.title}
               url={project.url}
-              moreUrl={project.moreUrl}
               imageAlt={project.imageAlt}
               imageSrc={project.imageSrc}
               fork={project.fork}
