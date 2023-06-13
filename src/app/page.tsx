@@ -35,7 +35,7 @@ const Home: React.FC = () => {
         </Text>
       </Textblock>
       <Section>
-        <Textblock id={s["foss-movement"]}>
+        <Textblock id={s["foss-movement"]} className="mdx-content">
           <FOSSMovement />
         </Textblock>
       </Section>
