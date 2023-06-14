@@ -9,7 +9,6 @@ import { LinkPure } from "../../01_atoms/LinkPure";
 import { LinkButton } from "../../01_atoms/LinkButton";
 import { Textblock } from "../textblock/Textblock";
 import { linkSocial, linkNotice } from "../../../types/general";
-import { Icon } from "../../01_atoms/Icon";
 import WLTP from "./WLTP.mdx";
 
 export const Footer = (): JSX.Element => {
