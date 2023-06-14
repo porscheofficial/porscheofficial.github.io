@@ -1,4 +1,3 @@
-import { use } from "react";
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
 import s from "./projectCard.module.scss";
@@ -31,14 +30,14 @@ export interface ProjectCardProps {
   imageAlt: string;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({
+export const ProjectCard: React.FC<ProjectCardProps> = async ({
   title,
   repo,
   imageSrc,
   imageAlt,
   status,
 }) => {
-  const githubData: GithubResponse = use(getGitHubData(repo));
+  const githubData: GithubResponse = await getGitHubData(repo);
   return (
     <div className={s.card}>
       <div className={s.image}>
