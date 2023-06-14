@@ -166,11 +166,6 @@ export const Footer = (): JSX.Element => {
         </Textblock>
       </div>
       <div className={s["made-with"]}>
-        <Icon
-          name="arrow-double-right"
-          theme="dark"
-          color="notification-error"
-        />
         Made with{" "}
         <LinkPure theme="dark" icon="none">
           <Link
