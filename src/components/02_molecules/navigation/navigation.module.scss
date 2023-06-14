@@ -4,3 +4,14 @@
   grid-column-start: $pds-grid-wide-column-start;
   grid-row: 1;
 }
+
+.job-counter {
+  margin-left: $pds-spacing-static-small;
+  background-color: $pds-theme-light-background-surface;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
