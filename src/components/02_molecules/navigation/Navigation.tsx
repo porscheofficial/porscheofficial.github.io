@@ -10,25 +10,13 @@ import { BurgerMenu } from "../../01_atoms/BurgerMenu";
 import { LinkPure } from "../../01_atoms/LinkPure";
 import { Flyout } from "../../01_atoms/Flyout";
 
-interface JobsResponse {
-  SearchResult: {
-    SearchResultCountAll: string;
-  };
+export interface NavigationProps {
+  jobsCounter?: string;
 }
 
-const getJobsData = async (): Promise<JobsResponse> => {
-  const res = await fetch(
-    "https://porsche-beesite-production-gjb.app.beesite.de/search/?data=%7B%22SearchParameters%22%3A%7B%22FirstItem%22%3A1%2C%22CountItem%22%3A0%2C%22MatchedObjectDescriptor%22%3A%5B%22Facet%3APositionLocation.City%22%5D%7D%2C%22SearchCriteria%22%3A%5B%7B%22CriterionName%22%3A%22PublicationChannel.Code%22%2C%22CriterionValue%22%3A%5B%2212%22%5D%7D%2C%7B%22CriterionName%22%3A%22PositionFormattedDescription.Content%22%2C%22CriterionValue%22%3A%5B%22Open%20Source%22%5D%7D%5D%2C%22LanguageCode%22%3A%22EN%22%7D"
-  );
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return res.json() as Promise<JobsResponse>;
-};
-
-export const Navigation = (): JSX.Element => {
+export const Navigation = ({ jobsCounter }: NavigationProps): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [jobCounter, setJobCounter] = useState<string>("0");
+
   const onOpen = useCallback(() => {
     setIsMenuOpen(true);
   }, []);
@@ -60,14 +48,6 @@ export const Navigation = (): JSX.Element => {
     setIsMenuOpen(false);
   }, [pathname]);
 
-  getJobsData()
-    .then((data: JobsResponse) =>
-      setJobCounter(data.SearchResult.SearchResultCountAll)
-    )
-    .catch((error) => {
-      throw new Error(error);
-    });
-
   return (
     <div className={s["menu-container"]}>
       <BurgerMenu onClick={() => onOpen()} />
@@ -94,7 +74,7 @@ export const Navigation = (): JSX.Element => {
               variant="secondary"
               theme="light"
             >
-              FOSS Jobs <span className={s["job-counter"]}>{jobCounter}</span>
+              FOSS Jobs <span className={s["job-counter"]}>{jobsCounter}</span>
             </LinkButton>
             <LinkButton
               href="https://github.com/porscheofficial"
