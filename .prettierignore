@@ -7,3 +7,4 @@ src/generated/
 pact/pacts
 graphqlrc.js
 .yarn
+*.md
