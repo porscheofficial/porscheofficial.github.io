@@ -34,10 +34,7 @@
     margin-top: $pds-spacing-static-medium;
 
     .status {
-      display: none;
-      @include pds-media-query-min("s") {
-        display: flex;
-      }
+      display: flex;
     }
 
     .stars,
