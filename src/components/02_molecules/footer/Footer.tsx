@@ -103,7 +103,7 @@ export const Footer = (): JSX.Element => {
         </Text>
         <ul className={s.content} id={s["company-links"]}>
           {links.map((link) => (
-            <li key={link.url} >
+            <li key={link.url}>
               <LinkPure theme="dark" icon="none">
                 <Link href={{ pathname: link.url }}>{link.name}</Link>
               </LinkPure>

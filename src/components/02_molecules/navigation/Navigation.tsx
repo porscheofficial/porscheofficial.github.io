@@ -96,7 +96,7 @@ export const Navigation = ({ jobsCounter }: NavigationProps): JSX.Element => {
         >
           {docsLinks.map((link) => (
             <LinkPure
-                key={link.name}
+              key={link.name}
               size="medium"
               alignLabel="left"
               icon="arrow-head-right"
