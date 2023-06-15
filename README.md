@@ -1,6 +1,7 @@
 # Porsche Open Source Platform
 
-The Porsche Open Source Platform (POSP) is a static website generated with [Next.js 13](https://nextjs.org/) and the [Porsche Design System](https://designsystem.porsche.com/v3/). The POSP is a one-stop shop for all open-source activities of Porsche AG and subsidiaries, featuring selected projects and providing documentation on our FOSS best practices.
+The Porsche Open Source Platform (POSP) is a static website generated with [Next.js 13](https://nextjs.org/) and the [Porsche Design System](https://designsystem.porsche.com/v3/).
+The POSP is a one-stop shop for all open-source activities of Porsche AG and subsidiaries, featuring selected projects and providing documentation on our FOSS best practices.
 
 ## 🛠️ Run Locally
 
@@ -42,6 +43,12 @@ To locally simulate a production build, simply call
 
 ```bash
 yarn build
+```
+
+To run a production build locally, simply call
+
+```bash
+yarn start
 ```
 
 ## ✨ Contributing
