@@ -6,4 +6,5 @@
 
 .section {
   margin-top: $pds-spacing-fluid-xx-large;
+  grid-column-start: $pds-grid-basic-column-start;
 }
