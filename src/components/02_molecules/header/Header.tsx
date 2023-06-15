@@ -22,7 +22,7 @@ const getJobsData = async (): Promise<JobsResponse> => {
 };
 
 export interface HeaderProps {
-  logo?: JSX.Element;
+  logo?: React.ReactNode;
 }
 
 export const Header: React.FC<HeaderProps> = async ({ logo }) => {

@@ -16,7 +16,7 @@ export interface NavigationProps {
   jobsCounter?: string;
 }
 
-export const Navigation = ({ jobsCounter }: NavigationProps): JSX.Element => {
+export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isDocsAccordionOpen, setDocsAccordionOpen] = useState<boolean>(false);
 
@@ -28,25 +28,30 @@ export const Navigation = ({ jobsCounter }: NavigationProps): JSX.Element => {
     setIsMenuOpen(false);
     setDocsAccordionOpen(false);
   }, []);
+
   const onDocsAccordionUpdate = useCallback(
     (e: CustomEvent<AccordionUpdateEvent>) => {
       setDocsAccordionOpen(e.detail.open);
     },
     []
   );
+
   const pathname = usePathname();
 
   const homeLinks = [
     {
       url: "/",
+      hash: "foss-movement",
       name: "FOSS Movement",
     },
     {
       url: "/",
+      hash: "projects",
       name: "Projects",
     },
     {
       url: "/",
+      hash: "news",
       name: "News & Media",
     },
   ];
@@ -80,7 +85,12 @@ export const Navigation = ({ jobsCounter }: NavigationProps): JSX.Element => {
                 stretch
                 tabIndex={0}
               >
-                <Link href={{ pathname: link.url }}>{link.name}</Link>
+                <Link
+                  href={{ pathname: link.url, hash: link.hash }}
+                  onClick={onDismiss}
+                >
+                  {link.name}
+                </Link>
               </LinkPure>
             </li>
           ))}

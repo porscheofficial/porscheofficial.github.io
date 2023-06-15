@@ -34,12 +34,11 @@ const Home: React.FC = () => {
           nonumy eirmod tempor invidunt.
         </Text>
       </Textblock>
-      <Section>
+      <Section id="foss-movement">
         <FOSSMovement />
       </Section>
-      <Section>
+      <Section id="projects">
         <Carousel
-          id="projects"
           slidesPerPage={{ base: 1, s: 3 }}
           heading={projects.heading}
           theme="dark"
@@ -58,9 +57,8 @@ const Home: React.FC = () => {
           ))}
         </Carousel>
       </Section>
-      <Section>
+      <Section id="news">
         <Carousel
-          id="news"
           slidesPerPage={{ base: 1, s: 2 }}
           heading={news.heading}
           theme="dark"
