@@ -2,7 +2,7 @@ heading: Projects
 items:
   - title: Porsche Design System
     repo: porsche-design-system/porsche-design-system
-    imageSrc: https://avatars.githubusercontent.com/u/45687195?s=400&v=4
+    imageSrc: https://avatars.githubusercontent.com/u/45687195?s=400&v=4.png
     imageAlt: Porsche Design System Avatar
     status: Public
   - title: OSS Review Toolkit
