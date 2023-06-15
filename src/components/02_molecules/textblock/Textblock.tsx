@@ -8,13 +8,11 @@ interface TextblockProps {
   className?: React.HTMLAttributes<HTMLElement>["className"];
 }
 
-export const Textblock: React.FC<React.PropsWithChildren<TextblockProps>> = (
-    {
-        id,
-        children,
-        className,
-    }
-) => {
+export const Textblock: React.FC<React.PropsWithChildren<TextblockProps>> = ({
+  id,
+  children,
+  className,
+}) => {
   return (
     <section className={s["textblock-container"]}>
       <div className={`${s.textblock} ${className ?? ""}`} id={id}>
