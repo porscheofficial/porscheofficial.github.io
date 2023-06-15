@@ -11,7 +11,7 @@ import { Textblock } from "../textblock/Textblock";
 import { linkSocial, linkNotice } from "../../../types/general";
 import WLTP from "./WLTP.mdx";
 
-export const Footer = (): JSX.Element => {
+export const Footer: React.FC = () => {
   const links = [
     {
       url: "https://investorrelations.porsche.com/en/",

@@ -4,7 +4,7 @@ import { Footer } from "../../02_molecules/footer/Footer";
 
 export interface PageLayoutProps {
   children: React.ReactNode;
-  logo?: JSX.Element;
+  logo?: React.ReactNode;
 }
 
 export const PageLayout = ({
