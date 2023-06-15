@@ -1,0 +1,47 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.keyvalue-container {
+  @include pds-grid;
+
+  &:not(:last-child) {
+    margin-bottom: $pds-spacing-fluid-medium;
+  }
+
+  .keyvalue {
+    grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
+    grid-row: 1;
+    column-gap: $pds-spacing-fluid-medium;
+    row-gap: 0;
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    .number {
+      grid-row: 1;
+      background-color: $pds-theme-dark-primary;
+      color: $pds-theme-light-primary;
+      border-radius: 50%;
+      text-align: center;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      line-height: 2rem;
+    }
+
+    .text {
+      grid-row: 1;
+    }
+
+    .principles-accordion {
+      grid-column: 2;
+      grid-row: 2;
+
+      .principles {
+        margin-top: $pds-spacing-static-small;
+        display: grid;
+        gap: $pds-spacing-fluid-medium;
+      }
+    }
+  }
+}

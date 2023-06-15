@@ -35,9 +35,7 @@ const Home: React.FC = () => {
         </Text>
       </Textblock>
       <Section>
-        <Textblock id="foss-movement" className="mdx-content">
-          <FOSSMovement />
-        </Textblock>
+        <FOSSMovement />
       </Section>
       <Section>
         <Carousel
