@@ -48,6 +48,7 @@ const Home: React.FC = () => {
         >
           {projects.items.map((project) => (
             <ProjectCard
+              key={project.title}
               title={project.title}
               repo={project.repo}
               imageAlt={project.imageAlt}
@@ -68,6 +69,7 @@ const Home: React.FC = () => {
         >
           {news.items.map((media) => (
             <NewsCard
+              key={media.title}
               title={media.title}
               url={media.url}
               imageAlt={media.imageAlt}

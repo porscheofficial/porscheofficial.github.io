@@ -103,7 +103,7 @@ export const Footer = (): JSX.Element => {
         </Text>
         <ul className={s.content} id={s["company-links"]}>
           {links.map((link) => (
-            <li>
+            <li key={link.url} >
               <LinkPure theme="dark" icon="none">
                 <Link href={{ pathname: link.url }}>{link.name}</Link>
               </LinkPure>
@@ -136,7 +136,7 @@ export const Footer = (): JSX.Element => {
 
           <ul>
             {linksSocial.map((link) => (
-              <li className={s.inline}>
+              <li className={s.inline} key={link.url}>
                 <LinkButton
                   href={link.url}
                   theme="dark"
@@ -156,7 +156,7 @@ export const Footer = (): JSX.Element => {
       <div className={s.notice}>
         © 2023 Dr. Ing. h.c. F. Porsche AG.{" "}
         {linksNotice.map((link) => (
-          <LinkPure theme="dark" icon="none" underline>
+          <LinkPure key={link.url} theme="dark" icon="none" underline>
             <Link href={{ pathname: link.url }}>{link.name}.</Link>
           </LinkPure>
         ))}

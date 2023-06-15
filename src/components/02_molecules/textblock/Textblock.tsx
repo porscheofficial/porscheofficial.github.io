@@ -9,11 +9,12 @@ interface TextblockProps {
 }
 
 export const Textblock: React.FC<React.PropsWithChildren<TextblockProps>> = (
-  props: TextblockProps
+    {
+        id,
+        children,
+        className,
+    }
 ) => {
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  const { id, children, className } = props;
-
   return (
     <section className={s["textblock-container"]}>
       <div className={`${s.textblock} ${className ?? ""}`} id={id}>
@@ -21,9 +22,4 @@ export const Textblock: React.FC<React.PropsWithChildren<TextblockProps>> = (
       </div>
     </section>
   );
-};
-
-Textblock.defaultProps = {
-  className: undefined,
-  id: undefined,
 };
