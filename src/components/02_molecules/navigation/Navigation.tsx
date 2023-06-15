@@ -3,6 +3,8 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import type { AccordionUpdateEvent } from "@porsche-design-system/components-react";
+import { Accordion } from "../../01_atoms/Accordion";
 import { LinkButton } from "../../01_atoms/LinkButton";
 import { ButtonGroup } from "../../01_atoms/ButtonGroup";
 import s from "./navigation.module.scss";
@@ -16,16 +18,25 @@ export interface NavigationProps {
 
 export const Navigation = ({ jobsCounter }: NavigationProps): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isDocsAccordionOpen, setDocsAccordionOpen] = useState<boolean>(false);
 
   const onOpen = useCallback(() => {
     setIsMenuOpen(true);
+    setDocsAccordionOpen(false);
   }, []);
   const onDismiss = useCallback(() => {
     setIsMenuOpen(false);
+    setDocsAccordionOpen(false);
   }, []);
+  const onDocsAccordionUpdate = useCallback(
+    (e: CustomEvent<AccordionUpdateEvent>) => {
+      setDocsAccordionOpen(e.detail.open);
+    },
+    []
+  );
   const pathname = usePathname();
 
-  const links = [
+  const homeLinks = [
     {
       url: "/",
       name: "FOSS Movement",
@@ -38,9 +49,16 @@ export const Navigation = ({ jobsCounter }: NavigationProps): JSX.Element => {
       url: "/",
       name: "News & Media",
     },
+  ];
+
+  const docsLinks = [
     {
       url: "/docs",
-      name: "Documentation",
+      name: "Contributing Upstream",
+    },
+    {
+      url: "/docs",
+      name: "Publishing FOSS",
     },
   ];
 
@@ -53,7 +71,7 @@ export const Navigation = ({ jobsCounter }: NavigationProps): JSX.Element => {
       <BurgerMenu onClick={() => onOpen()} />
       <Flyout open={isMenuOpen} position="left" onDismiss={onDismiss}>
         <ul>
-          {links.map((link) => (
+          {homeLinks.map((link) => (
             <li key={link.name}>
               <LinkPure
                 size="medium"
@@ -67,6 +85,27 @@ export const Navigation = ({ jobsCounter }: NavigationProps): JSX.Element => {
             </li>
           ))}
         </ul>
+        <Accordion
+          className={s.docsAccordion}
+          theme="light"
+          heading="Documentation"
+          size="medium"
+          compact
+          open={isDocsAccordionOpen}
+          onUpdate={onDocsAccordionUpdate}
+        >
+          {docsLinks.map((link) => (
+            <LinkPure
+              size="medium"
+              alignLabel="left"
+              icon="arrow-head-right"
+              stretch
+              tabIndex={0}
+            >
+              <Link href={{ pathname: link.url }}>{link.name}</Link>
+            </LinkPure>
+          ))}
+        </Accordion>
         <div slot="footer">
           <ButtonGroup>
             <LinkButton
