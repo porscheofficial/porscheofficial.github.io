@@ -12,7 +12,16 @@ items:
     status: Upstream
   - title: Cookie Consent Banner
     repo: porscheofficial/cookie-consent-banner
-    subtitle: The lightweight and flexible Cookie Consent Banner
     imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
     imageAlt: Cookie Consent Banner Avatar
+    status: Public
+  - title: Terraform AWS ECR Usage Dashboard
+    repo: porscheofficial/terraform-aws-ecr-watch
+    imageSrc: https://gitlab.com/uploads/-/system/group/avatar/13943452/terraform-icon.png?width=500.png
+    imageAlt: Terraform AWS ECR Usage Dashboard Screenshot
+    status: Public
+  - title: ESLint Config Porsche Digital
+    repo: porscheofficial/eslint-config-porschedigital
+    imageSrc: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/ESLint_logo.svg/546px-ESLint_logo.svg.png
+    imageAlt: ESLint Avatar
     status: Public
