@@ -13,15 +13,15 @@ import { AppProvider } from "../components/AppProvider";
 import { PageLayout } from "../components/04_templates/pageLayout/PageLayout";
 import "./globals.scss";
 
-export const config = {
+export const siteConfig = {
   title: "Porsche Open Source Platform",
   description:
     "The POSP is a one-stop shop for all open-source activities of Porsche AG and subsidiaries, featuring selected projects and providing documentation on our FOSS best practices.",
 };
 
 export const metadata = {
-  title: config.title,
-  description: config.description,
+  title: siteConfig.title,
+  description: siteConfig.description,
   keywords: [
     "Porsche",
     "FOSS",
@@ -40,14 +40,14 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://opensource.porsche.com",
-    title: config.title,
-    description: config.description,
+    title: siteConfig.title,
+    description: siteConfig.description,
   },
   twitter: {
     card: "summary_large_image",
     creator: "@Porsche",
-    title: config.title,
-    description: config.description,
+    title: siteConfig.title,
+    description: siteConfig.description,
   },
 };
 
