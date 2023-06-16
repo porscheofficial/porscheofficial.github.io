@@ -30,8 +30,10 @@ const Home: React.FC = () => {
       />
       <Textblock className={s.intro}>
         <Text theme="dark" size="large" align="center">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt.
+          With the Porsche FOSS Movement, we are continuing our open source
+          journey and creating a common understanding of values, principles and
+          goals - in all teams, all subsidiaries and across all national
+          borders.
         </Text>
       </Textblock>
       <Section id="foss-movement">
