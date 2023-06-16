@@ -13,7 +13,7 @@ import { AppProvider } from "../components/AppProvider";
 import { PageLayout } from "../components/04_templates/pageLayout/PageLayout";
 import "./globals.scss";
 
-export const siteConfig = {
+const siteConfig = {
   title: "Porsche Open Source Platform",
   description:
     "The POSP is a one-stop shop for all open-source activities of Porsche AG and subsidiaries, featuring selected projects and providing documentation on our FOSS best practices.",
