@@ -22,6 +22,6 @@ items:
     status: Public
   - title: ESLint Config Porsche Digital
     repo: porscheofficial/eslint-config-porschedigital
-    imageSrc: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/ESLint_logo.svg/546px-ESLint_logo.svg.png
+    imageSrc: https://eslint.org/icon-512.png
     imageAlt: ESLint Avatar
     status: Public

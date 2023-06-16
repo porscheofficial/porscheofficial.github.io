@@ -3,5 +3,5 @@ module.exports = [
   "https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg",
   "https://avatars.githubusercontent.com/u/45687195?s=400&v=4.png",
   "https://gitlab.com/uploads/-/system/group/avatar/13943452/terraform-icon.png?width=500.png",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/ESLint_logo.svg/546px-ESLint_logo.svg.png",
+  "https://eslint.org/icon-512.png",
 ];
