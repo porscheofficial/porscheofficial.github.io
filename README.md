@@ -60,7 +60,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) on how to get started.
 
 ## 🙌 Acknowledgements
 
-We would like to thank [Porsche Digital](https://www.porsche.digital/) for designing and implementing this project.
+This project is a joint initiative of [Porsche AG](https://www.porsche.com) and [Porsche Digital](https://www.porsche.digital/).
 
 ## ✒️ License
 
