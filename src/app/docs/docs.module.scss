@@ -1,0 +1,15 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.tile-container {
+  @include pds-grid;
+
+  .contributing-tile {
+    grid-column: $pds-grid-extended-column-start /
+      $pds-grid-extended-span-one-half;
+  }
+
+  .creating-tile {
+    grid-column: $pds-grid-extended-span-one-half /
+      $pds-grid-extended-column-end;
+  }
+}

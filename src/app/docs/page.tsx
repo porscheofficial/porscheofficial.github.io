@@ -1,8 +1,11 @@
+import ExportedImage from "next-image-export-optimizer";
 import { Section } from "../../components/02_molecules/section/section";
+import s from "./docs.module.scss";
 import { HeroSection } from "../../components/03_organisms/heroSection/HeroSection";
 import heroImage from "../../../public/assets/heroImage2.png";
-import { Textblock } from "../../components/02_molecules/textblock/Textblock";
-import FOSSDoc from "./FOSS_DOC.mdx";
+import { LinkTile } from "../../components/01_atoms/LinkTile";
+import contributingImage from "../../../public/assets/paintshopTaycan.jpg";
+import creatingImage from "../../../public/assets/crestTaycan.jpg";
 
 const Docs: React.FC = () => {
   return (
@@ -15,9 +18,34 @@ const Docs: React.FC = () => {
       />
 
       <Section>
-        <Textblock id="docs" className="mdx-content">
-          <FOSSDoc />
-        </Textblock>
+        <div className={s["tile-container"]}>
+          <LinkTile
+            label="Documentation on contributing to FOSS"
+            description="Contributing FOSS"
+            compact
+            href="/docs/contributing/"
+            className={s["contributing-tile"]}
+          >
+            <ExportedImage
+              src={contributingImage}
+              alt="Porsche Stuttgart - Production Zuffenhausen: Paint shop Taycan"
+              fill
+            />
+          </LinkTile>
+          <LinkTile
+            label="Documentation on creating FOSS on behalf of Porsche"
+            description="Creating FOSS"
+            compact
+            href="/docs/creating/"
+            className={s["creating-tile"]}
+          >
+            <ExportedImage
+              src={creatingImage}
+              alt="Porsche Stuttgart - Production Zuffenhausen: Crest Taycan"
+              fill
+            />
+          </LinkTile>
+        </div>
       </Section>
     </>
   );

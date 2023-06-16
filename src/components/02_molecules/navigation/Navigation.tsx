@@ -58,12 +58,12 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
 
   const docsLinks = [
     {
-      url: "/docs",
+      url: "/docs/contributing",
       name: "Contributing Upstream",
     },
     {
-      url: "/docs",
-      name: "Publishing FOSS",
+      url: "/docs/creating",
+      name: "Creating FOSS",
     },
   ];
 
