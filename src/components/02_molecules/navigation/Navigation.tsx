@@ -65,6 +65,10 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
       url: "/docs/creating",
       name: "Creating FOSS",
     },
+    {
+      url: "/docs/cla",
+      name: "Contributor License Agreement",
+    },
   ];
 
   useEffect(() => {
