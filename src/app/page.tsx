@@ -52,6 +52,7 @@ const Home: React.FC = () => {
               key={project.title}
               title={project.title}
               repo={project.repo}
+              description={project.description}
               imageAlt={project.imageAlt}
               imageSrc={project.imageSrc}
               status={project.status}

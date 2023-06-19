@@ -22,9 +22,30 @@ export const getGitHubData = async (repo: string): Promise<GithubResponse> => {
   return res.json() as Promise<GithubResponse>;
 };
 
+export const renderGitHubStats = (
+  githubData: GithubResponse | null
+): React.JSX.Element | null => {
+  if (githubData !== null) {
+    return (
+      <>
+        <div className={s.stars}>
+          <Icon source="/assets/octicons/star-24.svg" theme="dark" />
+          {githubData.stargazers_count}
+        </div>
+        <div className={s.forks}>
+          <Icon source="/assets/octicons/repo-forked-24.svg" theme="dark" />
+          {githubData.forks}
+        </div>
+      </>
+    );
+  }
+  return null;
+};
+
 export interface ProjectCardProps {
   title: string;
   repo: string;
+  description: string;
   status: string;
   imageSrc: string | StaticImageData;
   imageAlt: string;
@@ -33,46 +54,47 @@ export interface ProjectCardProps {
 export const ProjectCard: React.FC<ProjectCardProps> = async ({
   title,
   repo,
+  description,
   imageSrc,
   imageAlt,
   status,
 }) => {
-  const githubData: GithubResponse = await getGitHubData(repo);
+  const githubData: GithubResponse | null = repo.includes("https://github.com/")
+    ? await getGitHubData(repo.split("https://github.com/")[1])
+    : null;
   return (
     <div className={s.card}>
       <div className={s.image}>
         <ExportedImage src={imageSrc} alt={imageAlt} fill />
       </div>
       <div className={s.content}>
-        <Heading size="medium" theme="dark" className={s.title} tag="h3">
+        <Heading
+          ellipsis
+          size="small"
+          theme="dark"
+          className={s.title}
+          tag="h3"
+        >
           {title}
         </Heading>
         <Text ellipsis size="small" theme="dark" className={s.subtitle}>
-          {githubData.description}
+          {githubData !== null ? githubData.description : description}
         </Text>
         <div className={s.actions}>
           <Tag color="background-base" className={s.status}>
             {status}
           </Tag>
 
-          <div className={s.stars}>
-            <Icon source="/assets/octicons/star-24.svg" theme="dark" />
-            {githubData.stargazers_count}
-          </div>
-
-          <div className={s.forks}>
-            <Icon source="/assets/octicons/repo-forked-24.svg" theme="dark" />
-            {githubData.forks}
-          </div>
+          {renderGitHubStats(githubData)}
         </div>
         {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
         <a
           className={s["link-overlay"]}
           aria-hidden
-          href={githubData.html_url}
+          href={repo}
           tabIndex={-1}
         />
-        <LinkPure href={githubData.html_url} theme="dark" className={s.link}>
+        <LinkPure href={repo} theme="dark" className={s.link}>
           Learn more
         </LinkPure>
       </div>
