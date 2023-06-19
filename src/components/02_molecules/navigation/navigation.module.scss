@@ -16,6 +16,10 @@
   line-height: 1.5rem;
 }
 
+.navLink {
+  margin-bottom: $pds-spacing-fluid-small;
+}
+
 .docsAccordion {
-  margin-top: $pds-spacing-static-medium;
+  margin: $pds-spacing-static-medium 0;
 }
