@@ -4,4 +4,5 @@ module.exports = [
   "https://avatars.githubusercontent.com/u/45687195?s=400&v=4.png",
   "https://gitlab.com/uploads/-/system/group/avatar/13943452/terraform-icon.png?width=500.png",
   "https://eslint.org/icon-512.png",
+  "https://source.android.com/images/home/billboard-bg.svg",
 ];

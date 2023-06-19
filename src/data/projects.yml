@@ -1,27 +1,33 @@
 heading: Projects
 items:
+  - title: Android Open Source Project
+    repo: https://source.android.com/
+    description: Android unites the world. Use the open source Android operating system to power your device.
+    imageSrc: https://source.android.com/images/home/billboard-bg.svg
+    imageAlt: Android Open Source Project Avatar
+    status: Upstream
   - title: Porsche Design System
-    repo: porsche-design-system/porsche-design-system
+    repo: https://github.com/porsche-design-system/porsche-design-system
     imageSrc: https://avatars.githubusercontent.com/u/45687195?s=400&v=4.png
     imageAlt: Porsche Design System Avatar
     status: Public
   - title: OSS Review Toolkit
-    repo: oss-review-toolkit/ort
+    repo: https://github.com/oss-review-toolkit/ort
     imageSrc: https://raw.githubusercontent.com/oss-review-toolkit/ort/main/logos/logo.png
     imageAlt: OSS Review Toolkit Avatar
     status: Upstream
   - title: Cookie Consent Banner
-    repo: porscheofficial/cookie-consent-banner
+    repo: https://github.com/porscheofficial/cookie-consent-banner
     imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
     imageAlt: Cookie Consent Banner Avatar
     status: Public
   - title: Terraform AWS ECR Usage Dashboard
-    repo: porscheofficial/terraform-aws-ecr-watch
+    repo: https://github.com/porscheofficial/terraform-aws-ecr-watch
     imageSrc: https://gitlab.com/uploads/-/system/group/avatar/13943452/terraform-icon.png?width=500.png
     imageAlt: Terraform AWS ECR Usage Dashboard Screenshot
     status: Public
   - title: ESLint Config Porsche Digital
-    repo: porscheofficial/eslint-config-porschedigital
+    repo: https://github.com/porscheofficial/eslint-config-porschedigital
     imageSrc: https://eslint.org/icon-512.png
     imageAlt: ESLint Avatar
     status: Public
