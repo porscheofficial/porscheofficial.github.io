@@ -1,0 +1,9 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.codeblock {
+  white-space: pre-wrap;
+  margin: $pds-spacing-fluid-small 0;
+  padding: $pds-spacing-static-small;
+  border-radius: $pds-border-radius-small;
+  background: $pds-theme-dark-background-surface;
+}

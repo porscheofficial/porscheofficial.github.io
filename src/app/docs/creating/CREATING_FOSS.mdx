@@ -1,71 +1,113 @@
-The FOSS activities we publish on behalf of Porsche are directly connected to the Porsche brand and thus should be of the same quality and excellence as all of our other commercial products. Please follow these best practices and standards for all of your FOSS activities. Don't hesitate to reach out to the OSO if you have any questions regarding FOSS contribution.
+import { InlineNotification } from "../../../components/01_atoms/InlineNotification";
+import { LinkPure } from "../../../components/01_atoms/LinkPure";
+import { Tag } from "../../../components/01_atoms/Tag";
 
-## Be an outstanding open-source citizen
+## Creating a FOSS project on behalf of Porsche
 
-As Porsche Group, we do not only want to be a good open-source citizen by being compliant when consuming open-source software, but be an outstanding open-source citizen by contributing back to the community and collaborating with professionals all over the world. Thus, please ensure to
+<InlineNotification theme="dark" dismissButton={false}>
+  By creating a FOSS project on behalf of Porsche, you're taking an important
+  role within our [FOSS Movement.](/#foss-movement) Thank you! To embrace a
+  positive image and be a good open-source citizen, please make sure to adapt
+  the following standards for your Porsche FOSS project.
+</InlineNotification>
 
-- act responsible and adhere to existing codes of conduct whenever participating in FOSS projects,
-- help others wherever possible by sharing your knowledge,
-- learn from others and accept different standpoints or requirements,
-- give credit where credit's due, especially when collaborating with others.
+### Preliminary steps
 
-## Establish a 4-eyes-principle
+You can always start developing or preparing the go-live of your FOSS project in
+a private repository, e.g. on [GitHub](https://github.com/porscheofficial)
+or on your corporate GitLab instance.
 
-**For FOSS projects by Porsche**s
+Before publishing your project under an open source license, please make sure to
+follow our process for FOSS Contributions. You can find more information in our
+<LinkPure
+  theme="dark"
+  icon="lock"
+  href="https://skyway.porsche.com/confluence/display/OSO/Contribution+Guide"
+>corporate wiki.</LinkPure>
 
-If not agreed other with OSO, your project will typically be hosted on GitHub - Porsche Open Source Platform. To maintain a positive image, the default branch (i.e. main) of your repository should always be considered as stable/working and be protected with a minimal set of branch protection rules:
+### Establish a 4-eyes-principle
 
+If not agreed other with OSO, your project will typically be hosted on GitHub -
+Porsche Open Source Platform. To maintain a positive image, the default branch
+(i.e. main) of your repository should always be considered as stable/working and
+be protected with a minimal set of branch protection rules:
+
+```markdown
 - Require a pull request before merging
   - Require 1 approval
 - Require status checks to pass before merging
   - Require branches to be up to date before merging
 - Do not allow bypassing the above settings
-
-**For third-party FOSS projects**
-
-If your change is not trivial (e.g. fixing typos), please ensure that a suitable colleague of yours is able to
-
-- reproduce and confirm your issue or
-- review your change request and successfully build/execute the changed code.
-
-## Maintaining a FOSS project on behalf of Porsche
-
-By maintaining a FOSS project of Porsche, you're taking an important role and duty within our FOSS movement. To embrace a positive image and be a good open-source citizen, please make sure to adapt the following requirements for your Porsche FOSS project.
+```
 
 ### Necessary files and documents
 
 Please make sure that the following files are included in the FOSS project you're maintaining:
 
-- CONTRIBUTOR_LICENSE_AGREEMENT.md
-  - Please don't make any modifications to this file and include the CLA as is.
-- PULL_REQUEST_TEMPLATE.md
-  - Of course you're free to add any further checkboxes or hints into your pull request template, but make sure that the item "I have read and accept the Contributor License Agreement" is included.
-- LICENSE.md
-  - We're happy to help you finding a suitable license for your FOSS Project. Don't grant a license without consulting the OSO!
-- README.md
-  - Check makeareadme.com as a helpful starting point for writing a good README.
-- CONTRIBUTING.md
-  - Check out our existing contributing guides, e.g. cookie-consent-banner/CONTRIBUTING.md.
-- NOTICE.txt (if you distribute third-party components by packaging them into a bundled release)
-  - The compulsory Open Source Software Notice is provided to you by the OSO during the FOSS Compliance process.
+1. Please add the following pull request template in a file named <Tag
+   theme="dark">.github/PULL_REQUEST_TEMPLATE.md</Tag> to your repository:
+
+   ```markdown
+   ### Pull Request Checklist
+
+   <!-- Make sure to read and accept the CLA, before you open the pull request! -->
+   <!-- Tick the checkbox below if you accept our CLA (`[x]`) -->
+
+   - [ ] I have read and accept the [Contributor License Agreement](https://opensource.porsche.com/docs/cla)
+   ```
+
+   You're free to add further content to the pull request template, but make
+   sure that the checkbox "**I have read and accept the Contributor License
+   Agreement**" is always included.
+
+2. Please add the unmodified license text of your FOSS project in a file named
+   <Tag theme="dark">LICENSE.md</Tag> to your repository. We're happy to help
+   you finding a suitable license for your FOSS Project. Don't grant a license
+   without first consulting the OSO!
+
+3. Please add a file <Tag theme="dark">README.md</Tag> to your repository that
+   introduces and explains your FOSS project. See for instance
+   [makeareadme.com](https://makeareadme.com/) as a helpful starting point for
+   writing good READMEs.
+
+4. Please add a file <Tag theme="dark">CONTRIBUTING.md</Tag> to your repository
+   that explains how to contribute to your FOSS project. Check out our existing
+   contributing guides, e.g.
+   [cookie-consent-banner/CONTRIBUTING.md](https://github.com/porscheofficial/cookie-consent-banner/blob/main/CONTRIBUTING.md)
+   as an inspiration.
+
+5. If you distribute third-party components by packaging them into a bundled
+   release, please add the compulsory Open Source Software Notice (that is provided
+   to you by OSO during FOSS Compliance process) in a file named
+   <Tag theme="dark">NOTICE.txt</Tag>.
 
 ### Own your project
 
-As maintainer of a Porsche FOSS project, you should always keep in mind that you own a project that is directly connected to the Porsche brand. Thus, make sure to adopt the following standards:
+As maintainer of a Porsche FOSS project, you should always keep in mind that you
+own a project that is directly connected to the Porsche brand. Thus, make sure
+to adopt the following standards:
 
-- Always triage new issues in a timely manner. Don't let visitors wait weeks until they receive their first answer. For instance, a short notice that you have noticed the issue and will come back to this topic later is a good starting point.
-- Make sure to address pull requests in a timely manner. If a pull request needs change or a pipeline fails, please make sure to indicate reasonable hints on how to resolve them.
+- Always triage new issues in a timely manner. Don't let adopters wait until
+  they receive their first answer.
+- Make sure to address pull requests in a timely manner. If a pull request needs
+  change or a pipeline fails, please make sure to indicate reasonable hints on
+  how to resolve them.
 
 ### Release Management
 
-By incorporating a minimal release management, we give others the chance to rely on our Posche FOSS projects. This includes
+By incorporating a minimal release management, we give others the chance to rely
+on our Posche FOSS projects. This includes
 
 - tagging your main branch and releasing whenever reasonable,
-- adopting a suitable versioning scheme, e.g. [Semantic Versioning](https://semver.org/),
+- adopting a suitable versioning scheme, e.g. [Semantic
+  Versioning,](https://semver.org/)
 - indicating breaking changes, and
-- publishing release notes that reflect all changes, offers a hint on upgradability and gives credit to all contributors.
+- publishing release notes that reflect all changes, offers a hint on
+  upgradability and gives credit to all contributors.
 
 ### Further Reading
 
-- [Recommended Practices for Hosting and Managing Open Source Projects on GitHub (linuxfoundation.org)](https://www.linuxfoundation.org/research/hosting-os-projects-on-github)
-- [Recommended Community Standards by GitHub](https://github.com/Github-Community-Standards/github-community-standards)
+- [Recommended Practices for Hosting and Managing Open Source Projects on GitHub
+  (linuxfoundation.org)](https://www.linuxfoundation.org/research/hosting-os-projects-on-github)
+- [Recommended Community Standards by
+  GitHub](https://github.com/Github-Community-Standards/github-community-standards)

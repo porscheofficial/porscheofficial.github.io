@@ -1,7 +1,8 @@
 import type { MDXComponents } from "mdx/types";
 import { Heading } from "./components/01_atoms/Heading";
 import { TextList, TextListItem } from "./components/01_atoms/TextList";
-import { Tag } from "./components/01_atoms/Tag";
+import { LinkPure } from "./components/01_atoms/LinkPure";
+import { Codeblock } from "./components/02_molecules/codeblock/Codeblock";
 
 // This file allows you to provide custom React components
 // to be used in MDX files. You can import and use any
@@ -59,10 +60,13 @@ export const useMDXComponents = (components: MDXComponents): MDXComponents => {
       </TextList>
     ),
     li: ({ children }) => <TextListItem>{children}</TextListItem>,
-    code: ({ children }) => (
-      <Tag theme="dark" color="background-surface">
+    code: ({ children, ...props }) => (
+      <Codeblock wrapperClassName={props.className}>{children}</Codeblock>
+    ),
+    a: ({ children, ...props }) => (
+      <LinkPure theme="dark" underline icon="none" href={props.href}>
         {children}
-      </Tag>
+      </LinkPure>
     ),
     ...components,
   };

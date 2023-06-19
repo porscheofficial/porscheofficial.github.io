@@ -8,3 +8,4 @@ pact/pacts
 graphqlrc.js
 .yarn
 *.md
+*.mdx
