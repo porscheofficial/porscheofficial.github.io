@@ -1,0 +1,19 @@
+# See: https://github.com/oss-review-toolkit/ort/blob/main/docs/config-file-ort-yml.md
+excludes:
+  paths:
+    - pattern: ".github/**"
+      reason: "BUILD_TOOL_OF"
+      comment: "Github Action Definitions"
+    - pattern: ".yarn/**"
+      reason: "OTHER"
+      comment: "Yarn Package Manager"
+    - pattern: "public/**"
+      reason: "OTHER"
+      comment: "Public Assets such as images"
+    - pattern: ".vscode/**"
+      reason: "OTHER"
+      comment: "IDE Config vor VSCode"
+  scopes:
+    - pattern: "devDependencies"
+      reason: "DEV_DEPENDENCY_OF"
+      comment: "Packages for development only."
