@@ -83,7 +83,7 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
           {homeLinks.map((link) => (
             <li key={link.name}>
               <LinkPure
-                className={s["navLink"]}
+                className={s.navLink}
                 size="medium"
                 alignLabel="left"
                 icon="arrow-head-right"
@@ -112,7 +112,7 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
           {docsLinks.map((link) => (
             <LinkPure
               key={link.name}
-              className={s["navLink"]}
+              className={s.navLink}
               size="medium"
               alignLabel="left"
               icon="arrow-head-right"
