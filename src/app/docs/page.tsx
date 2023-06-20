@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import ExportedImage from "next-image-export-optimizer";
 import { Section } from "../../components/02_molecules/section/section";
 import s from "./docs.module.scss";
@@ -6,6 +7,10 @@ import heroImage from "../../../public/assets/heroImage2.png";
 import { LinkTile } from "../../components/01_atoms/LinkTile";
 import contributingImage from "../../../public/assets/paintshopTaycan.jpg";
 import creatingImage from "../../../public/assets/crestTaycan.jpg";
+
+export const metadata: Metadata = {
+  title: "Documentation | Porsche Open Source Platform",
+};
 
 const Docs: React.FC = () => {
   return (
