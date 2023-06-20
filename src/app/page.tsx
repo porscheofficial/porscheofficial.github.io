@@ -28,17 +28,19 @@ const Home: React.FC = () => {
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"
       />
-      <Textblock className={s.intro}>
-        <Text theme="dark" size="large" align="center">
-          With the Porsche FOSS Movement, we are continuing our open source
-          journey and creating a common understanding of values, principles and
-          goals - in all teams, all subsidiaries and across all national
-          borders.
-        </Text>
-      </Textblock>
-      <Section id="foss-movement">
-        <FOSSMovement />
-      </Section>
+      <div className={s["foss-movement"]}>
+        <Textblock className={s.intro}>
+          <Text theme="dark" size="large" align="center">
+            With the Porsche FOSS Movement, we are continuing our open source
+            journey and creating a common understanding of values, principles
+            and goals - in all teams, all subsidiaries and across all national
+            borders.
+          </Text>
+        </Textblock>
+        <Section id="foss-movement">
+          <FOSSMovement />
+        </Section>
+      </div>
       <Section id="projects">
         <Carousel
           slidesPerPage={{ base: 1, s: 3 }}
