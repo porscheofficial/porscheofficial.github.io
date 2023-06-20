@@ -6,15 +6,14 @@
 
   .image {
     position: relative;
-    width: 25%;
+    width: 15%;
     aspect-ratio: 1/1;
-    transform: translate3d(300%, 50%, 0);
+    transform: translate3d(535%, 50%, 0);
     z-index: 2;
 
     img {
       border-radius: $pds-border-radius-medium $pds-border-radius-medium 0 0;
       object-fit: contain;
-      padding: $pds-spacing-static-medium;
     }
   }
 

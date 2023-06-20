@@ -52,6 +52,7 @@ const Home: React.FC = () => {
           slidesPerPage={{ base: 1, s: 3 }}
           heading={projects.heading}
           theme="dark"
+          width="extended"
           alignHeader="center"
           rewind={false}
         >
