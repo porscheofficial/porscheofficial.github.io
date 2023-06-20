@@ -11,8 +11,10 @@ export interface MembershipProps {
 }
 
 export const Membership: React.FC<MembershipProps> = ({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   title,
   description,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   url,
   imageSrc,
   imageAlt,
