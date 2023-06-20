@@ -154,12 +154,14 @@ export const Footer: React.FC = () => {
       </div>
       <Divider className={s.divider} theme="dark" />
       <div className={s.notice}>
-        © 2023 Dr. Ing. h.c. F. Porsche AG.{" "}
-        {linksNotice.map((link) => (
-          <LinkPure key={link.url} theme="dark" icon="none" underline>
-            <Link href={{ pathname: link.url }}>{link.name}.</Link>
-          </LinkPure>
-        ))}
+        <div className={s.linkBar}>
+          © 2023 Dr. Ing. h.c. F. Porsche AG.{" "}
+          {linksNotice.map((link) => (
+            <LinkPure key={link.url} theme="dark" icon="none" underline>
+              <Link href={{ pathname: link.url }}>{link.name}.</Link>
+            </LinkPure>
+          ))}
+        </div>
         <Textblock id={s.wltp}>
           <WLTP />
         </Textblock>
