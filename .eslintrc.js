@@ -27,6 +27,7 @@ module.exports = {
         "src/mdx-components.tsx",
         "src/app/**/page.tsx",
         "src/app/**/layout.tsx",
+        "src/app/**/not-found.tsx",
       ],
       rules: {
         "import/no-default-export": "off",
