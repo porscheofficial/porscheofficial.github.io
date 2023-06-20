@@ -9,6 +9,7 @@
     width: 25%;
     aspect-ratio: 1/1;
     transform: translate3d(300%, 50%, 0);
+    z-index: 2;
 
     img {
       border-radius: $pds-border-radius-medium $pds-border-radius-medium 0 0;
@@ -65,9 +66,8 @@
   .link-overlay {
     position: fixed;
     inset: 0;
-    border-radius: $pds-border-radius-medium $pds-border-radius-medium 0 0 !important;
+    border-radius: $pds-border-radius-large !important;
     font-size: 0;
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 25% 0 0 0 !important;
   }
 }
