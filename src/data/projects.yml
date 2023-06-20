@@ -3,12 +3,12 @@ items:
   - title: Android Open Source Project
     repo: https://source.android.com/
     description: Android unites the world. Use the open source Android operating system to power your device.
-    imageSrc: https://source.android.com/images/home/billboard-bg.svg
+    imageSrc: https://developer.android.com/static/images/brand/Android_Robot.png
     imageAlt: Android Open Source Project Avatar
     status: Upstream
   - title: Porsche Design System
     repo: https://github.com/porsche-design-system/porsche-design-system
-    imageSrc: https://avatars.githubusercontent.com/u/45687195?s=400&v=4.png
+    imageSrc: https://raw.githubusercontent.com/porsche-design-system/porsche-design-system/main/packages/crest/src/porsche-crest%403x.png
     imageAlt: Porsche Design System Avatar
     status: Public
   - title: OSS Review Toolkit
