@@ -6,7 +6,9 @@
 
   .image {
     position: relative;
-    aspect-ratio: 4/3;
+    width: 25%;
+    aspect-ratio: 1/1;
+    transform: translate3d(300%, 50%, 0);
 
     img {
       border-radius: $pds-border-radius-medium $pds-border-radius-medium 0 0;
@@ -16,12 +18,20 @@
   }
 
   .content {
-    padding: 0 $pds-spacing-static-medium $pds-spacing-static-medium
-      $pds-spacing-static-medium;
+    padding: $pds-spacing-static-large $pds-spacing-static-medium;
+    background: $pds-theme-dark-background-surface;
+    border-radius: $pds-border-radius-large;
+  }
+
+  .status {
+    display: flex;
+    p-tag {
+      background: $pds-theme-dark-background-surface;
+    }
   }
 
   .title {
-    margin-top: $pds-spacing-static-large;
+    margin-top: $pds-spacing-static-small;
   }
 
   .subtitle {
@@ -30,12 +40,9 @@
 
   .actions {
     display: flex;
+    min-height: 1.5rem;
     gap: $pds-spacing-static-medium;
     margin-top: $pds-spacing-static-medium;
-
-    .status {
-      display: flex;
-    }
 
     .stars,
     .forks {

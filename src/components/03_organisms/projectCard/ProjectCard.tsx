@@ -68,9 +68,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = async ({
         <ExportedImage src={imageSrc} alt={imageAlt} fill />
       </div>
       <div className={s.content}>
+        <Tag theme="dark" color="background-base" className={s.status}>
+          {status}
+        </Tag>
         <Heading
           ellipsis
-          size="small"
+          size="medium"
           theme="dark"
           className={s.title}
           tag="h3"
@@ -80,13 +83,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = async ({
         <Text ellipsis size="small" theme="dark" className={s.subtitle}>
           {githubData !== null ? githubData.description : description}
         </Text>
-        <div className={s.actions}>
-          <Tag color="background-base" className={s.status}>
-            {status}
-          </Tag>
-
-          {renderGitHubStats(githubData)}
-        </div>
+        <div className={s.actions}>{renderGitHubStats(githubData)}</div>
         {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
         <a
           className={s["link-overlay"]}
