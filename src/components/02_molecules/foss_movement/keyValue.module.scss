@@ -4,7 +4,7 @@
   @include pds-grid;
 
   &:not(:last-child) {
-    margin-bottom: $pds-spacing-fluid-medium;
+    margin-bottom: $pds-spacing-fluid-large;
   }
 
   .keyvalue {
@@ -17,24 +17,11 @@
     align-items: center;
     flex-wrap: nowrap;
 
-    .number {
-      grid-row: 1;
-      background-color: $pds-theme-dark-primary;
-      color: $pds-theme-light-primary;
-      border-radius: 50%;
-      text-align: center;
-      display: inline-block;
-      width: 2rem;
-      height: 2rem;
-      line-height: 2rem;
-    }
-
     .text {
       grid-row: 1;
     }
 
     .principles-accordion {
-      grid-column: 2;
       grid-row: 2;
 
       .principles {

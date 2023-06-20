@@ -23,7 +23,6 @@ export const KeyValue: React.FC<PropsWithChildren<KeyValueProps>> = (
   return (
     <div className={s["keyvalue-container"]}>
       <div className={s.keyvalue}>
-        <span className={s.number}>{number}</span>
         <Heading className={s.text} tag="h2" theme="dark" size="large">
           {text}
         </Heading>
