@@ -58,8 +58,10 @@
   .notice {
     grid-column: $pds-grid-wide-column-start / $pds-grid-wide-column-end;
 
-    p-link-pure {
-      padding: 0 $pds-spacing-fluid-x-small;
+    .linkBar {
+      p-link-pure {
+        padding: 0 $pds-spacing-fluid-x-small;
+      }
     }
 
     #wltp {
