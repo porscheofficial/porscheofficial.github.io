@@ -14,6 +14,7 @@
     "lint:fix": "eslint src/ --fix --ext .js,.jsx,.tsx,.ts  -f stylish --quiet",
     "prettier:ci": "prettier --check ./",
     "prettier:fix": "prettier --write ./",
+    "a11y:audit:preview": "a11y-sitechecker --config=a11y-config.json",
     "test:ci": "yarn prettier:ci && yarn tsc --noEmit --noEmitHelpers && yarn lint:ci"
   },
   "dependencies": {
@@ -23,7 +24,7 @@
     "classnames": "2.3.2",
     "next": "13.4.6",
     "next-image-export-optimizer": "1.7.0",
-    "prism-react-renderer": "^2.0.5",
+    "prism-react-renderer": "2.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -38,6 +39,7 @@
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
+    "a11y-sitechecker": "6.0.1",
     "eslint": "8.42.0",
     "http-server": "14.1.1",
     "js-yaml-loader": "1.2.2",

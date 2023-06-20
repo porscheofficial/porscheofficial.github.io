@@ -1,0 +1,25 @@
+{
+  "name": "porscheofficial.github.io",
+  "json": true,
+  "threshold": 1,
+  "urlsToAnalyze": [
+    "https://porscheofficial-github-io.vercel.app"
+  ],
+  "resultsPath": "a11y-results",
+  "resultTypes": ["violations", "incomplete"],
+  "crawl": true,
+  "login": {
+    "url": "https://porscheofficial-github-io.vercel.app",
+    "steps": [
+      {
+        "input": [
+          {
+            "selector": "[name='_vercel_password']",
+            "value": "foss"
+          }
+        ],
+        "submit": ".submit"
+      }
+    ]
+  }
+}

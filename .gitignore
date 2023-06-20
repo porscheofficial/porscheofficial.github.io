@@ -51,3 +51,6 @@ next-env.d.ts
 # Intellij idea
 .idea
 *.iml
+
+# misc
+a11y-results/
