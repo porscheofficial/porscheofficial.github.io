@@ -8,7 +8,7 @@
   }
 
   .keyvalue {
-    grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
+    grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
     grid-row: 1;
     column-gap: $pds-spacing-fluid-medium;
     row-gap: $pds-spacing-fluid-small;

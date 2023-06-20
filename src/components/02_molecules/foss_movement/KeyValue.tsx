@@ -22,7 +22,7 @@ export const KeyValue: React.FC<PropsWithChildren<KeyValueProps>> = (
   return (
     <div className={s["keyvalue-container"]}>
       <div className={s.keyvalue}>
-        <Heading className={s.text} tag="h2" theme="dark" size="large">
+        <Heading className={s.text} tag="h2" theme="dark" size="xx-large">
           {text}
         </Heading>
         <div className={s["principles-accordion"]}>
@@ -30,7 +30,7 @@ export const KeyValue: React.FC<PropsWithChildren<KeyValueProps>> = (
             theme="dark"
             heading="Principles"
             tag="h3"
-            size="small"
+            size="medium"
             open={isOpen}
             onUpdate={onUpdate}
           >

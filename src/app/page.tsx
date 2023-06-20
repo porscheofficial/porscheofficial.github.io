@@ -4,6 +4,9 @@ import importProjects from "js-yaml-loader!./../data/projects.yml";
 // @ts-expect-error TODO
 // eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
 import importNews from "js-yaml-loader!./../data/news.yml";
+// @ts-expect-error TODO
+// eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
+import importMemberships from "js-yaml-loader!./../data/memberships.yml";
 import { Text } from "../components/01_atoms/Text";
 import { HeroSection } from "../components/03_organisms/heroSection/HeroSection";
 import s from "./page.module.scss";
@@ -14,11 +17,14 @@ import { ProjectCard } from "../components/03_organisms/projectCard/ProjectCard"
 import { NewsCard } from "../components/03_organisms/newsCard/NewsCard";
 import { Carousel } from "../components/01_atoms/Carousel";
 import { Section } from "../components/02_molecules/section/section";
-import { Projects, News } from "../types/general";
+import { Projects, News, Memberships } from "../types/general";
+import { Membership } from "../components/03_organisms/membership/Membership";
+import { Heading } from "src/components/01_atoms/Heading";
 
 const Home: React.FC = () => {
   const projects: Projects = importProjects as Projects;
   const news: News = importNews as News;
+  const memberships: Memberships = importMemberships as Memberships;
 
   return (
     <main className={s.main}>
@@ -30,7 +36,7 @@ const Home: React.FC = () => {
       />
       <div className={s["foss-movement"]}>
         <Textblock className={s.intro}>
-          <Text theme="dark" size="large" align="center">
+          <Text theme="dark" size="x-large" align="center">
             With the Porsche FOSS Movement, we are continuing our open source
             journey and creating a common understanding of values, principles
             and goals - in all teams, all subsidiaries and across all national
@@ -80,6 +86,21 @@ const Home: React.FC = () => {
             />
           ))}
         </Carousel>
+      </Section>
+      <Section id="memberships">
+        <Heading theme="dark" align="center">
+          {memberships.heading}
+        </Heading>
+        {memberships.items.map((membership) => (
+          <Membership
+            key={membership.title}
+            description={membership.description}
+            title={membership.title}
+            url={membership.url}
+            imageAlt={membership.imageAlt}
+            imageSrc={membership.imageSrc}
+          />
+        ))}
       </Section>
     </main>
   );

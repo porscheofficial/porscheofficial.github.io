@@ -1,0 +1,18 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.membership-container {
+  @include pds-grid;
+  display: grid;
+  grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
+
+  .logo {
+    grid-column: $pds-grid-basic-column-start / span 2;
+    position: relative;
+    aspect-ratio: 4/3;
+  }
+
+  .description {
+    grid-column: span 6 / $pds-grid-narrow-column-end;
+    align-self: center;
+  }
+}
