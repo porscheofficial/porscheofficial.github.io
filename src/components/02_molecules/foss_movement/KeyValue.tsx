@@ -7,7 +7,6 @@ import { Accordion } from "../../01_atoms/Accordion";
 import { Heading } from "../../01_atoms/Heading";
 
 export interface KeyValueProps {
-  number: string;
   text: string;
   children: ReactNode;
 }
@@ -15,7 +14,7 @@ export interface KeyValueProps {
 export const KeyValue: React.FC<PropsWithChildren<KeyValueProps>> = (
   props: KeyValueProps
 ) => {
-  const { number, text, children } = props;
+  const { text, children } = props;
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const onUpdate = useCallback((e: CustomEvent<AccordionUpdateEvent>) => {
     setIsOpen(e.detail.open);
