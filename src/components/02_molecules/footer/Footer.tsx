@@ -34,8 +34,8 @@ export const Footer: React.FC = () => {
       name: "Innovation",
     },
     {
-      url: "https://www.porsche.com/international/aboutporsche/75years/",
-      name: "75 Years",
+      url: "https://www.porsche.com/international/faq/",
+      name: "FAQ",
     },
   ];
 
