@@ -37,3 +37,8 @@ jobs:
       - run: yarn --version
       - name: Run a11y:audit:preview
         run: yarn run a11y:audit:preview
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: a11y
+          path: a11y-results
