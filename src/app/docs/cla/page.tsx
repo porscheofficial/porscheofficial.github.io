@@ -6,7 +6,7 @@ import CLADoc from "./CONTRIBUTOR_LICENSE_AGREEMENT.mdx";
 
 const Docs: React.FC = () => {
   return (
-    <>
+    <main>
       <HeroSection
         title="Contributor License Agreement"
         subtitle="FOSS@Porsche"
@@ -19,7 +19,7 @@ const Docs: React.FC = () => {
           <CLADoc />
         </Textblock>
       </Section>
-    </>
+    </main>
   );
 };
 
