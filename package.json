@@ -14,7 +14,7 @@
     "lint:fix": "eslint src/ --fix --ext .js,.jsx,.tsx,.ts  -f stylish --quiet",
     "prettier:ci": "prettier --check ./",
     "prettier:fix": "prettier --write ./",
-    "playwright": "yarn playwright test",
+    "playwright:run": "yarn playwright test",
     "test:ci": "yarn prettier:ci && yarn tsc --noEmit --noEmitHelpers && yarn lint:ci"
   },
   "dependencies": {
