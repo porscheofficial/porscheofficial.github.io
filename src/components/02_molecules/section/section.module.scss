@@ -5,6 +5,17 @@
 }
 
 .section {
-  margin-top: $pds-spacing-fluid-xx-large;
   grid-column-start: $pds-grid-basic-column-start;
+}
+
+.section-grid {
+  @include pds-grid;
+
+  p-heading {
+    grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
+  }
+}
+
+.section-xl {
+  margin-top: $pds-spacing-fluid-xx-large;
 }

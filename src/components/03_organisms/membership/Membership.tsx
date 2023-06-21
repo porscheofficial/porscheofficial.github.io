@@ -1,5 +1,6 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
+import { Fragment } from "react";
 import s from "./membership.module.scss";
 
 export interface MembershipProps {
@@ -20,11 +21,11 @@ export const Membership: React.FC<MembershipProps> = ({
   imageAlt,
 }) => {
   return (
-    <div className={s["membership-container"]}>
+    <>
       <div className={s.logo}>
         <ExportedImage src={imageSrc} alt={imageAlt} fill />
       </div>
       <div className={s.description}>{description}</div>
-    </div>
+    </>
   );
 };

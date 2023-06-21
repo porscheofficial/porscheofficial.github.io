@@ -34,7 +34,7 @@ const Home: React.FC = () => {
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"
       />
-      <div className={s["foss-movement"]}>
+      <Section className={s["foss-movement"]} spacing="none">
         <Textblock className={s.intro}>
           <Text theme="dark" size="x-large" align="center">
             With the Porsche FOSS Movement, we are continuing our open source
@@ -43,11 +43,10 @@ const Home: React.FC = () => {
             borders.
           </Text>
         </Textblock>
-        <Section id="foss-movement">
-          <FOSSMovement />
-        </Section>
-      </div>
-      <Section id="projects">
+
+        <FOSSMovement />
+      </Section>
+      <Section id="projects" grid={false}>
         <Carousel
           slidesPerPage={{ base: 1, s: 3 }}
           heading={projects.heading}
@@ -69,7 +68,7 @@ const Home: React.FC = () => {
           ))}
         </Carousel>
       </Section>
-      <Section id="news">
+      <Section id="news" grid={false}>
         <Carousel
           slidesPerPage={{ base: 1, s: 2 }}
           heading={news.heading}
@@ -88,7 +87,7 @@ const Home: React.FC = () => {
           ))}
         </Carousel>
       </Section>
-      <Section id="memberships">
+      <Section id="memberships" className={s["membership-list"]}>
         <Heading theme="dark" align="center">
           {memberships.heading}
         </Heading>

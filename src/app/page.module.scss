@@ -22,4 +22,9 @@
 
 .keyvalues {
   margin-bottom: $pds-spacing-fluid-large;
+  grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
+}
+
+.membership-list {
+  margin-top: $pds-spacing-fluid-xx-large;
 }

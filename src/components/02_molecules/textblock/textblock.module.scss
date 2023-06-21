@@ -1,9 +1,5 @@
 @use "@porsche-design-system/components-js/styles" as *;
 
 .textblock-container {
-  @include pds-grid;
-
-  .textblock {
-    grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
-  }
+  grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
 }

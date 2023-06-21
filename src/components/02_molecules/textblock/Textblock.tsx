@@ -14,10 +14,11 @@ export const Textblock: React.FC<React.PropsWithChildren<TextblockProps>> = ({
   className,
 }) => {
   return (
-    <section className={s["textblock-container"]}>
-      <div className={`${s.textblock} ${className ?? ""}`} id={id}>
-        {children}
-      </div>
+    <section
+      className={`${s["textblock-container"]} ${className ?? ""}`}
+      id={id}
+    >
+      {children}
     </section>
   );
 };
