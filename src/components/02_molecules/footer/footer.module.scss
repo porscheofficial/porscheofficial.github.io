@@ -26,11 +26,11 @@
     }
 
     #company-links {
-      column-count: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
       @include pds-media-query-min-max("s", "m") {
-        column-count: 1;
-        column-gap: 0;
+        grid-template-columns: 1fr;
       }
     }
   }
