@@ -20,7 +20,7 @@ export const Codeblock: React.FC<React.PropsWithChildren<CodeblockProps>> = ({
       : "";
   return (
     <Highlight
-      theme={themes.dracula}
+      theme={themes.vsDark}
       code={highlightedCode}
       language={matches?.groups?.lang ? matches.groups.lang : ""}
     >
