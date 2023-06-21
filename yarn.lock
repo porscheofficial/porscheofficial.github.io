@@ -12,6 +12,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@axe-core/playwright@npm:4.7.3":
+  version: 4.7.3
+  resolution: "@axe-core/playwright@npm:4.7.3"
+  dependencies:
+    axe-core: ^4.7.0
+  peerDependencies:
+    playwright-core: ">= 1.0.0"
+  checksum: c913cf6a816af283fc733411013460656213cf6c0efffcc36db1fd2984ffac3d780efd0a9aabd3b41ce78e2a536fee9ba5436d19311f660067e4c3560677b115
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.20.7":
   version: 7.22.5
   resolution: "@babel/runtime@npm:7.22.5"
@@ -290,6 +301,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@playwright/test@npm:1.35.1":
+  version: 1.35.1
+  resolution: "@playwright/test@npm:1.35.1"
+  dependencies:
+    "@types/node": "*"
+    fsevents: 2.3.2
+    playwright-core: 1.35.1
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    playwright: cli.js
+  checksum: 3509d2f2c7397f9b0d4f49088cab8625f17d186f7e9b3389ddebf7c52ee8aae6407eab48f66b300b7bf6a33f6e3533fd5951e72bfdb001b68838af98596d5a53
+  languageName: node
+  linkType: hard
+
 "@porsche-design-system/components-js@npm:3.1.0":
   version: 3.1.0
   resolution: "@porsche-design-system/components-js@npm:3.1.0"
@@ -468,7 +495,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.3.1":
+"@types/node@npm:*, @types/node@npm:20.3.1":
   version: 20.3.1
   resolution: "@types/node@npm:20.3.1"
   checksum: 63a393ab6d947be17320817b35d7277ef03728e231558166ed07ee30b09fd7c08861be4d746f10fdc63ca7912e8cd023939d4eab887ff6580ff704ff24ed810c
@@ -980,7 +1007,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axe-core@npm:^4.6.2":
+"axe-core@npm:^4.6.2, axe-core@npm:^4.7.0":
   version: 4.7.2
   resolution: "axe-core@npm:4.7.2"
   checksum: 5d86fa0f45213b0e54cbb5d713ce885c4a8fe3a72b92dd915a47aa396d6fd149c4a87fec53aa978511f6d941402256cfeb26f2db35129e370f25a453c688655a
@@ -2242,7 +2269,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@npm:~2.3.2":
+"fsevents@npm:2.3.2, fsevents@npm:~2.3.2":
   version: 2.3.2
   resolution: "fsevents@npm:2.3.2"
   dependencies:
@@ -2252,7 +2279,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
+"fsevents@patch:fsevents@2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
   resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
   dependencies:
@@ -4430,14 +4457,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"playwright-core@npm:1.35.1":
+  version: 1.35.1
+  resolution: "playwright-core@npm:1.35.1"
+  bin:
+    playwright-core: cli.js
+  checksum: 179abc0051f00474e528935b507fa8cedc986b2803b020d7679878ba28cdd7036ad5a779792aad2ad281f8dc625eb1d2fb77663cb8de0d20c7ffbda7c18febdd
+  languageName: node
+  linkType: hard
+
 "porscheofficial@workspace:.":
   version: 0.0.0-use.local
   resolution: "porscheofficial@workspace:."
   dependencies:
+    "@axe-core/playwright": 4.7.3
     "@mdx-js/loader": 2.3.0
     "@mdx-js/react": 2.3.0
     "@next/eslint-plugin-next": 13.4.6
     "@next/mdx": 13.4.6
+    "@playwright/test": 1.35.1
     "@porsche-design-system/components-js": 3.1.0
     "@porsche-design-system/components-react": 3.1.0
     "@porscheofficial/eslint-config-porschedigital-react": 3.0.1
@@ -4454,7 +4492,7 @@ __metadata:
     next: 13.4.6
     next-image-export-optimizer: 1.7.0
     prettier: 2.8.8
-    prism-react-renderer: ^2.0.5
+    prism-react-renderer: 2.0.5
     react: 18.2.0
     react-dom: 18.2.0
     typescript: 5.1.3
@@ -4601,7 +4639,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prism-react-renderer@npm:^2.0.5":
+"prism-react-renderer@npm:2.0.5":
   version: 2.0.5
   resolution: "prism-react-renderer@npm:2.0.5"
   dependencies:

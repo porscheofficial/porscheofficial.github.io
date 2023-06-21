@@ -14,6 +14,7 @@
     "lint:fix": "eslint src/ --fix --ext .js,.jsx,.tsx,.ts  -f stylish --quiet",
     "prettier:ci": "prettier --check ./",
     "prettier:fix": "prettier --write ./",
+    "playwright:run": "yarn playwright test",
     "test:ci": "yarn prettier:ci && yarn tsc --noEmit --noEmitHelpers && yarn lint:ci"
   },
   "dependencies": {
@@ -23,15 +24,17 @@
     "classnames": "2.3.2",
     "next": "13.4.6",
     "next-image-export-optimizer": "1.7.0",
-    "prism-react-renderer": "^2.0.5",
+    "prism-react-renderer": "2.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.7.3",
     "@mdx-js/loader": "2.3.0",
     "@mdx-js/react": "2.3.0",
     "@next/eslint-plugin-next": "13.4.6",
     "@next/mdx": "13.4.6",
+    "@playwright/test": "1.35.1",
     "@porscheofficial/eslint-config-porschedigital-react": "3.0.1",
     "@porscheofficial/prettier-config-porschedigital": "3.0.1",
     "@types/mdx": "2.0.5",

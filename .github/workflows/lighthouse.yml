@@ -1,0 +1,17 @@
+name: Lighthouse CI
+on:
+  workflow_dispatch:
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v10
+        with:
+          urls: |
+            https://porscheofficial-github-io.vercel.app/
+            https://porscheofficial-github-io.vercel.app/docs/contributing
+            https://porscheofficial-github-io.vercel.app/docs/creating
+            https://porscheofficial-github-io.vercel.app/docs/cla
+          uploadArtifacts: true # save results as an action artifacts

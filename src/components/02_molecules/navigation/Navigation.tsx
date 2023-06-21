@@ -119,7 +119,9 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
               stretch
               tabIndex={0}
             >
-              <Link href={{ pathname: link.url }}>{link.name}</Link>
+              <Link href={{ pathname: link.url }} onClick={onDismiss}>
+                {link.name}
+              </Link>
             </LinkPure>
           ))}
         </Accordion>

@@ -1,4 +1,4 @@
-name: Analyzer
+name: OSO ORT Analyzer
 
 on:
   workflow_dispatch:

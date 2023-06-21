@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const Docs: React.FC = () => {
   return (
-    <>
+    <main>
       <HeroSection
         title="Creating FOSS"
         subtitle="FOSS@Porsche"
@@ -24,7 +24,7 @@ const Docs: React.FC = () => {
           <CreatingDoc />
         </Textblock>
       </Section>
-    </>
+    </main>
   );
 };
 
