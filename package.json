@@ -14,7 +14,7 @@
     "lint:fix": "eslint src/ --fix --ext .js,.jsx,.tsx,.ts  -f stylish --quiet",
     "prettier:ci": "prettier --check ./",
     "prettier:fix": "prettier --write ./",
-    "a11y:audit:preview": "a11y-sitechecker --config=a11y-config.json",
+    "playwright": "yarn playwright test",
     "test:ci": "yarn prettier:ci && yarn tsc --noEmit --noEmitHelpers && yarn lint:ci"
   },
   "dependencies": {
@@ -29,17 +29,18 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.7.3",
     "@mdx-js/loader": "2.3.0",
     "@mdx-js/react": "2.3.0",
     "@next/eslint-plugin-next": "13.4.6",
     "@next/mdx": "13.4.6",
+    "@playwright/test": "1.35.1",
     "@porscheofficial/eslint-config-porschedigital-react": "3.0.1",
     "@porscheofficial/prettier-config-porschedigital": "3.0.1",
     "@types/mdx": "2.0.5",
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
-    "a11y-sitechecker": "6.0.1",
     "eslint": "8.42.0",
     "http-server": "14.1.1",
     "js-yaml-loader": "1.2.2",

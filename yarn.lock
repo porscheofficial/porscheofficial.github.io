@@ -12,6 +12,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@axe-core/playwright@npm:4.7.3":
+  version: 4.7.3
+  resolution: "@axe-core/playwright@npm:4.7.3"
+  dependencies:
+    axe-core: ^4.7.0
+  peerDependencies:
+    playwright-core: ">= 1.0.0"
+  checksum: c913cf6a816af283fc733411013460656213cf6c0efffcc36db1fd2984ffac3d780efd0a9aabd3b41ce78e2a536fee9ba5436d19311f660067e4c3560677b115
+  languageName: node
+  linkType: hard
+
 "@axe-core/puppeteer@npm:^4.4.0":
   version: 4.7.3
   resolution: "@axe-core/puppeteer@npm:4.7.3"
@@ -298,6 +309,22 @@ __metadata:
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
   checksum: 6ad6a00fc4f2f2cfc6bff76fb1d88b8ee20bc0601e18ebb01b6d4be583733a860239a521a7fbca73b612e66705078809483549d2b18f370eb346c5155c8e4a0f
+  languageName: node
+  linkType: hard
+
+"@playwright/test@npm:1.35.1":
+  version: 1.35.1
+  resolution: "@playwright/test@npm:1.35.1"
+  dependencies:
+    "@types/node": "*"
+    fsevents: 2.3.2
+    playwright-core: 1.35.1
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    playwright: cli.js
+  checksum: 3509d2f2c7397f9b0d4f49088cab8625f17d186f7e9b3389ddebf7c52ee8aae6407eab48f66b300b7bf6a33f6e3533fd5951e72bfdb001b68838af98596d5a53
   languageName: node
   linkType: hard
 
@@ -2497,7 +2524,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@npm:~2.3.2":
+"fsevents@npm:2.3.2, fsevents@npm:~2.3.2":
   version: 2.3.2
   resolution: "fsevents@npm:2.3.2"
   dependencies:
@@ -2507,7 +2534,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
+"fsevents@patch:fsevents@2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
   resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
   dependencies:
@@ -4859,14 +4886,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"playwright-core@npm:1.35.1":
+  version: 1.35.1
+  resolution: "playwright-core@npm:1.35.1"
+  bin:
+    playwright-core: cli.js
+  checksum: 179abc0051f00474e528935b507fa8cedc986b2803b020d7679878ba28cdd7036ad5a779792aad2ad281f8dc625eb1d2fb77663cb8de0d20c7ffbda7c18febdd
+  languageName: node
+  linkType: hard
+
 "porscheofficial@workspace:.":
   version: 0.0.0-use.local
   resolution: "porscheofficial@workspace:."
   dependencies:
+    "@axe-core/playwright": 4.7.3
     "@mdx-js/loader": 2.3.0
     "@mdx-js/react": 2.3.0
     "@next/eslint-plugin-next": 13.4.6
     "@next/mdx": 13.4.6
+    "@playwright/test": 1.35.1
     "@porsche-design-system/components-js": 3.1.0
     "@porsche-design-system/components-react": 3.1.0
     "@porscheofficial/eslint-config-porschedigital-react": 3.0.1
