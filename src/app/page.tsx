@@ -69,6 +69,7 @@ const Home: React.FC = () => {
           theme="dark"
           alignHeader="center"
           rewind={false}
+          width="extended"
         >
           {news.items.map((media) => (
             <NewsCard
