@@ -2,9 +2,14 @@ heading: News & Media
 items:
   - title: The Porsche OSPO Journey
     url: https://todogroup.org/guides/casestudies/porsche/
-    imageSrc: /assets/cover4.png
-    imageAlt: Photo by Arnold Francisca on Unsplash
+    imageSrc: /assets/cover4.jpg
+    imageAlt: Taycan GTS, 2021, Porsche AG 911
+  - title: |
+      OSPOs In Action: Ways On How Organizations Drive Open Source Innovation
+    url: https://www.linuxfoundation.org/webinars/ospos-in-action
+    imageSrc: /assets/cover6.jpg
+    imageAlt: Macan, 2021, Porsche AG
   - title: Porsche Launches New Open Source Initiative
     url: https://medium.com/next-level-german-engineering/porsche-open-source-initiative-93f1f9b4471e
-    imageSrc: /assets/cover5.png
-    imageAlt: Photo by Arnold Francisca on Unsplash
+    imageSrc: /assets/cover5.jpg
+    imageAlt: Carrera 4S, 2018, Porsche AG
