@@ -22,7 +22,7 @@ export const KeyValue: React.FC<PropsWithChildren<KeyValueProps>> = (
   return (
     <div className={s["keyvalue-container"]}>
       <div className={s.keyvalue}>
-        <Heading className={s.text} tag="h2" theme="dark" size="xx-large">
+        <Heading tag="h2" theme="dark" size="xx-large">
           {text}
         </Heading>
         <div className={s["principles-accordion"]}>

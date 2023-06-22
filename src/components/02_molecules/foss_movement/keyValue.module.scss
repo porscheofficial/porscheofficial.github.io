@@ -8,18 +8,15 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: $pds-spacing-fluid-large;
+    margin-bottom: $pds-spacing-fluid-x-large;
   }
 
   .keyvalue {
-    .text {
-    }
-
     .principles-accordion {
       .principles {
         margin-top: $pds-spacing-fluid-small;
         display: grid;
-        gap: $pds-spacing-fluid-medium;
+        gap: $pds-spacing-fluid-large;
       }
     }
   }

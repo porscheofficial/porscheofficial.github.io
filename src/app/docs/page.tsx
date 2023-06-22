@@ -22,35 +22,33 @@ const Docs: React.FC = () => {
         imageAlt="AI generated Porsche Taycan"
       />
 
-      <Section>
-        <div className={s["tile-container"]}>
-          <LinkTile
-            label="Documentation on contributing to FOSS"
-            description="Contributing FOSS"
-            compact
-            href="/docs/contributing/"
-            className={s["contributing-tile"]}
-          >
-            <ExportedImage
-              src={contributingImage}
-              alt="Porsche Stuttgart - Production Zuffenhausen: Paint shop Taycan"
-              fill
-            />
-          </LinkTile>
-          <LinkTile
-            label="Documentation on creating FOSS on behalf of Porsche"
-            description="Creating FOSS"
-            compact
-            href="/docs/creating/"
-            className={s["creating-tile"]}
-          >
-            <ExportedImage
-              src={creatingImage}
-              alt="Porsche Stuttgart - Production Zuffenhausen: Crest Taycan"
-              fill
-            />
-          </LinkTile>
-        </div>
+      <Section spacing="s">
+        <LinkTile
+          label="Documentation on contributing to FOSS"
+          description="Contributing FOSS"
+          compact
+          href="/docs/contributing/"
+          className={s["contributing-tile"]}
+        >
+          <ExportedImage
+            src={contributingImage}
+            alt="Porsche Stuttgart - Production Zuffenhausen: Paint shop Taycan"
+            fill
+          />
+        </LinkTile>
+        <LinkTile
+          label="Documentation on creating FOSS on behalf of Porsche"
+          description="Creating FOSS"
+          compact
+          href="/docs/creating/"
+          className={s["creating-tile"]}
+        >
+          <ExportedImage
+            src={creatingImage}
+            alt="Porsche Stuttgart - Production Zuffenhausen: Crest Taycan"
+            fill
+          />
+        </LinkTile>
       </Section>
     </main>
   );

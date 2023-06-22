@@ -1,7 +1,8 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
-import { Fragment } from "react";
+import Link from "next/link";
 import s from "./membership.module.scss";
+import { Text } from "../../01_atoms/Text";
 
 export interface MembershipProps {
   title: string;
@@ -12,10 +13,8 @@ export interface MembershipProps {
 }
 
 export const Membership: React.FC<MembershipProps> = ({
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   title,
   description,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   url,
   imageSrc,
   imageAlt,
@@ -23,9 +22,15 @@ export const Membership: React.FC<MembershipProps> = ({
   return (
     <>
       <div className={s.logo}>
-        <ExportedImage src={imageSrc} alt={imageAlt} fill />
+        <Link href={{ pathname: url }} aria-label={title}>
+          <ExportedImage src={imageSrc} alt={imageAlt} fill />
+        </Link>
       </div>
-      <div className={s.description}>{description}</div>
+      <div className={s.description}>
+        <Text theme="dark" size="small">
+          {description}
+        </Text>
+      </div>
     </>
   );
 };

@@ -1,12 +1,23 @@
 @use "@porsche-design-system/components-js/styles" as *;
 
 .logo {
-  grid-column: $pds-grid-basic-column-start / span 2;
+  grid-row: 1;
+  grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
   position: relative;
-  aspect-ratio: 4/3;
+  aspect-ratio: 7/1;
+  @include pds-media-query-min("s") {
+    aspect-ratio: 4/1;
+    grid-row: 1;
+    grid-column: $pds-grid-basic-column-start / $pds-grid-basic-span-one-third;
+  }
 }
 
 .description {
-  grid-column: span 6 / $pds-grid-narrow-column-end;
+  grid-row: 2;
+  grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
+  @include pds-media-query-min("s") {
+    grid-row: 1;
+    grid-column: $pds-grid-basic-span-two-thirds / $pds-grid-basic-column-end;
+  }
   align-self: center;
 }

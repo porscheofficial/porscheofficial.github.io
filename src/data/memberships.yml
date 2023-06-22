@@ -2,7 +2,7 @@ heading: Partnerships
 items:
   - title: TODO Group
     url: https://todogroup.org/
-    imageSrc: https://todogroup.org/img/logo.svg
+    imageSrc: /assets/logos/logo_todogroup.svg
     imageAlt: TODO Group Logo
     description: |
       Porsche AG is a General Member of TODO Group. TODO is an open community of

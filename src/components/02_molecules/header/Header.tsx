@@ -30,7 +30,7 @@ export const Header: React.FC<HeaderProps> = async ({ logo }) => {
   return (
     <header className={s["header-container"]}>
       <div className={s["logo-container"]}>
-        <Link className={s["link-container"]} href="/">
+        <Link href="/">
           {logo ?? (
             <>
               <Wordmark theme="dark" size="small" />
