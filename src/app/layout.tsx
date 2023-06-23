@@ -20,6 +20,7 @@ const siteConfig = {
 };
 
 export const metadata = {
+  metadataBase: new URL('https://opensource.porsche.com'),
   title: siteConfig.title,
   description: siteConfig.description,
   keywords: [
@@ -33,13 +34,13 @@ export const metadata = {
   authors: [
     {
       name: "Porsche AG",
-      url: "https://porsche.com",
+      url: new URL('https://porsche.com'),
     },
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://opensource.porsche.com",
+    url: new URL('https://opensource.porsche.com'),
     title: siteConfig.title,
     description: siteConfig.description,
   },
