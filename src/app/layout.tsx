@@ -78,8 +78,6 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
         </AppProvider>
         {/* necessary for SSR support, enables declarative shadow dom support for Safari and Firefox */}
         {getDSRPonyfill({ format: "jsx" })}
-        {/* shows a cookie fallback overlay and blocks the page, in case cookies are disabled */}
-        {getCookiesFallbackScript({ format: "jsx" })}
         {/* shows a browser fallback overlay and blocks the page, in case browser is not supported (e.g. IE11) */}
         {getBrowserSupportFallbackScript({ format: "jsx" })}
       </body>
