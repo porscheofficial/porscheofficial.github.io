@@ -6,7 +6,6 @@ import {
   getIconLinks,
   getMetaTagsAndIconLinks,
   getDSRPonyfill,
-  getCookiesFallbackScript,
   getBrowserSupportFallbackScript,
 } from "@porsche-design-system/components-react/partials";
 import { AppProvider } from "../components/AppProvider";

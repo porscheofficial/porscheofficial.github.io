@@ -25,6 +25,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           src={imageSrc}
           alt={imageAlt}
           fill
+          priority
         />
         <div className={s["image-overlay"]} />
       </div>
