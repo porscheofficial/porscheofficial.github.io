@@ -38,7 +38,7 @@ const Home: React.FC = () => {
       <Section className={s["foss-movement"]} id="foss-movement" spacing="none">
         <Textblock className={s.intro}>
           <Text theme="dark" size="x-large" align="center">
-            With the Porsche FOSS Movement, we are continuing our open source
+            With the Porsche FOSS Movement, we are continuing our open-source
             journey and creating a common understanding of values, principles
             and goals - in all teams, all subsidiaries and across all national
             borders.
