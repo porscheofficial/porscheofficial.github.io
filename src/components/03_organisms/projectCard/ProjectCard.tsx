@@ -1,7 +1,6 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
 import s from "./projectCard.module.scss";
-import { Tag } from "../../01_atoms/Tag";
 import { LinkPure } from "../../01_atoms/LinkPure";
 import { Heading } from "../../01_atoms/Heading";
 import { Text } from "../../01_atoms/Text";
@@ -68,9 +67,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = async ({
         <ExportedImage src={imageSrc} alt={imageAlt} fill placeholder="empty" />
       </div>
       <div className={s.content}>
-        <Tag theme="dark" color="background-base" className={s.status}>
+        <Text theme="dark" size="x-small" className={s.status}>
           {status}
-        </Tag>
+        </Text>
         <Heading
           ellipsis
           size="medium"
