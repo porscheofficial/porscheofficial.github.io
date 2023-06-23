@@ -1,24 +1,18 @@
 @use "@porsche-design-system/components-js/styles" as *;
 
 .hero-container {
-  display: flex;
-  margin-top: -12rem;
-  position: relative;
-  aspect-ratio: 2 / 3;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  @include pds-media-query-min("xs") {
-    aspect-ratio: 1 / 1;
-    margin-top: -15rem;
-  }
+  display: grid;
+  margin-top: -5rem;
 
   @include pds-media-query-min("s") {
-    aspect-ratio: 16 / 9;
-    margin-top: -18rem;
+    margin-top: -6.25rem;
   }
 
   .background-image-container {
+    grid-row: 1;
+    height: 50rem;
+    position: relative;
+
     .hero-image {
       object-fit: cover;
       object-position: right center;
@@ -26,7 +20,7 @@
     .image-overlay {
       background: linear-gradient(
         0deg,
-        var(--app-background) 10%,
+        var(--app-background) 5%,
         rgba(0, 0, 0, 0) 50%
       );
       position: absolute;
@@ -36,7 +30,11 @@
 
   .title-container {
     @include pds-grid;
+    grid-row: 2;
+    align-self: end;
+    margin-top: -5rem;
     grid-row-gap: $pds-spacing-fluid-small;
+    margin-bottom: $pds-spacing-fluid-x-large;
     z-index: 1;
 
     .subtitle {
@@ -46,7 +44,6 @@
     .title {
       grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
       grid-row: 2;
-      margin-bottom: $pds-spacing-fluid-x-large;
     }
   }
 }
