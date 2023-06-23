@@ -2,11 +2,7 @@
 
 .header-container {
   @include pds-grid;
-  background: linear-gradient(
-    180deg,
-    var(--app-background) 0%,
-    rgba(0, 0, 0, 0) 50%
-  );
+  @include pds-gradient-to-bottom();
   align-items: center;
   z-index: 99;
   min-height: 5rem;

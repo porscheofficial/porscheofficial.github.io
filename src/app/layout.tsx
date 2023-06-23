@@ -6,7 +6,6 @@ import {
   getIconLinks,
   getMetaTagsAndIconLinks,
   getDSRPonyfill,
-  getCookiesFallbackScript,
   getBrowserSupportFallbackScript,
 } from "@porsche-design-system/components-react/partials";
 import { AppProvider } from "../components/AppProvider";
@@ -20,6 +19,7 @@ const siteConfig = {
 };
 
 export const metadata = {
+  metadataBase: new URL("https://opensource.porsche.com"),
   title: siteConfig.title,
   description: siteConfig.description,
   keywords: [
@@ -33,13 +33,13 @@ export const metadata = {
   authors: [
     {
       name: "Porsche AG",
-      url: "https://porsche.com",
+      url: new URL("https://porsche.com"),
     },
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://opensource.porsche.com",
+    url: new URL("https://opensource.porsche.com"),
     title: siteConfig.title,
     description: siteConfig.description,
   },
@@ -77,8 +77,6 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
         </AppProvider>
         {/* necessary for SSR support, enables declarative shadow dom support for Safari and Firefox */}
         {getDSRPonyfill({ format: "jsx" })}
-        {/* shows a cookie fallback overlay and blocks the page, in case cookies are disabled */}
-        {getCookiesFallbackScript({ format: "jsx" })}
         {/* shows a browser fallback overlay and blocks the page, in case browser is not supported (e.g. IE11) */}
         {getBrowserSupportFallbackScript({ format: "jsx" })}
       </body>

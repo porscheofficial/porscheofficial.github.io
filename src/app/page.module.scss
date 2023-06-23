@@ -17,9 +17,29 @@
 
 .intro {
   grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end !important;
-  margin-top: $pds-spacing-fluid-large;
+  margin-bottom: $pds-spacing-fluid-xx-large;
+}
+
+.documentation {
+  .text {
+    grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end !important;
+    margin-bottom: $pds-spacing-fluid-medium;
+    grid-row: 2;
+  }
+  .cta {
+    justify-self: center;
+    grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end !important;
+    grid-row: 3;
+  }
 }
 
 .keyvalues {
-  margin-bottom: $pds-spacing-fluid-medium;
+  margin-bottom: $pds-spacing-fluid-x-large;
+  grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
+}
+
+.memberships {
+  margin-top: $pds-spacing-fluid-xx-large;
+  grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
+  align-items: center;
 }

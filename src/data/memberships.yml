@@ -1,0 +1,11 @@
+heading: Partnerships
+items:
+  - title: TODO Group
+    url: https://todogroup.org/
+    imageSrc: /assets/logos/logo_todogroup.svg
+    imageAlt: TODO Group Logo
+    description: |
+      Porsche AG is a General Member of TODO Group. TODO is an open community of
+      practitioners who aim to create and share knowledge, collaborate on
+      practices, tools, and other ways to run successful and effective Open
+      Source Program Offices or similar Open Source initiatives.
