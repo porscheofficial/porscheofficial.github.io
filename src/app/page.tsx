@@ -35,7 +35,7 @@ const Home: React.FC = () => {
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"
       />
-      <Section className={s["foss-movement"]} spacing="none">
+      <Section className={s["foss-movement"]} id="foss-movement" spacing="none">
         <Textblock className={s.intro}>
           <Text theme="dark" size="x-large" align="center">
             With the Porsche FOSS Movement, we are continuing our open source
