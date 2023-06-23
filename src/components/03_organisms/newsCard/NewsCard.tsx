@@ -1,6 +1,5 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
-import s from "./newsCard.module.scss";
 import { LinkTile } from "../../01_atoms/LinkTile";
 
 export interface NewsCardProps {
@@ -17,7 +16,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({
   url,
 }) => {
   return (
-    <div className={s.card}>
+    <div>
       <LinkTile label="Read more" compact="true" description={title} href={url}>
         <ExportedImage src={imageSrc} alt={imageAlt} fill placeholder="empty" />
       </LinkTile>

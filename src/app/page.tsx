@@ -4,6 +4,9 @@ import importProjects from "js-yaml-loader!./../data/projects.yml";
 // @ts-expect-error TODO
 // eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
 import importNews from "js-yaml-loader!./../data/news.yml";
+// @ts-expect-error TODO
+// eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
+import importMemberships from "js-yaml-loader!./../data/memberships.yml";
 import { Text } from "../components/01_atoms/Text";
 import { HeroSection } from "../components/03_organisms/heroSection/HeroSection";
 import s from "./page.module.scss";
@@ -14,11 +17,15 @@ import { ProjectCard } from "../components/03_organisms/projectCard/ProjectCard"
 import { NewsCard } from "../components/03_organisms/newsCard/NewsCard";
 import { Carousel } from "../components/01_atoms/Carousel";
 import { Section } from "../components/02_molecules/section/section";
-import { Projects, News } from "../types/general";
+import { Projects, News, Memberships } from "../types/general";
+import { Membership } from "../components/03_organisms/membership/Membership";
+import { Heading } from "../components/01_atoms/Heading";
+import { LinkButton } from "../components/01_atoms/LinkButton";
 
 const Home: React.FC = () => {
   const projects: Projects = importProjects as Projects;
   const news: News = importNews as News;
+  const memberships: Memberships = importMemberships as Memberships;
 
   return (
     <main className={s.main}>
@@ -28,24 +35,24 @@ const Home: React.FC = () => {
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"
       />
-      <div className={s["foss-movement"]}>
+      <Section className={s["foss-movement"]} id="foss-movement" spacing="none">
         <Textblock className={s.intro}>
-          <Text theme="dark" size="large" align="center">
+          <Text theme="dark" size="x-large" align="center">
             With the Porsche FOSS Movement, we are continuing our open source
             journey and creating a common understanding of values, principles
             and goals - in all teams, all subsidiaries and across all national
             borders.
           </Text>
         </Textblock>
-        <Section id="foss-movement">
-          <FOSSMovement />
-        </Section>
-      </div>
-      <Section id="projects">
+
+        <FOSSMovement />
+      </Section>
+      <Section id="projects" grid={false}>
         <Carousel
           slidesPerPage={{ base: 1, s: 3 }}
           heading={projects.heading}
           theme="dark"
+          width="extended"
           alignHeader="center"
           rewind={false}
         >
@@ -62,7 +69,7 @@ const Home: React.FC = () => {
           ))}
         </Carousel>
       </Section>
-      <Section id="news">
+      <Section id="news" grid={false}>
         <Carousel
           slidesPerPage={{ base: 1, s: 2 }}
           heading={news.heading}
@@ -81,6 +88,38 @@ const Home: React.FC = () => {
             />
           ))}
         </Carousel>
+      </Section>
+      <Section id="documentation" className={s.documentation}>
+        <Heading
+          theme="dark"
+          align="center"
+          size="x-large"
+          className={s.headline}
+        >
+          Documentation
+        </Heading>
+        <Textblock className={s.text}>
+          <Text theme="dark" size="medium" align="center">
+            Our growing documentation covers best practices and standards on
+            contributing to FOSS projects or creating new FOSS projects on
+            behalf of Porsche.
+          </Text>
+        </Textblock>
+        <LinkButton href="/docs" theme="dark" className={s.cta}>
+          Read documentation
+        </LinkButton>
+      </Section>
+      <Section id="memberships" className={s.memberships}>
+        {memberships.items.map((membership) => (
+          <Membership
+            key={membership.title}
+            description={membership.description}
+            title={membership.title}
+            url={membership.url}
+            imageAlt={membership.imageAlt}
+            imageSrc={membership.imageSrc}
+          />
+        ))}
       </Section>
     </main>
   );

@@ -1,33 +1,22 @@
 @use "@porsche-design-system/components-js/styles" as *;
 
 .keyvalue-container {
-  @include pds-grid;
+  grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
+
+  @include pds-media-query-min("l") {
+    grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
+  }
 
   &:not(:last-child) {
-    margin-bottom: $pds-spacing-fluid-large;
+    margin-bottom: $pds-spacing-fluid-x-large;
   }
 
   .keyvalue {
-    grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
-    grid-row: 1;
-    column-gap: $pds-spacing-fluid-medium;
-    row-gap: $pds-spacing-fluid-small;
-    display: grid;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
-
-    .text {
-      grid-row: 1;
-    }
-
     .principles-accordion {
-      grid-row: 2;
-
       .principles {
         margin-top: $pds-spacing-fluid-small;
         display: grid;
-        gap: $pds-spacing-fluid-medium;
+        gap: $pds-spacing-fluid-large;
       }
     }
   }
