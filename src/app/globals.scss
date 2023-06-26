@@ -43,12 +43,12 @@ ul {
 
 .mdx-content {
   p-heading {
-    margin-top: $pds-spacing-static-medium;
-    margin-bottom: $pds-spacing-static-medium;
+    margin-top: $pds-spacing-fluid-large;
+    margin-bottom: $pds-spacing-fluid-small;
   }
 
   p-text-list {
-    margin-bottom: $pds-spacing-static-medium;
+    margin-bottom: $pds-spacing-fluid-medium;
 
     p-text-list-item {
       margin-bottom: 0;
@@ -56,7 +56,7 @@ ul {
   }
 
   p {
-    margin-bottom: $pds-spacing-static-medium;
+    margin-bottom: $pds-spacing-fluid-medium;
   }
 
   p-tag {
