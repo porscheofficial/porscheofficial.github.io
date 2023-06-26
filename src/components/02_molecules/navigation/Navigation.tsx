@@ -103,12 +103,12 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
         <Accordion
           className={s.docsAccordion}
           theme="light"
-          heading="Documentation"
           size="medium"
           compact
           open={isDocsAccordionOpen}
           onUpdate={onDocsAccordionUpdate}
         >
+          <span slot="heading">Documentation</span>
           {docsLinks.map((link) => (
             <LinkPure
               key={link.name}
