@@ -4,6 +4,7 @@ import { HeroSection } from "../../../components/03_organisms/heroSection/HeroSe
 import heroImage from "../../../../public/assets/heroImage2.png";
 import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
 import ContributingDoc from "./CONTRIBUTING_UPSTREAM.mdx";
+import { EditOnGithub } from "../../../components/02_molecules/editOnGithub/EditOnGithub";
 
 export const metadata: Metadata = {
   title: "Contributing Upstream | Porsche Open Source Platform",
@@ -24,6 +25,7 @@ const Docs: React.FC = () => {
           <ContributingDoc />
         </Textblock>
       </Section>
+      <EditOnGithub file="/src/app/docs/contributing/CONTRIBUTING_UPSTREAM.mdx" />
     </main>
   );
 };

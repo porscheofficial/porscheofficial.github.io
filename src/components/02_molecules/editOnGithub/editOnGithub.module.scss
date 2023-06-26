@@ -1,0 +1,10 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.editOnGithub-container {
+  @include pds-grid;
+  padding-top: $pds-spacing-fluid-x-large;
+
+  .editOnGithub {
+    grid-column: $pds-grid-basic-column-start / span 4;
+  }
+}
