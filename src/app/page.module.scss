@@ -17,6 +17,7 @@
 
 .intro {
   grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end !important;
+  margin-top: $pds-spacing-fluid-x-large;
   margin-bottom: $pds-spacing-fluid-xx-large;
 }
 
