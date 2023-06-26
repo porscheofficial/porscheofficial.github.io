@@ -42,8 +42,10 @@ ul {
 }
 
 .mdx-content {
-  p-heading {
+  p-heading:not(:first-of-type) {
     margin-top: $pds-spacing-fluid-large;
+  }
+  p-heading {
     margin-bottom: $pds-spacing-fluid-small;
   }
 
