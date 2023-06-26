@@ -4,6 +4,7 @@ import { HeroSection } from "../../../components/03_organisms/heroSection/HeroSe
 import heroImage from "../../../../public/assets/heroImage2.png";
 import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
 import CreatingDoc from "./CREATING_FOSS.mdx";
+import { EditOnGithub } from "../../../components/02_molecules/editOnGithub/EditOnGithub";
 
 export const metadata: Metadata = {
   title: "Creating FOSS | Porsche Open Source Platform",
@@ -24,6 +25,7 @@ const Docs: React.FC = () => {
           <CreatingDoc />
         </Textblock>
       </Section>
+      <EditOnGithub file="/src/app/docs/creating/CREATING_FOSS.mdx" />
     </main>
   );
 };
