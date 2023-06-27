@@ -6,6 +6,7 @@
 
 .section {
   grid-column-start: $pds-grid-basic-column-start;
+  min-height: $pds-spacing-fluid-x-large;
 }
 
 .section-grid {
