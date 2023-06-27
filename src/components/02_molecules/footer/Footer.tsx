@@ -74,7 +74,7 @@ export const Footer: React.FC = () => {
 
   const linksNotice: linkNotice[] = [
     {
-      url: "https://www.porsche.com/international/legal-notice/",
+      url: "/legal-notice",
       name: "Legal notice",
     },
     {
