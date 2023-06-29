@@ -99,7 +99,6 @@ export const a11y: PrismTheme = {
       },
     },
     {
-      // Fix tag color for HTML
       types: ["string"],
       languages: ["css"],
       style: {
