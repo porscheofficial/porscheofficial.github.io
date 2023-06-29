@@ -1,6 +1,7 @@
 "use client";
 import React, { ReactNode } from "react";
-import { Highlight, themes } from "prism-react-renderer";
+import { Highlight } from "prism-react-renderer";
+import { a11y } from "./themes/a11y";
 import s from "./codeblock.module.scss";
 
 interface CodeblockProps {
@@ -20,7 +21,7 @@ export const Codeblock: React.FC<React.PropsWithChildren<CodeblockProps>> = ({
       : "";
   return (
     <Highlight
-      theme={themes.vsDark}
+      theme={a11y}
       code={highlightedCode}
       language={matches?.groups?.lang ? matches.groups.lang : ""}
     >
