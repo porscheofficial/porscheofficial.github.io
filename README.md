@@ -37,6 +37,29 @@ We're using the [opinionated ESLint config](https://github.com/porscheofficial/e
 yarn test:ci
 ```
 
+### Check A11y
+
+To ensure the accessibility of the website, we're using dedicated ESLint rules, as well as automated accessibility checks with axe Core.
+ESLint runs automatically after each commit via GitHub Action.
+Locally it can be called via
+
+```bash
+yarn test:ci
+```
+
+To run axe core on the deployed website, we're using a dedicated GitHub Action.
+To run them from local, simply call
+
+```bash
+yarn playwright:run
+```
+
+### Check Lighthouse Performance Score
+
+We have a dedicated GitHub Action to check the Lighthouse Performance Score of the deployed website.
+Simply call the respective GitHub Action to run the checks.
+
+
 ## 🏁 Building for Deployment
 
 To locally simulate a production build, simply call
