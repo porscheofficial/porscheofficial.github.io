@@ -1,10 +1,12 @@
 @use "@porsche-design-system/components-js/styles" as *;
 
-.contributing-tile {
-  grid-column: $pds-grid-extended-column-start /
-    $pds-grid-extended-span-one-half;
-}
+.doc-tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
+  grid-gap: $pds-grid-gap;
 
-.creating-tile {
-  grid-column: $pds-grid-extended-span-one-half / $pds-grid-extended-column-end;
+  @include pds-media-query-max("m") {
+    grid-template-columns: 1fr;
+  }
 }
