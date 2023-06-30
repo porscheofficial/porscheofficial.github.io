@@ -8,10 +8,10 @@
 
 .foss-movement {
   background: linear-gradient(
-    173.94deg,
-    #0e0e12 15%,
-    #69497950 50%,
-    #0e0e12 85%
+    175deg,
+    $pds-theme-dark-background-base 10%,
+    rgb(250 127 225 / 10%) 50%,
+    $pds-theme-dark-background-base 90%
   );
 }
 
