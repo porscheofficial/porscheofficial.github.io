@@ -1,4 +1,4 @@
-# Contributing to the Cookie Consent Banner
+# Contributing to the Porsche Open Source Platform
 
 Thanks for your interest in contributing to the Porsche Open Source Platform! :thumbsup: :thumbsup:
 
@@ -32,7 +32,7 @@ git checkout -b feature/short-description
 4. Check if all tests pass:
 
 ```sh
-`yarn test:ci
+yarn test:ci
 ```
 
 5. Push your branch to your fork:
@@ -42,8 +42,6 @@ git push origin feature/short-description
 ```
 
 6. Open a Pull Request
-
-and [create a branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) for your feature or fix.
 
 Just make sure that:
 
