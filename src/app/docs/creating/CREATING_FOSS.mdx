@@ -5,10 +5,10 @@ import { Tag } from "../../../components/01_atoms/Tag";
 ## Creating a FOSS project on behalf of Porsche
 
 <InlineNotification theme="dark" dismissButton={false}>
-  By creating a FOSS project on behalf of Porsche, you're taking an important
-  role within our [FOSS Movement.](/#foss-movement) Thank you! To embrace a
-  positive image and be a good open-source citizen, please make sure to adapt
-  the following standards for your Porsche FOSS project.
+  The purpose of this document is to provide transparency on how Porsche is
+  managing new open-source projects and the standards we're internally endorsing
+  to foster healthy communities. The intended audience is both interested
+  visitors as well as employees of Porsche AG and subsidaries.
 </InlineNotification>
 
 ### Preliminary steps
@@ -27,10 +27,10 @@ follow our process for FOSS Contributions. You can find more information in our
 
 ### Establish a 4-eyes-principle
 
-If not agreed other with OSO, your project will typically be hosted on GitHub -
-Porsche Open Source Platform. To maintain a positive image, the default branch
-(i.e. main) of your repository should always be considered as stable/working and
-be protected with a minimal set of branch protection rules:
+If not agreed other with Open Source Office of Porsche AG (OSO), your project
+will typically be hosted on GitHub - Porsche Open Source Platform. The default
+branch (i.e. main) of your repository should always be considered as
+stable/working and be protected with a minimal set of branch protection rules:
 
 ```markdown
 - Require a pull request before merging
@@ -39,6 +39,9 @@ be protected with a minimal set of branch protection rules:
   - Require branches to be up to date before merging
 - Do not allow bypassing the above settings
 ```
+
+More information on our GitHub flow can be found in the [Porsche Development
+Guidance](https://devguidance.porsche.com/coding/vcs/git-branching-model/#nowadays-widely-adopted-github-flow).
 
 ### Necessary files and documents
 
