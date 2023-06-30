@@ -2,11 +2,7 @@
 
 .hero-container {
   display: grid;
-  margin-top: -5rem;
-
-  @include pds-media-query-min("s") {
-    margin-top: -6.25rem;
-  }
+  margin-top: -14rem;
 
   .background-image-container {
     grid-row: 1;
@@ -34,7 +30,6 @@
     align-self: end;
     margin-top: -5rem;
     grid-row-gap: $pds-spacing-fluid-small;
-    margin-bottom: $pds-spacing-fluid-x-large;
     z-index: 1;
 
     .subtitle {

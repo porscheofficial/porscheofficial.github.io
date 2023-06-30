@@ -22,7 +22,7 @@ const Docs: React.FC = () => {
         imageAlt="AI generated Porsche Taycan"
       />
 
-      <Section spacing="s">
+      <Section spacing="xl">
         <LinkTile
           label="Documentation on contributing to FOSS"
           description="Contributing FOSS"
