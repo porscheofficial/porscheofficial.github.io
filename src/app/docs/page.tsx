@@ -23,32 +23,32 @@ const Docs: React.FC = () => {
       />
 
       <Section spacing="xl">
-        <LinkTile
-          label="Documentation on contributing to FOSS"
-          description="Contributing FOSS"
-          compact
-          href="/docs/contributing/"
-          className={s["contributing-tile"]}
-        >
-          <ExportedImage
-            src={contributingImage}
-            alt="Porsche Stuttgart - Production Zuffenhausen: Paint shop Taycan"
-            fill
-          />
-        </LinkTile>
-        <LinkTile
-          label="Documentation on creating FOSS on behalf of Porsche"
-          description="Creating FOSS"
-          compact
-          href="/docs/creating/"
-          className={s["creating-tile"]}
-        >
-          <ExportedImage
-            src={creatingImage}
-            alt="Porsche Stuttgart - Production Zuffenhausen: Crest Taycan"
-            fill
-          />
-        </LinkTile>
+        <div className={s["doc-tiles"]}>
+          <LinkTile
+            label="Documentation on contributing to FOSS"
+            description="Contributing FOSS"
+            compact
+            href="/docs/contributing/"
+          >
+            <ExportedImage
+              src={contributingImage}
+              alt="Porsche Stuttgart - Production Zuffenhausen: Paint shop Taycan"
+              fill
+            />
+          </LinkTile>
+          <LinkTile
+            label="Documentation on creating FOSS on behalf of Porsche"
+            description="Creating FOSS"
+            compact
+            href="/docs/creating/"
+          >
+            <ExportedImage
+              src={creatingImage}
+              alt="Porsche Stuttgart - Production Zuffenhausen: Crest Taycan"
+              fill
+            />
+          </LinkTile>
+        </div>
       </Section>
     </main>
   );
