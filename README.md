@@ -42,8 +42,7 @@ yarn test:ci
 To ensure the accessibility of the website, we're using dedicated ESLint rules,
 as well as automated accessibility checks with [axe-core](https://github.com/dequelabs/axe-core).
 
-ESLint runs automatically
-after each commit via GitHub Action. Locally it can be called via
+ESLint runs automatically after each commit via GitHub Action. Locally it can be called via
 
 ```bash
 yarn test:ci
