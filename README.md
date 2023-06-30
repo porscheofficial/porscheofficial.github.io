@@ -39,15 +39,17 @@ yarn test:ci
 
 ### Check A11y
 
-To ensure the accessibility of the website, we're using dedicated ESLint rules, as well as automated accessibility checks with axe Core.
-ESLint runs automatically after each commit via GitHub Action.
-Locally it can be called via
+To ensure the accessibility of the website, we're using dedicated ESLint rules,
+as well as automated accessibility checks with [axe-core](https://github.com/dequelabs/axe-core).
+
+ESLint runs automatically
+after each commit via GitHub Action. Locally it can be called via
 
 ```bash
 yarn test:ci
 ```
 
-To run axe core on the deployed website, we're using a dedicated GitHub Action.
+To run axe-core on the deployed website, we're using a dedicated GitHub Action.
 To run them from local, simply call
 
 ```bash
@@ -58,7 +60,6 @@ yarn playwright:run
 
 We have a dedicated GitHub Action to check the Lighthouse Performance Score of the deployed website.
 Simply call the respective GitHub Action to run the checks.
-
 
 ## 🏁 Building for Deployment
 
@@ -79,7 +80,6 @@ yarn start
 Thanks for your interest in contributing to our Porsche Open Source Platform!
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) on how to get started.
-
 
 ## 🙌 Acknowledgements
 
