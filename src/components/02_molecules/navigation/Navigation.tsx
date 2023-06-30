@@ -115,7 +115,7 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
               className={s.navLink}
               size="medium"
               alignLabel="left"
-              icon="arrow-head-right"
+              icon="none"
               stretch
               tabIndex={0}
             >
