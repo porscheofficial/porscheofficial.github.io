@@ -8,15 +8,16 @@
 
 .foss-movement {
   background: linear-gradient(
-    173.94deg,
-    #0e0e12 16.28%,
-    #171425 51.71%,
-    #0e0e12 89.43%
+    175deg,
+    $pds-theme-dark-background-base 10%,
+    rgb(250 127 225 / 10%) 50%,
+    $pds-theme-dark-background-base 90%
   );
 }
 
 .intro {
   grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end !important;
+  margin-top: $pds-spacing-fluid-x-large;
   margin-bottom: $pds-spacing-fluid-xx-large;
 }
 

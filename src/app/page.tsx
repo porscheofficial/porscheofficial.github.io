@@ -38,7 +38,7 @@ const Home: React.FC = () => {
       <Section className={s["foss-movement"]} id="foss-movement" spacing="none">
         <Textblock className={s.intro}>
           <Text theme="dark" size="x-large" align="center">
-            With the Porsche FOSS Movement, we are continuing our open source
+            With the Porsche FOSS Movement, we are continuing our open-source
             journey and creating a common understanding of values, principles
             and goals - in all teams, all subsidiaries and across all national
             borders.
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
       </Section>
       <Section id="projects" grid={false}>
         <Carousel
-          slidesPerPage={{ base: 1, s: 3 }}
+          slidesPerPage={{ base: 1, s: 2, l: 3 }}
           heading={projects.heading}
           theme="dark"
           width="extended"
@@ -71,7 +71,7 @@ const Home: React.FC = () => {
       </Section>
       <Section id="news" grid={false}>
         <Carousel
-          slidesPerPage={{ base: 1, s: 2 }}
+          slidesPerPage={{ base: 1, l: 2 }}
           heading={news.heading}
           theme="dark"
           alignHeader="center"

@@ -19,15 +19,12 @@
 
   .content {
     padding: $pds-spacing-static-large $pds-spacing-static-medium;
-    background: $pds-theme-dark-background-surface;
+    background: $pds-theme-dark-contrast-low;
     border-radius: $pds-border-radius-large;
   }
 
   .status {
     display: flex;
-    p-tag {
-      background: $pds-theme-dark-background-surface;
-    }
   }
 
   .title {
