@@ -71,7 +71,7 @@ const Home: React.FC = () => {
       </Section>
       <Section id="news" grid={false}>
         <Carousel
-          slidesPerPage={{ base: 1, l: 2 }}
+          slidesPerPage={{ base: 1, s: 2 }}
           heading={news.heading}
           theme="dark"
           alignHeader="center"
