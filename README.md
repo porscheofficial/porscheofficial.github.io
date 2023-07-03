@@ -86,4 +86,4 @@ This project is a joint initiative of [Porsche AG](https://www.porsche.com) and 
 
 ## ✒️ License
 
-This project is licensed under the ... license. See [LICENSE.md](./LICENSE.md) for more details.
+This project is licensed under the Apache 2.0 license. See [LICENSE.md](./LICENSE.md) for more details.
