@@ -10,7 +10,7 @@ on:
 
   # Rebuild site every hour in order to refresh exported data (e.g. FOSS job counter)
   schedule:
-    - cron: '5 * * * *'
+    - cron: "5 * * * *"
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -31,6 +31,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Wait for all tests to succeed
+        uses: lewagon/wait-on-check-action@v1.3.1
+        with:
+          ref: main
+          running-workflow-name: build
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 20
       - name: Checkout
         uses: actions/checkout@v3
       - name: Use Node.js 18
