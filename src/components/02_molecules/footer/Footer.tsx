@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
       name: "Legal notice",
     },
     {
-      url: "https://www.porsche.com/international/privacy/",
+      url: "/privacy",
       name: "Privacy Policy",
     },
     {

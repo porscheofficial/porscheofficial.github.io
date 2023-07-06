@@ -53,6 +53,16 @@ export const useMDXComponents = (components: MDXComponents): MDXComponents => {
         {children}
       </Heading>
     ),
+    h5: ({ children }) => (
+      <Heading
+        size={{ base: "small", s: "small" }}
+        align="left"
+        theme="dark"
+        tag="h5"
+      >
+        {children}
+      </Heading>
+    ),
     ul: ({ children }) => <TextList theme="dark">{children}</TextList>,
     ol: ({ children }) => (
       <TextList theme="dark" type="numbered">
