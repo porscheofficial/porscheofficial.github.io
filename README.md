@@ -1,3 +1,8 @@
+<div align="center">
+  <a target="_blank" rel="noopener noreferrer" href="https://opensource.porsche.com">
+    <img src="https://github.com/porscheofficial/porscheofficial.github.io/blob/dd4b80e2eb5bab6c8fd9478220050e9ce6a0217f/src/app/opengraph-image.jpg" alt="" width="600" />
+  </a>
+  
 # Porsche Open Source Platform
 
 ![GitHub](https://img.shields.io/github/license/porscheofficial/porscheofficial.github.io)
@@ -5,8 +10,10 @@
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/porscheofficial/porscheofficial.github.io/tests.yml?label=Automated%20Tests%20and%20Linting)
 ![GitHub deployments](https://img.shields.io/github/deployments/porscheofficial/porscheofficial.github.io/github-pages?label=GitHub%20Pages%20Deployment)
 
-The Porsche Open Source Platform (POSP) is a static website generated with [Next.js 13](https://nextjs.org/) and the [Porsche Design System](https://designsystem.porsche.com/v3/).
-The POSP is a one-stop shop for all open-source activities of Porsche AG and subsidiaries, featuring selected projects and providing documentation on our FOSS best practices.
+_The Porsche Open Source Platform (POSP) is a static website generated with [Next.js 13](https://nextjs.org/) and the [Porsche Design System](https://designsystem.porsche.com/v3/).
+The POSP is a one-stop shop for all open-source activities of Porsche AG and subsidiaries, featuring selected projects and providing documentation on our FOSS best practices._
+
+</div>
 
 ## 🛠️ Run Locally
 
