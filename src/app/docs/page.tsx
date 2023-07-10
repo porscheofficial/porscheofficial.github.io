@@ -28,7 +28,7 @@ const Docs: React.FC = () => {
             label="Documentation on contributing to FOSS"
             description="Contributing FOSS"
             compact
-            href="/docs/contributing/"
+            href="/docs/contributing"
           >
             <ExportedImage
               src={contributingImage}
@@ -40,7 +40,7 @@ const Docs: React.FC = () => {
             label="Documentation on creating FOSS on behalf of Porsche"
             description="Creating FOSS"
             compact
-            href="/docs/creating/"
+            href="/docs/creating"
           >
             <ExportedImage
               src={creatingImage}
