@@ -10,8 +10,8 @@ jobs:
         uses: treosh/lighthouse-ci-action@v10
         with:
           urls: |
-            https://porscheofficial-github-io.vercel.app/
-            https://porscheofficial-github-io.vercel.app/docs/contributing
-            https://porscheofficial-github-io.vercel.app/docs/creating
-            https://porscheofficial-github-io.vercel.app/docs/cla
+            https://opensource.porsche.com/
+            https://opensource.porsche.com/docs/contributing
+            https://opensource.porsche.com/docs/creating
+            https://opensource.porsche.com/docs/cla
           uploadArtifacts: true # save results as an action artifacts
