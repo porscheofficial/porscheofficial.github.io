@@ -9,7 +9,7 @@ Found an issue on the website or have an idea how to improve?
 1. Check if your issue or idea has already been reported: [See Issues](https://github.com/porscheofficial/porscheofficial.github.io/issues)
 2. Create an issue, but don't forget to provide a test case or even a live example: [Create Issue](https://github.com/porscheofficial/porscheofficial.github.io/issues/new)
 
-Make sure to also check the documentation on how to set up a local development environment and run the required tests: [See Documentation](/README.md)
+Make sure to also check the documentation on how to set up a local development environment and run the required tests: [See Documentation](README.md)
 
 ## Submitting a Pull Request
 
