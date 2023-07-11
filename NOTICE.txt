@@ -110,7 +110,8 @@ attribution notices of various relevant modules.
 
 *********************************************************************
 @next/eslint-plugin-next
-********************************************************************* #MIT
+*********************************************************************
+#MIT
 
 Copyright (c) 2023 Vercel, Inc.
 
@@ -197,11 +198,10 @@ THE SOFTWARE.
 #Authors: Dr. Ing. h.c. F. Porsche AG
 
 
-
-
 *********************************************************************
 @primer/octicons
-********************************************************************* #MIT
+*********************************************************************
+#MIT
 
 (c) GitHub, Inc. Copyright (c) 2023 GitHub Inc.
 
@@ -226,8 +226,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #Authors: GitHub Inc.
 
 
-********************************************************************* @types/mdx
-********************************************************************* #MIT
+*********************************************************************
+@types/mdx
+*********************************************************************
+#MIT
 
 Copyright (c) Microsoft Corporation
 
@@ -251,7 +253,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 *********************************************************************
 @types/node
-********************************************************************* #MIT
+*********************************************************************
+#MIT
 
 Copyright (c) Microsoft Corporation
 
@@ -275,7 +278,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 *********************************************************************
 @types/prop-types
-********************************************************************* #MIT
+*********************************************************************
+#MIT
 
 Copyright (c) Microsoft Corporation
 
@@ -299,7 +303,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 *********************************************************************
 @types/react
-********************************************************************* #MIT
+*********************************************************************
+#MIT
 
 Copyright (c) Microsoft Corporation
 
@@ -323,7 +328,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 *********************************************************************
 @types/react-dom
-********************************************************************* #MIT
+*********************************************************************
+#MIT
 
 Copyright (c) Microsoft Corporation
 
@@ -347,7 +353,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 *********************************************************************
 @types/scheduler
-********************************************************************* #MIT
+*********************************************************************
+#MIT
 
 Copyright (c) Microsoft Corporation
 
@@ -371,7 +378,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 *********************************************************************
 balanced-match
-********************************************************************* #MIT
+*********************************************************************
+#MIT
 
 Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
 
@@ -398,7 +406,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 *********************************************************************
 brace-expansion
-********************************************************************* #MIT
+*********************************************************************
+#MIT
 
 Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
 
@@ -423,8 +432,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #Authors: Julian Gruber
 
 
-********************************************************************* classnames
-********************************************************************* #MIT
+*********************************************************************
+classnames
+*********************************************************************
+#MIT
 
 Copyright (c) 2018 Jed Watson Copyright (c) 2018 Dave Keen
 <http://www.keendevelopment.ch> Adi Dahiya <https://github.com/adidahiya> Jason
@@ -454,8 +465,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #Authors: Jed Watson
 
 
-********************************************************************* concat-map
-********************************************************************* #MIT
+*********************************************************************
+concat-map
+*********************************************************************
+#MIT
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -478,8 +491,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #Authors: James Halliday
 
 
-********************************************************************* csstype
-********************************************************************* #MIT
+*********************************************************************
+csstype
+*********************************************************************
+#MIT
 
 Copyright (c) 2017-2018 Fredrik Nicol
 
@@ -506,7 +521,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 *********************************************************************
 fs.realpath
-********************************************************************* #ISC
+*********************************************************************
+#ISC
 
 
 Copyright (c) Isaac Z. Schlueter and Contributors
@@ -554,10 +570,10 @@ THE SOFTWARE.
 #Authors: Isaac Z. Schlueter
 
 
-
-
-********************************************************************* glob
-********************************************************************* #ISC
+*********************************************************************
+glob
+*********************************************************************
+#ISC
 
 Copyright (c) Isaac Z. Schlueter and Contributors
 
@@ -576,8 +592,10 @@ THIS SOFTWARE.
 #Authors: Isaac Z. Schlueter
 
 
-********************************************************************* inflight
-********************************************************************* #ISC
+*********************************************************************
+inflight
+*********************************************************************
+#ISC
 
 Copyright (c) Isaac Z. Schlueter
 
@@ -597,8 +615,10 @@ THIS SOFTWARE.
 #Authors: Isaac Z. Schlueter
 
 
-********************************************************************* inherits
-********************************************************************* #ISC
+*********************************************************************
+inherits
+*********************************************************************
+#ISC
 
 Copyright (c) Isaac Z. Schlueter
 
@@ -615,8 +635,10 @@ TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
 THIS SOFTWARE.
 
 
-********************************************************************* js-tokens
-********************************************************************* #MIT
+*********************************************************************
+js-tokens
+*********************************************************************
+#MIT
 
 Copyright (c) 2014, 2015, 2016, 2017, 2018 Simon Lydell Copyright 2015, 2017
 Simon Lydell Copyright 2014 Simon Lydell Copyright 2014, 2015, 2016, 2017, 2018
@@ -645,7 +667,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 *********************************************************************
 loose-envify
-********************************************************************* #MIT
+*********************************************************************
+#MIT
 
 Copyright (c) 2015 Andres Suarez <zertosh@gmail.com>
 
@@ -670,8 +693,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #Authors: Andres Suarez
 
 
-********************************************************************* minimatch
-********************************************************************* #ISC
+*********************************************************************
+minimatch
+*********************************************************************
+#ISC
 
 Copyright (c) Isaac Z. Schlueter and Contributors
 
@@ -693,7 +718,8 @@ THIS SOFTWARE.
 
 *********************************************************************
 object-assign
-********************************************************************* #MIT
+*********************************************************************
+#MIT
 
 (c) Sindre Sorhus (c) Sindre Sorhus (https://sindresorhus.com) Copyright (c)
 Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
@@ -719,8 +745,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #Authors: Sindre Sorhus
 
 
-********************************************************************* once
-********************************************************************* #ISC
+*********************************************************************
+once
+*********************************************************************
+#ISC
 
 Copyright (c) Isaac Z. Schlueter and Contributors
 
@@ -742,7 +770,8 @@ THIS SOFTWARE.
 
 *********************************************************************
 path-is-absolute
-********************************************************************* #MIT
+*********************************************************************
+#MIT
 
 (c) Sindre Sorhus (https://sindresorhus.com) Copyright (c) Sindre Sorhus
 <sindresorhus@gmail.com> (sindresorhus.com)
@@ -768,8 +797,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #Authors: Sindre Sorhus
 
 
-********************************************************************* react
-********************************************************************* #MIT
+*********************************************************************
+react
+*********************************************************************
+#MIT
 
 Copyright (c) Facebook, Inc. and its affiliates
 
@@ -791,8 +822,10 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-********************************************************************* wrappy
-********************************************************************* #ISC
+*********************************************************************
+wrappy
+*********************************************************************
+#ISC
 
 Copyright (c) Isaac Z. Schlueter and Contributors
 
@@ -812,15 +845,15 @@ THIS SOFTWARE.
 #Authors: Isaac Z. Schlueter
 
 
-
-==================================================================== Attachment
+====================================================================
+Attachment
 ====================================================================
 
 
-********************************************************************* Apache
-License 2.0
-********************************************************************* Apache
-License Version 2.0, January 2004 http://www.apache.org/licenses/
+*********************************************************************
+Apache License 2.0
+*********************************************************************
+Apache License Version 2.0, January 2004 http://www.apache.org/licenses/
 
  TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 
