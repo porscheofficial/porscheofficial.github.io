@@ -1,12 +1,9 @@
 // @ts-expect-error TODO
-// eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
-import importProjects from "js-yaml-loader!./../data/projects.yml";
+import importProjects from "../data/projects.yml";
 // @ts-expect-error TODO
-// eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
-import importNews from "js-yaml-loader!./../data/news.yml";
+import importNews from "../data/news.yml";
 // @ts-expect-error TODO
-// eslint-disable-next-line import/no-unresolved,import/no-webpack-loader-syntax
-import importMemberships from "js-yaml-loader!./../data/memberships.yml";
+import importMemberships from "../data/memberships.yml";
 import { Text } from "../components/01_atoms/Text";
 import { HeroSection } from "../components/03_organisms/heroSection/HeroSection";
 import s from "./page.module.scss";
@@ -90,12 +87,7 @@ const Home: React.FC = () => {
         </Carousel>
       </Section>
       <Section id="documentation" className={s.documentation}>
-        <Heading
-          theme="dark"
-          align="center"
-          size="x-large"
-          className={s.headline}
-        >
+        <Heading theme="dark" align="center" size="x-large">
           Documentation
         </Heading>
         <Textblock className={s.text}>
