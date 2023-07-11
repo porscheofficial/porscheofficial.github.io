@@ -1,15 +1,8 @@
-### Pull Request Checklist
+<!-- If this pull request closes an issue, please mention the issue number below -->
+Closes #<!-- Issue # here -->
 
-<!-- Make sure to read and accept the CLA, before you open the pull request: `CONTRIBUTOR_LICENSE_AGREEMENT` -->
-<!-- Tick the checkbox in case you accept it (`[x]`) -->
+## 📑 Description
+<!-- Please add a short description of your pull request -->
 
-- [ ] I have read and accept the
-  [Contributor License Agreement](https://github.com/porscheofficial/oss-docs/blob/67c5b24838a293ce7a964884e6005eb71f2b8579/CONTRIBUTOR_LICENSE_AGREEMENT.md)
-
-#### Scope
-
-Short description of the pull request scope
-
-#### Resolved Issue
-
-Resolves [IssueNumber]
+## ✅ Checks
+- [ ] I have read and accept the [Contributor License Agreement](https://opensource.porsche.com/docs/cla)

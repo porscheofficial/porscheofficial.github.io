@@ -46,4 +46,4 @@ git push origin feature/short-description
 Just make sure that:
 
 - Your pull request is focused and you avoid unrelated commits
-- You read and accept our [Contributor License Agreement](https://github.com/porscheofficial/oss-docs/blob/main/CONTRIBUTOR_LICENSE_AGREEMENT.md)
+- You read and accept our [Contributor License Agreement](https://opensource.porsche.com/docs/cla)
