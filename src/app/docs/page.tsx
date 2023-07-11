@@ -10,6 +10,9 @@ import creatingImage from "../../../public/assets/crestTaycan.jpg";
 
 export const metadata: Metadata = {
   title: "Documentation | Porsche Open Source Platform",
+  alternates: {
+    canonical: "/docs",
+  },
 };
 
 const Docs: React.FC = () => {

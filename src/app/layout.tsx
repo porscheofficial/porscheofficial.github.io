@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import {
   getInitialStyles,
   getFontFaceStylesheet,
@@ -11,6 +12,7 @@ import {
 import { AppProvider } from "../components/AppProvider";
 import { PageLayout } from "../components/04_templates/pageLayout/PageLayout";
 import "./globals.scss";
+import { BASE_URL } from "../config";
 
 const siteConfig = {
   title: "Porsche Open Source Platform",
@@ -18,10 +20,13 @@ const siteConfig = {
     "The POSP is a one-stop shop for all open-source activities of Porsche AG and subsidiaries, featuring selected projects and providing documentation on our FOSS best practices.",
 };
 
-export const metadata = {
-  metadataBase: new URL("https://opensource.porsche.com"),
+export const metadata: Metadata = {
+  metadataBase: new URL(`https://${BASE_URL}`),
   title: siteConfig.title,
   description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "Porsche",
     "FOSS",
@@ -67,7 +72,7 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
         {getIconLinks({ format: "jsx" })}
         {/* injects favicon, apple touch icons, android touch icons, etc. */}
         {getMetaTagsAndIconLinks({
-          appTitle: metadata.title,
+          appTitle: String(metadata.title ?? siteConfig.title),
           format: "jsx",
         })}
       </head>

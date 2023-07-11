@@ -17,6 +17,14 @@ module.exports = {
   },
   overrides: [
     {
+      files: ["config.ts"],
+      rules: {
+        "prefer-destructuring": "off",
+        "prefer-object-spread": "off",
+        "n/no-process-env": "off",
+      },
+    },
+    {
       files: ["next.config.js"],
       rules: {
         "import/no-extraneous-dependencies": "off",

@@ -65,6 +65,8 @@ jobs:
         run: yarn install --immutable
       - name: Build with Next.js
         run: yarn build
+        env:
+          BASE_URL: "opensource.porsche.com"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

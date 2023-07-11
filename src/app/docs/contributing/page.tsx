@@ -8,6 +8,9 @@ import { EditOnGithub } from "../../../components/02_molecules/editOnGithub/Edit
 
 export const metadata: Metadata = {
   title: "Contributing Upstream | Porsche Open Source Platform",
+  alternates: {
+    canonical: "/docs/contributing",
+  },
 };
 
 const Docs: React.FC = () => {
