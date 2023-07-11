@@ -1,7 +1,6 @@
 /* eslint-disable react/require-default-props */
 import { PropsWithChildren, ReactNode } from "react";
 import s from "./principle.module.scss";
-import { Tag } from "../../01_atoms/Tag";
 import { Text } from "../../01_atoms/Text";
 
 export interface PrincipleProps {
