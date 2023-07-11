@@ -19,5 +19,11 @@
 }
 
 .hashtag {
+  @include pds-text-x-small;
+  display: inline-block;
   margin-bottom: $pds-spacing-fluid-small;
+  padding: 4px 9px;
+  border-radius: $pds-border-radius-small;
+  background-color: $pds-theme-light-background-surface;
+  color: $pds-theme-light-primary;
 }

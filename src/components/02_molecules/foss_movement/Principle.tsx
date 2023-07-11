@@ -15,9 +15,9 @@ export const Principle: React.FC<PropsWithChildren<PrincipleProps>> = (
   const { hashtag, children } = props;
   return (
     <div className={s.principle}>
-      <Tag theme="dark" color="background-surface" className={s.hashtag}>
+      <span className={s.hashtag}>
         #{hashtag}
-      </Tag>
+      </span>
       <Text size="medium" theme="dark">
         {children}
       </Text>
