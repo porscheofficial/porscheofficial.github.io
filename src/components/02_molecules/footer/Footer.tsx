@@ -185,7 +185,7 @@ export const Footer: React.FC = () => {
           <Link
             href={{
               pathname:
-                "https://designsystem.porsche.com/latest/about/introduction",
+                "https://designsystem.porsche.com/latest/",
             }}
             target="_blank"
             rel="noreferrer"
