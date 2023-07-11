@@ -20,7 +20,7 @@ export const EditOnGithub: React.FC<EditOnGithubProps> = ({ file }) => {
         iconSource="/assets/octicons/mark-github.svg"
         theme="dark"
       >
-        Proposa a change on GitHub
+        Edit on GitHub
       </LinkButton>
     </div>
   );
