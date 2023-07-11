@@ -184,8 +184,7 @@ export const Footer: React.FC = () => {
         <LinkPure theme="dark" icon="none">
           <Link
             href={{
-              pathname:
-                "https://designsystem.porsche.com/latest/",
+              pathname: "https://designsystem.porsche.com/latest/",
             }}
             target="_blank"
             rel="noreferrer"
