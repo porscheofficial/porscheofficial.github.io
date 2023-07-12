@@ -93,7 +93,7 @@ const Home: React.FC = () => {
         <Textblock className={s.text}>
           <Text theme="dark" size="medium" align="center">
             Our growing documentation provides transparency on how Porsche is
-            contributing to open source and the standards we're endorsing for
+            contributing to open source and the standards we are endorsing for
             new projects to foster healthy communities.
           </Text>
         </Textblock>
