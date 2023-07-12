@@ -92,9 +92,9 @@ const Home: React.FC = () => {
         </Heading>
         <Textblock className={s.text}>
           <Text theme="dark" size="medium" align="center">
-            Our growing documentation covers best practices and standards on
-            contributing to FOSS projects or creating new FOSS projects on
-            behalf of Porsche.
+            Our growing documentation provides transparency on how Porsche
+            is contributing to open source and the standards we're endorsing
+            for new projects to foster healthy communities. 
           </Text>
         </Textblock>
         <LinkButton href="/docs" theme="dark" className={s.cta}>
