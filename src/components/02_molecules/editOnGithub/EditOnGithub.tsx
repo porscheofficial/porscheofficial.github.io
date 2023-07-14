@@ -15,7 +15,7 @@ export const EditOnGithub: React.FC<EditOnGithubProps> = ({ file }) => {
     <div className={s["editOnGithub-container"]}>
       <LinkButton
         className={s.editOnGithub}
-        href={url}
+        href={url.href}
         variant="secondary"
         iconSource="/assets/octicons/mark-github.svg"
         theme="dark"
