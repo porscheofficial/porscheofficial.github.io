@@ -16,6 +16,11 @@ items:
     imageSrc: https://raw.githubusercontent.com/oss-review-toolkit/ort/main/logos/logo.png
     imageAlt: OSS Review Toolkit Avatar
     status: Upstream
+  - title: mbeddr.formal
+    repo: https://github.com/mbeddr/mbeddr.formal
+    imageSrc: https://raw.githubusercontent.com/mbeddr/mbeddr.core/master/logos/2013/blue_orange/LogoBigTransparent.png
+    imageAlt: mbeddr Avatar
+    status: Upstream
   - title: Cookie Consent Banner
     repo: https://github.com/porscheofficial/cookie-consent-banner
     imageSrc: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg

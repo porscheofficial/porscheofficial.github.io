@@ -5,4 +5,5 @@ module.exports = [
   "https://gitlab.com/uploads/-/system/group/avatar/13943452/terraform-icon.png?width=500.png",
   "https://eslint.org/icon-512.png",
   "https://developer.android.com/static/images/brand/Android_Robot.png",
+  "https://raw.githubusercontent.com/mbeddr/mbeddr.core/master/logos/2013/blue_orange/LogoBigTransparent.png",
 ];
