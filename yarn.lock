@@ -317,24 +317,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@porsche-design-system/components-js@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@porsche-design-system/components-js@npm:3.3.0"
-  checksum: 8ae3adb20cbde4f18ab9e0ab2a36b53cb2b0f73ff921c45a5c5eb0676a930748a20f4cd6be3dd3052812923a4d105797b4647507422a495024aebe9cd8fc6a99
+"@porsche-design-system/components-js@npm:3.5.0":
+  version: 3.5.0
+  resolution: "@porsche-design-system/components-js@npm:3.5.0"
+  checksum: 2e20414f2a63129cffeb4dd865b0469c4e6865b36eb4aef6314c81d5f7d3ae165b5a21184e5459cd5dca82e72f878fd1bac6d548dfd8522b7f5f5bfb592c2b35
   languageName: node
   linkType: hard
 
-"@porsche-design-system/components-react@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@porsche-design-system/components-react@npm:3.3.0"
+"@porsche-design-system/components-react@npm:3.5.0":
+  version: 3.5.0
+  resolution: "@porsche-design-system/components-react@npm:3.5.0"
   dependencies:
-    "@porsche-design-system/components-js": 3.3.0
+    "@porsche-design-system/components-js": 3.5.0
   peerDependencies:
     react: ">=17.0.0 <19.0.0"
     react-dom: ">=17.0.0 <19.0.0"
   bin:
     patchRemixRunProcessBrowserGlobalIdentifier: bin/patchRemixRunProcessBrowserGlobalIdentifier.js
-  checksum: e47ffedee46e19e11d56a94e5e9585db70c718466ec03147c359dd05e2d4f310f5c7af330238022056fdbbf704869dfef2e9079078ffb7aab16fe28145f575f2
+  checksum: b5b58b799c6153b451877d0d1ac75c1171294c4feb0307d63ae401efb9956bcf2cc149c32b1022f161a5dec52d1c4ea37e2eab6898b98a7b91e3e9b71c4c8cc0
   languageName: node
   linkType: hard
 
@@ -4476,8 +4476,8 @@ __metadata:
     "@next/eslint-plugin-next": 13.4.6
     "@next/mdx": 13.4.6
     "@playwright/test": 1.35.1
-    "@porsche-design-system/components-js": 3.3.0
-    "@porsche-design-system/components-react": 3.3.0
+    "@porsche-design-system/components-js": 3.5.0
+    "@porsche-design-system/components-react": 3.5.0
     "@porscheofficial/eslint-config-porschedigital-react": 3.0.1
     "@porscheofficial/prettier-config-porschedigital": 3.0.1
     "@primer/octicons": 19.3.0
