@@ -17,7 +17,7 @@ import { Section } from "../components/02_molecules/section/section";
 import { Projects, News, Memberships } from "../types/general";
 import { Membership } from "../components/03_organisms/membership/Membership";
 import { Heading } from "../components/01_atoms/Heading";
-import { LinkButton } from "../components/01_atoms/LinkButton";
+import { LinkPure } from "../components/01_atoms/LinkPure";
 
 const Home: React.FC = () => {
   const projects: Projects = importProjects as Projects;
@@ -41,7 +41,6 @@ const Home: React.FC = () => {
             borders.
           </Text>
         </Textblock>
-
         <FOSSMovement />
       </Section>
       <Section id="projects" grid={false}>
@@ -92,14 +91,21 @@ const Home: React.FC = () => {
         </Heading>
         <Textblock className={s.text}>
           <Text theme="dark" size="medium" align="center">
-            Our growing documentation provides transparency on how Porsche is
-            contributing to open source and the standards we are endorsing for
-            new projects to foster healthy communities.
+            Our{" "}
+            <LinkPure
+              theme="dark"
+              underline
+              icon="none"
+              size="medium"
+              href="/docs"
+            >
+              growing documentation
+            </LinkPure>{" "}
+            provides transparency on how Porsche is contributing to open source
+            and the standards we are endorsing for new projects to foster
+            healthy communities.
           </Text>
         </Textblock>
-        <LinkButton href="/docs" theme="dark" className={s.cta}>
-          Read documentation
-        </LinkButton>
       </Section>
       <Section id="memberships" className={s.memberships}>
         {memberships.items.map((membership) => (
