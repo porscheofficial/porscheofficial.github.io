@@ -4,6 +4,8 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { AccordionUpdateEvent } from "@porsche-design-system/components-react";
+// eslint-disable-next-line import/no-unresolved
+import { allDocs } from "contentlayer/generated";
 import { Accordion } from "../../01_atoms/Accordion";
 import { LinkButton } from "../../01_atoms/LinkButton";
 import { ButtonGroup } from "../../01_atoms/ButtonGroup";
@@ -56,21 +58,6 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
     },
   ];
 
-  const docsLinks = [
-    {
-      url: "/docs/contributing",
-      name: "Contributing Upstream",
-    },
-    {
-      url: "/docs/creating",
-      name: "Creating FOSS",
-    },
-    {
-      url: "/docs/cla",
-      name: "Contributor License Agreement",
-    },
-  ];
-
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);
@@ -109,9 +96,9 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
           onUpdate={onDocsAccordionUpdate}
         >
           <span slot="heading">Documentation</span>
-          {docsLinks.map((link) => (
+          {allDocs.map((link) => (
             <LinkPure
-              key={link.name}
+              key={link.slug}
               className={s.navLink}
               size="medium"
               alignLabel="left"
@@ -119,8 +106,8 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
               stretch
               tabIndex={0}
             >
-              <Link href={{ pathname: link.url }} onClick={onDismiss}>
-                {link.name}
+              <Link href={{ pathname: link.slug }} onClick={onDismiss}>
+                {link.title}
               </Link>
             </LinkPure>
           ))}

@@ -81,5 +81,3 @@ export const useMDXComponents = (components: MDXComponents): MDXComponents => {
     ...components,
   };
 };
-
-export default useMDXComponents;

@@ -32,7 +32,7 @@ module.exports = {
     },
     {
       files: [
-        "src/mdx-components.tsx",
+        "src/MdxComponents.tsx",
         "src/app/**/page.tsx",
         "src/app/**/layout.tsx",
         "src/app/**/not-found.tsx",

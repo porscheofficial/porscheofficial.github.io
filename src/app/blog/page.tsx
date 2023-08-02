@@ -1,11 +1,11 @@
 import Link from "next/link";
 // eslint-disable-next-line import/no-unresolved
-import { allDocs } from "contentlayer/generated";
+import { allBlogs } from "contentlayer/generated";
 
-const DocsPage: React.FC = () => {
+const BlogPage: React.FC = () => {
   return (
     <ul>
-      {allDocs.map((doc) => (
+      {allBlogs.map((doc) => (
         <li>
           <Link href={{ pathname: doc.slug }} key={doc.slug}>
             {doc.title} | {doc.date}
@@ -16,4 +16,4 @@ const DocsPage: React.FC = () => {
   );
 };
 
-export default DocsPage;
+export default BlogPage;

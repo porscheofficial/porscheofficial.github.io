@@ -28,3 +28,9 @@ export interface linkNotice {
   url: string;
   name: string;
 }
+
+export interface PageProps {
+  params: {
+    slug: string[];
+  };
+}

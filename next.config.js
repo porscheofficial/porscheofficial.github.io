@@ -35,7 +35,8 @@ const nextConfig = {
     return config;
   },
 };
+const { withContentlayer } = require("next-contentlayer");
 
 const withMDX = require("@next/mdx")();
 
-module.exports = withMDX(nextConfig);
+module.exports = withContentlayer(withMDX(nextConfig));
