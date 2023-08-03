@@ -4,7 +4,6 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { AccordionUpdateEvent } from "@porsche-design-system/components-react";
-// eslint-disable-next-line import/no-unresolved
 import { allDocs } from "contentlayer/generated";
 import { Accordion } from "../../01_atoms/Accordion";
 import { LinkButton } from "../../01_atoms/LinkButton";

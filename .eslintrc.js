@@ -14,6 +14,14 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "arrow-body-style": "off",
     "@typescript-eslint/no-magic-numbers": "off",
+    // https://github.com/contentlayerdev/contentlayer/issues/48#issuecomment-1123983319
+    "import/no-unresolved": [
+      // eslint-disable-next-line no-magic-numbers
+      2,
+      {
+        ignore: ["contentlayer/generated", "next-contentlayer/hooks", "contentlayer/source-files"],
+      },
+    ],
   },
   overrides: [
     {

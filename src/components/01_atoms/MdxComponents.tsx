@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-props-no-spreading, import/no-unresolved */
+/* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { InlineNotification } from "./InlineNotification";

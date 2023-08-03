@@ -1,5 +1,4 @@
 import Link from "next/link";
-// eslint-disable-next-line import/no-unresolved
 import { allDocs } from "contentlayer/generated";
 
 const DocsPage: React.FC = () => {

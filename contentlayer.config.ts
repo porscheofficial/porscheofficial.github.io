@@ -2,7 +2,6 @@ import {
   defineDocumentType,
   makeSource,
   LocalDocument,
-  // eslint-disable-next-line import/no-unresolved
 } from "contentlayer/source-files";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */

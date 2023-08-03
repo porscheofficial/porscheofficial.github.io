@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-// eslint-disable-next-line import/no-unresolved
 import { allBlogs, Blog } from "contentlayer/generated";
 import { Metadata } from "next";
 import { PageProps } from "../../../types/general";
