@@ -1,0 +1,7 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.section {
+  .feature {
+    grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
+  }
+}

@@ -13,7 +13,7 @@ const DocsPage: React.FC = () => {
         imageAlt="AI generated Porsche Taycan"
       />
       <Section grid={false}>
-        <DocsSection />
+        <DocsSection isFeatured />
       </Section>
     </main>
   );
