@@ -30,9 +30,19 @@ const Blog = defineDocumentType(() => ({
       description: "The title of the blog",
       required: true,
     },
+    descriptionShort: {
+      type: "string",
+      description: "The description for the preview tile",
+      required: true,
+    },
     date: {
       type: "date",
       description: "The date of the blog",
+      required: true,
+    },
+    image: {
+      type: "string",
+      description: "The image of the blog",
       required: true,
     },
   },
@@ -50,9 +60,19 @@ export const Doc = defineDocumentType(() => ({
       description: "The title of the document",
       required: true,
     },
+    descriptionShort: {
+      type: "string",
+      description: "The description for the preview tile",
+      required: true,
+    },
     date: {
       type: "date",
       description: "The date of the document",
+      required: true,
+    },
+    image: {
+      type: "string",
+      description: "The image of the doc",
       required: true,
     },
   },

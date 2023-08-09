@@ -1,17 +1,21 @@
-import Link from "next/link";
-import { allDocs } from "contentlayer/generated";
+import { DocsSection } from "../../components/03_organisms/docsSection/DocsSection";
+import heroImage from "../../../public/assets/heroImage2.png";
+import { HeroSection } from "../../components/03_organisms/heroSection/HeroSection";
+import { Section } from "../../components/02_molecules/section/section";
 
 const DocsPage: React.FC = () => {
   return (
-    <ul>
-      {allDocs.map((doc) => (
-        <li>
-          <Link href={{ pathname: doc.slug }} key={doc.slug}>
-            {doc.title} | {doc.date}
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <main>
+      <HeroSection
+        title="Docs"
+        subtitle="FOSS@Porsche"
+        imageSrc={heroImage}
+        imageAlt="AI generated Porsche Taycan"
+      />
+      <Section grid={false}>
+        <DocsSection />
+      </Section>
+    </main>
   );
 };
 

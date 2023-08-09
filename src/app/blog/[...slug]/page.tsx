@@ -3,6 +3,10 @@ import { allBlogs, Blog } from "contentlayer/generated";
 import { Metadata } from "next";
 import { PageProps } from "../../../types/general";
 import { MdxComponents } from "../../../components/01_atoms/MdxComponents";
+import { HeroSection } from "../../../components/03_organisms/heroSection/HeroSection";
+import heroImage from "../../../../public/assets/heroImage2.png";
+import { Section } from "../../../components/02_molecules/section/section";
+import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
 
 const getParams = (params: { slug?: string[] }): Blog | null => {
   const slug = params.slug?.join("/") ?? "";
@@ -40,8 +44,18 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
 
   return (
     <main>
-      {blog.title}
-      <MdxComponents code={blog.body.code} />
+      <HeroSection
+        title={blog.title}
+        subtitle="FOSS@Porsche"
+        imageSrc={heroImage}
+        imageAlt="AI generated Porsche Taycan"
+      />
+
+      <Section>
+        <Textblock>
+          <MdxComponents code={blog.body.code} />
+        </Textblock>
+      </Section>
     </main>
   );
 };

@@ -19,7 +19,11 @@ module.exports = {
       // eslint-disable-next-line no-magic-numbers
       2,
       {
-        ignore: ["contentlayer/generated", "next-contentlayer/hooks", "contentlayer/source-files"],
+        ignore: [
+          "contentlayer/generated",
+          "next-contentlayer/hooks",
+          "contentlayer/source-files",
+        ],
       },
     ],
   },

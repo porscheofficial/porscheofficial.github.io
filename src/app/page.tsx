@@ -17,6 +17,7 @@ import { Section } from "../components/02_molecules/section/section";
 import { Projects, News, Memberships } from "../types/general";
 import { Membership } from "../components/03_organisms/membership/Membership";
 import { Heading } from "../components/01_atoms/Heading";
+import { DocsSection } from "../components/03_organisms/docsSection/DocsSection";
 
 const Home: React.FC = () => {
   const projects: Projects = importProjects as Projects;
@@ -96,6 +97,7 @@ const Home: React.FC = () => {
           </Text>
         </Textblock>
       </Section>
+      <DocsSection showHeading={false} />
       <Section id="memberships" className={s.memberships}>
         {memberships.items.map((membership) => (
           <Membership
