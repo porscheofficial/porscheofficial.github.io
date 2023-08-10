@@ -1,4 +1,5 @@
 import { allBlogs } from "contentlayer/generated";
+import { compareDesc } from "date-fns";
 import { BlogCard } from "../blogCard/BlogCard";
 import { Carousel } from "../../01_atoms/Carousel";
 import { Section } from "../../02_molecules/section/section";
@@ -16,8 +17,11 @@ export const BlogsSection: React.FC<BlogsSectionProps> = ({
   className,
   isFeatured = false,
 }) => {
-  const firstDoc = allBlogs[0];
-  const docList = isFeatured ? allBlogs.slice(1, allBlogs.length) : allBlogs;
+  const posts = allBlogs.sort((a, b) =>
+    compareDesc(new Date(a.date), new Date(b.date))
+  );
+  const firstDoc = posts[0];
+  const docList = isFeatured ? posts.slice(1, posts.length) : posts;
   return (
     <div className={s.section}>
       {isFeatured && firstDoc.slug && (
@@ -35,26 +39,29 @@ export const BlogsSection: React.FC<BlogsSectionProps> = ({
       )}
 
       {docList.length > 0 && (
-        <Carousel
-          slidesPerPage={{ base: 1, s: 2, l: 3 }}
-          heading={showHeading ? "Documentation" : ""}
-          theme="dark"
-          width="extended"
-          alignHeader="center"
-          rewind={false}
-          className={`${className ?? ""}`}
-        >
-          {docList.map((blog) => (
-            <BlogCard
-              title={blog.title}
-              description={blog.descriptionShort}
-              url={blog.slug}
-              key={blog.slug}
-              imageSrc={blog.image}
-              imageAlt=""
-            />
-          ))}
-        </Carousel>
+        <Section grid={false}>
+          <Carousel
+            slidesPerPage={{ base: 1, s: 2, l: 3 }}
+            heading={showHeading ? "Documentation" : ""}
+            theme="dark"
+            width="extended"
+            alignHeader="center"
+            rewind={false}
+            className={`${className ?? ""}`}
+          >
+            {docList.map((blog) => (
+              <BlogCard
+                title={blog.title}
+                description={blog.descriptionShort}
+                time={blog.date}
+                url={blog.slug}
+                key={blog.slug}
+                imageSrc={blog.image}
+                imageAlt=""
+              />
+            ))}
+          </Carousel>
+        </Section>
       )}
     </div>
   );

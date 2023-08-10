@@ -1,5 +1,6 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
+import { format, parseISO } from "date-fns";
 import s from "./blogCard.module.scss";
 import { Text } from "../../01_atoms/Text";
 import { Heading } from "../../01_atoms/Heading";
@@ -11,6 +12,7 @@ export interface BlogCardProps {
   url: string;
   imageSrc: string | StaticImageData;
   imageAlt: string;
+  time?: string;
 }
 
 export const BlogCard: React.FC<BlogCardProps> = ({
@@ -18,6 +20,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
   description,
   imageSrc,
   imageAlt,
+  time,
   url,
 }) => {
   return (
@@ -35,6 +38,11 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         >
           {title}
         </Heading>
+        {time && (
+          <Text size="x-small" theme="dark" className={s.description}>
+            {format(parseISO(time), "LLLL d, yyyy")}
+          </Text>
+        )}
         <Text ellipsis size="small" theme="dark" className={s.description}>
           {description}
         </Text>
