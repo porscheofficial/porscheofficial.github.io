@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 import { allBlogs, Blog } from "contentlayer/generated";
 import { Metadata } from "next";
+import { format, parseISO } from "date-fns";
 import { PageProps } from "../../../types/general";
 import { MdxComponents } from "../../../components/01_atoms/MdxComponents";
 import { HeroSection } from "../../../components/03_organisms/heroSection/HeroSection";
-import { Section } from "../../../components/02_molecules/section/section";
-import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
+import { Author } from "../../../components/02_molecules/author/author";
 
 const getParams = (params: { slug?: string[] }): Blog | null => {
   const slug = params.slug?.join("/") ?? "";
@@ -41,20 +41,29 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
     notFound();
   }
 
+  const formatDate = format(parseISO(blog.date), "do LLLL");
+  const hashes = blog.hashTags ? `· #${blog.hashTags.join(" #")}` : "";
+  const description = `${formatDate} · ${blog.readTime} reading time ${hashes}`;
+
   return (
     <main>
       <HeroSection
         title={blog.title}
+        description={description}
         subtitle="FOSS@Porsche"
         imageSrc={blog.image}
         imageAlt=""
       />
 
-      <Section>
-        <Textblock>
-          <MdxComponents code={blog.body.code} />
-        </Textblock>
-      </Section>
+      <MdxComponents code={blog.body.code} />
+
+      <Author
+        key={blog.author._id}
+        name={blog.author.name}
+        description={blog.author.description}
+        imageSrc={blog.author.image}
+        slug={blog.author.slug}
+      />
     </main>
   );
 };

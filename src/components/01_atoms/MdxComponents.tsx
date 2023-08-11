@@ -7,11 +7,14 @@ import { Tag } from "./Tag";
 import { Heading } from "./Heading";
 import { TextList, TextListItem } from "./TextList";
 import { Codeblock } from "../02_molecules/codeblock/Codeblock";
+import { ImageTextList } from "../03_organisms/imageTextList/ImageTextList";
 
 const components = {
   InlineNotification: ({ ...props }) => <InlineNotification {...props} />,
   LinkPure: ({ ...props }) => <LinkPure {...props} />,
   Tag: ({ ...props }) => <Tag {...props} />,
+  // @ts-expect-error TODO
+  ImageTextList: ({ ...props }) => <ImageTextList {...props} />,
   h1: ({ children }: { children: React.ReactNode }) => (
     <Heading
       align="center"

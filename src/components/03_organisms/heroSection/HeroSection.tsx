@@ -3,10 +3,12 @@ import { StaticImageData } from "next/image";
 import s from "./heroSection.module.scss";
 import { Display } from "../../01_atoms/Display";
 import { Heading } from "../../01_atoms/Heading";
+import { Text } from "../../01_atoms/Text";
 
 interface HeroSectionProps {
   title?: string;
   subtitle?: string;
+  description?: string;
   imageSrc: string | StaticImageData;
   imageAlt: string;
 }
@@ -14,6 +16,7 @@ interface HeroSectionProps {
 export const HeroSection: React.FC<HeroSectionProps> = ({
   title,
   subtitle,
+  description,
   imageSrc,
   imageAlt,
 }) => {
@@ -47,6 +50,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         >
           {title}
         </Display>
+        {description && (
+          <Text
+            size="medium"
+            align="center"
+            theme="dark"
+            className={s.description}
+          >
+            {description}
+          </Text>
+        )}
       </div>
     </div>
   );

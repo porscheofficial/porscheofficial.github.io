@@ -2,6 +2,7 @@ import {
   defineDocumentType,
   makeSource,
   LocalDocument,
+  defineNestedType,
 } from "contentlayer/source-files";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
@@ -19,6 +20,16 @@ const computedFields = {
       doc._raw.flattenedPath.split("/").slice(1).join("/"),
   },
 };
+
+const Author = defineNestedType(() => ({
+  name: "Author",
+  fields: {
+    name: { type: "string", required: true },
+    image: { type: "string", required: true },
+    slug: { type: "string", required: false },
+    description: { type: "string", required: false },
+  },
+}));
 
 const Blog = defineDocumentType(() => ({
   name: "Blog",
@@ -38,6 +49,22 @@ const Blog = defineDocumentType(() => ({
     date: {
       type: "date",
       description: "The date of the blog",
+      required: true,
+    },
+    readTime: {
+      type: "string",
+      description: "The reading time of the blog",
+      required: true,
+    },
+    hashTags: {
+      type: "list",
+      of: { type: "string" },
+      description: "The reading time of the blog",
+      required: false,
+    },
+    author: {
+      type: "nested",
+      of: Author,
       required: true,
     },
     image: {
