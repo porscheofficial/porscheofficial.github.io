@@ -7,7 +7,7 @@ const BlogPage: React.FC = () => {
   return (
     <main>
       <HeroSection
-        title="Docs"
+        title="Blog"
         subtitle="FOSS@Porsche"
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"

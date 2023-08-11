@@ -47,8 +47,8 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
       <HeroSection
         title={blog.title}
         subtitle="FOSS@Porsche"
-        imageSrc={heroImage}
-        imageAlt="AI generated Porsche Taycan"
+        imageSrc={blog.image}
+        imageAlt=""
       />
 
       <Section>

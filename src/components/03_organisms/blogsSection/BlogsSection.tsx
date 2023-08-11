@@ -42,7 +42,7 @@ export const BlogsSection: React.FC<BlogsSectionProps> = ({
         <Section grid={false}>
           <Carousel
             slidesPerPage={{ base: 1, s: 2, l: 3 }}
-            heading={showHeading ? "Documentation" : ""}
+            heading={showHeading ? "Blogs" : ""}
             theme="dark"
             width="extended"
             alignHeader="center"
