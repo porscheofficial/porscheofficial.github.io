@@ -4,7 +4,6 @@ import { Metadata } from "next";
 import { PageProps } from "../../../types/general";
 import { MdxComponents } from "../../../components/01_atoms/MdxComponents";
 import { HeroSection } from "../../../components/03_organisms/heroSection/HeroSection";
-import heroImage from "../../../../public/assets/heroImage2.png";
 import { Section } from "../../../components/02_molecules/section/section";
 import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
 
