@@ -22,7 +22,7 @@ export const getGitHubData = async (repo: string): Promise<GithubResponse> => {
 };
 
 export const renderGitHubStats = (
-  githubData: GithubResponse | null
+  githubData: GithubResponse | null,
 ): React.JSX.Element | null => {
   if (githubData !== null) {
     return (

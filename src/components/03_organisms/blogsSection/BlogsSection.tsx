@@ -18,7 +18,7 @@ export const BlogsSection: React.FC<BlogsSectionProps> = ({
   isFeatured = false,
 }) => {
   const posts = allBlogs.sort((a, b) =>
-    compareDesc(new Date(a.date), new Date(b.date))
+    compareDesc(new Date(a.date), new Date(b.date)),
   );
   const firstDoc = posts[0];
   const docList = isFeatured ? posts.slice(1, posts.length) : posts;

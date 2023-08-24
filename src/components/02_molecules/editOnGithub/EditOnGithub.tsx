@@ -9,7 +9,7 @@ export interface EditOnGithubProps {
 export const EditOnGithub: React.FC<EditOnGithubProps> = ({ file }) => {
   const url = new URL(
     path.join("porscheofficial/porscheofficial.github.io/edit/main/", file),
-    "https://github.com/"
+    "https://github.com/",
   );
   return (
     <div className={s["editOnGithub-container"]}>

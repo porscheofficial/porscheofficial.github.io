@@ -34,7 +34,7 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
     (e: CustomEvent<AccordionUpdateEvent>) => {
       setDocsAccordionOpen(e.detail.open);
     },
-    []
+    [],
   );
 
   const pathname = usePathname();

@@ -12,7 +12,7 @@ export interface KeyValueProps {
 }
 
 export const KeyValue: React.FC<PropsWithChildren<KeyValueProps>> = (
-  props: KeyValueProps
+  props: KeyValueProps,
 ) => {
   const { text, children } = props;
   const [isOpen, setIsOpen] = useState<boolean>(false);

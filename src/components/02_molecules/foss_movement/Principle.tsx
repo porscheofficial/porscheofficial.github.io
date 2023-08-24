@@ -10,7 +10,7 @@ export interface PrincipleProps {
 }
 
 export const Principle: React.FC<PropsWithChildren<PrincipleProps>> = (
-  props: PrincipleProps
+  props: PrincipleProps,
 ) => {
   const { hashtag, children } = props;
   return (
