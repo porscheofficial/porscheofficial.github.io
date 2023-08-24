@@ -1,29 +1,37 @@
 @use "@porsche-design-system/components-js/styles" as *;
 
 .imageTextList {
-  .description {
+  [class~="description"] {
     grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
+
+    @include pds-media-query-max("s") {
+      grid-row: 2;
+    }
 
     @include pds-media-query-min("s") {
       grid-column: $pds-grid-basic-column-start / 7 span;
       grid-row: 1;
 
-      &.left {
+      &[class~="left"] {
         grid-column: 7 span / $pds-grid-basic-column-end;
       }
     }
   }
 
-  .image {
+  [class~="image"] {
     position: relative;
     aspect-ratio: 16/9;
     grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
+
+    @include pds-media-query-max("s") {
+      grid-row: 1;
+    }
 
     @include pds-media-query-min("s") {
       grid-column: 5 span / $pds-grid-basic-column-end;
       grid-row: 1;
 
-      &.left {
+      &[class~="left"] {
         grid-column: $pds-grid-basic-column-start / 5 span;
       }
     }

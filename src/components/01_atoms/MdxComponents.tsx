@@ -9,15 +9,20 @@ import {
   PTextList,
   PTextListItem,
 } from "@porsche-design-system/components-react/ssr";
+import ExportedImage from "next-image-export-optimizer";
 import { Codeblock } from "../02_molecules/codeblock/Codeblock";
-import { ImageTextList } from "../03_organisms/imageTextList/ImageTextList";
+import { ImageText } from "../03_organisms/imageText/ImageText";
+import { Section } from "../02_molecules/section/section";
 
 const components = {
   PInlineNotification: ({ ...props }) => <PInlineNotification {...props} />,
   PLinkPure: ({ ...props }) => <PLinkPure {...props} />,
   PTag: ({ ...props }) => <PTag {...props} />,
+  ImageText: ({ ...props }) => <ImageText {...props} />,
   // @ts-expect-error TODO
-  ImageTextList: ({ ...props }) => <ImageTextList {...props} />,
+  ExportedImage: ({ ...props }) => <ExportedImage {...props} />,
+  // @ts-expect-error TODO
+  Section: ({ ...props }) => <Section {...props} />,
   h1: ({ children }: { children: React.ReactNode }) => (
     <PHeading
       align="center"
