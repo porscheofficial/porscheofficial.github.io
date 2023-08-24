@@ -1,9 +1,11 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
+import {
+  PHeading,
+  PLink,
+  PText,
+} from "@porsche-design-system/components-react/ssr";
 import s from "./featureCard.module.scss";
-import { Text } from "../../01_atoms/Text";
-import { Heading } from "../../01_atoms/Heading";
-import { LinkButton } from "../../01_atoms/LinkButton";
 
 export interface FeatureCardProps {
   title: string;
@@ -26,16 +28,16 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
         <ExportedImage src={imageSrc} alt={imageAlt} fill placeholder="empty" />
       </div>
       <div className={s.content}>
-        <Heading size="x-large" tag="h3">
+        <PHeading size="x-large" tag="h3">
           {title}
-        </Heading>
-        <Text size="small" className={s.description}>
+        </PHeading>
+        <PText size="small" className={s.description}>
           {description}
-        </Text>
+        </PText>
 
-        <LinkButton href={url} className={s.link}>
+        <PLink href={url} className={s.link}>
           Learn more
-        </LinkButton>
+        </PLink>
       </div>
     </div>
   );

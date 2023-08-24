@@ -1,8 +1,7 @@
 /* eslint-disable react/require-default-props */
 import Link from "next/link";
+import { PCrest, PWordmark } from "@porsche-design-system/components-react/ssr";
 import s from "./header.module.scss";
-import { Wordmark } from "../../01_atoms/Wordmark";
-import { Crest } from "../../01_atoms/Marquee";
 import { Navigation } from "../navigation/Navigation";
 
 interface JobsResponse {
@@ -33,8 +32,8 @@ export const Header: React.FC<HeaderProps> = async ({ logo }) => {
         <Link href="/">
           {logo ?? (
             <>
-              <Wordmark theme="dark" size="small" />
-              <Crest />
+              <PWordmark theme="dark" size="small" />
+              <PCrest />
             </>
           )}
         </Link>

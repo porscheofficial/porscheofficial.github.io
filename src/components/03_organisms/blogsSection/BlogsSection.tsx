@@ -1,7 +1,7 @@
 import { allBlogs } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
+import { PCarousel } from "@porsche-design-system/components-react/ssr";
 import { BlogCard } from "../blogCard/BlogCard";
-import { Carousel } from "../../01_atoms/Carousel";
 import { Section } from "../../02_molecules/section/section";
 import { FeatureCard } from "../featureCard/FeatureCard";
 import s from "./blogsSection.module.scss";
@@ -40,7 +40,7 @@ export const BlogsSection: React.FC<BlogsSectionProps> = ({
 
       {docList.length > 0 && (
         <Section grid={false}>
-          <Carousel
+          <PCarousel
             slidesPerPage={{ base: 1, s: 2, l: 3 }}
             heading={showHeading ? "Blogs" : ""}
             theme="dark"
@@ -60,7 +60,7 @@ export const BlogsSection: React.FC<BlogsSectionProps> = ({
                 imageAlt=""
               />
             ))}
-          </Carousel>
+          </PCarousel>
         </Section>
       )}
     </div>

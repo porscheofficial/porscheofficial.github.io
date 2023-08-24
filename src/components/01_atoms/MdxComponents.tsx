@@ -1,80 +1,83 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { InlineNotification } from "./InlineNotification";
-import { LinkPure } from "./LinkPure";
-import { Tag } from "./Tag";
-import { Heading } from "./Heading";
-import { TextList, TextListItem } from "./TextList";
+import {
+  PHeading,
+  PInlineNotification,
+  PLinkPure,
+  PTag,
+  PTextList,
+  PTextListItem,
+} from "@porsche-design-system/components-react/ssr";
 import { Codeblock } from "../02_molecules/codeblock/Codeblock";
 import { ImageTextList } from "../03_organisms/imageTextList/ImageTextList";
 
 const components = {
-  InlineNotification: ({ ...props }) => <InlineNotification {...props} />,
-  LinkPure: ({ ...props }) => <LinkPure {...props} />,
-  Tag: ({ ...props }) => <Tag {...props} />,
+  PInlineNotification: ({ ...props }) => <PInlineNotification {...props} />,
+  PLinkPure: ({ ...props }) => <PLinkPure {...props} />,
+  PTag: ({ ...props }) => <PTag {...props} />,
   // @ts-expect-error TODO
   ImageTextList: ({ ...props }) => <ImageTextList {...props} />,
   h1: ({ children }: { children: React.ReactNode }) => (
-    <Heading
+    <PHeading
       align="center"
       size={{ base: "large", s: "x-large" }}
       theme="dark"
       tag="h1"
     >
       {children}
-    </Heading>
+    </PHeading>
   ),
   h2: ({ children }: { children: React.ReactNode }) => (
-    <Heading
+    <PHeading
       size={{ base: "medium", s: "large" }}
       align="left"
       theme="dark"
       tag="h2"
     >
       {children}
-    </Heading>
+    </PHeading>
   ),
   h3: ({ children }: { children: React.ReactNode }) => (
-    <Heading
+    <PHeading
       size={{ base: "small", s: "medium" }}
       align="left"
       theme="dark"
       tag="h3"
     >
       {children}
-    </Heading>
+    </PHeading>
   ),
   h4: ({ children }: { children: React.ReactNode }) => (
-    <Heading
+    <PHeading
       size={{ base: "small", s: "small" }}
       align="left"
       theme="dark"
       tag="h4"
     >
       {children}
-    </Heading>
+    </PHeading>
   ),
   h5: ({ children }: { children: React.ReactNode }) => (
-    <Heading
+    <PHeading
       size={{ base: "small", s: "small" }}
       align="left"
       theme="dark"
       tag="h5"
     >
       {children}
-    </Heading>
+    </PHeading>
   ),
   ul: ({ children }: { children: React.ReactNode }) => (
-    <TextList theme="dark">{children}</TextList>
+    <PTextList theme="dark">{children}</PTextList>
   ),
   ol: ({ children }: { children: React.ReactNode }) => (
-    <TextList theme="dark" type="numbered">
+    <PTextList theme="dark" type="numbered">
       {children}
-    </TextList>
+    </PTextList>
   ),
   li: ({ children }: { children: React.ReactNode }) => (
-    <TextListItem>{children}</TextListItem>
+    <PTextListItem>{children}</PTextListItem>
   ),
   code: ({ children, ...props }: { children: React.ReactNode }) => (
     // @ts-expect-error expected?
@@ -84,9 +87,9 @@ const components = {
   a: ({ children, ...props }: { children: React.ReactNode }) => (
     // @ts-expect-error expected?
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    <LinkPure theme="dark" underline icon="none" href={props.href}>
+    <PLinkPure theme="dark" underline icon="none" href={props.href}>
       {children}
-    </LinkPure>
+    </PLinkPure>
   ),
 };
 

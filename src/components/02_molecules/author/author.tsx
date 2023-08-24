@@ -1,11 +1,13 @@
 import { StaticImageData } from "next/image";
 import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
+import {
+  PHeading,
+  PIcon,
+  PText,
+} from "@porsche-design-system/components-react/ssr";
 import s from "./author.module.scss";
-import { Text } from "../../01_atoms/Text";
-import { Heading } from "../../01_atoms/Heading";
 import { Section } from "../section/section";
-import { Icon } from "../../01_atoms/Icon";
 
 interface AuthorProps {
   name: string;
@@ -32,7 +34,7 @@ export const Author: React.FC<AuthorProps> = ({
         </span>
 
         <span className={s.content}>
-          <Heading
+          <PHeading
             ellipsis
             size="medium"
             theme="dark"
@@ -40,13 +42,13 @@ export const Author: React.FC<AuthorProps> = ({
             tag="h3"
           >
             {name}
-          </Heading>
+          </PHeading>
 
-          <Text theme="dark" className={s.description}>
+          <PText theme="dark" className={s.description}>
             {description}
-          </Text>
+          </PText>
         </span>
-        {slug && <Icon theme="dark" className={s.icon} />}
+        {slug && <PIcon theme="dark" className={s.icon} />}
       </Component>
     </Section>
   );

@@ -1,10 +1,12 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
 import { format, parseISO } from "date-fns";
+import {
+  PHeading,
+  PLinkPure,
+  PText,
+} from "@porsche-design-system/components-react/ssr";
 import s from "./blogCard.module.scss";
-import { Text } from "../../01_atoms/Text";
-import { Heading } from "../../01_atoms/Heading";
-import { LinkPure } from "../../01_atoms/LinkPure";
 
 export interface BlogCardProps {
   title: string;
@@ -29,7 +31,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         <ExportedImage src={imageSrc} alt={imageAlt} fill placeholder="empty" />
       </div>
       <div className={s.content}>
-        <Heading
+        <PHeading
           ellipsis
           size="medium"
           theme="dark"
@@ -37,21 +39,21 @@ export const BlogCard: React.FC<BlogCardProps> = ({
           tag="h3"
         >
           {title}
-        </Heading>
+        </PHeading>
         {time && (
-          <Text size="x-small" theme="dark" className={s.description}>
+          <PText size="x-small" theme="dark" className={s.description}>
             {format(parseISO(time), "LLLL d, yyyy")}
-          </Text>
+          </PText>
         )}
-        <Text ellipsis size="small" theme="dark" className={s.description}>
+        <PText ellipsis size="small" theme="dark" className={s.description}>
           {description}
-        </Text>
+        </PText>
 
         {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
         <a className={s["link-overlay"]} aria-hidden href={url} tabIndex={-1} />
-        <LinkPure href={url} theme="dark" className={s.link}>
+        <PLinkPure href={url} theme="dark" className={s.link}>
           Learn more
-        </LinkPure>
+        </PLinkPure>
       </div>
     </div>
   );

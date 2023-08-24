@@ -1,9 +1,11 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
+import {
+  PDisplay,
+  PHeading,
+  PText,
+} from "@porsche-design-system/components-react/ssr";
 import s from "./heroSection.module.scss";
-import { Display } from "../../01_atoms/Display";
-import { Heading } from "../../01_atoms/Heading";
-import { Text } from "../../01_atoms/Text";
 
 interface HeroSectionProps {
   title?: string;
@@ -33,15 +35,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <div className={s["image-overlay"]} />
       </div>
       <div className={s["title-container"]}>
-        <Heading
+        <PHeading
           size="medium"
           align="center"
           theme="dark"
           className={s.subtitle}
         >
           {subtitle}
-        </Heading>
-        <Display
+        </PHeading>
+        <PDisplay
           size="medium"
           align="center"
           theme="dark"
@@ -49,16 +51,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           className={s.title}
         >
           {title}
-        </Display>
+        </PDisplay>
         {description && (
-          <Text
+          <PText
             size="medium"
             align="center"
             theme="dark"
             className={s.description}
           >
             {description}
-          </Text>
+          </PText>
         )}
       </div>
     </div>

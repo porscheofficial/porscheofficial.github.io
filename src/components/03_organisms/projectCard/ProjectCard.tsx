@@ -1,10 +1,12 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
+import {
+  PHeading,
+  PIcon,
+  PLinkPure,
+  PText,
+} from "@porsche-design-system/components-react/ssr";
 import s from "./projectCard.module.scss";
-import { LinkPure } from "../../01_atoms/LinkPure";
-import { Heading } from "../../01_atoms/Heading";
-import { Text } from "../../01_atoms/Text";
-import { Icon } from "../../01_atoms/Icon";
 
 interface GithubResponse {
   description: string;
@@ -28,11 +30,11 @@ export const renderGitHubStats = (
     return (
       <>
         <div className={s.stars}>
-          <Icon source="/assets/octicons/star-24.svg" theme="dark" />
+          <PIcon source="/assets/octicons/star-24.svg" theme="dark" />
           {githubData.stargazers_count}
         </div>
         <div className={s.forks}>
-          <Icon source="/assets/octicons/repo-forked-24.svg" theme="dark" />
+          <PIcon source="/assets/octicons/repo-forked-24.svg" theme="dark" />
           {githubData.forks}
         </div>
       </>
@@ -67,10 +69,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = async ({
         <ExportedImage src={imageSrc} alt={imageAlt} fill placeholder="empty" />
       </div>
       <div className={s.content}>
-        <Text theme="dark" size="x-small" className={s.status}>
+        <PText theme="dark" size="x-small" className={s.status}>
           {status}
-        </Text>
-        <Heading
+        </PText>
+        <PHeading
           ellipsis
           size="medium"
           theme="dark"
@@ -78,10 +80,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = async ({
           tag="h3"
         >
           {title}
-        </Heading>
-        <Text ellipsis size="small" theme="dark" className={s.subtitle}>
+        </PHeading>
+        <PText ellipsis size="small" theme="dark" className={s.subtitle}>
           {githubData !== null ? githubData.description : description}
-        </Text>
+        </PText>
         <div className={s.actions}>{renderGitHubStats(githubData)}</div>
         {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
         <a
@@ -90,9 +92,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = async ({
           href={repo}
           tabIndex={-1}
         />
-        <LinkPure href={repo} theme="dark" className={s.link}>
+        <PLinkPure href={repo} theme="dark" className={s.link}>
           Learn more
-        </LinkPure>
+        </PLinkPure>
       </div>
     </div>
   );

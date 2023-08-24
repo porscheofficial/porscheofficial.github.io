@@ -1,6 +1,6 @@
 import { allDocs } from "contentlayer/generated";
+import { PCarousel } from "@porsche-design-system/components-react/ssr";
 import { BlogCard } from "../blogCard/BlogCard";
-import { Carousel } from "../../01_atoms/Carousel";
 import { FeatureCard } from "../featureCard/FeatureCard";
 import { Section } from "../../02_molecules/section/section";
 import s from "./docsSection.module.scss";
@@ -36,7 +36,7 @@ export const DocsSection: React.FC<DocsSectionProps> = ({
       )}
       {docList.length > 0 && (
         <Section grid={false}>
-          <Carousel
+          <PCarousel
             slidesPerPage={{ base: 1, s: 2, l: 3 }}
             heading={showHeading ? "Documentation" : ""}
             theme="dark"
@@ -55,7 +55,7 @@ export const DocsSection: React.FC<DocsSectionProps> = ({
                 imageAlt=""
               />
             ))}
-          </Carousel>
+          </PCarousel>
         </Section>
       )}
     </div>

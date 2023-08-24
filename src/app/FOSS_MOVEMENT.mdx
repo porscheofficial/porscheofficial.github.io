@@ -1,9 +1,9 @@
-import { Display } from "../components/01_atoms/Display";
 import { KeyValue } from "../components/02_molecules/foss_movement/KeyValue";
 import { Principle } from "../components/02_molecules/foss_movement/Principle";
 import s from "./page.module.scss";
+import { PDisplay } from "@porsche-design-system/components-react/ssr";
 
-<Display
+<PDisplay
   tag="h2"
   theme="dark"
   align="center"
@@ -11,7 +11,7 @@ import s from "./page.module.scss";
   className={s.keyvalues}
 >
   Our Key Values and Principles
-</Display>
+</PDisplay>
 
 <KeyValue
   text="Move from #commercial-software to #free-open-source-software, wherever possible"

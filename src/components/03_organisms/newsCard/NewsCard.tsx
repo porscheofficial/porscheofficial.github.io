@@ -1,6 +1,6 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
-import { LinkTile } from "../../01_atoms/LinkTile";
+import { PLinkTile } from "@porsche-design-system/components-react/ssr";
 
 export interface NewsCardProps {
   title: string;
@@ -16,10 +16,8 @@ export const NewsCard: React.FC<NewsCardProps> = ({
   url,
 }) => {
   return (
-    <div>
-      <LinkTile label="Read more" compact="true" description={title} href={url}>
-        <ExportedImage src={imageSrc} alt={imageAlt} fill placeholder="empty" />
-      </LinkTile>
-    </div>
+    <PLinkTile label="Read more" compact="true" description={title} href={url}>
+      <ExportedImage src={imageSrc} alt={imageAlt} fill placeholder="empty" />
+    </PLinkTile>
   );
 };
