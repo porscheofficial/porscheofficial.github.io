@@ -12,7 +12,7 @@ jobs:
     name: OSO ORT
     steps:
       - uses: actions/checkout@v3
-      - name: Run OSO ORT Analyzer and Submit to Scanner API
+      - name: Run OSO ORT Analyzer
         id: analyzer
         uses: porscheofficial/.github/workflows/ort-analyze@main
         with:
