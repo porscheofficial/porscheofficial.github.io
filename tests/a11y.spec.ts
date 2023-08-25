@@ -1,7 +1,8 @@
 import { test, expect, Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
+import { BASE_URL as BASE_URL_CONFIG } from "../src/config";
 
-const BASE_URL = `http://localhost:3001`;
+const BASE_URL = `https://${BASE_URL_CONFIG}`;
 
 const runA11yScan = async (page: Page, path: string): Promise<void> => {
   await page.goto(path);
