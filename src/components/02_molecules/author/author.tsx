@@ -36,15 +36,9 @@ export const Author: React.FC<AuthorProps> = ({
         )}
 
         <span className={s.content}>
-          <PHeading
-            ellipsis
-            size="medium"
-            theme="dark"
-            className={s.title}
-            tag="h3"
-          >
+          <PText ellipsis size="medium" theme="dark" className={s.title}>
             {name}
-          </PHeading>
+          </PText>
 
           <PText theme="dark" className={s.description}>
             {description}
