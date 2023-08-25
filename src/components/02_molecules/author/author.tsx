@@ -13,7 +13,7 @@ interface AuthorProps {
   name: string;
   description?: string;
   slug?: string;
-  imageSrc: string | StaticImageData;
+  imageSrc?: string | StaticImageData;
 }
 export const Author: React.FC<AuthorProps> = ({
   name,
@@ -29,9 +29,11 @@ export const Author: React.FC<AuthorProps> = ({
         href={{ pathname: slug }}
         target="_blank"
       >
-        <span className={s.image}>
-          <ExportedImage src={imageSrc} alt="" fill placeholder="empty" />
-        </span>
+        {!!imageSrc && (
+          <span className={s.image}>
+            <ExportedImage src={imageSrc} alt="" fill placeholder="empty" />
+          </span>
+        )}
 
         <span className={s.content}>
           <PHeading
@@ -48,7 +50,7 @@ export const Author: React.FC<AuthorProps> = ({
             {description}
           </PText>
         </span>
-        {slug && <PIcon theme="dark" className={s.icon} />}
+        {!!slug && <PIcon theme="dark" className={s.icon} />}
       </Component>
     </Section>
   );

@@ -25,7 +25,7 @@ const Author = defineNestedType(() => ({
   name: "Author",
   fields: {
     name: { type: "string", required: true },
-    image: { type: "string", required: true },
+    image: { type: "string", required: false },
     slug: { type: "string", required: false },
     description: { type: "string", required: false },
   },
@@ -65,7 +65,7 @@ const Blog = defineDocumentType(() => ({
     author: {
       type: "nested",
       of: Author,
-      required: true,
+      required: false,
     },
     image: {
       type: "string",

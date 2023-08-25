@@ -57,13 +57,15 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
 
       <MdxComponents code={blog.body.code} />
 
-      <Author
-        key={blog.author._id}
-        name={blog.author.name}
-        description={blog.author.description}
-        imageSrc={blog.author.image}
-        slug={blog.author.slug}
-      />
+      {!!blog.author && (
+        <Author
+          key={blog.author._id}
+          name={blog.author.name}
+          description={blog.author.description}
+          imageSrc={blog.author.image}
+          slug={blog.author.slug}
+        />
+      )}
     </main>
   );
 };
