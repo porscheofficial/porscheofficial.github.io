@@ -1,11 +1,7 @@
 import { StaticImageData } from "next/image";
 import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
-import {
-  PHeading,
-  PIcon,
-  PText,
-} from "@porsche-design-system/components-react/ssr";
+import { PIcon, PText } from "@porsche-design-system/components-react/ssr";
 import s from "./author.module.scss";
 import { Section } from "../section/section";
 
