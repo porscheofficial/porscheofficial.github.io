@@ -4,11 +4,11 @@ import {
   PText,
 } from "@porsche-design-system/components-react/ssr";
 // @ts-expect-error TODO
-import importProjects from "../data/projects.yml";
+import importProjects from "../../data/projects.yml";
 // @ts-expect-error TODO
-import importNews from "../data/news.yml";
+import importNews from "../../data/news.yml";
 // @ts-expect-error TODO
-import importMemberships from "../data/memberships.yml";
+import importMemberships from "../../data/memberships.yml";
 import { HeroSection } from "../components/03_organisms/heroSection/HeroSection";
 import s from "./page.module.scss";
 import heroImage from "../../public/assets/heroImage2.png";
