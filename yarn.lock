@@ -5343,9 +5343,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-image-export-optimizer@npm:1.8.3":
-  version: 1.8.3
-  resolution: "next-image-export-optimizer@npm:1.8.3"
+"next-image-export-optimizer@npm:1.8.4":
+  version: 1.8.4
+  resolution: "next-image-export-optimizer@npm:1.8.4"
   dependencies:
     cli-progress: ^3.10.0
     sharp: ^0.32.0
@@ -5355,7 +5355,7 @@ __metadata:
     react: ^18.0.0-0
   bin:
     next-image-export-optimizer: dist/optimizeImages.js
-  checksum: 333444498513ee56261e6e4305d40307ea317ea87d28a3ae9cdccd0cd231646b9dca001a44468c46e2013060ae1985f13fd7721e0c7b9267c9708681396b737b
+  checksum: b5de229321c2ab09c044e643f1e325b74f67424e97f8abdcb4d72c9e4cc44b050dedccd5cba529ff165bb2560379785cec0692cb6c9dfe824df551af43b9e8af
   languageName: node
   linkType: hard
 
@@ -5828,7 +5828,7 @@ __metadata:
     js-yaml-loader: 1.2.2
     next: 13.4.19
     next-contentlayer: 0.3.4
-    next-image-export-optimizer: 1.8.3
+    next-image-export-optimizer: 1.8.4
     prettier: 3.0.2
     prism-react-renderer: 2.0.6
     react: 18.2.0
