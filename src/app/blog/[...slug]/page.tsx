@@ -2,10 +2,13 @@ import { notFound } from "next/navigation";
 import { allBlogs, Blog } from "contentlayer/generated";
 import { Metadata } from "next";
 import { format, parseISO } from "date-fns";
+import { PText } from "@porsche-design-system/components-react/ssr";
 import { PageProps } from "../../../types/general";
 import { MdxComponents } from "../../../components/01_atoms/MdxComponents";
 import { HeroSection } from "../../../components/03_organisms/heroSection/HeroSection";
+import s from "./page.module.scss";
 import { Author } from "../../../components/02_molecules/author/author";
+import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
 
 const getParams = (params: { slug?: string[] }): Blog | null => {
   const slug = params.slug?.join("/") ?? "";
@@ -54,6 +57,12 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
         imageSrc={blog.image}
         imageAlt=""
       />
+
+      <Textblock className={s.descriptionShort}>
+        <PText theme="dark" size="x-large" align="center">
+          {blog.descriptionShort}
+        </PText>
+      </Textblock>
 
       <MdxComponents code={blog.body.code} />
 

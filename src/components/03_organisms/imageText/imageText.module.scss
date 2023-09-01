@@ -1,7 +1,7 @@
 @use "@porsche-design-system/components-js/styles" as *;
 
 .imageTextList {
-  [class~="description"] {
+  .description {
     grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
 
     @include pds-media-query-max("s") {
@@ -18,7 +18,7 @@
     }
   }
 
-  [class~="image"] {
+  .image {
     position: relative;
     aspect-ratio: 16/9;
     grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
