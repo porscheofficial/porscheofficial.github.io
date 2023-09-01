@@ -57,6 +57,10 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
       hash: "news",
       name: "News & Media",
     },
+    {
+      url: "/blog",
+      name: "Contributor Stories",
+    },
   ];
 
   useEffect(() => {
