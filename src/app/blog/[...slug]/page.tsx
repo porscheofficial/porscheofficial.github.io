@@ -10,6 +10,7 @@ import s from "./page.module.scss";
 import { Author } from "../../../components/02_molecules/author/author";
 import { Section } from "../../../components/02_molecules/section/section";
 import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
+import { BASE_URL } from "../../../config";
 
 const getParams = (params: { slug?: string[] }): Blog | null => {
   const slug = params.slug?.join("/") ?? "";
@@ -22,15 +23,40 @@ const getParams = (params: { slug?: string[] }): Blog | null => {
   return doc;
 };
 
-export const generateMetadata = ({
+// eslint-disable-next-line @typescript-eslint/require-await,func-style
+export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
-}): Metadata => {
-  const doc = allBlogs.find((file) => file._raw.flattenedPath === params.slug);
+}): Promise<Metadata> {
+  const doc = allBlogs.find((file) => file.slugAsParams === params.slug[0]);
   if (!doc) return {};
-  return { title: doc.title };
-};
+  const { title } = doc;
+  const description = doc.descriptionShort;
+  return {
+    title,
+    description: doc.descriptionShort,
+    keywords: doc.hashTags?.flat(),
+    authors: [
+      {
+        name: doc.author?.name,
+        url: doc.author?.slug ?? "",
+      },
+    ],
+    openGraph: {
+      url: `${BASE_URL}${doc.slug}`,
+      title,
+      description,
+      images: doc.image,
+    },
+    twitter: {
+      card: "summary_large_image",
+      creator: "@Porsche",
+      title,
+      description,
+    },
+  };
+}
 
 export const generateStaticParams = (): PageProps["params"][] => {
   return allBlogs.map((doc) => ({

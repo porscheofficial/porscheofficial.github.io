@@ -5,9 +5,9 @@ import { allDocs, Doc } from "contentlayer/generated";
 import { PageProps } from "../../../types/general";
 import { MdxComponents } from "../../../components/01_atoms/MdxComponents";
 import { HeroSection } from "../../../components/03_organisms/heroSection/HeroSection";
-import heroImage from "../../../../public/assets/heroImage2.png";
 import { Section } from "../../../components/02_molecules/section/section";
 import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
+import { BASE_URL } from "../../../config";
 
 const getParams = (params: { slug?: string[] }): Doc | null => {
   const slug = params.slug?.join("/") ?? "";
@@ -20,15 +20,33 @@ const getParams = (params: { slug?: string[] }): Doc | null => {
   return doc;
 };
 
-export const generateMetadata = ({
+// eslint-disable-next-line @typescript-eslint/require-await,func-style
+export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
-}): Metadata => {
-  const doc = allDocs.find((file) => file._raw.flattenedPath === params.slug);
+}): Promise<Metadata> {
+  const doc = allDocs.find((file) => file.slugAsParams === params.slug[0]);
   if (!doc) return {};
-  return { title: doc.title };
-};
+  const { title } = doc;
+  const description = doc.descriptionShort;
+  return {
+    title,
+    description: doc.descriptionShort,
+    openGraph: {
+      url: `${BASE_URL}${doc.slug}`,
+      title,
+      description,
+      images: doc.image,
+    },
+    twitter: {
+      card: "summary_large_image",
+      creator: "@Porsche",
+      title,
+      description,
+    },
+  };
+}
 
 export const generateStaticParams = (): PageProps["params"][] => {
   return allDocs.map((doc) => ({
@@ -47,8 +65,9 @@ const DocPage: React.FC<PageProps> = ({ params }: PageProps) => {
       <HeroSection
         title={doc.title}
         subtitle="FOSS@Porsche"
-        imageSrc={heroImage}
-        imageAlt="AI generated Porsche Taycan"
+        imageSrc={doc.image}
+        description={doc.descriptionShort}
+        imageAlt=""
       />
 
       <Section>
