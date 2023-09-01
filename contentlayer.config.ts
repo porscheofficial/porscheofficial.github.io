@@ -59,7 +59,7 @@ const Blog = defineDocumentType(() => ({
     hashTags: {
       type: "list",
       of: { type: "string" },
-      description: "The reading time of the blog",
+      description: "The list of hashtags of the blog",
       required: false,
     },
     author: {
