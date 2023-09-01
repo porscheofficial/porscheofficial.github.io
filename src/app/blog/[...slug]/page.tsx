@@ -61,7 +61,7 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
 
       <Section spacing="none">
         <Textblock className={s.descriptionShort}>
-          <PText theme="dark" size="x-large" align="center">
+          <PText theme="dark" size="large" align="center">
             {blog.descriptionShort}
           </PText>
         </Textblock>

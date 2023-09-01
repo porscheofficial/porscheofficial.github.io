@@ -1,6 +1,6 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
-import { PHeading } from "@porsche-design-system/components-react/ssr";
+import { PHeading, PText } from "@porsche-design-system/components-react/ssr";
 import s from "./imageText.module.scss";
 
 import { Section } from "../../02_molecules/section/section";
@@ -25,7 +25,9 @@ export const ImageText: React.FC<ImageTextProps> = ({
         <PHeading theme="dark" size="medium" tag="h2">
           {title}
         </PHeading>
-        {children}
+        <PText theme="dark">
+          {children}
+        </PText>
       </div>
       <div className={`${s.image} ${left ? "left" : ""}`}>
         <ExportedImage src={imageSrc} alt={imageAlt} fill />
