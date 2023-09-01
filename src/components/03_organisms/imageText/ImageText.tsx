@@ -25,9 +25,7 @@ export const ImageText: React.FC<ImageTextProps> = ({
         <PHeading theme="dark" size="medium" tag="h2">
           {title}
         </PHeading>
-        <PText theme="dark">
-          {children}
-        </PText>
+        <PText theme="dark">{children}</PText>
       </div>
       <div className={`${s.image} ${left ? "left" : ""}`}>
         <ExportedImage src={imageSrc} alt={imageAlt} fill />
