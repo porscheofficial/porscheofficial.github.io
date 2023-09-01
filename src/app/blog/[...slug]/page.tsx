@@ -8,6 +8,7 @@ import { MdxComponents } from "../../../components/01_atoms/MdxComponents";
 import { HeroSection } from "../../../components/03_organisms/heroSection/HeroSection";
 import s from "./page.module.scss";
 import { Author } from "../../../components/02_molecules/author/author";
+import { Section } from "../../../components/02_molecules/section/section";
 import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
 
 const getParams = (params: { slug?: string[] }): Blog | null => {
@@ -58,11 +59,13 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
         imageAlt=""
       />
 
-      <Textblock className={s.descriptionShort}>
-        <PText theme="dark" size="x-large" align="center">
-          {blog.descriptionShort}
-        </PText>
-      </Textblock>
+      <Section spacing="none">
+        <Textblock className={s.descriptionShort}>
+          <PText theme="dark" size="x-large" align="center">
+            {blog.descriptionShort}
+          </PText>
+        </Textblock>
+      </Section>
 
       <MdxComponents code={blog.body.code} />
 
