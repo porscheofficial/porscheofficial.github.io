@@ -3,6 +3,7 @@ import {
   PHeading,
   PText,
 } from "@porsche-design-system/components-react/ssr";
+import { allStatics } from "contentlayer/generated";
 // @ts-expect-error TODO
 import importProjects from "../../data/projects.yml";
 // @ts-expect-error TODO
@@ -13,19 +14,21 @@ import { HeroSection } from "../components/03_organisms/heroSection/HeroSection"
 import s from "./page.module.scss";
 import heroImage from "../../public/assets/heroImage2.png";
 import { Textblock } from "../components/02_molecules/textblock/Textblock";
-import FOSSMovement from "./FOSS_MOVEMENT.mdx";
 import { ProjectCard } from "../components/03_organisms/projectCard/ProjectCard";
 import { NewsCard } from "../components/03_organisms/newsCard/NewsCard";
 import { Section } from "../components/02_molecules/section/section";
 import { Projects, News, Memberships } from "../types/general";
 import { Membership } from "../components/03_organisms/membership/Membership";
 import { DocsSection } from "../components/03_organisms/docsSection/DocsSection";
+import { MdxComponents } from "../components/01_atoms/MdxComponents";
 
 const Home: React.FC = () => {
   const projects: Projects = importProjects as Projects;
   const news: News = importNews as News;
   const memberships: Memberships = importMemberships as Memberships;
-
+  const fossContent = allStatics.find(
+    (file) => file._raw.sourceFileName === "FOSS_MOVEMENT.mdx",
+  );
   return (
     <main className={s.main}>
       <HeroSection
@@ -43,8 +46,14 @@ const Home: React.FC = () => {
             borders.
           </PText>
         </Textblock>
-        <FOSSMovement />
       </Section>
+      {!!fossContent?.body.code && (
+        <div className={s["foss-movement"]}>
+          <Section>
+            <MdxComponents code={fossContent.body.code} />
+          </Section>
+        </div>
+      )}
       <Section id="projects" grid={false}>
         <PCarousel
           slidesPerPage={{ base: 1, s: 2, l: 3 }}

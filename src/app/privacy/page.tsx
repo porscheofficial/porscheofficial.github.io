@@ -1,9 +1,10 @@
 import { Metadata } from "next";
+import { allStatics } from "contentlayer/generated";
 import { Section } from "../../components/02_molecules/section/section";
 import { HeroSection } from "../../components/03_organisms/heroSection/HeroSection";
 import heroImage from "../../../public/assets/heroImage2.png";
 import { Textblock } from "../../components/02_molecules/textblock/Textblock";
-import Privacy from "./PRIVACY_POLICY.mdx";
+import { MdxComponents } from "../../components/01_atoms/MdxComponents";
 
 export const metadata: Metadata = {
   title: "Privacy | Porsche Open Source Platform",
@@ -12,7 +13,10 @@ export const metadata: Metadata = {
   },
 };
 
-const Docs: React.FC = () => {
+const Privacy: React.FC = () => {
+  const content = allStatics.find(
+    (file) => file._raw.sourceFileName === "PRIVACY_POLICY.mdx",
+  );
   return (
     <main>
       <HeroSection
@@ -21,14 +25,15 @@ const Docs: React.FC = () => {
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"
       />
-
-      <Section>
-        <Textblock id="docs" className="mdx-content">
-          <Privacy />
-        </Textblock>
-      </Section>
+      {!!content?.body.code && (
+        <Section>
+          <Textblock id="docs" className="mdx-content">
+            <MdxComponents code={content.body.code} />
+          </Textblock>
+        </Section>
+      )}
     </main>
   );
 };
 
-export default Docs;
+export default Privacy;

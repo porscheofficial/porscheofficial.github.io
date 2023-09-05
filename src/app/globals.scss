@@ -66,3 +66,8 @@ ul {
     padding: 0px;
   }
 }
+
+.keyvalues {
+  margin-bottom: $pds-spacing-fluid-x-large;
+  grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
+}

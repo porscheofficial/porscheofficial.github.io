@@ -34,10 +34,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.7.3",
-    "@mdx-js/loader": "2.3.0",
-    "@mdx-js/react": "2.3.0",
     "@next/eslint-plugin-next": "13.4.19",
-    "@next/mdx": "13.4.19",
     "@playwright/test": "1.37.1",
     "@porscheofficial/eslint-config-porschedigital-react": "4.0.0",
     "@porscheofficial/prettier-config-porschedigital": "4.0.0",

@@ -93,7 +93,9 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
         </Textblock>
       </Section>
 
-      <MdxComponents code={blog.body.code} />
+      <div className="mdx-content">
+        <MdxComponents code={blog.body.code} />
+      </div>
 
       {!!blog.author && (
         <Author

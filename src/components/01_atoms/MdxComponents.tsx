@@ -2,6 +2,7 @@
 import * as React from "react";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import {
+  PDisplay,
   PHeading,
   PInlineNotification,
   PLinkPure,
@@ -14,6 +15,8 @@ import { StaticImageData } from "next/image";
 import { Codeblock } from "../02_molecules/codeblock/Codeblock";
 import { ImageText } from "../03_organisms/imageText/ImageText";
 import { Section } from "../02_molecules/section/section";
+import { KeyValue } from "../02_molecules/foss_movement/KeyValue";
+import { Principle } from "../02_molecules/foss_movement/Principle";
 
 const components = {
   PInlineNotification: ({ ...props }) => <PInlineNotification {...props} />,
@@ -31,6 +34,11 @@ const components = {
   ExportedImage: ({ ...props }) => <ExportedImage {...props} />,
   // @ts-expect-error TODO
   Section: ({ ...props }) => <Section {...props} />,
+  // @ts-expect-error TODO
+  KeyValue: ({ ...props }) => <KeyValue {...props} />,
+  // @ts-expect-error TODO
+  Principle: ({ ...props }) => <Principle {...props} />,
+  PDisplay: ({ ...props }) => <PDisplay {...props} />,
   h1: ({ children }: { children: React.ReactNode }) => (
     <PHeading
       align="center"
@@ -112,10 +120,6 @@ interface MdxProps {
 export const MdxComponents: React.FC<MdxProps> = ({ code }: MdxProps) => {
   const Component = useMDXComponent(code);
 
-  return (
-    <div className="mdx-content">
-      {/* @ts-expect-error expected? */}
-      <Component components={components} />
-    </div>
-  );
+  // @ts-expect-error expected?
+  return <Component components={components} />;
 };

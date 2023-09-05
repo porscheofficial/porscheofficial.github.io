@@ -515,18 +515,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/loader@npm:2.3.0":
-  version: 2.3.0
-  resolution: "@mdx-js/loader@npm:2.3.0"
-  dependencies:
-    "@mdx-js/mdx": ^2.0.0
-    source-map: ^0.7.0
-  peerDependencies:
-    webpack: ">=4"
-  checksum: 1217f811b7ee37e4f63ca828642cd47120b7b2994975409b38cdd8550434166520c94f116efa975cb2b14760a5cc7a424848649519ce05d47f96d21b8c2c1066
-  languageName: node
-  linkType: hard
-
 "@mdx-js/mdx@npm:^2.0.0":
   version: 2.3.0
   resolution: "@mdx-js/mdx@npm:2.3.0"
@@ -552,18 +540,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/react@npm:2.3.0":
-  version: 2.3.0
-  resolution: "@mdx-js/react@npm:2.3.0"
-  dependencies:
-    "@types/mdx": ^2.0.0
-    "@types/react": ">=16"
-  peerDependencies:
-    react: ">=16"
-  checksum: f45fe779556e6cd9a787f711274480e0638b63c460f192ebdcd77cc07ffa61e23c98cb46dd46e577093e1cb4997a232a848d1fb0ba850ae204422cf603add524
-  languageName: node
-  linkType: hard
-
 "@next/env@npm:13.4.19":
   version: 13.4.19
   resolution: "@next/env@npm:13.4.19"
@@ -577,23 +553,6 @@ __metadata:
   dependencies:
     glob: 7.1.7
   checksum: d60c136e4a8d156b50d4b248eef9918bbf4bd7da293487cdf1f7bc172b07beeae4a2822798942d2f87999af86c53d871ebea592f3d6099ae23a0746d2abf7c73
-  languageName: node
-  linkType: hard
-
-"@next/mdx@npm:13.4.19":
-  version: 13.4.19
-  resolution: "@next/mdx@npm:13.4.19"
-  dependencies:
-    source-map: ^0.7.0
-  peerDependencies:
-    "@mdx-js/loader": ">=0.15.0"
-    "@mdx-js/react": ">=0.15.0"
-  peerDependenciesMeta:
-    "@mdx-js/loader":
-      optional: true
-    "@mdx-js/react":
-      optional: true
-  checksum: 56d591e43285eb5029a40940e4ce004635043ad7fbed2ce2740ea5a1840fc5b284eb96a8787e5fb6131ccf46d7fbc6320161e20a23775a0dd1493013caf3c52e
   languageName: node
   linkType: hard
 
@@ -1278,7 +1237,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:>=16":
+"@types/react@npm:*":
   version: 18.2.20
   resolution: "@types/react@npm:18.2.20"
   dependencies:
@@ -5806,10 +5765,7 @@ __metadata:
   resolution: "porscheofficial@workspace:."
   dependencies:
     "@axe-core/playwright": 4.7.3
-    "@mdx-js/loader": 2.3.0
-    "@mdx-js/react": 2.3.0
     "@next/eslint-plugin-next": 13.4.19
-    "@next/mdx": 13.4.19
     "@playwright/test": 1.37.1
     "@porsche-design-system/components-js": 3.6.1
     "@porsche-design-system/components-react": 3.6.1

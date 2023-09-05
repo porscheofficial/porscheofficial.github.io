@@ -17,6 +17,26 @@
   }
 }
 
-.section-xl {
+.section-xxl {
   margin-top: $pds-spacing-fluid-xx-large;
+}
+
+.section-xl {
+  margin-top: $pds-spacing-fluid-x-large;
+}
+
+.section-l {
+  margin-top: $pds-spacing-fluid-large;
+}
+
+.section-m {
+  margin-top: $pds-spacing-fluid-medium;
+}
+
+.section-s {
+  margin-top: $pds-spacing-fluid-small;
+}
+
+.section-none {
+  margin: 0;
 }

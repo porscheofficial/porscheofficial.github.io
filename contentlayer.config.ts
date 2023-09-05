@@ -107,8 +107,16 @@ export const Doc = defineDocumentType(() => ({
   computedFields,
 }));
 
+export const Static = defineDocumentType(() => ({
+  name: "Static",
+  filePathPattern: `static/**/*.mdx`,
+  contentType: "mdx",
+  // @ts-expect-error TODO
+  computedFields,
+}));
+
 // eslint-disable-next-line import/no-default-export
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [Blog, Doc],
+  documentTypes: [Blog, Doc, Static],
 });

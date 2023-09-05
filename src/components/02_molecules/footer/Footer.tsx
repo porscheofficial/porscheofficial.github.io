@@ -6,12 +6,17 @@ import {
   PLinkPure,
   PText,
 } from "@porsche-design-system/components-react/ssr";
+import { allStatics } from "contentlayer/generated";
 import s from "./footer.module.scss";
 import { Textblock } from "../textblock/Textblock";
 import { linkSocial, linkNotice } from "../../../types/general";
-import WLTP from "./WLTP.mdx";
+import { MdxComponents } from "../../01_atoms/MdxComponents";
 
 export const Footer: React.FC = () => {
+  const content = allStatics.find(
+    // eslint-disable-next-line no-underscore-dangle
+    (file) => file._raw.sourceFileName === "FOOTER.mdx",
+  );
   const links = [
     {
       url: "https://investorrelations.porsche.com/en/",
@@ -162,9 +167,11 @@ export const Footer: React.FC = () => {
             </PLinkPure>
           ))}
         </div>
-        <Textblock id={s.wltp}>
-          <WLTP />
-        </Textblock>
+        {!!content?.body.code && (
+          <Textblock id={s.wltp}>
+            <MdxComponents code={content.body.code} />
+          </Textblock>
+        )}
       </div>
       <div className={s["made-with"]}>
         Made with{" "}
