@@ -39,10 +39,10 @@ export const BlogsSection: React.FC<BlogsSectionProps> = ({
       )}
 
       {docList.length > 0 && (
-        <Section grid={false}>
+        <Section grid={false} spacing="xl">
           <PCarousel
             slidesPerPage={{ base: 1, s: 2, l: 3 }}
-            heading={showHeading ? "Blogs" : ""}
+            heading={showHeading ? "Contributor Stories" : ""}
             theme="dark"
             width="extended"
             alignHeader="center"

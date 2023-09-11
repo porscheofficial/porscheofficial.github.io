@@ -7,13 +7,13 @@ const DocsPage: React.FC = () => {
   return (
     <main>
       <HeroSection
-        title="Docs"
+        title="Documentation"
         subtitle="FOSS@Porsche"
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"
       />
-      <Section grid={false}>
-        <DocsSection isFeatured />
+      <Section>
+        <DocsSection />
       </Section>
     </main>
   );

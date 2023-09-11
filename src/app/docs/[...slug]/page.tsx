@@ -66,7 +66,6 @@ const DocPage: React.FC<PageProps> = ({ params }: PageProps) => {
         title={doc.title}
         subtitle="FOSS@Porsche"
         imageSrc={doc.image}
-        description={doc.descriptionShort}
         imageAlt=""
       />
 

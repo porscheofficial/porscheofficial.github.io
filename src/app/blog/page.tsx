@@ -7,13 +7,13 @@ const BlogPage: React.FC = () => {
   return (
     <main>
       <HeroSection
-        title="Blog"
+        title="Contributor Stories"
         subtitle="FOSS@Porsche"
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"
       />
       <Section grid={false}>
-        <BlogsSection isFeatured />
+        <BlogsSection isFeatured showHeading={false} />
       </Section>
     </main>
   );

@@ -107,8 +107,8 @@ const Home: React.FC = () => {
             are endorsing for new projects to foster healthy communities.
           </PText>
         </Textblock>
+        <DocsSection />
       </Section>
-      <DocsSection showHeading={false} />
       <Section id="memberships" className={s.memberships}>
         {memberships.items.map((membership) => (
           <Membership
