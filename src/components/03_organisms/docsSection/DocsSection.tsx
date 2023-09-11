@@ -10,21 +10,23 @@ export const DocsSection: React.FC = () => {
   return (
     <div className={s.section}>
       {allDocs.length > 0 && (
-        <div className={s.card}>
+        <>
           {allDocs.map((doc) => (
-            <div>
-              <PHeading ellipsis size="medium" theme="dark" tag="h3">
-                {doc.title}
-              </PHeading>
-              <PText theme="dark" size="small">
-                {doc.descriptionShort}
-              </PText>
-              <PLinkPure href={doc.slug} theme="dark" className={s.link}>
-                Learn more
-              </PLinkPure>
+            <div className={s.card}>
+              <div>
+                <PHeading ellipsis size="medium" theme="dark" tag="h3">
+                  {doc.title}
+                </PHeading>
+                <PText theme="dark" size="small" className={s.description}>
+                  {doc.descriptionShort}
+                </PText>
+                <PLinkPure href={doc.slug} theme="dark" className={s.link}>
+                  Learn more
+                </PLinkPure>
+              </div>
             </div>
           ))}
-        </div>
+        </>
       )}
     </div>
   );

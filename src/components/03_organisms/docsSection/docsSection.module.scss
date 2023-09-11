@@ -20,6 +20,10 @@
   background: $pds-theme-dark-background-surface;
   border-radius: $pds-border-radius-large;
 
+  .description {
+    margin-top: $pds-spacing-static-x-small;
+  }
+
   .link {
     margin-top: $pds-spacing-static-medium;
   }
