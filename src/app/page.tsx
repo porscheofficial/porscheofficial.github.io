@@ -19,6 +19,7 @@ import { NewsCard } from "../components/03_organisms/newsCard/NewsCard";
 import { Section } from "../components/02_molecules/section/section";
 import { Projects, News, Memberships } from "../types/general";
 import { Membership } from "../components/03_organisms/membership/Membership";
+import { BlogsSection } from "../components/03_organisms/blogsSection/BlogsSection";
 import { DocsSection } from "../components/03_organisms/docsSection/DocsSection";
 import { MdxComponents } from "../components/01_atoms/MdxComponents";
 
@@ -75,6 +76,12 @@ const Home: React.FC = () => {
             />
           ))}
         </PCarousel>
+      </Section>
+      <Section id="blog" grid={false}>
+        <PHeading theme="dark" align="center" size="x-large">
+          Contributor Stories
+        </PHeading>
+        <BlogsSection isFeatured showHeading={false} />
       </Section>
       <Section id="news" grid={false}>
         <PCarousel
