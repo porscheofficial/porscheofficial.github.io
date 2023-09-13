@@ -36,5 +36,6 @@ const nextConfig = {
   },
 };
 const { withContentlayer } = require("next-contentlayer");
+const withBundleAnalyzer = require("@next/bundle-analyzer")();
 
-module.exports = withContentlayer(nextConfig);
+module.exports = withBundleAnalyzer(withContentlayer(nextConfig));

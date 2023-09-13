@@ -22,7 +22,6 @@
     "@porsche-design-system/components-js": "3.6.1",
     "@porsche-design-system/components-react": "3.6.1",
     "@primer/octicons": "19.6.0",
-    "classnames": "2.3.2",
     "contentlayer": "0.3.4",
     "date-fns": "2.30.0",
     "next": "13.4.19",
@@ -34,6 +33,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.7.3",
+    "@next/bundle-analyzer": "13.4.19",
     "@next/eslint-plugin-next": "13.4.19",
     "@playwright/test": "1.37.1",
     "@porscheofficial/eslint-config-porschedigital-react": "4.0.0",
@@ -45,6 +45,7 @@
     "eslint": "8.48.0",
     "http-server": "14.1.1",
     "js-yaml-loader": "1.2.2",
+    "playwright-core": "1.37.1",
     "prettier": "3.0.3",
     "typescript": "5.2.2",
     "typescript-plugin-css-modules": "5.0.1"
