@@ -12,7 +12,7 @@ export const DocsSection: React.FC = () => {
       {allDocs.length > 0 && (
         <>
           {allDocs.map((doc) => (
-            <div className={s.card}>
+            <div className={s.card} key={`doc-${doc.title}`}>
               <div>
                 <PHeading ellipsis size="medium" theme="dark" tag="h3">
                   {doc.title}

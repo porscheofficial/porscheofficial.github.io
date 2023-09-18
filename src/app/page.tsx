@@ -66,7 +66,7 @@ const Home: React.FC = () => {
         >
           {projects.items.map((project) => (
             <ProjectCard
-              key={project.title}
+              key={`project-${project.title}`}
               title={project.title}
               repo={project.repo}
               description={project.description}
@@ -94,7 +94,7 @@ const Home: React.FC = () => {
         >
           {news.items.map((media) => (
             <NewsCard
-              key={media.title}
+              key={`news-${media.title}`}
               title={media.title}
               url={media.url}
               imageAlt={media.imageAlt}
@@ -119,7 +119,7 @@ const Home: React.FC = () => {
       <Section id="memberships" className={s.memberships}>
         {memberships.items.map((membership) => (
           <Membership
-            key={membership.title}
+            key={`member-${membership.title}`}
             description={membership.description}
             title={membership.title}
             url={membership.url}
