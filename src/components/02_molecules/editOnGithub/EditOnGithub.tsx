@@ -1,6 +1,6 @@
 import path from "path";
+import { PLink } from "@porsche-design-system/components-react/ssr";
 import s from "./editOnGithub.module.scss";
-import { LinkButton } from "../../01_atoms/LinkButton";
 
 export interface EditOnGithubProps {
   file: string;
@@ -9,11 +9,11 @@ export interface EditOnGithubProps {
 export const EditOnGithub: React.FC<EditOnGithubProps> = ({ file }) => {
   const url = new URL(
     path.join("porscheofficial/porscheofficial.github.io/edit/main/", file),
-    "https://github.com/"
+    "https://github.com/",
   );
   return (
     <div className={s["editOnGithub-container"]}>
-      <LinkButton
+      <PLink
         className={s.editOnGithub}
         href={url.href}
         variant="secondary"
@@ -21,7 +21,7 @@ export const EditOnGithub: React.FC<EditOnGithubProps> = ({ file }) => {
         theme="dark"
       >
         Edit on GitHub
-      </LinkButton>
+      </PLink>
     </div>
   );
 };

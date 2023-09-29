@@ -34,11 +34,13 @@
 
     .subtitle {
       grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
-      grid-row: 1;
     }
     .title {
       grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
-      grid-row: 2;
+    }
+
+    .description {
+      grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
     }
   }
 }

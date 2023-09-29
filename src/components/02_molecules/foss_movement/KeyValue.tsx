@@ -2,9 +2,11 @@
 /* eslint-disable react/require-default-props */
 import { PropsWithChildren, ReactNode, useCallback, useState } from "react";
 import type { AccordionUpdateEvent } from "@porsche-design-system/components-react";
+import {
+  PAccordion,
+  PHeading,
+} from "@porsche-design-system/components-react/ssr";
 import s from "./keyValue.module.scss";
-import { Accordion } from "../../01_atoms/Accordion";
-import { Heading } from "../../01_atoms/Heading";
 
 export interface KeyValueProps {
   text: string;
@@ -12,7 +14,7 @@ export interface KeyValueProps {
 }
 
 export const KeyValue: React.FC<PropsWithChildren<KeyValueProps>> = (
-  props: KeyValueProps
+  props: KeyValueProps,
 ) => {
   const { text, children } = props;
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -22,11 +24,11 @@ export const KeyValue: React.FC<PropsWithChildren<KeyValueProps>> = (
   return (
     <div className={s["keyvalue-container"]}>
       <div className={s.keyvalue}>
-        <Heading tag="h2" theme="dark" size="x-large">
+        <PHeading tag="h2" theme="dark" size="x-large">
           {text}
-        </Heading>
+        </PHeading>
         <div className={s["principles-accordion"]}>
-          <Accordion
+          <PAccordion
             theme="dark"
             heading="Principles"
             tag="h3"
@@ -35,7 +37,7 @@ export const KeyValue: React.FC<PropsWithChildren<KeyValueProps>> = (
             onUpdate={onUpdate}
           >
             <div className={s.principles}>{children}</div>
-          </Accordion>
+          </PAccordion>
         </div>
       </div>
     </div>

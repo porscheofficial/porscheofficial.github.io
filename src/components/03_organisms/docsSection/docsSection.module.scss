@@ -1,0 +1,30 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.section {
+  display: grid;
+  grid-column: $pds-grid-extended-column-start / $pds-grid-extended-column-end;
+  grid-template-columns: 1fr;
+  grid-gap: $pds-spacing-fluid-x-large;
+
+  @include pds-media-query-min("m") {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include pds-media-query-min("l") {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  padding: $pds-spacing-static-large $pds-spacing-static-medium;
+  background: $pds-theme-dark-background-surface;
+  border-radius: $pds-border-radius-large;
+
+  .description {
+    margin-top: $pds-spacing-static-x-small;
+  }
+
+  .link {
+    margin-top: $pds-spacing-static-medium;
+  }
+}

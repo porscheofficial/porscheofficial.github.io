@@ -4,13 +4,16 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { AccordionUpdateEvent } from "@porsche-design-system/components-react";
-import { Accordion } from "../../01_atoms/Accordion";
-import { LinkButton } from "../../01_atoms/LinkButton";
-import { ButtonGroup } from "../../01_atoms/ButtonGroup";
+import { allDocs } from "contentlayer/generated";
+import {
+  PAccordion,
+  PButtonGroup,
+  PButtonPure,
+  PFlyout,
+  PLink,
+  PLinkPure,
+} from "@porsche-design-system/components-react/ssr";
 import s from "./navigation.module.scss";
-import { BurgerMenu } from "../../01_atoms/BurgerMenu";
-import { LinkPure } from "../../01_atoms/LinkPure";
-import { Flyout } from "../../01_atoms/Flyout";
 
 export interface NavigationProps {
   jobsCounter?: string;
@@ -33,7 +36,7 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
     (e: CustomEvent<AccordionUpdateEvent>) => {
       setDocsAccordionOpen(e.detail.open);
     },
-    []
+    [],
   );
 
   const pathname = usePathname();
@@ -54,20 +57,9 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
       hash: "news",
       name: "News & Media",
     },
-  ];
-
-  const docsLinks = [
     {
-      url: "/docs/contributing",
-      name: "Contributing Upstream",
-    },
-    {
-      url: "/docs/creating",
-      name: "Creating FOSS",
-    },
-    {
-      url: "/docs/cla",
-      name: "Contributor License Agreement",
+      url: "/blog",
+      name: "Contributor Stories",
     },
   ];
 
@@ -77,12 +69,14 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
 
   return (
     <div className={s["menu-container"]}>
-      <BurgerMenu onClick={() => onOpen()} />
-      <Flyout open={isMenuOpen} position="left" onDismiss={onDismiss}>
+      <PButtonPure icon="menu-lines" theme="dark" onClick={() => onOpen()}>
+        Menu
+      </PButtonPure>
+      <PFlyout open={isMenuOpen} position="left" onDismiss={onDismiss}>
         <ul>
           {homeLinks.map((link) => (
             <li key={link.name}>
-              <LinkPure
+              <PLinkPure
                 className={s.navLink}
                 size="medium"
                 alignLabel="left"
@@ -96,11 +90,11 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
                 >
                   {link.name}
                 </Link>
-              </LinkPure>
+              </PLinkPure>
             </li>
           ))}
         </ul>
-        <Accordion
+        <PAccordion
           className={s.docsAccordion}
           theme="light"
           size="medium"
@@ -109,9 +103,9 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
           onUpdate={onDocsAccordionUpdate}
         >
           <span slot="heading">Documentation</span>
-          {docsLinks.map((link) => (
-            <LinkPure
-              key={link.name}
+          {allDocs.map((link) => (
+            <PLinkPure
+              key={link.slug}
               className={s.navLink}
               size="medium"
               alignLabel="left"
@@ -119,22 +113,22 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
               stretch
               tabIndex={0}
             >
-              <Link href={{ pathname: link.url }} onClick={onDismiss}>
-                {link.name}
+              <Link href={{ pathname: link.slug }} onClick={onDismiss}>
+                {link.title}
               </Link>
-            </LinkPure>
+            </PLinkPure>
           ))}
-        </Accordion>
+        </PAccordion>
         <div slot="footer">
-          <ButtonGroup>
-            <LinkButton
+          <PButtonGroup>
+            <PLink
               href="https://jobs.porsche.com/index.php?ac=search_result&search_criterion_keyword%5B%5D=Open%20Source"
               variant="secondary"
               theme="light"
             >
               FOSS Jobs <span className={s["job-counter"]}>{jobsCounter}</span>
-            </LinkButton>
-            <LinkButton
+            </PLink>
+            <PLink
               href="https://github.com/porscheofficial"
               variant="secondary"
               theme="light"
@@ -142,10 +136,10 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
               hideLabel
             >
               GitHub
-            </LinkButton>
-          </ButtonGroup>
+            </PLink>
+          </PButtonGroup>
         </div>
-      </Flyout>
+      </PFlyout>
     </div>
   );
 };

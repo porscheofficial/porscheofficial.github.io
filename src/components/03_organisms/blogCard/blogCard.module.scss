@@ -1,0 +1,39 @@
+@use "@porsche-design-system/components-js/styles" as *;
+
+.card {
+  position: relative;
+  transform: translate3d(0px, 0px, 0px);
+
+  .image {
+    position: relative;
+    aspect-ratio: 4/3;
+
+    img {
+      object-fit: cover;
+      border-radius: $pds-border-radius-large $pds-border-radius-large 0 0;
+    }
+  }
+
+  .content {
+    padding: $pds-spacing-static-large $pds-spacing-static-medium;
+  }
+
+  .title {
+    margin-top: $pds-spacing-static-small;
+  }
+
+  .description {
+    margin-top: $pds-spacing-static-x-small;
+  }
+
+  .link {
+    margin-top: $pds-spacing-static-medium;
+  }
+
+  .link-overlay {
+    position: fixed;
+    inset: 0;
+    border-radius: $pds-border-radius-large !important;
+    font-size: 0;
+  }
+}

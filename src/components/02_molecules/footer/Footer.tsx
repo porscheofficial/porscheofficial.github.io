@@ -1,17 +1,22 @@
-"use client";
-
 /* eslint-disable react/require-default-props */
 import Link from "next/link";
+import {
+  PDivider,
+  PLink,
+  PLinkPure,
+  PText,
+} from "@porsche-design-system/components-react/ssr";
+import { allStatics } from "contentlayer/generated";
 import s from "./footer.module.scss";
-import { Text } from "../../01_atoms/Text";
-import { Divider } from "../../01_atoms/Divider";
-import { LinkPure } from "../../01_atoms/LinkPure";
-import { LinkButton } from "../../01_atoms/LinkButton";
 import { Textblock } from "../textblock/Textblock";
 import { linkSocial, linkNotice } from "../../../types/general";
-import WLTP from "./WLTP.mdx";
+import { MdxComponents } from "../../01_atoms/MdxComponents";
 
 export const Footer: React.FC = () => {
+  const content = allStatics.find(
+    // eslint-disable-next-line no-underscore-dangle
+    (file) => file._raw.sourceFileName === "FOOTER.mdx",
+  );
   const links = [
     {
       url: "https://investorrelations.porsche.com/en/",
@@ -98,46 +103,46 @@ export const Footer: React.FC = () => {
   return (
     <footer className={s.footer}>
       <div className={s.left}>
-        <Text size="large" theme="dark">
+        <PText size="large" theme="dark">
           Porsche Company
-        </Text>
+        </PText>
         <ul className={s.content} id={s["company-links"]}>
           {links.map((link) => (
             <li key={link.url}>
-              <LinkPure theme="dark" icon="none">
+              <PLinkPure theme="dark" icon="none">
                 <Link href={{ pathname: link.url }}>{link.name}</Link>
-              </LinkPure>
+              </PLinkPure>
             </li>
           ))}
         </ul>
       </div>
       <div className={s.middle}>
-        <Text size="large" theme="dark">
+        <PText size="large" theme="dark">
           Contact
-        </Text>
+        </PText>
         <div className={s.content}>
-          <Text theme="dark">Do you have any questions?</Text>
+          <PText theme="dark">Do you have any questions?</PText>
 
-          <LinkButton
+          <PLink
             href="mailto:open_source_office@porsche.de"
             theme="dark"
             variant="secondary"
           >
             Contact Us
-          </LinkButton>
+          </PLink>
         </div>
       </div>
       <div className={s.right}>
-        <Text size="large" theme="dark">
+        <PText size="large" theme="dark">
           Social Media
-        </Text>
+        </PText>
         <div className={s.content}>
-          <Text theme="dark">Get in touch with us on social media.</Text>
+          <PText theme="dark">Get in touch with us on social media.</PText>
 
           <ul>
             {linksSocial.map((link) => (
               <li className={s.inline} key={link.url}>
-                <LinkButton
+                <PLink
                   href={link.url}
                   theme="dark"
                   variant="secondary"
@@ -146,29 +151,31 @@ export const Footer: React.FC = () => {
                   className={s.content}
                 >
                   {link.name}
-                </LinkButton>
+                </PLink>
               </li>
             ))}
           </ul>
         </div>
       </div>
-      <Divider className={s.divider} theme="dark" />
+      <PDivider className={s.divider} theme="dark" />
       <div className={s.notice}>
         <div className={s.linkBar}>
           © 2023 Dr. Ing. h.c. F. Porsche AG.{" "}
           {linksNotice.map((link) => (
-            <LinkPure key={link.url} theme="dark" icon="none" underline>
+            <PLinkPure key={link.url} theme="dark" icon="none" underline>
               <Link href={{ pathname: link.url }}>{link.name}.</Link>
-            </LinkPure>
+            </PLinkPure>
           ))}
         </div>
-        <Textblock id={s.wltp}>
-          <WLTP />
-        </Textblock>
+        {!!content?.body.code && (
+          <Textblock id={s.wltp}>
+            <MdxComponents code={content.body.code} />
+          </Textblock>
+        )}
       </div>
       <div className={s["made-with"]}>
         Made with{" "}
-        <LinkPure theme="dark" icon="none">
+        <PLinkPure theme="dark" icon="none">
           <Link
             href={{
               pathname:
@@ -179,9 +186,9 @@ export const Footer: React.FC = () => {
           >
             Free Open Source Software
           </Link>
-        </LinkPure>{" "}
+        </PLinkPure>{" "}
         and{" "}
-        <LinkPure theme="dark" icon="none">
+        <PLinkPure theme="dark" icon="none">
           <Link
             href={{
               pathname: "https://designsystem.porsche.com/latest/",
@@ -191,7 +198,7 @@ export const Footer: React.FC = () => {
           >
             Porsche Design System
           </Link>
-        </LinkPure>
+        </PLinkPure>
       </div>
     </footer>
   );

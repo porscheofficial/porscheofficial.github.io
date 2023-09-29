@@ -1,8 +1,8 @@
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
 import Link from "next/link";
+import { PText } from "@porsche-design-system/components-react/ssr";
 import s from "./membership.module.scss";
-import { Text } from "../../01_atoms/Text";
 
 export interface MembershipProps {
   title: string;
@@ -27,9 +27,9 @@ export const Membership: React.FC<MembershipProps> = ({
         </Link>
       </div>
       <div className={s.description}>
-        <Text theme="dark" size="small">
+        <PText theme="dark" size="small">
           {description}
-        </Text>
+        </PText>
       </div>
     </>
   );

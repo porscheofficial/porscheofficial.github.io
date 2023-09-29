@@ -6,30 +6,23 @@ interface SectionProps {
   id?: string;
   grid?: boolean;
   className?: React.HTMLAttributes<HTMLElement>["className"];
-  spacing?: "s" | "m" | "l" | "xl" | "none";
+  spacing?: "s" | "m" | "l" | "xl" | "xxl" | "none";
 }
 export const Section: React.FC<SectionProps> = ({
   children,
   id,
   className,
-  grid,
-  spacing,
+  grid = true,
+  spacing = "xxl",
 }) => {
-  const spacingClass = `section-${spacing ?? "xl"}`;
   return (
     <div
       className={`${grid ? s["section-grid"] : ""} ${s.section}  ${
         className ?? ""
-      } ${s[spacingClass]}`}
+      } ${s[`section-${spacing}`]}`}
       id={id}
     >
       {children}
     </div>
   );
-};
-
-Section.defaultProps = {
-  grid: true,
-  className: undefined,
-  spacing: "xl",
 };
