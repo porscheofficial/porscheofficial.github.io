@@ -4,11 +4,11 @@
   .description {
     grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
 
-    @include pds-media-query-max("s") {
+    @include pds-media-query-max("l") {
       grid-row: 2;
     }
 
-    @include pds-media-query-min("s") {
+    @include pds-media-query-min("l") {
       grid-column: $pds-grid-basic-column-start / 7 span;
       grid-row: 1;
 
@@ -23,11 +23,11 @@
     aspect-ratio: 16/9;
     grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
 
-    @include pds-media-query-max("s") {
+    @include pds-media-query-max("l") {
       grid-row: 1;
     }
 
-    @include pds-media-query-min("s") {
+    @include pds-media-query-min("l") {
       grid-column: 5 span / $pds-grid-basic-column-end;
       grid-row: 1;
 
