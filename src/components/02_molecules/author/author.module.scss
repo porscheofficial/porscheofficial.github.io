@@ -1,7 +1,7 @@
 @use "@porsche-design-system/components-js/styles" as *;
 
 .author {
-  @include pds-media-query-max('l') {
+  @include pds-media-query-max("l") {
     grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;
   }
   position: relative;
@@ -22,7 +22,7 @@
   }
 
   .image {
-    @include pds-media-query-max('m') {
+    @include pds-media-query-max("m") {
       display: none;
     }
     position: relative;
@@ -37,7 +37,7 @@
   }
 
   .content {
-    @include pds-media-query-max('m') {
+    @include pds-media-query-max("m") {
       max-width: 95%;
     }
     max-width: 70%;
