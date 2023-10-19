@@ -16,6 +16,11 @@ items:
     imageSrc: https://raw.githubusercontent.com/oss-review-toolkit/ort/main/logos/logo.png
     imageAlt: OSS Review Toolkit Avatar
     status: Upstream
+  - title: Porsche Design System China (PUI-CN)
+    repo: https://github.com/porsche-design-system/porsche-design-system-china
+    imageSrc: https://raw.githubusercontent.com/porsche-design-system/porsche-design-system/main/packages/crest/src/porsche-crest%403x.png
+    imageAlt: Porsche Design System Avatar
+    status: Public
   - title: mbeddr.formal
     repo: https://github.com/mbeddr/mbeddr.formal
     imageSrc: https://raw.githubusercontent.com/mbeddr/mbeddr.core/master/logos/2013/blue_orange/LogoBigTransparent.png
