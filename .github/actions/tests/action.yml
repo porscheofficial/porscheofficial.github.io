@@ -3,26 +3,8 @@ description: "Run tests and linting"
 runs:
   using: "composite"
   steps:
-    - name: "Checkout"
-      uses: "actions/checkout@v3"
-    - name: "Use Node.js 18"
-      uses: "actions/setup-node@v3"
-      with:
-        node-version: "18"
-    - name: "Get yarn cache directory path"
-      id: "yarn-cache-dir-path"
-      run: 'echo "dir=$(yarn config get cacheFolder)" >> "$GITHUB_OUTPUT"'
-    - name: "Restore yarn cache"
-      uses: "actions/cache@v3"
-      id: "yarn-cache"
-      with:
-        path: |
-          ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          ${{ github.workspace }}/.next/cache
-        key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-        restore-keys: |
-          ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}-
-    - run: "yarn install --immutable"
     - run: "yarn --version"
+      shell: bash
     - name: "Run test:ci"
+      shell: bash
       run: "yarn run test:ci"
