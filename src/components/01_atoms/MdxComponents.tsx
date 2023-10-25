@@ -7,12 +7,14 @@ import {
   PInlineNotification,
   PLinkPure,
   PTag,
+  PText,
   PTextList,
   PTextListItem,
 } from "@porsche-design-system/components-react/ssr";
 import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
 import { Codeblock } from "../02_molecules/codeblock/Codeblock";
+import { Textblock } from "../02_molecules/textblock/Textblock";
 import { ImageText } from "../03_organisms/imageText/ImageText";
 import { Section } from "../02_molecules/section/section";
 import { KeyValue } from "../02_molecules/foss_movement/KeyValue";
@@ -105,12 +107,22 @@ const components = {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     <Codeblock wrapperClassName={props.className}>{children}</Codeblock>
   ),
+  Textblock: ({ children, ...props }: { children: React.ReactNode }) => (
+    // @ts-expect-error expected?
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    <Textblock spacing={props.spacing}>{children}</Textblock>
+  ),
   a: ({ children, ...props }: { children: React.ReactNode }) => (
     // @ts-expect-error expected?
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     <PLinkPure theme="dark" underline icon="none" href={props.href}>
       {children}
     </PLinkPure>
+  ),
+  p: ({ children }: { children: React.ReactNode }) => (
+    <p>
+      <PText theme="dark">{children}</PText>
+    </p>
   ),
 };
 
