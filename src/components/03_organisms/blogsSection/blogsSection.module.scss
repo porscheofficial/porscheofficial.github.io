@@ -3,5 +3,6 @@
 .section {
   .feature {
     grid-column: $pds-grid-extended-column-start / $pds-grid-extended-column-end;
+    margin-top: $pds-spacing-fluid-large;
   }
 }
