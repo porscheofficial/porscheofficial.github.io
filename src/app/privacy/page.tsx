@@ -28,7 +28,7 @@ const Privacy: React.FC = () => {
       {!!content?.body.code && (
         <Section>
           <Textblock id="docs" className="mdx-content">
-            <MdxComponents code={content.body.code} />
+            <MdxComponents code={content.body.code} theme="dark" />
           </Textblock>
         </Section>
       )}

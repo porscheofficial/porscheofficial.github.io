@@ -11,6 +11,7 @@ interface ImageTextProps {
   left?: boolean;
   imageSrc: string | StaticImageData;
   imageAlt: string;
+  theme: "dark" | "light" | undefined;
 }
 export const ImageText: React.FC<ImageTextProps> = ({
   children,
@@ -18,12 +19,13 @@ export const ImageText: React.FC<ImageTextProps> = ({
   left,
   imageSrc,
   imageAlt,
+  theme,
 }) => {
   return (
-    <Section className={s.imageTextList}>
+    <Section className={s.imageTextList} spacing="xxl">
       <div className={`${s.description} ${left ? "left" : ""}`}>
         {title && (
-          <PHeading theme="dark" size="medium" tag="h2">
+          <PHeading theme={theme} size="medium" tag="h2">
             {title}
           </PHeading>
         )}

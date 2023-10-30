@@ -71,7 +71,7 @@ const DocPage: React.FC<PageProps> = ({ params }: PageProps) => {
 
       <Section>
         <Textblock className="mdx-content">
-          <MdxComponents code={doc.body.code} />
+          <MdxComponents code={doc.body.code} theme="dark" />
         </Textblock>
       </Section>
     </main>

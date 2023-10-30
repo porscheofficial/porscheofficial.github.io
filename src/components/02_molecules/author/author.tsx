@@ -19,7 +19,7 @@ export const Author: React.FC<AuthorProps> = ({
 }) => {
   const Component = slug ? Link : "div";
   return (
-    <Section>
+    <Section spacing="xl">
       <Component
         className={`${s.author} ${slug ? s.link : ""}`}
         href={{ pathname: slug }}

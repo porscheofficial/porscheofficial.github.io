@@ -38,7 +38,8 @@
 
     img {
       object-fit: cover;
-      object-position: bottom;
+      object-position: center;
+      border-radius: $pds-border-radius-large;
     }
   }
 }
