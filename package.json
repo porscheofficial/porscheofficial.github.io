@@ -16,7 +16,7 @@
     "prettier:fix": "prettier --write ./",
     "playwright:run": "yarn playwright test",
     "contentlayer:build": "contentlayer build",
-    "test:ci": "yarn contentlayer:build && yarn prettier:ci && yarn tsc --noEmit --noEmitHelpers && yarn lint:ci"
+    "test:ci": "echo test && yarn contentlayer:build && yarn prettier:ci && yarn tsc --noEmit --noEmitHelpers && yarn lint:ci"
   },
   "dependencies": {
     "@porsche-design-system/components-js": "3.6.1",
