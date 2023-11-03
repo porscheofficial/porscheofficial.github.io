@@ -71,7 +71,7 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
     notFound();
   }
 
-  const formatDate = format(parseISO(blog.date), "do LLLL");
+  const formatDate = format(parseISO(blog.date), "do LLLL yyyy");
   const hashes = blog.hashTags ? `· #${blog.hashTags.join(" #")}` : "";
   const description = `${formatDate} · ${blog.readTime} reading time ${hashes}`;
 
