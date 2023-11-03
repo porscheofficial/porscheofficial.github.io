@@ -71,7 +71,7 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
     notFound();
   }
 
-  const formatDate = format(parseISO(blog.date), "do LLLL");
+  const formatDate = format(parseISO(blog.date), "do LLLL yyyy");
   const hashes = blog.hashTags ? `· #${blog.hashTags.join(" #")}` : "";
   const description = `${formatDate} · ${blog.readTime} reading time ${hashes}`;
 
@@ -93,8 +93,8 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
         </Textblock>
       </Section>
 
-      <div className="mdx-content">
-        <MdxComponents code={blog.body.code} />
+      <div className={`mdx-content ${s["blog-content"]}`}>
+        <MdxComponents code={blog.body.code} theme="light" />
       </div>
 
       {!!blog.author && (

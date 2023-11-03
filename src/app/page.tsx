@@ -51,7 +51,7 @@ const Home: React.FC = () => {
       {!!fossContent?.body.code && (
         <div className={s["foss-movement"]}>
           <Section>
-            <MdxComponents code={fossContent.body.code} />
+            <MdxComponents code={fossContent.body.code} theme="dark" />
           </Section>
         </div>
       )}

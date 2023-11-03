@@ -38,6 +38,8 @@
 
     img {
       object-fit: cover;
+      object-position: center;
+      border-radius: $pds-border-radius-large;
     }
   }
 }

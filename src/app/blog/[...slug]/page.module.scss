@@ -2,6 +2,10 @@
 
 .descriptionShort {
   grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end !important;
-  margin-top: $pds-spacing-fluid-x-large;
-  margin-bottom: $pds-spacing-fluid-x-large;
+  margin: $pds-spacing-fluid-x-large 0;
+}
+
+.blog-content {
+  background: $pds-theme-light-background-base;
+  padding: $pds-spacing-fluid-x-large 0;
 }

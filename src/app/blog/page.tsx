@@ -12,7 +12,7 @@ const BlogPage: React.FC = () => {
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"
       />
-      <Section grid={false}>
+      <Section grid={false} spacing="l">
         <BlogsSection isFeatured showHeading={false} />
       </Section>
     </main>

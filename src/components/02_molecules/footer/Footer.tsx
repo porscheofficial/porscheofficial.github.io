@@ -169,7 +169,7 @@ export const Footer: React.FC = () => {
         </div>
         {!!content?.body.code && (
           <Textblock id={s.wltp}>
-            <MdxComponents code={content.body.code} />
+            <MdxComponents code={content.body.code} theme="dark" />
           </Textblock>
         )}
       </div>

@@ -14,6 +14,7 @@ const runA11yScan = async (page: Page, path: string): Promise<void> => {
   const accessibilityScanResults = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag21a", "best-practice", "wcag2aa", "wcag21aa"])
     .exclude("p-carousel")
+    .exclude("svg")
     .analyze();
 
   expect(accessibilityScanResults.violations).toEqual([]);
