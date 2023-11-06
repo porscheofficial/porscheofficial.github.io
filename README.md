@@ -7,7 +7,7 @@
 
 ![GitHub](https://img.shields.io/github/license/porscheofficial/porscheofficial.github.io)
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/porscheofficial/porscheofficial.github.io/oso-repolinter.yml?label=OSO%20Repolinter)
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/porscheofficial/porscheofficial.github.io/tests.yml?label=Automated%20Tests%20and%20Linting)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/porscheofficial/porscheofficial.github.io/e2e-tests.yml?label=End-to-end%20Testing)
 ![GitHub deployments](https://img.shields.io/github/deployments/porscheofficial/porscheofficial.github.io/github-pages?label=GitHub%20Pages%20Deployment)
 
 _The Porsche Open Source Platform (POSP) is a static website generated with [Next.js 13](https://nextjs.org/) and the [Porsche Design System](https://designsystem.porsche.com/v3/).
