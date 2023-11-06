@@ -7,4 +7,5 @@ module.exports = [
   "https://developer.android.com/static/images/brand/Android_Robot.png",
   "https://raw.githubusercontent.com/mbeddr/mbeddr.core/master/logos/2013/blue_orange/LogoBigTransparent.png",
   "https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_690x388/dam/pnr/other/executive-board/Meschke/pictures-NEW/New/Meschke1.jpg/jcr:content/Meschke1.jpg",
+  "https://www.linuxfoundation.org/hubfs/OSPO_FeaturedImage.png",
 ];

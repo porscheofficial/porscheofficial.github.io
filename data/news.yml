@@ -5,6 +5,10 @@ items:
     url: https://newsroom.porsche.com/en/2023/company/porsche-foss-movements-open-source-software-strategy-33413.html
     imageSrc: https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_690x388/dam/pnr/other/executive-board/Meschke/pictures-NEW/New/Meschke1.jpg/jcr:content/Meschke1.jpg
     imageAlt: Lutz Meschke, Deputy Chairman of the Executive Board and Member of the Executive Board for Finance and IT at Porsche AG, 2019, Porsche AG
+  - title: The Evolution of the Open Source Program Office (OSPO)
+    url: https://www.linuxfoundation.org/research/the-evolution-of-the-open-source-program-office-ospo
+    imageSrc: https://www.linuxfoundation.org/hubfs/OSPO_FeaturedImage.png
+    imageAlt: An OSPO maturity model featuring case studies from Bloomberg, Comcast, and Porsche
   - title: The Porsche OSPO Journey
     url: https://todogroup.org/resources/case-studies/porsche/
     imageSrc: /assets/cover4.jpg
