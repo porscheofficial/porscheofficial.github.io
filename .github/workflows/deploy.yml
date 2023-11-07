@@ -57,7 +57,7 @@ jobs:
       - name: Build with Next.js
         run: yarn build
         env:
-          BASE_URL: "opensource.porsche.com"
+          BASE_URL: "https://opensource.porsche.com"
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
