@@ -1,8 +1,6 @@
 import { test, expect, Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-import { BASE_URL as BASE_URL_CONFIG } from "../src/config";
-
-const BASE_URL = `https://${BASE_URL_CONFIG}`;
+import { BASE_URL } from "../src/config";
 
 const runA11yScan = async (page: Page, path: string): Promise<void> => {
   await page.goto(path);
@@ -14,13 +12,13 @@ const runA11yScan = async (page: Page, path: string): Promise<void> => {
   const accessibilityScanResults = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag21a", "best-practice", "wcag2aa", "wcag21aa"])
     .exclude("p-carousel")
-    .exclude("svg")
+    .exclude("#sharpBlur")
     .analyze();
 
   expect(accessibilityScanResults.violations).toEqual([]);
 };
 
-test.describe("Should not find any automatically detectable accessiblity issues", () => {
+test.describe("Should not find any automatically detectable accessibility issues", () => {
   test(`all pages`, async ({ page }) => {
     const request = page.waitForEvent("response");
     await page.goto(`${BASE_URL ?? ""}/sitemap.xml`);
