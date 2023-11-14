@@ -22,7 +22,7 @@ import { Membership } from "../components/03_organisms/membership/Membership";
 import { BlogsSection } from "../components/03_organisms/blogsSection/BlogsSection";
 import { DocsSection } from "../components/03_organisms/docsSection/DocsSection";
 import { MdxComponents } from "../components/01_atoms/MdxComponents";
-
+// comment
 const Home: React.FC = () => {
   const projects: Projects = importProjects as Projects;
   const news: News = importNews as News;
