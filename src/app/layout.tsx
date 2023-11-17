@@ -21,7 +21,7 @@ const siteConfig = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`https://${BASE_URL}`),
+  metadataBase: new URL(`${BASE_URL}`),
   title: siteConfig.title,
   description: siteConfig.description,
   alternates: {
