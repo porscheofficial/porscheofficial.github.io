@@ -5,25 +5,25 @@ import { BASE_URL } from "../config";
 
 const Sitemap = (): MetadataRoute.Sitemap => {
   const blogs = allBlogs.map((doc) => ({
-    url: `https://${BASE_URL}${doc.slug}`,
+    url: `${BASE_URL}${doc.slug}`,
     lastModified: format(parseISO(doc.date), "yyyy-MM-dd"),
   }));
   const docs = allDocs.map((doc) => ({
-    url: `https://${BASE_URL}${doc.slug}`,
+    url: `${BASE_URL}${doc.slug}`,
     lastModified: format(parseISO(doc.date), "yyyy-MM-dd"),
   }));
 
   const staticPaths = [
     {
-      url: `https://${BASE_URL}`,
+      url: `${BASE_URL}`,
       lastModified: "2023-08-25",
     },
     {
-      url: `https://${BASE_URL}/legal-notice`,
+      url: `${BASE_URL}/legal-notice`,
       lastModified: "2023-08-25",
     },
     {
-      url: `https://${BASE_URL}/privacy`,
+      url: `${BASE_URL}/privacy`,
       lastModified: "2023-08-25",
     },
   ];
