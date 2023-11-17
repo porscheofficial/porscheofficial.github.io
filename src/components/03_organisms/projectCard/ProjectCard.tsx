@@ -60,9 +60,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = async ({
   imageAlt,
   status,
 }) => {
-  const githubData: GithubResponse | null = repo.includes("https://github.com/")
-    ? await getGitHubData(repo.split("https://github.com/")[1])
-    : null;
+  const githubData: GithubResponse | null =
+    repo.includes("https://github.com/") && !repo.includes("search?q=")
+      ? await getGitHubData(repo.split("https://github.com/")[1])
+      : null;
   return (
     <div className={s.card}>
       <div className={s.image}>

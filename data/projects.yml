@@ -16,6 +16,12 @@ items:
     imageSrc: https://raw.githubusercontent.com/oss-review-toolkit/ort/main/logos/logo.png
     imageAlt: OSS Review Toolkit Avatar
     status: Upstream
+  - title: Research @ Porsche Digital Campus
+    repo: https://github.com/search?q=topic%3Aresearch+org%3Aporscheofficial&type=Repositories
+    description: Code published alongside various academic research projects.
+    imageSrc: https://uploads-ssl.webflow.com/6419a4c2c9609e21b02a47e8/6454e539d4ea54c08e42aedb_Frame%2010683.png
+    imageAlt: Porsche Digital Campus
+    status: Public
   - title: Porsche Design System China (PUI-CN)
     repo: https://github.com/porsche-design-system/porsche-design-system-china
     imageSrc: https://raw.githubusercontent.com/porsche-design-system/porsche-design-system/main/packages/crest/src/porsche-crest%403x.png
