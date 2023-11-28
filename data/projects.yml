@@ -27,6 +27,11 @@ items:
     imageSrc: https://raw.githubusercontent.com/porsche-design-system/porsche-design-system/main/packages/crest/src/porsche-crest%403x.png
     imageAlt: Porsche Design System Avatar
     status: Public
+  - title: Porsche Open Source Platform
+    repo: https://github.com/porscheofficial/porscheofficial.github.io
+    imageSrc: assets/logos/POSP-square.jpg
+    imageAlt: Porsche Open Source Platform
+    status: Public
   - title: mbeddr.formal
     repo: https://github.com/mbeddr/mbeddr.formal
     imageSrc: https://raw.githubusercontent.com/mbeddr/mbeddr.core/master/logos/2013/blue_orange/LogoBigTransparent.png
