@@ -9,4 +9,5 @@ module.exports = [
   "https://uploads-ssl.webflow.com/6419a4c2c9609e21b02a47e8/6454e539d4ea54c08e42aedb_Frame%2010683.png",
   "https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_690x388/dam/pnr/other/executive-board/Meschke/pictures-NEW/New/Meschke1.jpg/jcr:content/Meschke1.jpg",
   "https://www.linuxfoundation.org/hubfs/OSPO_FeaturedImage.png",
+  "https://github.com/todogroup/todogroup.org/assets/43671777/0a4cfd31-89fb-49d6-a38b-797f4c20c40f",
 ];
