@@ -8,7 +8,7 @@ items:
     status: Upstream
   - title: Porsche Design System
     repo: https://github.com/porsche-design-system/porsche-design-system
-    imageSrc: https://raw.githubusercontent.com/porsche-design-system/porsche-design-system/main/packages/crest/src/porsche-crest%403x.png
+    imageSrc: https://raw.githubusercontent.com/porsche-design-system/porsche-design-system/main/packages/assets/projects/crest/src/porsche-crest%403x.png
     imageAlt: Porsche Design System Avatar
     status: Public
   - title: OSS Review Toolkit
@@ -24,7 +24,7 @@ items:
     status: Public
   - title: Porsche Design System China (PUI-CN)
     repo: https://github.com/porsche-design-system/porsche-design-system-china
-    imageSrc: https://raw.githubusercontent.com/porsche-design-system/porsche-design-system/main/packages/crest/src/porsche-crest%403x.png
+    imageSrc: https://raw.githubusercontent.com/porsche-design-system/porsche-design-system/main/packages/assets/projects/crest/src/porsche-crest%403x.png
     imageAlt: Porsche Design System Avatar
     status: Public
   - title: Porsche Open Source Platform
