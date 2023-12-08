@@ -3,13 +3,13 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { AccordionUpdateEvent } from "@porsche-design-system/components-react";
 import { allDocs } from "contentlayer/generated";
 import {
-  PAccordion,
+  type FlyoutNavigationUpdateEvent,
   PButtonGroup,
   PButtonPure,
-  PFlyout,
+  PFlyoutNavigation,
+  PFlyoutNavigationItem,
   PLink,
   PLinkPure,
 } from "@porsche-design-system/components-react/ssr";
@@ -21,21 +21,20 @@ export interface NavigationProps {
 
 export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isDocsAccordionOpen, setDocsAccordionOpen] = useState<boolean>(false);
+  const [
+    flyoutNavigationActiveIdentifier,
+    setFlyoutNavigationActiveIdentifier,
+  ] = useState<string>("documentation");
 
   const onOpen = useCallback(() => {
     setIsMenuOpen(true);
-    setDocsAccordionOpen(false);
   }, []);
   const onDismiss = useCallback(() => {
     setIsMenuOpen(false);
-    setDocsAccordionOpen(false);
   }, []);
-
-  const onDocsAccordionUpdate = useCallback(
-    (e: CustomEvent<AccordionUpdateEvent>) => {
-      setDocsAccordionOpen(e.detail.open);
-    },
+  const onUpdate = useCallback(
+    (e: CustomEvent<FlyoutNavigationUpdateEvent>) =>
+      setFlyoutNavigationActiveIdentifier(e.detail.activeIdentifier),
     [],
   );
 
@@ -72,74 +71,56 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
       <PButtonPure icon="menu-lines" theme="dark" onClick={() => onOpen()}>
         Menu
       </PButtonPure>
-      <PFlyout open={isMenuOpen} position="left" onDismiss={onDismiss}>
-        <ul>
-          {homeLinks.map((link) => (
-            <li key={link.name}>
-              <PLinkPure
-                className={s.navLink}
-                size="medium"
-                alignLabel="left"
-                icon="arrow-head-right"
-                stretch
-                tabIndex={0}
-              >
-                <Link
-                  href={{ pathname: link.url, hash: link.hash }}
-                  onClick={onDismiss}
-                >
-                  {link.name}
-                </Link>
-              </PLinkPure>
-            </li>
-          ))}
-        </ul>
-        <PAccordion
-          className={s.docsAccordion}
-          theme="light"
-          size="medium"
-          compact
-          open={isDocsAccordionOpen}
-          onUpdate={onDocsAccordionUpdate}
-        >
-          <span slot="heading">Documentation</span>
+      <PFlyoutNavigation
+        open={isMenuOpen}
+        activeIdentifier={flyoutNavigationActiveIdentifier}
+        onDismiss={onDismiss}
+        onUpdate={onUpdate}
+      >
+        {homeLinks.map((link) => (
+          <PLinkPure
+            className={s.navLink}
+            size="medium"
+            alignLabel="left"
+            icon="arrow-head-right"
+            stretch
+            tabIndex={0}
+          >
+            <Link
+              href={{ pathname: link.url, hash: link.hash }}
+              onClick={onDismiss}
+            >
+              {link.name}
+            </Link>
+          </PLinkPure>
+        ))}
+        <PFlyoutNavigationItem identifier="documentation" label="Documentation">
+          <h3>Documentation</h3>
           {allDocs.map((link) => (
-            <PLinkPure
-              key={link.slug}
-              className={s.navLink}
-              size="medium"
-              alignLabel="left"
-              icon="none"
-              stretch
-              tabIndex={0}
-            >
-              <Link href={{ pathname: link.slug }} onClick={onDismiss}>
-                {link.title}
-              </Link>
-            </PLinkPure>
+            <Link href={{ pathname: link.slug }} onClick={onDismiss}>
+              {link.title}
+            </Link>
           ))}
-        </PAccordion>
-        <div slot="footer">
-          <PButtonGroup>
-            <PLink
-              href="https://jobs.porsche.com/index.php?ac=search_result&search_criterion_keyword%5B%5D=Open%20Source"
-              variant="secondary"
-              theme="light"
-            >
-              FOSS Jobs <span className={s["job-counter"]}>{jobsCounter}</span>
-            </PLink>
-            <PLink
-              href="https://github.com/porscheofficial"
-              variant="secondary"
-              theme="light"
-              iconSource="/assets/octicons/mark-github.svg"
-              hideLabel
-            >
-              GitHub
-            </PLink>
-          </PButtonGroup>
-        </div>
-      </PFlyout>
+        </PFlyoutNavigationItem>
+        <PButtonGroup className={s["button-group"]}>
+          <PLink
+            href="https://jobs.porsche.com/index.php?ac=search_result&search_criterion_keyword%5B%5D=Open%20Source"
+            variant="secondary"
+            theme="light"
+          >
+            FOSS Jobs <span className={s["job-counter"]}>{jobsCounter}</span>
+          </PLink>
+          <PLink
+            href="https://github.com/porscheofficial"
+            variant="secondary"
+            theme="light"
+            iconSource="/assets/octicons/mark-github.svg"
+            hideLabel
+          >
+            GitHub
+          </PLink>
+        </PButtonGroup>
+      </PFlyoutNavigation>
     </div>
   );
 };

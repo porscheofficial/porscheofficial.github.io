@@ -5,8 +5,11 @@
   grid-row: 1;
 }
 
+.button-group {
+  margin-top: $pds-spacing-fluid-medium;
+}
+
 .job-counter {
-  margin-left: $pds-spacing-static-small;
   background-color: $pds-theme-light-background-surface;
   border-radius: 50%;
   text-align: center;
@@ -17,9 +20,7 @@
 }
 
 .navLink {
-  margin: $pds-spacing-fluid-small 0;
-}
-
-.docsAccordion {
-  margin: $pds-spacing-fluid-medium 0;
+  width: auto;
+  margin: 0 calc($pds-spacing-fluid-small * -1);
+  padding: $pds-spacing-fluid-small;
 }
