@@ -3,6 +3,7 @@
 .card {
   background: #fff;
   border-radius: $pds-border-radius-medium;
+  overflow: hidden;
 
   @include pds-media-query-min("m") {
     display: grid;
