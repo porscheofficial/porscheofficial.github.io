@@ -82,7 +82,8 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
         description={description}
         subtitle="FOSS@Porsche"
         imageSrc={blog.image}
-        imageAlt=""
+        imageAlt="Hero Image"
+        position="center center"
       />
 
       <Section spacing="none">

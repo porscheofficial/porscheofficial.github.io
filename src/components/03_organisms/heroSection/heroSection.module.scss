@@ -6,12 +6,14 @@
 
   .background-image-container {
     grid-row: 1;
-    height: 50rem;
+    @include pds-media-query-min("m") {
+      height: 50rem;
+    }
+    height: 40rem;
     position: relative;
 
     .hero-image {
       object-fit: cover;
-      object-position: right center;
     }
     .image-overlay {
       background: linear-gradient(
