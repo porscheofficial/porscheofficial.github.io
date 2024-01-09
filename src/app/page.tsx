@@ -119,7 +119,7 @@ const Home: React.FC = () => {
       <Section id="memberships" className={s.memberships}>
         {memberships.items.map((membership) => (
           <Membership
-            key={`member-${membership.title}`}
+            key={`membership-${membership.title}`}
             description={membership.description}
             title={membership.title}
             url={membership.url}

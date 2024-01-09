@@ -2,29 +2,30 @@
 /* eslint-disable react/require-default-props */
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
+import { compareDesc } from "date-fns";
 import { usePathname } from "next/navigation";
-import { allDocs } from "contentlayer/generated";
+import { allBlogs, allDocs } from "contentlayer/generated";
 import {
   type FlyoutNavigationUpdateEvent,
-  PButtonGroup,
   PButtonPure,
   PFlyoutNavigation,
   PFlyoutNavigationItem,
-  PLink,
   PLinkPure,
+  PLinkTile,
 } from "@porsche-design-system/components-react/ssr";
+import ExportedImage from "next-image-export-optimizer";
 import s from "./navigation.module.scss";
 
 export interface NavigationProps {
   jobsCounter?: string;
 }
 
-export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
+export const Navigation: React.FC<NavigationProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [
     flyoutNavigationActiveIdentifier,
     setFlyoutNavigationActiveIdentifier,
-  ] = useState<string>("documentation");
+  ] = useState<string>();
 
   const onOpen = useCallback(() => {
     setIsMenuOpen(true);
@@ -56,11 +57,13 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
       hash: "news",
       name: "News & Media",
     },
-    {
-      url: "/blog",
-      name: "Contributor Stories",
-    },
   ];
+
+  const posts = allBlogs.sort((a, b) =>
+    compareDesc(new Date(a.date), new Date(b.date)),
+  );
+  const firstDoc = posts[0];
+  const otherDocs = posts.slice(1, posts.length);
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -81,10 +84,11 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
           <PLinkPure
             className={s.navLink}
             size="medium"
-            alignLabel="left"
+            alignLabel="start"
             icon="arrow-head-right"
             stretch
             tabIndex={0}
+            key={link.name}
           >
             <Link
               href={{ pathname: link.url, hash: link.hash }}
@@ -94,32 +98,52 @@ export const Navigation: React.FC<NavigationProps> = ({ jobsCounter }) => {
             </Link>
           </PLinkPure>
         ))}
-        <PFlyoutNavigationItem identifier="documentation" label="Documentation">
-          <h3>Documentation</h3>
-          {allDocs.map((link) => (
-            <Link href={{ pathname: link.slug }} onClick={onDismiss}>
+        <PFlyoutNavigationItem
+          identifier="blog"
+          label="Contributor Stories"
+          key="blog"
+        >
+          <PLinkTile
+            href={firstDoc.slug}
+            label={firstDoc.title}
+            description={firstDoc.title}
+            size="default"
+            compact
+          >
+            <ExportedImage
+              src={firstDoc.image}
+              alt={firstDoc.title}
+              fill
+              placeholder="empty"
+            />
+          </PLinkTile>
+          <h3>Further Stories</h3>
+          {otherDocs.map((link) => (
+            <Link
+              href={{ pathname: link.slug }}
+              onClick={onDismiss}
+              key={link.title}
+            >
               {link.title}
             </Link>
           ))}
         </PFlyoutNavigationItem>
-        <PButtonGroup className={s["button-group"]}>
-          <PLink
-            href="https://jobs.porsche.com/index.php?ac=search_result&search_criterion_keyword%5B%5D=Open%20Source"
-            variant="secondary"
-            theme="light"
-          >
-            FOSS Jobs <span className={s["job-counter"]}>{jobsCounter}</span>
-          </PLink>
-          <PLink
-            href="https://github.com/porscheofficial"
-            variant="secondary"
-            theme="light"
-            iconSource="/assets/octicons/mark-github.svg"
-            hideLabel
-          >
-            GitHub
-          </PLink>
-        </PButtonGroup>
+        <PFlyoutNavigationItem
+          identifier="documentation"
+          label="Documentation"
+          key="docs"
+        >
+          <h3>Documentation</h3>
+          {allDocs.map((link) => (
+            <Link
+              href={{ pathname: link.slug }}
+              onClick={onDismiss}
+              key={link.title}
+            >
+              {link.title}
+            </Link>
+          ))}
+        </PFlyoutNavigationItem>
       </PFlyoutNavigation>
     </div>
   );

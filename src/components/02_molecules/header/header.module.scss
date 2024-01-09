@@ -14,11 +14,13 @@
 
   .logo-container {
     grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
+    display: flex;
     place-self: center;
     grid-row: 1;
 
     a {
       display: inline-flex;
+      align-self: start;
     }
 
     p-crest {
@@ -32,5 +34,11 @@
         display: none;
       }
     }
+  }
+
+  .github-container {
+    grid-column: $pds-grid-wide-column-start / $pds-grid-wide-column-end;
+    justify-self: end;
+    grid-row: 1;
   }
 }
