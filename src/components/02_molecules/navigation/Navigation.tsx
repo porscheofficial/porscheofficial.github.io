@@ -85,7 +85,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
             className={s.navLink}
             size="medium"
             alignLabel="start"
-            icon="arrow-head-right"
+            icon="none"
             stretch
             tabIndex={0}
             key={link.name}
