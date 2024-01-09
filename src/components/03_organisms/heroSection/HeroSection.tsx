@@ -13,6 +13,7 @@ interface HeroSectionProps {
   description?: string;
   imageSrc: string | StaticImageData;
   imageAlt: string;
+  position?: string;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
@@ -21,12 +22,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   description,
   imageSrc,
   imageAlt,
+  position = "right center",
 }) => {
   return (
     <div className={s["hero-container"]}>
       <div className={s["background-image-container"]}>
         <ExportedImage
           className={s["hero-image"]}
+          style={{ objectPosition: position }}
           src={imageSrc}
           alt={imageAlt}
           fill
