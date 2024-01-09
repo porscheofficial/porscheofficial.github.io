@@ -133,7 +133,6 @@ export const Navigation: React.FC<NavigationProps> = () => {
           label="Documentation"
           key="docs"
         >
-          <h3>Documentation</h3>
           {allDocs.map((link) => (
             <Link
               href={{ pathname: link.slug }}
