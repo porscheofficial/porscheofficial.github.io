@@ -28,7 +28,13 @@ export const BlogCard: React.FC<BlogCardProps> = ({
   return (
     <div className={s.card}>
       <div className={s.image}>
-        <ExportedImage src={imageSrc} alt={imageAlt} fill placeholder="empty" />
+        <ExportedImage
+          src={imageSrc}
+          alt={imageAlt}
+          fill
+          placeholder="empty"
+          sizes="(min-width: 1300px) 33vw, (min-width: 760px) 50vw, 100vw"
+        />
       </div>
       <div className={s.content}>
         <PHeading

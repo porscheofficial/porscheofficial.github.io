@@ -42,6 +42,7 @@ export const BlogsSection: React.FC<BlogsSectionProps> = ({
         <Section grid={false} spacing="l">
           <PCarousel
             slidesPerPage={{ base: 1, s: 2, l: 3 }}
+            // TODO heading has to be set via property or named slot for component p-carousel in order to ensure accessibility.
             heading={showHeading ? "Contributor Stories" : ""}
             theme="dark"
             width="extended"

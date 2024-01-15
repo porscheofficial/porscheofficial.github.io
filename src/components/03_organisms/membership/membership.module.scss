@@ -12,6 +12,13 @@
   }
 }
 
+.link {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .description {
   grid-row: 2;
   grid-column: $pds-grid-basic-column-start / $pds-grid-basic-column-end;

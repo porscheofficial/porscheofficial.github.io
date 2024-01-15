@@ -109,12 +109,15 @@ export const Navigation: React.FC<NavigationProps> = () => {
             description={firstDoc.title}
             size="default"
             compact
+            className={s.navLinkImage}
           >
             <ExportedImage
               src={firstDoc.image}
               alt={firstDoc.title}
               fill
               placeholder="empty"
+              sizes="(max-width: 759px) 100vw, 50vw"
+              unoptimized
             />
           </PLinkTile>
           <h3>Further Stories</h3>

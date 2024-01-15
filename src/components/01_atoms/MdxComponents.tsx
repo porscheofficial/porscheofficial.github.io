@@ -61,7 +61,7 @@ const CustomComponents = (
     h2: ({ children }) => (
       <PHeading
         size={{ base: "medium", s: "large" }}
-        align="left"
+        align="start"
         theme={theme}
         tag="h2"
       >
@@ -71,7 +71,7 @@ const CustomComponents = (
     h3: ({ children }) => (
       <PHeading
         size={{ base: "small", s: "medium" }}
-        align="left"
+        align="start"
         theme={theme}
         tag="h3"
       >
@@ -81,7 +81,7 @@ const CustomComponents = (
     h4: ({ children }) => (
       <PHeading
         size={{ base: "small", s: "small" }}
-        align="left"
+        align="start"
         theme={theme}
         tag="h4"
       >
@@ -91,7 +91,7 @@ const CustomComponents = (
     h5: ({ children }) => (
       <PHeading
         size={{ base: "small", s: "small" }}
-        align="left"
+        align="start"
         theme={theme}
         tag="h5"
       >
@@ -109,16 +109,8 @@ const CustomComponents = (
       <Codeblock wrapperClassName={props.className}>{children}</Codeblock>
     ),
     Textblock: ({ children }) => <Textblock>{children}</Textblock>,
-    a: ({ children, ...props }) => (
-      <PLinkPure theme={theme} underline icon="none" href={props.href}>
-        {children}
-      </PLinkPure>
-    ),
-    p: ({ children }) => (
-      <p>
-        <PText theme={theme}>{children}</PText>
-      </p>
-    ),
+    a: ({ children, ...props }) => <a href={props.href}>{children}</a>,
+    p: ({ children }) => <PText theme={theme}>{children}</PText>,
   };
 };
 
