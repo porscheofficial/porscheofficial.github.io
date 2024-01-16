@@ -19,14 +19,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@axe-core/playwright@npm:4.8.2":
-  version: 4.8.2
-  resolution: "@axe-core/playwright@npm:4.8.2"
+"@axe-core/playwright@npm:4.8.3":
+  version: 4.8.3
+  resolution: "@axe-core/playwright@npm:4.8.3"
   dependencies:
-    axe-core: ~4.8.2
+    axe-core: ~4.8.3
   peerDependencies:
     playwright-core: ">= 1.0.0"
-  checksum: 1a292b7b2a4f0b57a0e2227e7fe4cf59a6161d449fc5788b9129adc9162f905e902f54e3375ee9ea956a5d156fc0a178bfd783b32e5c43fa16010d465c4a6b4c
+  checksum: d391dfb8beae02ed8c6bfa1189e82ee7d89ae3a76da7806d08f920c225d188a2632c3c904da61c3928c694e921419e901535a7ffc580d062b82756be5fda608d
   languageName: node
   linkType: hard
 
@@ -1105,24 +1105,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@porsche-design-system/components-js@npm:3.10.0-rc.3":
-  version: 3.10.0-rc.3
-  resolution: "@porsche-design-system/components-js@npm:3.10.0-rc.3"
-  checksum: 07b3bd77d8e799597a924a7a61e0181c982c617b489d83e35583a3344f876a3ad42d8402468a769b50c73820fa31ca9f782f22502391aff8a822ec4447bf70bd
+"@porsche-design-system/components-js@npm:3.10.0-rc.4":
+  version: 3.10.0-rc.4
+  resolution: "@porsche-design-system/components-js@npm:3.10.0-rc.4"
+  checksum: faa3848c55093e1d4dd52371a6bdc6e6a74030b4a8b566d1e2f22b3b9421e14eedbe1b9acdc61c7299f648f514aaff698af3ed57e85d25631bc4b10c6282ab6f
   languageName: node
   linkType: hard
 
-"@porsche-design-system/components-react@npm:3.10.0-rc.3":
-  version: 3.10.0-rc.3
-  resolution: "@porsche-design-system/components-react@npm:3.10.0-rc.3"
+"@porsche-design-system/components-react@npm:3.10.0-rc.4":
+  version: 3.10.0-rc.4
+  resolution: "@porsche-design-system/components-react@npm:3.10.0-rc.4"
   dependencies:
-    "@porsche-design-system/components-js": 3.10.0-rc.3
+    "@porsche-design-system/components-js": 3.10.0-rc.4
   peerDependencies:
     react: ">=17.0.0 <19.0.0"
     react-dom: ">=17.0.0 <19.0.0"
   bin:
     patchRemixRunProcessBrowserGlobalIdentifier: bin/patchRemixRunProcessBrowserGlobalIdentifier.js
-  checksum: 509cd86044fd949c11baa52568b614f2252b0a38fdf4389406c2ace6cf8a895203bcbfc25775f9c790624bdeb580e94e72633b9a364e2d2b8d060a1b5b33579f
+  checksum: a14461495759ed0bd53d3bda0996d9256a7a8ac3365a72f84560f03e8dd33998b0be854770b103a178d764cfda8d068cf6ddfae58e116452cc80385437389ba0
   languageName: node
   linkType: hard
 
@@ -1370,12 +1370,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.10.7":
-  version: 20.10.7
-  resolution: "@types/node@npm:20.10.7"
+"@types/node@npm:20.11.4":
+  version: 20.11.4
+  resolution: "@types/node@npm:20.11.4"
   dependencies:
     undici-types: ~5.26.4
-  checksum: 86f4f96f5169538f47bbd652ab8e3712cd307701481ff3e9ce0c1ea7d8424a38b5ac4a1d33088cdd9ea1bfe68fd27bbae005a21969aa6d9a36295904da6f09f2
+  checksum: b9cf2c5397ea31f3355656edd204aee777a36db75b79b8b7aba2bed7ea5b29914fa808489da5c632c5eddbb33c3106188bef0bff3b7648bd39aa50dee466a73b
   languageName: node
   linkType: hard
 
@@ -1445,14 +1445,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.47":
-  version: 18.2.47
-  resolution: "@types/react@npm:18.2.47"
+"@types/react@npm:18.2.48":
+  version: 18.2.48
+  resolution: "@types/react@npm:18.2.48"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 49608f07f73374e535b21f99fee28e6cfd5801d887c6ed88c41b4dc701dbcee9f0c4d289d9af7b2b23114f76dbf203ffe2c9191bfb4958cf18dae5a25daedbd0
+  checksum: c9ca43ed2995389b7e09492c24e6f911a8439bb8276dd17cc66a2fbebbf0b42daf7b2ad177043256533607c2ca644d7d928fdfce37a67af1f8646d2bac988900
   languageName: node
   linkType: hard
 
@@ -1971,10 +1971,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axe-core@npm:~4.8.2":
-  version: 4.8.2
-  resolution: "axe-core@npm:4.8.2"
-  checksum: 8c19f507dabfcb8514e4280c7fc66e85143be303ddb57ec9f119338021228dc9b80560993938003837bda415fde7c07bba3a96560008ffa5f4145a248ed8f5fe
+"axe-core@npm:~4.8.3":
+  version: 4.8.3
+  resolution: "axe-core@npm:4.8.3"
+  checksum: f546c74d1f3a7bff81752457fe9e5573693a8ecce11d3c265db501a82105efe0cd29964a491dd98e5979f6f3d85db6776e5e46626c2b09ab579a3729108964fd
   languageName: node
   linkType: hard
 
@@ -5872,18 +5872,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "porscheofficial@workspace:."
   dependencies:
-    "@axe-core/playwright": 4.8.2
+    "@axe-core/playwright": 4.8.3
     "@next/bundle-analyzer": 13.5.6
     "@next/eslint-plugin-next": 13.5.6
     "@playwright/test": 1.40.1
-    "@porsche-design-system/components-js": 3.10.0-rc.3
-    "@porsche-design-system/components-react": 3.10.0-rc.3
+    "@porsche-design-system/components-js": 3.10.0-rc.4
+    "@porsche-design-system/components-react": 3.10.0-rc.4
     "@porscheofficial/eslint-config-porschedigital-react": 4.0.0
     "@porscheofficial/prettier-config-porschedigital": 4.0.0
     "@primer/octicons": 19.8.0
     "@types/mdx": 2.0.10
-    "@types/node": 20.10.7
-    "@types/react": 18.2.47
+    "@types/node": 20.11.4
+    "@types/react": 18.2.48
     "@types/react-dom": 18.2.18
     contentlayer: 0.3.4
     date-fns: 2.30.0
@@ -5895,7 +5895,7 @@ __metadata:
     next-contentlayer: 0.3.4
     next-image-export-optimizer: 1.12.2
     playwright-core: 1.40.1
-    prettier: 3.1.1
+    prettier: 3.2.2
     prism-react-renderer: 2.3.1
     react: 18.2.0
     react-dom: 18.2.0
@@ -6012,12 +6012,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.1.1":
-  version: 3.1.1
-  resolution: "prettier@npm:3.1.1"
+"prettier@npm:3.2.2":
+  version: 3.2.2
+  resolution: "prettier@npm:3.2.2"
   bin:
     prettier: bin/prettier.cjs
-  checksum: e386855e3a1af86a748e16953f168be555ce66d6233f4ba54eb6449b88eb0c6b2ca79441b11eae6d28a7f9a5c96440ce50864b9d5f6356d331d39d6bb66c648e
+  checksum: b416e1e4b26c351403343ebe461feda631c0eee5c3cf316c711204a08f3c639f38a8f9177c75e98a690998ff82e8ddc80c6bc027fb4ef6cedb6a4db035b4fe9a
   languageName: node
   linkType: hard
 
