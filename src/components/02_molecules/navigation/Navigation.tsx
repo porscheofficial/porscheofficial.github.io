@@ -6,7 +6,7 @@ import { compareDesc } from "date-fns";
 import { usePathname } from "next/navigation";
 import { allBlogs, allDocs } from "contentlayer/generated";
 import {
-  type FlyoutNavigationUpdateEvent,
+  type FlyoutNavigationUpdateEventDetail,
   PButtonPure,
   PFlyoutNavigation,
   PFlyoutNavigationItem,
@@ -34,7 +34,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
     setIsMenuOpen(false);
   }, []);
   const onUpdate = useCallback(
-    (e: CustomEvent<FlyoutNavigationUpdateEvent>) =>
+    (e: CustomEvent<FlyoutNavigationUpdateEventDetail>) =>
       setFlyoutNavigationActiveIdentifier(e.detail.activeIdentifier),
     [],
   );
