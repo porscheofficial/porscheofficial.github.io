@@ -70,7 +70,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = async ({
         <ExportedImage
           src={imageSrc}
           alt={imageAlt}
-          placeholder="empty"
+          placeholder="blur"
           sizes="33w"
           fill
           unoptimized

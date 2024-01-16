@@ -115,7 +115,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
               src={firstDoc.image}
               alt={firstDoc.title}
               fill
-              placeholder="empty"
+              placeholder="blur"
               sizes="(max-width: 759px) 100vw, 50vw"
               unoptimized
             />

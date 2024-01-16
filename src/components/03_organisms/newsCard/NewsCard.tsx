@@ -28,7 +28,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({
         src={imageSrc}
         alt={imageAlt}
         fill
-        placeholder="empty"
+        placeholder="blur"
         sizes="(min-width: 760px) 33vw, 100vw"
       />
     </PLinkTile>

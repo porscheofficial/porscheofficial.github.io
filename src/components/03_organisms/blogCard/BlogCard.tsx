@@ -32,7 +32,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
           src={imageSrc}
           alt={imageAlt}
           fill
-          placeholder="empty"
+          placeholder="blur"
           sizes="(min-width: 1300px) 33vw, (min-width: 760px) 50vw, 100vw"
         />
       </div>

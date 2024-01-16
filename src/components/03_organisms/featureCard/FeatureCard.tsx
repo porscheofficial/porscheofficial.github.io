@@ -29,7 +29,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
           src={imageSrc}
           alt={imageAlt}
           fill
-          placeholder="empty"
+          placeholder="blur"
           sizes="(min-width: 1000px) 50vw, 100vw"
         />
       </div>
