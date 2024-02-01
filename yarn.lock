@@ -19,14 +19,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@axe-core/playwright@npm:4.8.3":
-  version: 4.8.3
-  resolution: "@axe-core/playwright@npm:4.8.3"
+"@axe-core/playwright@npm:4.8.4":
+  version: 4.8.4
+  resolution: "@axe-core/playwright@npm:4.8.4"
   dependencies:
     axe-core: ~4.8.3
   peerDependencies:
     playwright-core: ">= 1.0.0"
-  checksum: d391dfb8beae02ed8c6bfa1189e82ee7d89ae3a76da7806d08f920c225d188a2632c3c904da61c3928c694e921419e901535a7ffc580d062b82756be5fda608d
+  checksum: f61efffb64ab06b1ad45aab264d4269ab08cb94518ba4e11a09fd91955d81ceda952ea9cc20a6df0777aa5105a50da476cd3e1bdb2596a412aacb5164f3142b8
   languageName: node
   linkType: hard
 
@@ -1087,14 +1087,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@playwright/test@npm:1.40.1":
-  version: 1.40.1
-  resolution: "@playwright/test@npm:1.40.1"
+"@playwright/test@npm:1.41.1":
+  version: 1.41.1
+  resolution: "@playwright/test@npm:1.41.1"
   dependencies:
-    playwright: 1.40.1
+    playwright: 1.41.1
   bin:
     playwright: cli.js
-  checksum: ae094e6cb809365c0707ee2b184e42d2a2542569ada020d2d44ca5866066941262bd9a67af185f86c2fb0133c9b712ea8cb73e2959a289e4261c5fd17077283c
+  checksum: d9877e777a1a7f60f097df57b6abc2478e2ae342930a409c8546c8aa40d6e206cbc16bf1c71b23414ac3fbad36dcae1ad79635d7f4eb705ab54d3c705e82ea04
   languageName: node
   linkType: hard
 
@@ -1349,10 +1349,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mdx@npm:2.0.10":
-  version: 2.0.10
-  resolution: "@types/mdx@npm:2.0.10"
-  checksum: 3e2fb24b7bfae739a59573344171292b6c31256ad9afddc00232e9de4fbc97b270e1a11d13cb935cba0d9bbb9bc7348793eda82ee752233c5d2289f4b897f719
+"@types/mdx@npm:2.0.11":
+  version: 2.0.11
+  resolution: "@types/mdx@npm:2.0.11"
+  checksum: 4199e8d58f0a40be908fe8148959a4e9779f94339f83327495dd5a6609fc82cd5f6ff7391bf6077d7d2ca73cedec3557a51cac5044f0d6f2ae37e40019813dfe
   languageName: node
   linkType: hard
 
@@ -1370,12 +1370,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.11.4":
-  version: 20.11.4
-  resolution: "@types/node@npm:20.11.4"
+"@types/node@npm:20.11.14":
+  version: 20.11.14
+  resolution: "@types/node@npm:20.11.14"
   dependencies:
     undici-types: ~5.26.4
-  checksum: b9cf2c5397ea31f3355656edd204aee777a36db75b79b8b7aba2bed7ea5b29914fa808489da5c632c5eddbb33c3106188bef0bff3b7648bd39aa50dee466a73b
+  checksum: 656644db447386dbefb97e76861f1f69e32995196503f6e215261ef2fd92f065c15b60f506c5e930c33a5c3a0d9513e0a93eb319c146b38ec2d5f9bde45b8886
   languageName: node
   linkType: hard
 
@@ -1445,14 +1445,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.48":
-  version: 18.2.48
-  resolution: "@types/react@npm:18.2.48"
+"@types/react@npm:18.2.50":
+  version: 18.2.50
+  resolution: "@types/react@npm:18.2.50"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: c9ca43ed2995389b7e09492c24e6f911a8439bb8276dd17cc66a2fbebbf0b42daf7b2ad177043256533607c2ca644d7d928fdfce37a67af1f8646d2bac988900
+  checksum: f7f5a5d0b73ddf5ec574e691039197ee91bf0addbbffa408ad2a33e4d085be5c8821758220ec64a214bd2aec42ef67fc4a7f322d1f81e87b98430d9510374b45
   languageName: node
   linkType: hard
 
@@ -2125,9 +2125,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001406":
-  version: 1.0.30001519
-  resolution: "caniuse-lite@npm:1.0.30001519"
-  checksum: 66085133ede05d947e30b62fed2cbae18e5767afda8b0de38840883e1cfe5846bf1568ddbafd31647544e59112355abedaf9c867ac34541bfc20d69e7a19d94c
+  version: 1.0.30001581
+  resolution: "caniuse-lite@npm:1.0.30001581"
+  checksum: ca4e2cd9d0acf5e3c71fa2e7cd65561e4532d32b640145f634c333792074bb63de1239b35abfb6b6d372f97caf26f8d97faac7ba51ef190717ad2d3ae9c0d7a2
   languageName: node
   linkType: hard
 
@@ -2538,7 +2538,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:16.3.1, dotenv@npm:^16.0.3":
+"dotenv@npm:16.4.1":
+  version: 16.4.1
+  resolution: "dotenv@npm:16.4.1"
+  checksum: a343f0a1d156deef8c60034f797969867af4dbccfacedd4ac15fad04547e7ffe0553b58fc3b27a5837950f0d977e38e9234943fbcec4aeced4e3d044309a76ab
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^16.0.3":
   version: 16.3.1
   resolution: "dotenv@npm:16.3.1"
   checksum: 15d75e7279018f4bafd0ee9706593dd14455ddb71b3bcba9c52574460b7ccaf67d5cf8b2c08a5af1a9da6db36c956a04a1192b101ee102a3e0cf8817bbcf3dfd
@@ -5844,27 +5851,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.40.1":
-  version: 1.40.1
-  resolution: "playwright-core@npm:1.40.1"
+"playwright-core@npm:1.41.1":
+  version: 1.41.1
+  resolution: "playwright-core@npm:1.41.1"
   bin:
     playwright-core: cli.js
-  checksum: 84d92fb9b86e3c225b16b6886bf858eb5059b4e60fa1205ff23336e56a06dcb2eac62650992dede72f406c8e70a7b6a5303e511f9b4bc0b85022ede356a01ee0
+  checksum: c83446a560c6bd85f6f0cd586ff8c643b77e2005567386e12f85890936cc370673114b94cd883246018797cc1580e93b0296ade7d07275bb611b8962f5bb9693
   languageName: node
   linkType: hard
 
-"playwright@npm:1.40.1":
-  version: 1.40.1
-  resolution: "playwright@npm:1.40.1"
+"playwright@npm:1.41.1":
+  version: 1.41.1
+  resolution: "playwright@npm:1.41.1"
   dependencies:
     fsevents: 2.3.2
-    playwright-core: 1.40.1
+    playwright-core: 1.41.1
   dependenciesMeta:
     fsevents:
       optional: true
   bin:
     playwright: cli.js
-  checksum: 9e36791c1b4a649c104aa365fdd9d049924eeb518c5967c0e921aa38b9b00994aa6ee54784d6c2af194b3b494b6f69772673081ef53c6c4a4b2065af9955c4ba
+  checksum: 3da7fb929abdec6adbdd8829f840580f5f210713214a8d230b130127f2270403eb2113c6c1418012221149707250fff896794c7c22c260dd09a92bf800227f31
   languageName: node
   linkType: hard
 
@@ -5872,30 +5879,30 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "porscheofficial@workspace:."
   dependencies:
-    "@axe-core/playwright": 4.8.3
+    "@axe-core/playwright": 4.8.4
     "@next/bundle-analyzer": 13.5.6
     "@next/eslint-plugin-next": 13.5.6
-    "@playwright/test": 1.40.1
+    "@playwright/test": 1.41.1
     "@porsche-design-system/components-js": 3.11.0
     "@porsche-design-system/components-react": 3.11.0
     "@porscheofficial/eslint-config-porschedigital-react": 4.0.0
     "@porscheofficial/prettier-config-porschedigital": 4.0.0
     "@primer/octicons": 19.8.0
-    "@types/mdx": 2.0.10
-    "@types/node": 20.11.4
-    "@types/react": 18.2.48
+    "@types/mdx": 2.0.11
+    "@types/node": 20.11.14
+    "@types/react": 18.2.50
     "@types/react-dom": 18.2.18
     contentlayer: 0.3.4
     date-fns: 2.30.0
-    dotenv: 16.3.1
+    dotenv: 16.4.1
     eslint: 8.56.0
     http-server: 14.1.1
     js-yaml-loader: 1.2.2
     next: 13.5.6
     next-contentlayer: 0.3.4
     next-image-export-optimizer: 1.12.2
-    playwright-core: 1.40.1
-    prettier: 3.2.2
+    playwright-core: 1.41.1
+    prettier: 3.2.4
     prism-react-renderer: 2.3.1
     react: 18.2.0
     react-dom: 18.2.0
@@ -6012,12 +6019,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.2.2":
-  version: 3.2.2
-  resolution: "prettier@npm:3.2.2"
+"prettier@npm:3.2.4":
+  version: 3.2.4
+  resolution: "prettier@npm:3.2.4"
   bin:
     prettier: bin/prettier.cjs
-  checksum: b416e1e4b26c351403343ebe461feda631c0eee5c3cf316c711204a08f3c639f38a8f9177c75e98a690998ff82e8ddc80c6bc027fb4ef6cedb6a4db035b4fe9a
+  checksum: 6ec9385a836e0b9bac549e585101c086d1521c31d7b882d5c8bb7d7646da0693da5f31f4fff6dc080710e5e2d34c85e6fb2f8766876b3645c8be2f33b9c3d1a3
   languageName: node
   linkType: hard
 
