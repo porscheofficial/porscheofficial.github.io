@@ -73,7 +73,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = async ({
           placeholder="blur"
           sizes="33w"
           fill
-          unoptimized
         />
       </div>
       <div className={s.content}>

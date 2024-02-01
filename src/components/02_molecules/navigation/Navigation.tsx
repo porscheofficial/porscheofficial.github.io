@@ -117,7 +117,6 @@ export const Navigation: React.FC<NavigationProps> = () => {
               fill
               placeholder="blur"
               sizes="(max-width: 759px) 100vw, 50vw"
-              unoptimized
             />
           </PLinkTile>
           <h3>Further Stories</h3>
