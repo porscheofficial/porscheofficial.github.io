@@ -4,5 +4,10 @@ declare module "*.module.scss" {
   export default classes;
 }
 
+declare module "*.yml" {
+  const data: any;
+  export default data;
+}
+
 declare module "*.png";
 declare module "*.jpg";
