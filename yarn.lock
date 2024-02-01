@@ -1105,24 +1105,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@porsche-design-system/components-js@npm:3.10.0-rc.4":
-  version: 3.10.0-rc.4
-  resolution: "@porsche-design-system/components-js@npm:3.10.0-rc.4"
-  checksum: faa3848c55093e1d4dd52371a6bdc6e6a74030b4a8b566d1e2f22b3b9421e14eedbe1b9acdc61c7299f648f514aaff698af3ed57e85d25631bc4b10c6282ab6f
+"@porsche-design-system/components-js@npm:3.11.0":
+  version: 3.11.0
+  resolution: "@porsche-design-system/components-js@npm:3.11.0"
+  checksum: 95aa51e027232f4248233d6ad12877234d83c8e42d870eac037246e42f641c02dd61f63d0e639dbbc27a3e59a30ca8f66bf139b879422ee97a9fea30a537daf2
   languageName: node
   linkType: hard
 
-"@porsche-design-system/components-react@npm:3.10.0-rc.4":
-  version: 3.10.0-rc.4
-  resolution: "@porsche-design-system/components-react@npm:3.10.0-rc.4"
+"@porsche-design-system/components-react@npm:3.11.0":
+  version: 3.11.0
+  resolution: "@porsche-design-system/components-react@npm:3.11.0"
   dependencies:
-    "@porsche-design-system/components-js": 3.10.0-rc.4
+    "@porsche-design-system/components-js": 3.11.0
   peerDependencies:
     react: ">=17.0.0 <19.0.0"
     react-dom: ">=17.0.0 <19.0.0"
   bin:
     patchRemixRunProcessBrowserGlobalIdentifier: bin/patchRemixRunProcessBrowserGlobalIdentifier.js
-  checksum: a14461495759ed0bd53d3bda0996d9256a7a8ac3365a72f84560f03e8dd33998b0be854770b103a178d764cfda8d068cf6ddfae58e116452cc80385437389ba0
+  checksum: b68b83c82067867a5c84cdfd41b1d013d1a6f0bf0195ef6fb00333c043e3a29a9ced08e2f8194a3903c330859a8e8e70a74b12a051f63cd5b31d5b5286226443
   languageName: node
   linkType: hard
 
@@ -5876,8 +5876,8 @@ __metadata:
     "@next/bundle-analyzer": 13.5.6
     "@next/eslint-plugin-next": 13.5.6
     "@playwright/test": 1.40.1
-    "@porsche-design-system/components-js": 3.10.0-rc.4
-    "@porsche-design-system/components-react": 3.10.0-rc.4
+    "@porsche-design-system/components-js": 3.11.0
+    "@porsche-design-system/components-react": 3.11.0
     "@porscheofficial/eslint-config-porschedigital-react": 4.0.0
     "@porscheofficial/prettier-config-porschedigital": 4.0.0
     "@primer/octicons": 19.8.0

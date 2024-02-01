@@ -19,8 +19,8 @@
     "test:ci": "yarn contentlayer:build && yarn prettier:ci && yarn tsc --noEmit --noEmitHelpers && yarn lint:ci"
   },
   "dependencies": {
-    "@porsche-design-system/components-js": "3.10.0-rc.4",
-    "@porsche-design-system/components-react": "3.10.0-rc.4",
+    "@porsche-design-system/components-js": "3.11.0",
+    "@porsche-design-system/components-react": "3.11.0",
     "@primer/octicons": "19.8.0",
     "contentlayer": "0.3.4",
     "date-fns": "2.30.0",
