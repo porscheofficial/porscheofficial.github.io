@@ -78,7 +78,6 @@ For further information regarding the software components listed below and
 the corresponding license terms and – where required by license – source
 codes, please contact Porsche at www.porsche.com/softwareinfo.
 
-
 Some licenses, however, require the provision of physical copies of source
 and/or object code. In this case, you and any third party may obtain a copy
 of the source and/or object codes according to the requirements of the
@@ -106,7 +105,7 @@ choose.
 
 ====================================================================
 
-Project: Porsche Open Source Platform (Web) - OSO-2212
+Project: Porsche Open Source Platform (Web) - OSO-2340
 
 The following list contains attribution notices, among them, where applicable, attribution notices of various relevant modules. 
 
@@ -1307,10 +1306,13 @@ governing permissions and limitations under the License.
 *********************************************************************
 #Apache-2.0
 
- Referenced in: LICENSE
-Copyright (c) 2022 Dr. Ing. h.c. F. Porsche AG
+ Referenced in: LICENSE of
+ https://registry.npmjs.org/@porsche-design-system/components-js/-/components-js-3.11.0.tgz
+ Copyright (c) 2022 Dr. Ing. h.c. F. Porsche AG
 
- Copyright (c) Microsoft Corporation. All rights reserved.
+ Referenced in: jsdom-polyfill/index.cjs of
+ https://registry.npmjs.org/@porsche-design-system/components-js/-/components-js-3.11.0.tgz
+ Copyright (c) Microsoft Corporation
 
  Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -1324,43 +1326,56 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
- #Authors
+#Authors:
 Dr. Ing. h.c. F. Porsche AG
 
- #MIT
+ #0BSD
 
- Referenced in: partials/index.js and jsdom-polyfill/index.js
+ Referenced in: jsdom-polyfill/index.cjs of https://registry.npmjs.org/@porsche-design-system/components-js/-/components-js-3.11.0.tgz
+
+ Copyright (c) Microsoft Corporation
+
+ Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+#MIT
+
+ Referenced in: jsdom-polyfill/index.cjs of https://registry.npmjs.org/@porsche-design-system/components-js/-/components-js-3.11.0.tgz
 
  Copyright (c) Facebook, Inc. and its affiliates
-copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight.
-copyright (c) 2012: Scott Jehl
-Copyright: 2022 Naotoshi Fujita
+copyright (c) 2012 Scott Jehl, Paul Irish, Nicholas Zakas, David Knight
+copyright (c) 2012 Scott Jehl
+Copyright 2022 Naotoshi Fujita
 copyright Oleg Isonen (Slobodskoi) / Isonen 2014-present
 Copyright (c) 2014-present Oleg Isonen (Slobodskoi) & contributors
 
+ Copyright (c) 2019-present Drifty Co.
+Referenced in: jsdom-polyfill/index.cjs
+ Stencil Client Patch Browser v4.8.2 | MIT Licensed | https://stenciljs.com
+
  Copyright (c) 2015 Simon Friis Vindum
-Referenced in: jsdom-polyfill/index.js
-Virtual DOM patching algorithm based on Snabbdom by
-Simon Friis Vindum (@paldepind)
-Licensed under the MIT License
-https://github.com/snabbdom/snabbdom/blob/master/LICENSE
+Referenced in: jsdom-polyfill/index.cjs
+ * Licensed under the MIT License
+ * https://github.com/snabbdom/snabbdom/blob/master/LICENSE
 
  Copyright (c) 2015-present Jason Miller
-Referenced in: jsdom-polyfill/index.js 
-Production h() function based on Preact by
-Jason Miller (@developit)
-Licensed under the MIT License
-https://github.com/developit/preact/blob/master/LICENSE
+Referenced in: jsdom-polyfill/index.cjs
+ * Licensed under the MIT License
+ * https://github.com/developit/preact/blob/master/LICENSE
 
  Copyright (c) 2023 Cody Olsen
-Referenced in: jsdom-polyfill/index.js 
-The majority of this file is based on https://github.com/stipsan/compute-scroll-into-view (MIT license), but has been rewritten to accept a scroller as an argument.
+The majority of this file is based on https://github.com/stipsan/compute-scroll-into-view (MIT license),
+but has been rewritten to accept a scroller as an argument.
 
- Copyright (c) 2019-present Drifty Co.
-Referenced in: jsdom-polyfill/index.js 
-Stencil Client Patch Browser v4.7.2 | MIT Licensed | https://stenciljs.com
-
- Permission is hereby granted, free of charge, to any person obtaining
+Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
 "Software"), to deal in the Software without restriction, including
 without limitation the rights to use, copy, modify, merge, publish,
@@ -1379,58 +1394,58 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
- #0BSD
+#W3C-20150513
 
- Referenced in: jsdom-polyfill/index.js
-
- Copyright (c) Microsoft Corporation
-
- Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
- THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
- #W3C-20150513
-
- Referenced in: jsdom-polyfill/index.js
+ Referenced in: jsdom-polyfill/index.cjs of https://registry.npmjs.org/@porsche-design-system/components-js/-/components-js-3.11.0.tgz
 
  This software or document includes material copied from or derived from Intersection Observer, https://w3c.github.io/IntersectionObserver/. 
-Copyright © 2022 W3C® (MIT, ERCIM, Keio, Beihang).
-Copyright © 2022 W3C® (MIT, ERCIM, Keio, Beihang). W3C liability, trademark and permissive document license rules apply. 
 Copyright 2016 Google Inc. All Rights Reserved.
+Copyright (c) 2022 W3C(r) (MIT, ERCIM, Keio, Beihang)
+Copyright (c) 2022 W3C(r) MIT, ERCIM, Keio
+Copyright (c) YEAR W3C(r) MIT, ERCIM, Keio
+
+ W3C Software and Document Notice and License
+
+ Status: This license takes effect 13 May, 2015.
 
  This work is being provided by the copyright holders under the following license.
+License
 
- License
-By obtaining and/or copying this work, you (the licensee) agree that you have read, understood, and will comply with the following terms and conditions.
+ By obtaining and/or copying this work, you (the licensee) agree that you have
+read, understood, and will comply with the following terms and conditions.
 
  Permission to copy, modify, and distribute this work, with or without
- modification, for any purpose and without fee or royalty is hereby granted,
- provided that you include the following on ALL copies of the work or portions
- thereof, including modifications:
+modification, for any purpose and without fee or royalty is hereby granted,
+provided that you include the following on ALL copies of the work or portions
+thereof, including modifications:
 
-• The full text of this NOTICE in a location viewable to users of the redistributed or derivative work.
-• Any pre-existing intellectual property disclaimers, notices, or terms and conditions. If none exist, the W3C Software and Document Short Notice should be included.
-• Notice of any changes or modifications, through a copyright statement on the new code or document such as "This software or document includes material copied from or derived from [title and URI of the W3C document]. Copyright (c) [YEAR] W3C® (MIT, ERCIM, Keio, Beihang)."
-Disclaimers
-THIS WORK IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR
+ The full text of this NOTICE in a location viewable to users of the
+ redistributed or derivative work.
+
+ Any pre-existing intellectual property disclaimers, notices, or terms and
+ conditions. If none exist, the W3C Software and Document Short Notice should
+ be included.
+
+ Notice of any changes or modifications, through a copyright statement on the
+ new code or document such as "This software or document includes material
+ copied from or derived from [title and URI of the W3C document]. Copyright ©
+ [YEAR] W3C® (MIT, ERCIM, Keio, Beihang)."
+
+ Disclaimers
+
+ THIS WORK IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR
 WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, WARRANTIES OF
 MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE
 SOFTWARE OR DOCUMENT WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS,
 TRADEMARKS OR OTHER RIGHTS.
 
- COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE SOFTWARE OR DOCUMENT.
+ COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR
+CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE SOFTWARE OR DOCUMENT.
 
  The name and trademarks of copyright holders may NOT be used in advertising or
- publicity pertaining to the work without specific, written prior permission.
- Title to copyright in this work will at all times remain with copyright
- holders.
+publicity pertaining to the work without specific, written prior permission.
+Title to copyright in this work will at all times remain with copyright holders.
+Notes
 
 
 
@@ -1537,12 +1552,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 *********************************************************************
 #MIT
 
-
-Copyright (c) Microsoft Corporation
+ Copyright (c) Microsoft Corporation
 Copyright Node.js contributors
 
-
-Permission is hereby granted, free of charge, to any person obtaining
+ Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
 "Software"), to deal in the Software without restriction, including
 without limitation the rights to use, copy, modify, merge, publish,
@@ -1550,12 +1563,10 @@ distribute, sublicense, and/or sell copies of the Software, and to
 permit persons to whom the Software is furnished to do so, subject to
 the following conditions:
 
-
-The above copyright notice and this permission notice shall be
+ The above copyright notice and this permission notice shall be
 included in all copies or substantial portions of the Software.
 
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
