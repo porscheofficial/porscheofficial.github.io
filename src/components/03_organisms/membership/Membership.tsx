@@ -22,8 +22,14 @@ export const Membership: React.FC<MembershipProps> = ({
   return (
     <>
       <div className={s.logo}>
-        <Link href={{ pathname: url }} aria-label={title}>
-          <ExportedImage src={imageSrc} alt={imageAlt} fill />
+        <Link href={{ pathname: url }} aria-label={title} className={s.link}>
+          <ExportedImage
+            src={imageSrc}
+            alt={imageAlt}
+            placeholder="blur"
+            sizes="(min-width: 760px) 33vw, 100vw"
+            fill
+          />
         </Link>
       </div>
       <div className={s.description}>

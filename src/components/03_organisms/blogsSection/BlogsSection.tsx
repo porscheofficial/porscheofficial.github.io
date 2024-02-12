@@ -42,13 +42,13 @@ export const BlogsSection: React.FC<BlogsSectionProps> = ({
         <Section grid={false} spacing="l">
           <PCarousel
             slidesPerPage={{ base: 1, s: 2, l: 3 }}
-            heading={showHeading ? "Contributor Stories" : ""}
             theme="dark"
             width="extended"
             alignHeader="center"
             rewind={false}
             className={`${className ?? ""}`}
           >
+            <h2 slot="heading">{showHeading ? "Contributor Stories" : ""}</h2>
             {docList.map((blog) => (
               <BlogCard
                 title={blog.title}

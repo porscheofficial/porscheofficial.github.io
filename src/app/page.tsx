@@ -4,11 +4,8 @@ import {
   PText,
 } from "@porsche-design-system/components-react/ssr";
 import { allStatics } from "contentlayer/generated";
-// @ts-expect-error TODO
 import importProjects from "../../data/projects.yml";
-// @ts-expect-error TODO
 import importNews from "../../data/news.yml";
-// @ts-expect-error TODO
 import importMemberships from "../../data/memberships.yml";
 import { HeroSection } from "../components/03_organisms/heroSection/HeroSection";
 import s from "./page.module.scss";
@@ -119,7 +116,7 @@ const Home: React.FC = () => {
       <Section id="memberships" className={s.memberships}>
         {memberships.items.map((membership) => (
           <Membership
-            key={`member-${membership.title}`}
+            key={`membership-${membership.title}`}
             description={membership.description}
             title={membership.title}
             url={membership.url}

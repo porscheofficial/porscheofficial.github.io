@@ -27,7 +27,13 @@ export const Author: React.FC<AuthorProps> = ({
       >
         {!!imageSrc && (
           <span className={s.image}>
-            <ExportedImage src={imageSrc} alt="" fill placeholder="empty" />
+            <ExportedImage
+              src={imageSrc}
+              alt=""
+              fill
+              sizes="(min-width: 760px) 15vw"
+              placeholder="blur"
+            />
           </span>
         )}
 

@@ -32,6 +32,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           style={{ objectPosition: position }}
           src={imageSrc}
           alt={imageAlt}
+          placeholder="blur"
+          sizes="100vw"
           fill
           priority
         />

@@ -25,7 +25,13 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
   return (
     <div className={s.card}>
       <div className={s.image}>
-        <ExportedImage src={imageSrc} alt={imageAlt} fill placeholder="empty" />
+        <ExportedImage
+          src={imageSrc}
+          alt={imageAlt}
+          fill
+          placeholder="blur"
+          sizes="(min-width: 1000px) 50vw, 100vw"
+        />
       </div>
       <div className={s.content}>
         <PHeading size="x-large" tag="h3">

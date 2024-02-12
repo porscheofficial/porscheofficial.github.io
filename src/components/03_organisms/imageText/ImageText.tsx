@@ -32,7 +32,13 @@ export const ImageText: React.FC<ImageTextProps> = ({
         {children}
       </div>
       <div className={`${s.image} ${left ? "left" : ""}`}>
-        <ExportedImage src={imageSrc} alt={imageAlt} fill />
+        <ExportedImage
+          src={imageSrc}
+          alt={imageAlt}
+          placeholder="blur"
+          sizes="(min-width: 760px) 33vw, 100vw"
+          fill
+        />
       </div>
     </Section>
   );

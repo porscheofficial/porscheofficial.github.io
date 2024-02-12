@@ -67,7 +67,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = async ({
   return (
     <div className={s.card}>
       <div className={s.image}>
-        <ExportedImage src={imageSrc} alt={imageAlt} fill placeholder="empty" />
+        <ExportedImage
+          src={imageSrc}
+          alt={imageAlt}
+          placeholder="blur"
+          sizes="33w"
+          fill
+        />
       </div>
       <div className={s.content}>
         <PText theme="dark" size="x-small" className={s.status}>

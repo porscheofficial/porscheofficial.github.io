@@ -6,7 +6,6 @@
 }
 
 .job-counter {
-  margin-left: $pds-spacing-static-small;
   background-color: $pds-theme-light-background-surface;
   border-radius: 50%;
   text-align: center;
@@ -17,9 +16,11 @@
 }
 
 .navLink {
-  margin: $pds-spacing-fluid-small 0;
+  width: auto;
+  margin: 0 calc($pds-spacing-fluid-small * -1);
+  padding: $pds-spacing-fluid-small;
 }
 
-.docsAccordion {
-  margin: $pds-spacing-fluid-medium 0;
+.navLinkImage {
+  position: relative;
 }

@@ -1,6 +1,11 @@
 /* eslint-disable react/require-default-props */
 import Link from "next/link";
-import { PCrest, PWordmark } from "@porsche-design-system/components-react/ssr";
+import {
+  PCrest,
+  PWordmark,
+  PLinkPure,
+} from "@porsche-design-system/components-react/ssr";
+import { spacingFluidXSmall } from "@porsche-design-system/components-react/styles";
 import s from "./header.module.scss";
 import { Navigation } from "../navigation/Navigation";
 
@@ -38,7 +43,17 @@ export const Header: React.FC<HeaderProps> = async ({ logo }) => {
           )}
         </Link>
       </div>
-
+      <div className={s["github-container"]}>
+        <PLinkPure
+          href="https://github.com/porscheofficial"
+          theme="dark"
+          iconSource="/assets/octicons/mark-github.svg"
+          hideLabel
+          style={{ padding: spacingFluidXSmall }}
+        >
+          GitHub
+        </PLinkPure>
+      </div>
       <Navigation jobsCounter={jobsCounter} />
     </header>
   );
