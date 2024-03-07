@@ -10,4 +10,5 @@ module.exports = [
   "https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_690x388/dam/pnr/other/executive-board/Meschke/pictures-NEW/New/Meschke1.jpg/jcr:content/Meschke1.jpg",
   "https://www.linuxfoundation.org/hubfs/OSPO_FeaturedImage.png",
   "https://github-production-user-asset-6210df.s3.amazonaws.com/43671777/287491838-0a4cfd31-89fb-49d6-a38b-797f4c20c40f.png",
+  "https://raw.githubusercontent.com/todogroup/ospology/main/ospo-book/static/images/ospo-book-social.jpg",
 ];
