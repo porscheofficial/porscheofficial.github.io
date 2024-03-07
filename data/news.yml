@@ -3,7 +3,7 @@ items:
   - title: |
       OSPO Book: Porsche End-User Journey Report
     url: https://ospobook.todogroup.org/use-cases/
-    imageSrc: http://ospobook.todogroup.org/images/ospo-book-social.jpg
+    imageSrc: https://raw.githubusercontent.com/todogroup/ospology/main/ospo-book/static/images/ospo-book-social.jpg
     imageAlt: OSPO End-User Journeys
   - title: |
       Nik Peters elected as member of TODO Group Steering Committee 2024
