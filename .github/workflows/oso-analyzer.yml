@@ -14,9 +14,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run OSO ORT Analyzer
         id: analyzer
-        uses: porscheofficial/.github/workflows/ort-analyze@main
+        uses: porscheofficial/.github/workflows/ort-analyze@fix/ort-pipeline-permissions
         with:
           ort-aws-access-key-id: ${{ secrets.ANALYZER_AWS_ACCESS_KEY_ID }}
           ort-aws-secret-access-key: ${{ secrets.ANALYZER_AWS_ACCESS_KEY }}
           container-repository: ${{ secrets.ANALYZER_DOCKER_IMAGE }}
           container-registry: ${{ secrets.ANALYZER_DOCKER_REGISTRY }}
+      - name: Zip analyzer-result
+        shell: bash
+        run: |
+          zip -9jv analyzer-result.zip .ort.yml ort/analyzer-result.yml
