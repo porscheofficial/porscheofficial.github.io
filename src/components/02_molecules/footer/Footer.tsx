@@ -118,17 +118,18 @@ export const Footer: React.FC = () => {
       </div>
       <div className={s.middle}>
         <PText size="large" theme="dark">
-          Contact
+          Open Source
         </PText>
         <div className={s.content}>
-          <PText theme="dark">Do you have any questions?</PText>
-
+          <PText theme="dark">Find us on GitHub.</PText>
           <PLink
-            href="mailto:open_source_office@porsche.de"
+            href="https://github.com/porscheofficial"
             theme="dark"
+            iconSource="/assets/octicons/mark-github.svg"
+            hideLabel
             variant="secondary"
           >
-            Contact Us
+            @porscheofficial
           </PLink>
         </div>
       </div>
