@@ -118,10 +118,10 @@ export const Footer: React.FC = () => {
       </div>
       <div className={s.middle}>
         <PText size="large" theme="dark">
-          GitHub
+          Open Source
         </PText>
         <div className={s.content}>
-          <PText theme="dark">See all open-source projects by Porsche.</PText>
+          <PText theme="dark">Find us on GitHub.</PText>
           <PLink
             href="https://github.com/porscheofficial"
             theme="dark"
