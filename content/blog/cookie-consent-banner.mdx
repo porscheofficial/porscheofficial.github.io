@@ -1,0 +1,103 @@
+---
+title: Cookie Consent Banner
+date: 2024-05-08
+image: /assets/blog/ccb/preview.png
+hero: /assets/blog/ccb/hero.png
+descriptionShort: The Cookie Consent Banner is one of the very first FOSS projects published by Porsche back in 2021. In this Contributor Story, the two maintainers Tim and Patrick share what they have learnt over the past three years and how they managed to keep an eye on the needs of the community.
+author:
+  name: Cookie Consent Banner
+  description: Simplify cookie consent with Cookie Consent Banner, providing a customizable UI and a straightforward API. Focus on the things that really matter.
+  image: https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/main/assets/logo.svg
+  slug: https://github.com/porscheofficial/cookie-consent-banner
+readTime: 5min
+---
+
+<ImageText imageSrc="/assets/blog/pdc/team.jpg" imageAlt="Porsche Digital Campus" theme="light"
+    title="Tell us a little more about yourself, your role at Porsche and what topics drive you.">
+
+    **Tim (Web Developer Customer Innovation / Physical Products):** I'm passionate
+    about enabling best-in-class user experiences for our products. To achieve
+    this, we all rely on software packages that must meet high quality
+    standards. It is therefore particularly important to me to be an active
+    member of the open-source world and to contribute our ambitious standards
+    back to the community.
+    <br/>
+    **Patrick (System Architect My Porsche):** I'm a huge fan of a great user
+    experience. Not only for the end users of a product, but also for the software
+    engineers creating those. An awesome developer experience leads to an awesome
+    (end-) user experience. That's why I enjoy spending time into defining a
+    meaningful and scalable interface definition. The Cookie Consent Banner is such
+    an example. It's a component that you have to build for legal reasons and
+    probably don't touch quite often after the initial implementation. It shouldn't
+    be complicated if you need to adapt it again after some time. The Cookie Consent
+    Banner is very flexible, but still convenient to integrate.  
+
+</ImageText>
+
+<ImageText imageSrc="/assets/blog/ccb/1.png" imageAlt="Porsche Digital Campus" theme="light" left
+    title="You are currently maintaining Porsche's open-source project Cookie Consent Banner on GitHub. How would you explain your project to a five-year-old? What problem does your project solve for Porsche?">
+
+    **Patrick:** I'm sure everybody remembers the time when cookie banners hit the
+    internet. It's not only cumbersome for the visitors of a website but also for
+    the maintainers to implement such a solution. But it makes sense, informing the
+    user's what is going on with their data. So we created a component that is not
+    only informative to the visitors of a website, but also easy to integrate for
+    the product teams. It should be as straightforward as possible to integrate
+    third-party scripts and cookies into a website in a privacy-friendly manner,
+    always respecting the decision of the visitor. That's why the component doesn't
+    do any magical gatekeeping of such scripts, but instead making it very
+    convenient for the developer to get to know the information about the consent of
+    the visitor. The developers should have total control over what's going on the
+    website and which scripts are being loaded.  
+    <br/>
+    **Tim:** In innovation projects, we work in a particularly agile manner and in
+    short development cycles. A cookie banner was therefore the perfect opportunity
+    to give something back to the community and at the same time create a building
+    block that enables innovation projects to build GDPR-compliant pages with
+    minimal effort.
+</ImageText>
+
+<ImageText imageSrc="/assets/blog/ccb/2.jpg" imageAlt="Porsche Digital Campus" theme="light"
+    title="With over 3000 weekly downloads your project already gained some adoption among the community. What did you learn along the way of maintaining an open-source project?">
+
+    **Patrick:** The component should be easy to use, thus we need to ensure a
+    balance between sensible defaults and a potentially overwhelming set of
+    options to customize. Given the success of the component, I would say we
+    found a good balance. I really like the feedback the community provides via
+    GitHub Issues and Pull Requests. For example, did we face an issue where
+    someone mentioned how the component affects their Google Lighthouse Score.
+    Together, we found a solution, making the component better performing for
+    everybody. And while feature requests are always welcome, I'm hopeful to see
+    more direct contributions through Pull Requests in the future. It's this
+    kind of active collaboration that brings out the best in open-source
+    projects.
+    <br/>
+    **Tim:** Apart from the question of finding the right level of customization
+    options, the biggest challenge for me in this project is the variety of
+    different contexts in which the component is used: There is a very wide range of
+    different browsers we need to support but also, we decided to make the component
+    available as a React component. This is only possible using extensive testing in
+    different environments and with the help of standards such as the Web Component
+    standard and tools like Stencil. This illustrates the importance of these
+    projects in the overall FOSS context, as we rely on open source to build open
+    source.
+</ImageText>
+
+<ImageText imageSrc="/assets/blog/pdc/3.png" imageAlt="Porsche Digital Campus" theme="light" left
+    title="It's great to see how the Cookie Consent Banner was able to attract a decent community around the project. Are there specific reasons why you decided to publish this component under a FOSS license?">
+
+    Contributing is never a zero-sum game. The return is always greater than the
+    resources invested. People often only see that it requires additional effort to
+    create a software component in a way that makes it also usable for other
+    products as well. That is only half the truth. If multiple teams develop the
+    same software component, the whole company invests twice the required resources.
+    Additionally, an active open-source community provides a huge amount of
+    knowledge that is hard to replicate within a closed environment. For instance, a
+    developer reported an issue with the Cookie Consent Banner for a specific
+    browser version. We only learned about that because of the community. And yes,
+    there's always the argument that publishing something as open source will also
+    help competitors. Well, that's true, but let's be honest, a great cookie consent
+    banner will not make a dramatic difference. It's a base component that every
+    product needs to provide. I'm not asking to share software components that could
+    be described as the “secret sauce”.
+</ImageText>
