@@ -74,6 +74,7 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
   const formatDate = format(parseISO(blog.date), "do LLLL yyyy");
   const hashes = blog.hashTags ? `· #${blog.hashTags.join(" #")}` : "";
   const description = `${formatDate} · ${blog.readTime} reading time ${hashes}`;
+  const hero = blog.hero ? blog.hero : blog.image;
 
   return (
     <main>
@@ -81,7 +82,7 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
         title={blog.title}
         description={description}
         subtitle="FOSS@Porsche"
-        imageSrc={blog.image}
+        imageSrc={hero}
         imageAlt="Hero Image"
         position="center center"
       />

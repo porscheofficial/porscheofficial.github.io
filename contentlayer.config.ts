@@ -69,8 +69,13 @@ const Blog = defineDocumentType(() => ({
     },
     image: {
       type: "string",
-      description: "The image of the blog",
+      description: "The preview image of the blog post",
       required: true,
+    },
+    hero: {
+      type: "string",
+      description: "The hero image of the blog post",
+      required: false,
     },
   },
   // @ts-expect-error TODO
@@ -101,6 +106,11 @@ export const Doc = defineDocumentType(() => ({
       type: "string",
       description: "The image of the doc",
       required: true,
+    },
+    hero: {
+      type: "string",
+      description: "The hero image of the doc",
+      required: false,
     },
   },
   // @ts-expect-error TODO
