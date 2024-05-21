@@ -1,3 +1,4 @@
+/* eslint-disable n/no-process-env */
 const VERCEL_URL = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : null;

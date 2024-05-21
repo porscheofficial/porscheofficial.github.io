@@ -112,7 +112,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
             className={s.navLinkImage}
           >
             <ExportedImage
-              src={firstDoc.image}
+              src={firstDoc.image.base}
               alt={firstDoc.title}
               fill
               placeholder="blur"

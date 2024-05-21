@@ -3,6 +3,7 @@ import {
   MediaQueryDescriptor,
   mediaQueryDescriptors,
 } from "../../config/layout";
+import { removeContentlayerDocProps } from "./transformContentlayerImage";
 
 export type BreakpointDescriptor = MediaQueryDescriptor | "base";
 
@@ -14,6 +15,8 @@ export const isArtDirectionAsset = (
   src: string | StaticImageData | ArtDirectionImageData,
 ): src is ArtDirectionImageData =>
   typeof src === "object" &&
-  Object.keys(src as object).every((key) =>
-    [...mediaQueryDescriptors, "base"].includes(key as BreakpointDescriptor),
-  );
+  Object.keys(src as object)
+    .filter(removeContentlayerDocProps)
+    .every((key) =>
+      [...mediaQueryDescriptors, "base"].includes(key as BreakpointDescriptor),
+    );

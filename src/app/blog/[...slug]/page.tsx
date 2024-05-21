@@ -11,6 +11,7 @@ import { Author } from "../../../components/02_molecules/author/author";
 import { Section } from "../../../components/02_molecules/section/section";
 import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
 import { BASE_URL } from "../../../config/env";
+import { transformContentlayerImage } from "../../../utils/imageHelpers/transformContentlayerImage";
 
 const getParams = (params: { slug?: string[] }): Blog | null => {
   const slug = params.slug?.join("/") ?? "";
@@ -47,7 +48,7 @@ export async function generateMetadata({
       url: `${BASE_URL}${doc.slug}`,
       title,
       description,
-      images: doc.image,
+      images: doc.image.base,
     },
     twitter: {
       card: "summary_large_image",
@@ -81,7 +82,7 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
         title={blog.title}
         description={description}
         subtitle="FOSS@Porsche"
-        imageSrc={blog.image}
+        imageSrc={transformContentlayerImage(blog.image)}
         imageAlt="Hero Image"
         position="center center"
       />

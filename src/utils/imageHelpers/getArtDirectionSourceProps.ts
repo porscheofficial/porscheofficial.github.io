@@ -9,8 +9,6 @@ import { getBaseMediaQuery } from "./getBaseMediaQuery";
 import type { ArtDirectionImageData } from "./isArtDirectionAsset";
 import type { Entries } from "../typeHelpers/Entries";
 
-type AllImgProps = ReturnType<typeof getImageProps>["props"];
-
 interface SourceProps {
   media: `(min-width: ${number}px)` | `(max-width: ${number}px)`;
   srcSet: string | undefined;
@@ -37,9 +35,13 @@ export const getArtDirectionSourceProps = ({
 
   const sources = srcDictEntriesSorted.map(
     ([breakpointDescriptor, src], index) => {
-      let allImageProps: AllImgProps;
-
-      allImageProps = getImageProps({ src, ...props }).props;
+      const allImageProps = getImageProps({
+        src,
+        ...props,
+        // TODO: support next-export-image's loader and placeholder props
+        loader: (params) => params.src,
+        placeholder: "empty",
+      }).props;
 
       let mediaQuery;
       if (
