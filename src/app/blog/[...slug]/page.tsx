@@ -10,7 +10,7 @@ import s from "./page.module.scss";
 import { Author } from "../../../components/02_molecules/author/author";
 import { Section } from "../../../components/02_molecules/section/section";
 import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
-import { BASE_URL } from "../../../config";
+import { BASE_URL } from "../../../config/env";
 
 const getParams = (params: { slug?: string[] }): Blog | null => {
   const slug = params.slug?.join("/") ?? "";
