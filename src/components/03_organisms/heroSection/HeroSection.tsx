@@ -6,12 +6,17 @@ import {
   PText,
 } from "@porsche-design-system/components-react/ssr";
 import s from "./heroSection.module.scss";
+import {
+  ArtDirectionImageData,
+  isArtDirectionAsset,
+} from "../../../utils/imageHelpers/isArtDirectionAsset";
+import { ArtDirectionImage } from "../../01_atoms/artDirectionImage/ArtDirectionImage";
 
 interface HeroSectionProps {
   title?: string;
   subtitle?: string;
   description?: string;
-  imageSrc: string | StaticImageData;
+  imageSrc: string | StaticImageData | ArtDirectionImageData;
   imageAlt: string;
   position?: string;
 }
@@ -27,16 +32,29 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <div className={s["hero-container"]}>
       <div className={s["background-image-container"]}>
-        <ExportedImage
-          className={s["hero-image"]}
-          style={{ objectPosition: position }}
-          src={imageSrc}
-          alt={imageAlt}
-          placeholder="blur"
-          sizes="100vw"
-          fill
-          priority
-        />
+        {isArtDirectionAsset(imageSrc) ? (
+          <ArtDirectionImage
+            src={imageSrc}
+            alt={imageAlt}
+            className={s["hero-image"]}
+            placeholder="blur"
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectPosition: position }}
+          />
+        ) : (
+          <ExportedImage
+            className={s["hero-image"]}
+            style={{ objectPosition: position }}
+            src={imageSrc}
+            alt={imageAlt}
+            placeholder="blur"
+            sizes="100vw"
+            fill
+            priority
+          />
+        )}
         <div className={s["image-overlay"]} />
       </div>
       <div className={s["title-container"]}>

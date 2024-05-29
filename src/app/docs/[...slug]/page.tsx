@@ -7,7 +7,7 @@ import { MdxComponents } from "../../../components/01_atoms/MdxComponents";
 import { HeroSection } from "../../../components/03_organisms/heroSection/HeroSection";
 import { Section } from "../../../components/02_molecules/section/section";
 import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
-import { BASE_URL } from "../../../config";
+import { BASE_URL } from "../../../config/env";
 
 const getParams = (params: { slug?: string[] }): Doc | null => {
   const slug = params.slug?.join("/") ?? "";

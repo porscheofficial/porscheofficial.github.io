@@ -1,6 +1,6 @@
 import { test, expect, Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-import { BASE_URL } from "../src/config";
+import { BASE_URL } from "../src/config/env";
 
 const runA11yScan = async (page: Page, path: string): Promise<void> => {
   await page.goto(path);
