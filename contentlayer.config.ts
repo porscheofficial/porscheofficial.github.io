@@ -95,6 +95,12 @@ const Blog = defineDocumentType(() => ({
       description: "The image of the blog",
       required: true,
     },
+    hero: {
+      type: "nested",
+      of: ResponsiveImage,
+      description: "The hero image of the blog post",
+      required: false,
+    },
   },
   // @ts-expect-error TODO
   computedFields,
@@ -124,6 +130,11 @@ export const Doc = defineDocumentType(() => ({
       type: "string",
       description: "The image of the doc",
       required: true,
+    },
+    hero: {
+      type: "string",
+      description: "The hero image of the doc",
+      required: false,
     },
   },
   // @ts-expect-error TODO
