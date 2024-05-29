@@ -21,8 +21,8 @@ module.exports = {
       {
         ignore: [
           "contentlayer/generated",
-          "next-contentlayer/hooks",
-          "contentlayer/source-files",
+          "next-contentlayer2/hooks",
+          "contentlayer2/source-files",
         ],
       },
     ],

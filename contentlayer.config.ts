@@ -3,13 +3,13 @@ import {
   makeSource,
   LocalDocument,
   defineNestedType,
-} from "contentlayer/source-files";
+} from "contentlayer2/source-files";
 import {
   MediaQueryDescriptor,
   mediaQueryDescriptors,
 } from "./src/config/layout";
 
-/** @type {import('contentlayer/source-files').ComputedFields} */
+/** @type {import('contentlayer2/source-files').ComputedFields} */
 const computedFields = {
   slug: {
     type: "string",
