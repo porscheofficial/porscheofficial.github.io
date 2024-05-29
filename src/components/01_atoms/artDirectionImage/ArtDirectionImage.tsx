@@ -29,7 +29,8 @@ export const ArtDirectionImage = forwardRef<
     <picture
       ref={ref}
       className={className}
-      style={{ ...fillStyles, ...style }}>
+      style={{ ...fillStyles, ...style }}
+    >
       {sources.map(({ media, srcSet, sizes, breakpointDescriptor }) => (
         <source
           key={breakpointDescriptor}
