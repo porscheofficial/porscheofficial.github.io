@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Script from "next/script";
 import {
   getInitialStyles,
   getFontFaceStylesheet,
@@ -56,10 +57,37 @@ export const metadata: Metadata = {
   },
 };
 
+const cspHeader = `
+    default-src 'self' https://api.github.com/repos/;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.ui.porsche.com/porsche-design-system/;
+    style-src 'self' 'unsafe-inline' https://cdn.ui.porsche.com/porsche-design-system/;
+    img-src 'self' blob: data: https://cdn.ui.porsche.com/porsche-design-system/ https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/;
+    font-src 'self' https://cdn.ui.porsche.com/porsche-design-system/;
+    object-src 'none';
+    manifest-src 'self' https://cdn.ui.porsche.com/porsche-design-system/;
+    base-uri 'self';
+    form-action 'self';
+    upgrade-insecure-requests;
+    `;
 const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en">
-      <head>
+    <head>
+      <meta
+        httpEquiv="Content-Security-Policy"
+        content={cspHeader.replace(/\n/g, "")}
+      />
+      <style id="antiClickjack">{"body{display:none !important;}"}</style>
+      <Script id="antiClickjackScript">
+        {`
+            if (self === top) {
+              var antiClickjack = document.getElementById("antiClickjack");
+              antiClickjack.parentNode.removeChild(antiClickjack);
+            } else {
+              top.location = self.location;
+            }
+        `}
+      </Script>
         {/* necessary for SSR support, injects stylesheet which defines visibility of pre-hydrated PDS components */}
         {getInitialStyles({ format: "jsx" })}
         {/* injects stylesheet which defines Porsche Next CSS font-face definition (=> minimize FOUT) */}
