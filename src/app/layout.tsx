@@ -72,14 +72,14 @@ const cspHeader = `
 const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en">
-    <head>
-      <meta
-        httpEquiv="Content-Security-Policy"
-        content={cspHeader.replace(/\n/g, "")}
-      />
-      <style id="antiClickjack">{"body{display:none !important;}"}</style>
-      <Script id="antiClickjackScript">
-        {`
+      <head>
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content={cspHeader.replace(/\n/g, "")}
+        />
+        <style id="antiClickjack">{"body{display:none !important;}"}</style>
+        <Script id="antiClickjackScript">
+          {`
             if (self === top) {
               var antiClickjack = document.getElementById("antiClickjack");
               antiClickjack.parentNode.removeChild(antiClickjack);
@@ -87,7 +87,7 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
               top.location = self.location;
             }
         `}
-      </Script>
+        </Script>
         {/* necessary for SSR support, injects stylesheet which defines visibility of pre-hydrated PDS components */}
         {getInitialStyles({ format: "jsx" })}
         {/* injects stylesheet which defines Porsche Next CSS font-face definition (=> minimize FOUT) */}
