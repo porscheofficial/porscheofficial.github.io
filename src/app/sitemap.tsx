@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { allBlogs, allDocs } from "contentlayer/generated";
 import { format, parseISO } from "date-fns";
-import { BASE_URL } from "../config";
+import { BASE_URL } from "../config/env";
 
 const Sitemap = (): MetadataRoute.Sitemap => {
   const blogs = allBlogs.map((doc) => ({

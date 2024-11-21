@@ -10,7 +10,8 @@ import s from "./page.module.scss";
 import { Author } from "../../../components/02_molecules/author/author";
 import { Section } from "../../../components/02_molecules/section/section";
 import { Textblock } from "../../../components/02_molecules/textblock/Textblock";
-import { BASE_URL } from "../../../config";
+import { BASE_URL } from "../../../config/env";
+import { transformContentlayerImage } from "../../../utils/imageHelpers/transformContentlayerImage";
 
 const getParams = (params: { slug?: string[] }): Blog | null => {
   const slug = params.slug?.join("/") ?? "";
@@ -47,7 +48,7 @@ export async function generateMetadata({
       url: `${BASE_URL}${doc.slug}`,
       title,
       description,
-      images: doc.image,
+      images: doc.image.base,
     },
     twitter: {
       card: "summary_large_image",
@@ -82,7 +83,7 @@ const BlogPage: React.FC<PageProps> = ({ params }: PageProps) => {
         title={blog.title}
         description={description}
         subtitle="FOSS@Porsche"
-        imageSrc={hero}
+        imageSrc={transformContentlayerImage(hero)}
         imageAlt="Hero Image"
         position="center center"
       />

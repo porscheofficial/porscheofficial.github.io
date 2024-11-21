@@ -3,9 +3,13 @@ import {
   makeSource,
   LocalDocument,
   defineNestedType,
-} from "contentlayer/source-files";
+} from "contentlayer2/source-files";
+import {
+  MediaQueryDescriptor,
+  mediaQueryDescriptors,
+} from "./src/config/layout";
 
-/** @type {import('contentlayer/source-files').ComputedFields} */
+/** @type {import('contentlayer2/source-files').ComputedFields} */
 const computedFields = {
   slug: {
     type: "string",
@@ -28,6 +32,24 @@ const Author = defineNestedType(() => ({
     image: { type: "string", required: false },
     slug: { type: "string", required: false },
     description: { type: "string", required: false },
+  },
+}));
+
+type ResponsiveImageFields = Partial<
+  Record<MediaQueryDescriptor, { type: "string"; required: false }>
+>;
+
+const ResponsiveImage = defineNestedType(() => ({
+  name: "ResponsiveImage",
+  fields: {
+    base: { type: "string", required: true },
+    ...mediaQueryDescriptors.reduce<ResponsiveImageFields>(
+      (acc, breakpointDescriptor) => ({
+        ...acc,
+        [breakpointDescriptor]: { type: "string", required: false },
+      }),
+      {},
+    ),
   },
 }));
 
@@ -68,12 +90,14 @@ const Blog = defineDocumentType(() => ({
       required: false,
     },
     image: {
-      type: "string",
-      description: "The preview image of the blog post",
+      type: "nested",
+      of: ResponsiveImage,
+      description: "The image of the blog",
       required: true,
     },
     hero: {
-      type: "string",
+      type: "nested",
+      of: ResponsiveImage,
       description: "The hero image of the blog post",
       required: false,
     },

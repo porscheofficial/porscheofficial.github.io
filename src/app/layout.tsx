@@ -13,7 +13,7 @@ import {
 import { AppProvider } from "../components/AppProvider";
 import { PageLayout } from "../components/04_templates/pageLayout/PageLayout";
 import "./globals.scss";
-import { BASE_URL } from "../config";
+import { BASE_URL } from "../config/env";
 
 const siteConfig = {
   title: "Porsche Open Source Platform",

@@ -22,6 +22,7 @@ export const BlogsSection: React.FC<BlogsSectionProps> = ({
   );
   const firstDoc = posts[0];
   const docList = isFeatured ? posts.slice(1, posts.length) : posts;
+
   return (
     <div className={s.section}>
       {isFeatured && firstDoc.slug && (
@@ -31,7 +32,7 @@ export const BlogsSection: React.FC<BlogsSectionProps> = ({
               title={firstDoc.title}
               description={firstDoc.descriptionShort}
               url={firstDoc.slug}
-              imageSrc={firstDoc.image}
+              imageSrc={firstDoc.image.base}
               imageAlt=""
             />
           </div>
@@ -56,7 +57,7 @@ export const BlogsSection: React.FC<BlogsSectionProps> = ({
                 time={blog.date}
                 url={blog.slug}
                 key={blog.slug}
-                imageSrc={blog.image}
+                imageSrc={blog.image.base}
                 imageAlt=""
               />
             ))}
