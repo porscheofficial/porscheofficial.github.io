@@ -19,7 +19,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({
   return (
     <PLinkTile
       label="Read more"
-      compact="true"
+      compact
       description={title}
       href={url}
       className={s.link}

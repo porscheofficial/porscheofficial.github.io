@@ -1105,24 +1105,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@porsche-design-system/components-js@npm:3.11.0":
-  version: 3.11.0
-  resolution: "@porsche-design-system/components-js@npm:3.11.0"
-  checksum: 95aa51e027232f4248233d6ad12877234d83c8e42d870eac037246e42f641c02dd61f63d0e639dbbc27a3e59a30ca8f66bf139b879422ee97a9fea30a537daf2
+"@porsche-design-system/components-js@npm:3.21.0":
+  version: 3.21.0
+  resolution: "@porsche-design-system/components-js@npm:3.21.0"
+  checksum: 431054c51fded85509249ab18d3481452d5fd5f614e73d896adfee1ba7c0b60806500cd3edeb6d72990ec11bf36f149bb258d6b02d963dc895a656ec64ecebfd
   languageName: node
   linkType: hard
 
-"@porsche-design-system/components-react@npm:3.11.0":
-  version: 3.11.0
-  resolution: "@porsche-design-system/components-react@npm:3.11.0"
+"@porsche-design-system/components-react@npm:3.21.0":
+  version: 3.21.0
+  resolution: "@porsche-design-system/components-react@npm:3.21.0"
   dependencies:
-    "@porsche-design-system/components-js": 3.11.0
+    "@porsche-design-system/components-js": 3.21.0
   peerDependencies:
-    react: ">=17.0.0 <19.0.0"
-    react-dom: ">=17.0.0 <19.0.0"
+    ag-grid-enterprise: ">= 32.0.0 <33.0.0"
+    ag-grid-react: ">= 32.0.0 <33.0.0"
+    react: ">=18.0.0 <19.0.0"
+    react-dom: ">=18.0.0 <19.0.0"
+  peerDependenciesMeta:
+    ag-grid-enterprise:
+      optional: true
+    ag-grid-react:
+      optional: true
   bin:
     patchRemixRunProcessBrowserGlobalIdentifier: bin/patchRemixRunProcessBrowserGlobalIdentifier.js
-  checksum: b68b83c82067867a5c84cdfd41b1d013d1a6f0bf0195ef6fb00333c043e3a29a9ced08e2f8194a3903c330859a8e8e70a74b12a051f63cd5b31d5b5286226443
+  checksum: 086bdafd194b522ae0b3a1ff71de8f37e49cf2d08daea89760ea077826bd6fb8d8fb537afcd3474d02ea2b1f45ff9e808c29970452499d0a59f75b8ae1d8ece1
   languageName: node
   linkType: hard
 
@@ -5883,8 +5890,8 @@ __metadata:
     "@next/bundle-analyzer": 13.5.6
     "@next/eslint-plugin-next": 13.5.6
     "@playwright/test": 1.41.1
-    "@porsche-design-system/components-js": 3.11.0
-    "@porsche-design-system/components-react": 3.11.0
+    "@porsche-design-system/components-js": 3.21.0
+    "@porsche-design-system/components-react": 3.21.0
     "@porscheofficial/eslint-config-porschedigital-react": 4.0.0
     "@porscheofficial/prettier-config-porschedigital": 4.0.0
     "@primer/octicons": 19.8.0

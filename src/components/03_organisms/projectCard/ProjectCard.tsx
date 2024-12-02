@@ -15,12 +15,17 @@ interface GithubResponse {
   forks: string;
 }
 
-export const getGitHubData = async (repo: string): Promise<GithubResponse> => {
-  const res = await fetch(`https://api.github.com/repos/${repo}`);
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
+export const getGitHubData = async (
+  repo: string,
+): Promise<GithubResponse | null> => {
+  let res;
+
+  try {
+    res = await fetch(`https://api.github.com/repos/${repo}`);
+    return await (res.json() as Promise<GithubResponse>);
+  } catch {
+    throw new Error(`Failed to fetch data ${repo}`);
   }
-  return res.json() as Promise<GithubResponse>;
 };
 
 export const renderGitHubStats = (

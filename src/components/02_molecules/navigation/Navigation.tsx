@@ -6,10 +6,10 @@ import { compareDesc } from "date-fns";
 import { usePathname } from "next/navigation";
 import { allBlogs, allDocs } from "contentlayer/generated";
 import {
-  type FlyoutNavigationUpdateEventDetail,
+  type FlyoutMultilevelUpdateEventDetail,
   PButtonPure,
-  PFlyoutNavigation,
-  PFlyoutNavigationItem,
+  PFlyoutMultilevel,
+  PFlyoutMultilevelItem,
   PLinkPure,
   PLinkTile,
 } from "@porsche-design-system/components-react/ssr";
@@ -32,9 +32,10 @@ export const Navigation: React.FC<NavigationProps> = () => {
   }, []);
   const onDismiss = useCallback(() => {
     setIsMenuOpen(false);
+    setFlyoutNavigationActiveIdentifier(undefined);
   }, []);
   const onUpdate = useCallback(
-    (e: CustomEvent<FlyoutNavigationUpdateEventDetail>) =>
+    (e: CustomEvent<FlyoutMultilevelUpdateEventDetail>) =>
       setFlyoutNavigationActiveIdentifier(e.detail.activeIdentifier),
     [],
   );
@@ -74,7 +75,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
       <PButtonPure icon="menu-lines" theme="dark" onClick={() => onOpen()}>
         Menu
       </PButtonPure>
-      <PFlyoutNavigation
+      <PFlyoutMultilevel
         open={isMenuOpen}
         activeIdentifier={flyoutNavigationActiveIdentifier}
         onDismiss={onDismiss}
@@ -98,7 +99,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
             </Link>
           </PLinkPure>
         ))}
-        <PFlyoutNavigationItem
+        <PFlyoutMultilevelItem
           identifier="blog"
           label="Contributor Stories"
           key="blog"
@@ -129,8 +130,8 @@ export const Navigation: React.FC<NavigationProps> = () => {
               {link.title}
             </Link>
           ))}
-        </PFlyoutNavigationItem>
-        <PFlyoutNavigationItem
+        </PFlyoutMultilevelItem>
+        <PFlyoutMultilevelItem
           identifier="documentation"
           label="Documentation"
           key="docs"
@@ -144,8 +145,8 @@ export const Navigation: React.FC<NavigationProps> = () => {
               {link.title}
             </Link>
           ))}
-        </PFlyoutNavigationItem>
-      </PFlyoutNavigation>
+        </PFlyoutMultilevelItem>
+      </PFlyoutMultilevel>
     </div>
   );
 };
