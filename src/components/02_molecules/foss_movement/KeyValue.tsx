@@ -31,7 +31,7 @@ export const KeyValue: React.FC<PropsWithChildren<KeyValueProps>> = (
           <PAccordion
             theme="dark"
             heading="Principles"
-            tag="h3"
+            headingTag="h3"
             size="medium"
             open={isOpen}
             onUpdate={onUpdate}

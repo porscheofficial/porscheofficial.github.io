@@ -11,10 +11,10 @@ const NotFound: React.FC = () => {
         imageSrc={heroImage}
         imageAlt="AI generated Porsche Taycan"
       />
-      <PText theme="dark" size="middle" align="center">
+      <PText theme="dark" size="medium" align="center">
         This page could not be found.
       </PText>
-      <PText theme="dark" size="middle" align="center">
+      <PText theme="dark" size="medium" align="center">
         We can only apologize for the 404. Our favorite is 911.
       </PText>
     </>
