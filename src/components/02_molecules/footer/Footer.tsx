@@ -161,7 +161,7 @@ export const Footer: React.FC = () => {
       <PDivider className={s.divider} theme="dark" />
       <div className={s.notice}>
         <div className={s.linkBar}>
-          © 2023 Dr. Ing. h.c. F. Porsche AG.{" "}
+          © 2024 Dr. Ing. h.c. F. Porsche AG.{" "}
           {linksNotice.map((link) => (
             <PLinkPure key={link.url} theme="dark" icon="none" underline>
               <Link href={{ pathname: link.url }}>{link.name}.</Link>

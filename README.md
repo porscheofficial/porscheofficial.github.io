@@ -100,7 +100,7 @@ This project is a joint initiative of [Porsche AG](https://www.porsche.com) and 
 
 ## ✒️ License
 
-Copyright © 2023 Dr. Ing. h.c. F. Porsche AG
+Copyright © 2024 Dr. Ing. h.c. F. Porsche AG
 
 Dr. Ing. h.c. F. Porsche AG publishes the Porsche Open Source Platform software and accompanied documentation (if any) subject to the terms of the [MIT license](./LICENSE.md). All rights not explicitly granted to you under the MIT license remain the sole and exclusive property of Dr. Ing. h.c. F. Porsche AG.
 
