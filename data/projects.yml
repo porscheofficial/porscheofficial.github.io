@@ -3,7 +3,7 @@ items:
   - title: Android Open Source Project
     repo: https://source.android.com/
     description: Android unites the world. Use the open source Android operating system to power your device.
-    imageSrc: https://developer.android.com/static/images/brand/Android_Robot.png
+    imageSrc: https://developer.android.com/static/images/brand/android-head_flat.png
     imageAlt: Android Open Source Project Avatar
     status: Upstream
   - title: Porsche Design System
