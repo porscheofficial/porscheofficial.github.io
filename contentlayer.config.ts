@@ -3,9 +3,9 @@ import {
   makeSource,
   LocalDocument,
   defineNestedType,
-} from "contentlayer/source-files";
+} from "contentlayer2/source-files";
 
-/** @type {import('contentlayer/source-files').ComputedFields} */
+/** @type {import('contentlayer2/source-files').ComputedFields} */
 const computedFields = {
   slug: {
     type: "string",
@@ -121,7 +121,7 @@ export const Static = defineDocumentType(() => ({
   name: "Static",
   filePathPattern: `static/**/*.mdx`,
   contentType: "mdx",
-  // @ts-expect-error TODO
+  // @ts-expect-error TODO add type
   computedFields,
 }));
 
