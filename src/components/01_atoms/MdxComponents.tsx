@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
-import { useMDXComponent } from "next-contentlayer/hooks";
+// eslint-disable-next-line import/no-unresolved
+import { getMDXComponent } from "next-contentlayer2/hooks";
 import type { MDXComponents } from "mdx/types";
 import {
   PDisplay,
@@ -123,7 +124,7 @@ export const MdxComponents: React.FC<MdxProps> = ({
   code,
   theme,
 }: MdxProps) => {
-  const Component = useMDXComponent(code);
+  const Component = getMDXComponent(code);
 
   return <Component components={CustomComponents(theme)} />;
 };

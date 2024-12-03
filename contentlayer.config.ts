@@ -3,9 +3,9 @@ import {
   makeSource,
   LocalDocument,
   defineNestedType,
-} from "contentlayer/source-files";
+} from "contentlayer2/source-files";
 
-/** @type {import('contentlayer/source-files').ComputedFields} */
+/** @type {import('contentlayer2/source-files').ComputedFields} */
 const computedFields = {
   slug: {
     type: "string",
