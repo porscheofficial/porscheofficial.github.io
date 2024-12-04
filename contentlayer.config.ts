@@ -121,7 +121,7 @@ export const Static = defineDocumentType(() => ({
   name: "Static",
   filePathPattern: `static/**/*.mdx`,
   contentType: "mdx",
-  // @ts-expect-error TODO add type
+  // @ts-expect-error TODO
   computedFields,
 }));
 
