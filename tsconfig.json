@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2018",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -16,21 +16,21 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "contentlayer/generated": ["./.contentlayer/generated"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "plugins": [
       { "name": "typescript-plugin-css-modules" },
       {
-        "name": "next",
-      },
-    ],
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".contentlayer/generated",
+    ".contentlayer/generated"
   ],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }
