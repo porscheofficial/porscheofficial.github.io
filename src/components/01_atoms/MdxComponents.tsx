@@ -106,11 +106,16 @@ const CustomComponents = (
       </PTextList>
     ),
     li: ({ children }) => <PTextListItem>{children}</PTextListItem>,
-    code: ({ children, ...props }) => (
+    code: ({ children, ...props }: React.AnchorHTMLAttributes<HTMLElement>) => (
       <Codeblock wrapperClassName={props.className}>{children}</Codeblock>
     ),
     Textblock: ({ children }) => <Textblock>{children}</Textblock>,
-    a: ({ children, ...props }) => <a href={props.href}>{children}</a>,
+    a: ({
+      children,
+      ...props
+    }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+      <a href={props.href}>{children}</a>
+    ),
     p: ({ children }) => <PText theme={theme}>{children}</PText>,
   };
 };
