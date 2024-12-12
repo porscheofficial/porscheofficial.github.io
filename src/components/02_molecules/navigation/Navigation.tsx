@@ -152,6 +152,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
               alignLabel="start"
               icon="none"
               stretch
+              className={s.navSubLink}
             >
               {link.title}
             </PLinkPure>
