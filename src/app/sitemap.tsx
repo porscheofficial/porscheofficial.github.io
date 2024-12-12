@@ -3,6 +3,8 @@ import { allBlogs, allDocs } from "contentlayer/generated";
 import { format, parseISO } from "date-fns";
 import { BASE_URL } from "../config";
 
+export const dynamic = "force-static";
+
 const Sitemap = (): MetadataRoute.Sitemap => {
   const blogs = allBlogs.map((doc) => ({
     url: `${BASE_URL}${doc.slug}`,

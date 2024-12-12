@@ -4,6 +4,7 @@ import {
   PText,
 } from "@porsche-design-system/components-react/ssr";
 import { allStatics } from "contentlayer/generated";
+import Link from "next/link";
 import importProjects from "../../data/projects.yml";
 import importNews from "../../data/news.yml";
 import importMemberships from "../../data/memberships.yml";
@@ -106,9 +107,10 @@ const Home: React.FC = () => {
         </PHeading>
         <Textblock className={s.text}>
           <PText theme="dark" size="medium" align="center">
-            Our <a href="/docs">growing documentation</a> provides transparency
-            on how Porsche is contributing to open source and the standards we
-            are endorsing for new projects to foster healthy communities.
+            Our <Link href="/docs">growing documentation</Link> provides
+            transparency on how Porsche is contributing to open source and the
+            standards we are endorsing for new projects to foster healthy
+            communities.
           </PText>
         </Textblock>
         <DocsSection />

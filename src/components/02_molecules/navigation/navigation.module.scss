@@ -21,6 +21,12 @@
   padding: $pds-spacing-fluid-small;
 }
 
+.navSubLink {
+  width: auto;
+  margin-top: $pds-spacing-static-small;
+}
+
 .navLinkImage {
   position: relative;
+  margin-bottom: $pds-spacing-fluid-medium;
 }
