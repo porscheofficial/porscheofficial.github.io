@@ -36,7 +36,6 @@ export async function generateMetadata({
   return {
     title,
     description: doc.descriptionShort,
-    keywords: doc.hashTags?.flat(),
     authors: [
       {
         name: doc.author?.name,
