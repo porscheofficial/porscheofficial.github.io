@@ -47,7 +47,12 @@ export const BlogCard: React.FC<BlogCardProps> = ({
           {title}
         </PHeading>
         {time && (
-          <PText tag="span" size="x-small" theme="dark" className={s.description}>
+          <PText
+            tag="span"
+            size="x-small"
+            theme="dark"
+            className={s.description}
+          >
             {format(parseISO(time), "yyyy")}
           </PText>
         )}

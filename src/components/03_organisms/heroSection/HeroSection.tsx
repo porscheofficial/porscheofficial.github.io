@@ -2,7 +2,7 @@ import ExportedImage from "next-image-export-optimizer";
 import { StaticImageData } from "next/image";
 import {
   PDisplay,
-  PHeading
+  PHeading,
 } from "@porsche-design-system/components-react/ssr";
 import s from "./heroSection.module.scss";
 
