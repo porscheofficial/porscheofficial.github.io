@@ -3,14 +3,12 @@ import { StaticImageData } from "next/image";
 import {
   PDisplay,
   PHeading,
-  PText,
 } from "@porsche-design-system/components-react/ssr";
 import s from "./heroSection.module.scss";
 
 interface HeroSectionProps {
   title?: string;
   subtitle?: string;
-  description?: string;
   imageSrc: string | StaticImageData;
   imageAlt: string;
   position?: string;
@@ -19,7 +17,6 @@ interface HeroSectionProps {
 export const HeroSection: React.FC<HeroSectionProps> = ({
   title,
   subtitle,
-  description,
   imageSrc,
   imageAlt,
   position = "right center",
@@ -57,16 +54,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         >
           {title}
         </PDisplay>
-        {description && (
-          <PText
-            size="medium"
-            align="center"
-            theme="dark"
-            className={s.description}
-          >
-            {description}
-          </PText>
-        )}
       </div>
     </div>
   );

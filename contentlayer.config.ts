@@ -51,17 +51,6 @@ const Blog = defineDocumentType(() => ({
       description: "The date of the blog",
       required: true,
     },
-    readTime: {
-      type: "string",
-      description: "The reading time of the blog",
-      required: true,
-    },
-    hashTags: {
-      type: "list",
-      of: { type: "string" },
-      description: "The list of hashtags of the blog",
-      required: false,
-    },
     author: {
       type: "nested",
       of: Author,

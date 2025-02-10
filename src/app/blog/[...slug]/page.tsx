@@ -35,7 +35,6 @@ export async function generateMetadata(props: {
   return {
     title,
     description: doc.descriptionShort,
-    keywords: doc.hashTags?.flat(),
     authors: [
       {
         name: doc.author?.name,
@@ -75,17 +74,15 @@ const BlogPage: ({
     notFound();
   }
 
-  const formatDate = format(parseISO(blog.date), "do LLLL yyyy");
-  const hashes = blog.hashTags ? `· #${blog.hashTags.join(" #")}` : "";
-  const description = `${formatDate} · ${blog.readTime} reading time ${hashes}`;
+  const formatDate = format(parseISO(blog.date), "yyyy");
+  const subtitle = `FOSS@Porsche · ${formatDate}`;
   const hero = blog.hero ? blog.hero : blog.image;
 
   return (
     <main>
       <HeroSection
         title={blog.title}
-        description={description}
-        subtitle="FOSS@Porsche"
+        subtitle={subtitle}
         imageSrc={hero}
         imageAlt="Hero Image"
         position="center center"
