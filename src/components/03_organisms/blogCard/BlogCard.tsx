@@ -47,8 +47,8 @@ export const BlogCard: React.FC<BlogCardProps> = ({
           {title}
         </PHeading>
         {time && (
-          <PText size="x-small" theme="dark" className={s.description}>
-            {format(parseISO(time), "LLLL d, yyyy")}
+          <PText tag="span" size="x-small" theme="dark" className={s.description}>
+            {format(parseISO(time), "yyyy")}
           </PText>
         )}
         <PText ellipsis size="small" theme="dark" className={s.description}>
