@@ -12,6 +12,7 @@ import {
   PFlyoutMultilevelItem,
   PLinkPure,
   PLinkTile,
+  PHeading,
 } from "@porsche-design-system/components-react/ssr";
 import ExportedImage from "next-image-export-optimizer";
 import s from "./navigation.module.scss";
@@ -80,6 +81,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
         activeIdentifier={flyoutNavigationActiveIdentifier}
         onDismiss={onDismiss}
         onUpdate={onUpdate}
+        theme="light"
       >
         {homeLinks.map((link) => (
           <PLinkPure
@@ -120,15 +122,21 @@ export const Navigation: React.FC<NavigationProps> = () => {
               sizes="(max-width: 759px) 100vw, 50vw"
             />
           </PLinkTile>
-          <h3>Further Stories</h3>
+          <PHeading tag="h3" size="small">
+            Further Stories
+          </PHeading>
           {otherDocs.map((link) => (
-            <Link
-              href={{ pathname: link.slug }}
+            <PLinkPure
+              href={link.slug}
               onClick={onDismiss}
               key={link.title}
+              alignLabel="start"
+              icon="none"
+              stretch
+              className={s.navSubLink}
             >
               {link.title}
-            </Link>
+            </PLinkPure>
           ))}
         </PFlyoutMultilevelItem>
         <PFlyoutMultilevelItem
@@ -137,13 +145,17 @@ export const Navigation: React.FC<NavigationProps> = () => {
           key="docs"
         >
           {allDocs.map((link) => (
-            <Link
-              href={{ pathname: link.slug }}
+            <PLinkPure
+              href={link.slug}
               onClick={onDismiss}
               key={link.title}
+              alignLabel="start"
+              icon="none"
+              stretch
+              className={s.navSubLink}
             >
               {link.title}
-            </Link>
+            </PLinkPure>
           ))}
         </PFlyoutMultilevelItem>
       </PFlyoutMultilevel>

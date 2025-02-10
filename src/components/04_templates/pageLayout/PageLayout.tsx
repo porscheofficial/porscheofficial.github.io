@@ -1,4 +1,5 @@
 /* eslint-disable react/require-default-props */
+import type { JSX } from "react";
 import { Header } from "../../02_molecules/header/Header";
 import { Footer } from "../../02_molecules/footer/Footer";
 

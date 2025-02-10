@@ -21,11 +21,10 @@ const getParams = (params: { slug?: string[] }): Doc | null => {
 };
 
 // eslint-disable-next-line @typescript-eslint/require-await,func-style
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  const params = await props.params;
   const doc = allDocs.find((file) => file.slugAsParams === params.slug[0]);
   if (!doc) return {};
   const { title } = doc;
@@ -53,8 +52,13 @@ export const generateStaticParams = (): PageProps["params"][] => {
     slug: doc.slugAsParams.split("/"),
   }));
 };
-const DocPage: React.FC<PageProps> = ({ params }: PageProps) => {
-  const doc = getParams(params);
+const DocPage: ({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) => Promise<React.JSX.Element> = async ({ params }) => {
+  const { slug } = await params;
+  const doc = getParams({ slug: [slug] });
 
   if (!doc) {
     notFound();
