@@ -61,7 +61,7 @@ const cspHeader = `
     default-src 'self' https://api.github.com/repos/;
     script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.ui.porsche.com/porsche-design-system/;
     style-src 'self' 'unsafe-inline' https://cdn.ui.porsche.com/porsche-design-system/;
-    img-src 'self' blob: data: https://cdn.ui.porsche.com/porsche-design-system/ https://raw.githubusercontent.com/porscheofficial/cookie-consent-banner/;
+    img-src 'self' blob: data: https://cdn.ui.porsche.com/porsche-design-system/ https://raw.githubusercontent.com/porscheofficial/;
     font-src 'self' https://cdn.ui.porsche.com/porsche-design-system/;
     object-src 'none';
     manifest-src 'self' https://cdn.ui.porsche.com/porsche-design-system/;
