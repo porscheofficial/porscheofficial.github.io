@@ -56,7 +56,7 @@ readTime: 5min
     title="Over time, more teams began to adapt this project. Could you share more details about this project?">
 
     Initially, the idea was to deploy the Technology Radar just for my Agile Release
-    Train. However, after discussing with another architect, who had already faced
+    Train (ART). However, after discussing with another architect, who had already faced
     challenges with their existing system managed through Excel files, it became
     clear that there was potential to scale this across other departments. We
     collaborated closely to refine and deploy the Technology Radar, making it adaptable
@@ -83,7 +83,17 @@ readTime: 5min
     initiatives, and contribute back to the open-source community.
 </ImageText>
 
-<ImageText imageSrc="/assets/blog/techradar/6.jpg" imageAlt="Patrice Bouillet in front of a screen presenting the Technology Radar and discussing with his team" theme="light" left
+<ImageText imageSrc="/assets/blog/techradar/6.jpg" imageAlt="A team of developers standing in front of a screen that presents the Technology Radar" theme="light" left
+    title="Can you give us more insight about the additional features that are provided in the fork?">
+
+    Sure! In [our fork](https://github.com/porscheofficial/porschedigital-technology-radar), we have integrated additional features that are specifically tailored to meet our needs at Porsche Digital. We're happy to contribute our modifications back to the upstream project whenever the community shows interest.
+    - For example, we now have the ability to map blips to specific teams, which is important because we have many different teams within our ARTs. This mapping creates an extra layer that encourages teams to work together on common technology.
+    - On the overview page of our Technology Radar, users can now see all of our teams and filter the information based on a specific team. This functionality helps to quickly understand the tech stack, tools, and methodologies that each team is using.
+    - We've added a development mode that allows changes to the Markdown files to be reflected immediately without having to restart the entire build process.
+    - We also implemented a single sign-on (SSO) integration based on EntraID, which simplifies both authentication and authorization for our users. We released this as a plug-and-play solution in a separate open-source repository: [@porscheofficial/vercel-static-extensions](https://github.com/porscheofficial/vercel-static-extensions)  
+</ImageText>
+
+<ImageText imageSrc="/assets/blog/techradar/7.jpg" imageAlt="Patrice Bouillet in front of a screen presenting the Technology Radar and discussing with his team" theme="light"
     title="With a glimpse into the future: What are your plans regarding FOSS Contributions?">
 
     As more departments adopt our Technology Radar, we hope to see increased contributions
