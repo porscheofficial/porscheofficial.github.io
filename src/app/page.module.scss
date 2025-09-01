@@ -48,21 +48,40 @@
 /* Open Source Software Notice – table styles */
 
 /* Layout */
-.container { width: 100%; padding: 2rem 1rem; }
-.headerWrap, .divider, .table { max-width: 72rem; margin-inline: auto; }
+.container {
+  width: 100%;
+  padding: 2rem 1rem;
+}
+.headerWrap,
+.divider,
+.table {
+  max-width: 72rem;
+  margin-inline: auto;
+}
 
 .title {
-  font-weight: 600; letter-spacing: -0.01em; line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
   font-size: clamp(1.875rem, 1.4rem + 1.2vw, 2.25rem);
 }
-.intro { margin-top: .75rem; font-size: clamp(.875rem,.8rem + .3vw,1rem); line-height: 1.6; }
+.intro {
+  margin-top: 0.75rem;
+  font-size: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
+  line-height: 1.6;
+}
 
-.divider { margin-top: 1.5rem; border-top: 1px solid var(--border-color, #e5e7eb); }
-.footerDivider { margin-top: 2rem; }
+.divider {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-color, #e5e7eb);
+}
+.footerDivider {
+  margin-top: 2rem;
+}
 
 /* Table wrapper */
 .table {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   overflow: hidden;
   border: 1px solid var(--border-color, #e5e7eb);
   border-radius: 1rem;
@@ -70,35 +89,76 @@
 }
 
 /* Grid (always 12 cols) */
-.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
 
 /* Column spans: 5 / 5 / 2 */
-.colSoftware { grid-column: span 5 / span 5; }
-.colVehicles { grid-column: span 5 / span 5; }
-.colSop      { grid-column: span 2 / span 2; }
+.colSoftware {
+  grid-column: span 5 / span 5;
+}
+.colVehicles {
+  grid-column: span 5 / span 5;
+}
+.colSop {
+  grid-column: span 2 / span 2;
+}
 
 /* Header row */
-.headerRow { font-weight: 600; font-size: .875rem; }
-.th { padding: .75rem 1rem; border-bottom: 1px solid var(--border-color, #e5e7eb); }
+.headerRow {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.th {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
 
 /* Body rows */
-.rows { list-style: none; margin: 0; padding: 0; }
-.row { font-size: 1rem; background: transparent; }
-.rowAlt { background: rgba(255,255,255,.02); } /* subtle stripe for dark themes */
-.row + .row { border-top: 1px solid var(--border-color, #e5e7eb); }
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.row {
+  font-size: 1rem;
+  background: transparent;
+}
+.rowAlt {
+  background: rgba(255, 255, 255, 0.02);
+} /* subtle stripe for dark themes */
+.row + .row {
+  border-top: 1px solid var(--border-color, #e5e7eb);
+}
 
-.td { padding: 1rem; }
-.tdFull { grid-column: 1 / -1; } /* span all columns for empty state */
-.wrap { word-break: break-word; }
+.td {
+  padding: 1rem;
+}
+.tdFull {
+  grid-column: 1 / -1;
+} /* span all columns for empty state */
+.wrap {
+  word-break: break-word;
+}
 
 /* Link */
-.link { text-decoration: none; }
-.link:hover { text-decoration: underline; }
+.link {
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
 
 /* Optional: dark-scheme border tweak */
 @media (prefers-color-scheme: dark) {
-  .table { border-color: rgba(255,255,255,.12); }
-  .th, .row + .row { border-color: rgba(255,255,255,.12); }
+  .table {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  .th,
+  .row + .row {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
 }
 
 /* Attachments under the Software cell */
@@ -125,28 +185,51 @@
 /* ===== Text alignment + vertical gap ===== */
 .ossn {
   /* center title + intro */
-  .headerWrap { text-align: center; }
-  .title { margin: 0 auto; }
-  .intro { margin: .5rem auto 0; max-width: 70ch; }
+  .headerWrap {
+    text-align: center;
+  }
+  .title {
+    margin: 0 auto;
+  }
+  .intro {
+    margin: 0.5rem auto 0;
+    max-width: 70ch;
+  }
 
   /* reduce space between intro and table */
-  .divider { margin-top: .75rem; }
-  .table   { margin-top: .75rem; }
+  .divider {
+    margin-top: 0.75rem;
+  }
+  .table {
+    margin-top: 0.75rem;
+  }
 
   /* --- Vertical gap controls --- */
   /* Adjust these three variables to taste */
-  --ossn-leading: 1.85;     /* line-height for body text in table */
-  --ossn-th-leading: 1.6;   /* line-height for header cells */
-  --ossn-row-py: 1.15rem;   /* vertical padding for body cells */
-  --ossn-th-py: 1rem;       /* vertical padding for header cells */
+  --ossn-leading: 1.85; /* line-height for body text in table */
+  --ossn-th-leading: 1.6; /* line-height for header cells */
+  --ossn-row-py: 1.15rem; /* vertical padding for body cells */
+  --ossn-th-py: 1rem; /* vertical padding for header cells */
 
-  .title { line-height: 1.6; }              /* title wraps */
-  .intro { line-height: var(--ossn-leading); }
-  .th    { line-height: var(--ossn-th-leading); padding-block: var(--ossn-th-py); }
-  .td    { line-height: var(--ossn-leading);   padding-block: var(--ossn-row-py); }
+  .title {
+    line-height: 1.6;
+  } /* title wraps */
+  .intro {
+    line-height: var(--ossn-leading);
+  }
+  .th {
+    line-height: var(--ossn-th-leading);
+    padding-block: var(--ossn-th-py);
+  }
+  .td {
+    line-height: var(--ossn-leading);
+    padding-block: var(--ossn-row-py);
+  }
 
   /* more vertical breathing room for attachment chips */
-  .attachments { row-gap: 0.75rem; }
+  .attachments {
+    row-gap: 0.75rem;
+  }
 }
 
 /* Optional a11y focus */
@@ -155,5 +238,3 @@
   outline: 2px solid currentColor;
   outline-offset: 2px;
 }
-
-

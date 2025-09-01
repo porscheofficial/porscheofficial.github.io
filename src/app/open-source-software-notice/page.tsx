@@ -1,18 +1,36 @@
 import React from "react";
+import type { Metadata } from "next";
 import styles from "../page.module.scss";
+
+/* Metadata: block indexing & following (bot) */
+export const metadata: Metadata = {
+  title: "Open Source Software Notice",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      "max-snippet": 0,
+      "max-image-preview": "none",
+      "max-video-preview": 0,
+    },
+  },
+};
 
 /* Types */
 export interface Attachment {
-  label: string;            // e.g., "PDF", "HTML"
-  href: string;             // e.g., "/assets/ossn/conbox-ossn.pdf"
-  external?: boolean;       // open in new tab (default: true)
+  label: string; // e.g., "PDF", "HTML"
+  href: string; // e.g., "/assets/ossn/conbox-ossn.pdf"
+  external?: boolean; // open in new tab (default: true)
 }
 
 export interface LicenseRow {
   software: string;
-  softwareHref?: string;    // main link for the software cell
-  vehicles: string;         // e.g., "Taycan, 911"
-  primalSop: string;        // e.g., "CW 46/2025"
+  softwareHref?: string; // main link for the software cell
+  vehicles: string; // e.g., "Taycan, 911"
+  primalSop: string; // e.g., "CW 46/2025"
   attachments?: Attachment[];
 }
 
@@ -20,7 +38,7 @@ export interface OssnProps {
   title: string;
   intro: string;
   rows: LicenseRow[];
-  className: string;        // <<< required to satisfy react/require-default-props
+  className: string; // required to satisfy react/require-default-props
 }
 
 /* Helper: classnames */
@@ -104,7 +122,11 @@ const OssnTable = ({
                           key={`${a.label}-${a.href}`}
                           href={a.href}
                           target={a.external === false ? undefined : "_blank"}
-                          rel={a.external === false ? undefined : "noopener noreferrer"}
+                          rel={
+                            a.external === false
+                              ? undefined
+                              : "noopener noreferrer"
+                          }
                           className={styles.attachmentChip}
                         >
                           {a.label}
@@ -115,15 +137,21 @@ const OssnTable = ({
                 </div>
 
                 {/* Vehicles */}
-                <div className={cx(styles.td, styles.colVehicles)}>{r.vehicles}</div>
+                <div className={cx(styles.td, styles.colVehicles)}>
+                  {r.vehicles}
+                </div>
 
                 {/* Primal SOP */}
-                <div className={cx(styles.td, styles.colSop)}>{r.primalSop}</div>
+                <div className={cx(styles.td, styles.colSop)}>
+                  {r.primalSop}
+                </div>
               </li>
             ))
           ) : (
             <li className={`${styles.grid} ${styles.row}`}>
-              <div className={`${styles.td} ${styles.tdFull}`}>No data available</div>
+              <div className={`${styles.td} ${styles.tdFull}`}>
+                No data available
+              </div>
             </li>
           )}
         </ul>
@@ -142,16 +170,9 @@ const Page = (): React.ReactElement => {
       title="Open Source Software Notice"
       intro="In addition to the information provided in the vehicles of Porsche AG regarding Open Source Software Notices you can also download corresponding information here:"
       rows={DATA_RECORDS}
-      className=""                 /* pass empty to satisfy required prop */
+      className="" /* passing empty to satisfy required prop */
     />
   );
 };
 
 export default Page;
-
-/* Metadata */
-export const metadata = {
-  title: "Open Source Software Notice",
-  description:
-    "Open Source Software Notice",
-};
