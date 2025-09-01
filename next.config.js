@@ -31,10 +31,28 @@ const nextConfig = {
       test: /\.ya?ml/,
       use: "js-yaml-loader",
     });
-
     return config;
   },
+
+  // ── HTTP headers ──
+  async headers() {
+    return [
+      {
+        source: "/open-source-software-notice",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noimageindex" },
+        ],
+      },
+      {
+        source: "/open-source-software-notice/:path*",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noimageindex" },
+        ],
+      },
+    ];
+  },
 };
+
 const { withContentlayer } = require("next-contentlayer2");
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
