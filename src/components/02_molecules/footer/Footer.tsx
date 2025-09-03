@@ -22,10 +22,12 @@ export const Footer: React.FC = () => {
       url: "https://investorrelations.porsche.com/en/",
       name: "Investors Relations",
     },
+    /*
     {
       url: "https://www.porsche.com/international/aboutporsche/overview/",
       name: "At a Glance",
     },
+    */
     {
       url: "https://www.porsche.com/international/aboutporsche/jobs/",
       name: "Jobs & Careers",
@@ -34,6 +36,7 @@ export const Footer: React.FC = () => {
       url: "https://newsroom.porsche.com/en.html",
       name: "Newsroom & Press",
     },
+    /*
     {
       url: "https://www.porsche.com/international/aboutporsche/innovation/",
       name: "Innovation",
@@ -42,6 +45,7 @@ export const Footer: React.FC = () => {
       url: "https://www.porsche.com/international/faq/",
       name: "FAQ",
     },
+    */
   ];
 
   const linksSocial: linkSocial[] = [
