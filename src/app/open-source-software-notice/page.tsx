@@ -50,7 +50,7 @@ const cx = (...cls: (string | undefined | false)[]): string =>
 /* The attachments should be part of /public/assests/ossn/<att_name> */
 const DATA_RECORDS: LicenseRow[] = [
   {
-    software: "ConBox",
+    software: "ConBox_2020_RD",
     vehicles: "911, Taycan, Panamera, Cayenne",
     primalSop: "CW 25/2024",
     softwareHref: "/assets/ossn/ConBox_2020_RD.txt",
