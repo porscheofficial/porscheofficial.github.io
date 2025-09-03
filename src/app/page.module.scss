@@ -108,7 +108,9 @@
 /* Header row */
 .headerRow {
   font-weight: 600;
-  font-size: 0.875rem;
+  /* Bigger than body rows: ~1.0–1.125rem depending on width */
+  font-size: clamp(1rem, 0.98rem + 0.3vw, 1.125rem);
+  letter-spacing: 0.01em; /* subtle legibility bump */
 }
 .th {
   padding: 0.75rem 1rem;
@@ -121,8 +123,9 @@
   margin: 0;
   padding: 0;
 }
+/* Slightly smaller than header; stays <= header across breakpoints */
 .row {
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 0.92rem + 0.2vw, 1rem);
   background: transparent;
 }
 .rowAlt {

@@ -48,10 +48,10 @@ const cx = (...cls: (string | undefined | false)[]): string =>
 /* Data records (edit or replace as needed) */
 const DATA_RECORDS: LicenseRow[] = [
   {
-    software: "Conbox",
+    software: "ConBox",
     vehicles: "911, Taycan, Panamera, Cayenne",
     primalSop: "CW 25/2024",
-    softwareHref: "/assets/ossn/conbox_2020_RD.txt",
+    softwareHref: "/assets/ossn/ConBox_2020_RD.txt",
     /*
     attachments: [
       { label: "HTML", href: "/assets/ossn/conbox-ossn.html" },
