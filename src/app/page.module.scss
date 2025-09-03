@@ -193,8 +193,7 @@
   }
   .intro {
     margin: 0.5rem auto 0;
-    max-width: 70ch;
-  }
+  } /* removed fixed max-width */
 
   /* reduce space between intro and table */
   .divider {
@@ -205,7 +204,6 @@
   }
 
   /* --- Vertical gap controls --- */
-  /* Adjust these three variables to taste */
   --ossn-leading: 1.85; /* line-height for body text in table */
   --ossn-th-leading: 1.6; /* line-height for header cells */
   --ossn-row-py: 1.15rem; /* vertical padding for body cells */
@@ -232,26 +230,36 @@
   }
 }
 
-/* One-line intro, with ellipsis */
-.ossn .intro {
-  /* keep your existing margin if you like */
-  margin: 0.5rem auto 0;
-
-  /* override previous width cap */
-  max-width: none;
-
-  /* make it a single line */
-  white-space: nowrap;
-
-  /* handle Overflow */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block; /* ensures ellipsis works reliably */
-}
-
 /* Optional a11y focus */
 .link:focus-visible,
 .attachmentChip:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
+}
+
+/* ==== Responsive intro: wrap on small screens, one line on wide ==== */
+/* Mobile-first: allow wrapping */
+.ossn .headerWrap .intro {
+  margin: 0.5rem auto 0;
+  text-align: center;
+  display: block;
+
+  /* wrap on small screens */
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+
+  /* fit phones nicely */
+  max-width: clamp(40ch, 92vw, 110ch);
+}
+
+/* ≥ 1024px (desktop): force single line with ellipsis */
+@media (min-width: 1024px) {
+  .ossn .headerWrap .intro {
+    max-width: 100%;
+    display: inline-block; /* reliable ellipsis */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
