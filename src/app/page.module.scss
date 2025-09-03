@@ -45,7 +45,7 @@
   align-items: center;
 }
 
-/* Open Source Software Notice – table styles */
+/* Open Source Software Notice – table styles - only relevant for the OSSN Page */
 
 /* Layout */
 .container {
@@ -193,7 +193,7 @@
   }
   .intro {
     margin: 0.5rem auto 0;
-  } /* removed fixed max-width */
+  }
 
   /* reduce space between intro and table */
   .divider {
@@ -261,5 +261,54 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
+
+/* ==== Prevent SOP clipping on small screens ==== */
+/* Let grid children shrink instead of overflowing (key CSS Grid fix) */
+.grid > * {
+  min-width: 0;
+}
+.th,
+.td {
+  min-width: 0;
+}
+
+/* Rebalance column widths on small screens: give SOP a bit more space */
+@media (max-width: 640px) {
+  .colSoftware {
+    grid-column: span 5 / span 5;
+  }
+  .colVehicles {
+    grid-column: span 4 / span 4;
+  }
+  .colSop {
+    grid-column: span 3 / span 3;
+    text-align: right;
+  }
+
+  /* Slightly tighter cell padding on phones */
+  .th,
+  .td {
+    padding: 0.75rem;
+  }
+}
+
+/* On very narrow screens, allow SOP to wrap if needed rather than clip */
+@media (max-width: 480px) {
+  .colSop {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+  /* If you prefer single-line with ellipsis instead, use:
+     .colSop { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  */
+}
+
+/* Tiny screens: a subtle font-size nudge for SOP */
+@media (max-width: 360px) {
+  .colSop {
+    font-size: 0.95rem;
   }
 }

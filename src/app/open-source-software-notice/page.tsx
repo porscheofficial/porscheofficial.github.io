@@ -48,7 +48,7 @@ const cx = (...cls: (string | undefined | false)[]): string =>
 /* Data records (edit or replace as needed) */
 const DATA_RECORDS: LicenseRow[] = [
   {
-    software: "ConBox",
+    software: "Conbox",
     vehicles: "911, Taycan, Panamera, Cayenne",
     primalSop: "CW 25/2024",
     softwareHref: "/assets/ossn/conbox_2020_RD.txt",
@@ -61,7 +61,7 @@ const DATA_RECORDS: LicenseRow[] = [
   },
 ];
 
-/* Reusable table component */
+/* Reuse table component */
 const OssnTable = ({
   title,
   intro,
