@@ -45,7 +45,9 @@ export interface OssnProps {
 const cx = (...cls: (string | undefined | false)[]): string =>
   cls.filter(Boolean).join(" ");
 
-/* Data records (edit or replace as needed) */
+/* Data records (edit or replace) */
+/* This is a content block where user can add the software information */
+/* The attachments should be part of /public/assests/ossn/<att_name> */
 const DATA_RECORDS: LicenseRow[] = [
   {
     software: "ConBox",
