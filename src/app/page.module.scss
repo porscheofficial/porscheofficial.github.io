@@ -232,6 +232,23 @@
   }
 }
 
+/* One-line intro, with ellipsis */
+.ossn .intro {
+  /* keep your existing margin if you like */
+  margin: 0.5rem auto 0;
+
+  /* override previous width cap */
+  max-width: none;
+
+  /* make it a single line */
+  white-space: nowrap;
+
+  /* handle Overflow */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block; /* ensures ellipsis works reliably */
+}
+
 /* Optional a11y focus */
 .link:focus-visible,
 .attachmentChip:focus-visible {
