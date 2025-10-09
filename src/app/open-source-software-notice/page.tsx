@@ -61,6 +61,18 @@ const DATA_RECORDS: LicenseRow[] = [
     ],
     */
   },
+  {
+    software: "WWS",
+    vehicles: "Macan, Panamera, Cayenne",
+    primalSop: "CW 25/2023",
+    softwareHref: "/assets/ossn/OSO-3667_WWS.txt",
+    /*
+    attachments: [
+      { label: "HTML", href: "/assets/ossn/wws-ossn.html" },
+      { label: "PDF", href: "/assets/ossn/wws-ossn.pdf" },
+    ],
+    */
+  },
 ];
 
 /* Reuse table component */
