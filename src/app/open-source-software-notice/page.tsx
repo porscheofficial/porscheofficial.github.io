@@ -73,7 +73,7 @@ const DATA_RECORDS: LicenseRow[] = [
     ],
     */
   },
-    {
+  {
     software: "OnboardDataCollector 2.0.58d",
     vehicles: "Macan",
     primalSop: "CW 49/2023",
