@@ -73,6 +73,18 @@ const DATA_RECORDS: LicenseRow[] = [
     ],
     */
   },
+  {
+    software: "OnboardDataCollector 2.0.58d",
+    vehicles: "Macan",
+    primalSop: "CW 49/2023",
+    softwareHref: "/assets/ossn/OnboardDataCollector_2_0_58d.txt",
+    /*
+    attachments: [
+      { label: "HTML", href: "/assets/ossn/OnboardDataCollector_2_0_58d.html" },
+      { label: "PDF", href: "/assets/ossn/OnboardDataCollector_2_0_58d.pdf" },
+    ],
+    */
+  },
 ];
 
 /* Reuse table component */
