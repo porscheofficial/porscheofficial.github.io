@@ -85,6 +85,18 @@ const DATA_RECORDS: LicenseRow[] = [
     ],
     */
   },
+  {
+    software: "HCP5_P6/Autoedge Runtime",
+    vehicles: "Macan",
+    primalSop: "CW 49/2023",
+    softwareHref: "/assets/ossn/HCP5_P6_Autoedge_Runtime.txt",
+    /*
+    attachments: [
+      { label: "HTML", href: "/assets/ossn/HCP5_P6_Autoedge_Runtime.html" },
+      { label: "PDF", href: "/assets/ossn/HCP5_P6_Autoedge_Runtime.pdf" },
+    ],
+    */
+  },
 ];
 
 /* Reuse table component */
