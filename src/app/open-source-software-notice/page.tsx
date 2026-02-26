@@ -97,6 +97,18 @@ const DATA_RECORDS: LicenseRow[] = [
     ],
     */
   },
+  {
+    software: "Cloud Connector Container Update on HCP5 CL3 KD2",
+    vehicles: "Macan",
+    primalSop: "CW 06/2026",
+    softwareHref: "/assets/ossn/CLOUD_CONNECTOR_hcp5-cl3_3.29.1.txt",
+    /*
+    attachments: [
+      { label: "HTML", href: "/assets/ossn/CLOUD_CONNECTOR_hcp5-cl3_3.29.1.html" },
+      { label: "PDF", href: "/assets/ossn/CLOUD_CONNECTOR_hcp5-cl3_3.29.1.pdf" },
+    ],
+    */
+  },
 ];
 
 /* Reuse table component */
