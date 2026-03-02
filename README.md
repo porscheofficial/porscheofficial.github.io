@@ -43,7 +43,7 @@ Start the development server
 
 ## 🔍 Testing, Linting and Prettifying
 
-We're using the [opinionated ESLint config](https://github.com/porscheofficial/eslint-config-porschedigital) provided by [Porsche Digital](https://www.porsche.digital/). To check your local changes, simply call
+We're using the [opinionated ESLint config](https://github.com/porscheofficial/eslint-config-porschedigital) provided by [Porsche Digital](https://www.porsche.digital/en). To check your local changes, simply call
 
 ```bash
 yarn test:ci
@@ -96,7 +96,7 @@ which will then be monitored/prioritized in our open [GitHub Project board](http
 
 ## 🙌 Acknowledgements
 
-This project is a joint initiative of [Porsche AG](https://www.porsche.com) and [Porsche Digital](https://www.porsche.digital/).
+This project is a joint initiative of [Porsche AG](https://www.porsche.com) and [Porsche Digital](https://www.porsche.digital/en).
 
 ## ✒️ License
 
