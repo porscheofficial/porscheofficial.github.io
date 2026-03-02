@@ -109,6 +109,18 @@ const DATA_RECORDS: LicenseRow[] = [
     ],
     */
   },
+  {
+    software: "HCP5_RemoteProductionClientPlus (RPC+) CL3 KD2",
+    vehicles: "Macan",
+    primalSop: "CW 06/2026",
+    softwareHref: "/assets/ossn/HCP5_RemoteProductionClientPlus.txt",
+    /*
+    attachments: [
+      { label: "HTML", href: "/assets/ossn/HCP5_RemoteProductionClientPlus.html" },
+      { label: "PDF", href: "/assets/ossn/HCP5_RemoteProductionClientPlus.pdf" },
+    ],
+    */
+  },
 ];
 
 /* Reuse table component */
