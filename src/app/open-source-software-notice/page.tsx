@@ -124,7 +124,7 @@ const DATA_RECORDS: LicenseRow[] = [
   {
     software: "[CHINA] [PPE] [CL3] Rollout EV-Container (IoT) 0.86.8",
     vehicles: "Macan",
-    primalSop: "CW 06/2026",
+    primalSop: "CW 49/2023",
     softwareHref:
       "/assets/ossn/CHINA_PPE_CL3_Rollout_EV-Container_IoT_0.86.8.txt",
     /*
