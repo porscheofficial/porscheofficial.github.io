@@ -121,6 +121,19 @@ const DATA_RECORDS: LicenseRow[] = [
     ],
     */
   },
+  {
+    software: "[CHINA] [PPE] [CL3] Rollout EV-Container (IoT) 0.86.8",
+    vehicles: "Macan",
+    primalSop: "CW 06/2026",
+    softwareHref:
+      "/assets/ossn/CHINA_PPE_CL3_Rollout_EV-Container_IoT_0.86.8.txt",
+    /*
+    attachments: [
+      { label: "HTML", href: "/assets/ossn/CHINA_PPE_CL3_Rollout_EV-Container_IoT_0.86.8.html" },
+      { label: "PDF", href: "/assets/ossn/CHINA_PPE_CL3_Rollout_EV-Container_IoT_0.86.8.pdf" },
+    ],
+    */
+  },
 ];
 
 /* Reuse table component */
