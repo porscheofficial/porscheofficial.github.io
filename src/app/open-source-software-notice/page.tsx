@@ -98,9 +98,9 @@ const DATA_RECORDS: LicenseRow[] = [
     */
   },
   {
-    software: "Cloud Connector Container Update on HCP5 CL3 KD2",
+    software: "Cloud Connector Container Update on HCP5 CL3 & CL3 KD2",
     vehicles: "Macan",
-    primalSop: "CW 06/2026",
+    primalSop: "CW 49/2023",
     softwareHref: "/assets/ossn/CLOUD_CONNECTOR_hcp5-cl3_3.29.1.txt",
     /*
     attachments: [
