@@ -1015,83 +1015,83 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/bundle-analyzer@npm:15.5.16":
-  version: 15.5.16
-  resolution: "@next/bundle-analyzer@npm:15.5.16"
+"@next/bundle-analyzer@npm:15.5.18":
+  version: 15.5.18
+  resolution: "@next/bundle-analyzer@npm:15.5.18"
   dependencies:
     webpack-bundle-analyzer: 4.10.1
-  checksum: c109e6dc7e7fe4ce1d2c32953a63011ca6f4acc7b67428e40023511d40b6563e566a7bc04c19253bb82fce27f203f9998b482626dc230ec722e42f32d4551bd2
+  checksum: 57097d6f285640300f0be34aff3a4bddde2c395d135842ae17ecfeb2de4c94fd7a7fb1b8f538422c453224bf6081b84e5e3c14682c9b408a12aa409271241856
   languageName: node
   linkType: hard
 
-"@next/env@npm:15.5.16":
-  version: 15.5.16
-  resolution: "@next/env@npm:15.5.16"
-  checksum: 0991f57dd6b9b1ee5d15adc8d468c634c209c04d58824082ef78d90c1617902a3604dd1a83c49de66d22fed49f1f7f1a56db0a07c2c0644ae542a6ed3d027128
+"@next/env@npm:15.5.18":
+  version: 15.5.18
+  resolution: "@next/env@npm:15.5.18"
+  checksum: de4165dc1caaf9da8bf014618e5a096d5c06e074509c1950c5a074a64110a497ed44d61866fbd1def3041e1e67b7f88ed515953eea4d5ab62f6ece01be79d7f4
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:15.5.16":
-  version: 15.5.16
-  resolution: "@next/eslint-plugin-next@npm:15.5.16"
+"@next/eslint-plugin-next@npm:15.5.18":
+  version: 15.5.18
+  resolution: "@next/eslint-plugin-next@npm:15.5.18"
   dependencies:
     fast-glob: 3.3.1
-  checksum: 84263e25a5f4e84ef851d5e91f8d325f2c875a710d277268f00fce56ee13b40a77b3bf4ad124d84d4d235f8f6a29c474a59ce135f9e1b9bdf4aa7f043743c048
+  checksum: 3dedad6abd55c8f4039e9d20e1e77022aa2d5589eb5d50561d261b775b9be7ff0fc11472c010badd08e50e8b082364f7d76d719137268b30e2dd5a75fabd63f9
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:15.5.16":
-  version: 15.5.16
-  resolution: "@next/swc-darwin-arm64@npm:15.5.16"
+"@next/swc-darwin-arm64@npm:15.5.18":
+  version: 15.5.18
+  resolution: "@next/swc-darwin-arm64@npm:15.5.18"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:15.5.16":
-  version: 15.5.16
-  resolution: "@next/swc-darwin-x64@npm:15.5.16"
+"@next/swc-darwin-x64@npm:15.5.18":
+  version: 15.5.18
+  resolution: "@next/swc-darwin-x64@npm:15.5.18"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:15.5.16":
-  version: 15.5.16
-  resolution: "@next/swc-linux-arm64-gnu@npm:15.5.16"
+"@next/swc-linux-arm64-gnu@npm:15.5.18":
+  version: 15.5.18
+  resolution: "@next/swc-linux-arm64-gnu@npm:15.5.18"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:15.5.16":
-  version: 15.5.16
-  resolution: "@next/swc-linux-arm64-musl@npm:15.5.16"
+"@next/swc-linux-arm64-musl@npm:15.5.18":
+  version: 15.5.18
+  resolution: "@next/swc-linux-arm64-musl@npm:15.5.18"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:15.5.16":
-  version: 15.5.16
-  resolution: "@next/swc-linux-x64-gnu@npm:15.5.16"
+"@next/swc-linux-x64-gnu@npm:15.5.18":
+  version: 15.5.18
+  resolution: "@next/swc-linux-x64-gnu@npm:15.5.18"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:15.5.16":
-  version: 15.5.16
-  resolution: "@next/swc-linux-x64-musl@npm:15.5.16"
+"@next/swc-linux-x64-musl@npm:15.5.18":
+  version: 15.5.18
+  resolution: "@next/swc-linux-x64-musl@npm:15.5.18"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:15.5.16":
-  version: 15.5.16
-  resolution: "@next/swc-win32-arm64-msvc@npm:15.5.16"
+"@next/swc-win32-arm64-msvc@npm:15.5.18":
+  version: 15.5.18
+  resolution: "@next/swc-win32-arm64-msvc@npm:15.5.18"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:15.5.16":
-  version: 15.5.16
-  resolution: "@next/swc-win32-x64-msvc@npm:15.5.16"
+"@next/swc-win32-x64-msvc@npm:15.5.18":
+  version: 15.5.18
+  resolution: "@next/swc-win32-x64-msvc@npm:15.5.18"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -5829,19 +5829,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:15.5.16":
-  version: 15.5.16
-  resolution: "next@npm:15.5.16"
+"next@npm:15.5.18":
+  version: 15.5.18
+  resolution: "next@npm:15.5.18"
   dependencies:
-    "@next/env": 15.5.16
-    "@next/swc-darwin-arm64": 15.5.16
-    "@next/swc-darwin-x64": 15.5.16
-    "@next/swc-linux-arm64-gnu": 15.5.16
-    "@next/swc-linux-arm64-musl": 15.5.16
-    "@next/swc-linux-x64-gnu": 15.5.16
-    "@next/swc-linux-x64-musl": 15.5.16
-    "@next/swc-win32-arm64-msvc": 15.5.16
-    "@next/swc-win32-x64-msvc": 15.5.16
+    "@next/env": 15.5.18
+    "@next/swc-darwin-arm64": 15.5.18
+    "@next/swc-darwin-x64": 15.5.18
+    "@next/swc-linux-arm64-gnu": 15.5.18
+    "@next/swc-linux-arm64-musl": 15.5.18
+    "@next/swc-linux-x64-gnu": 15.5.18
+    "@next/swc-linux-x64-musl": 15.5.18
+    "@next/swc-win32-arm64-msvc": 15.5.18
+    "@next/swc-win32-x64-msvc": 15.5.18
     "@swc/helpers": 0.5.15
     caniuse-lite: ^1.0.30001579
     postcss: 8.4.31
@@ -5884,7 +5884,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 03b3f13f8f1cd73ceb227a36db81d35aeb945b7ab39d96b2aecf1e588624bcd9760dbc55a3fff4a52a769c8562e499ed1be49ac7e1c2f1deb27b915e55672742
+  checksum: 97989a5a3766e859c239921d293111d29f5f3eaec5d4f2c06044d0e1952527cb1ecf09a42656538cb75b140b2bee34979156a3003e4af639d2fd74402f9acad1
   languageName: node
   linkType: hard
 
@@ -6256,8 +6256,8 @@ __metadata:
   resolution: "porscheofficial@workspace:."
   dependencies:
     "@axe-core/playwright": 4.10.1
-    "@next/bundle-analyzer": 15.5.16
-    "@next/eslint-plugin-next": 15.5.16
+    "@next/bundle-analyzer": 15.5.18
+    "@next/eslint-plugin-next": 15.5.18
     "@playwright/test": 1.49.0
     "@porsche-design-system/components-js": 3.22.1
     "@porsche-design-system/components-react": 3.22.1
@@ -6274,7 +6274,7 @@ __metadata:
     eslint: 8.57.1
     http-server: 14.1.1
     js-yaml-loader: 1.2.2
-    next: 15.5.16
+    next: 15.5.18
     next-contentlayer2: 0.5.3
     next-image-export-optimizer: 1.18.0
     playwright-core: 1.49.0
