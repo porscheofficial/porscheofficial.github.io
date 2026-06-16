@@ -56,6 +56,9 @@
     "semver": "7.5.3",
     "word-wrap": "aashutoshrathi/word-wrap",
     "@types/react": "19.0.1",
-    "@types/react-dom": "19.0.2"
+    "@types/react-dom": "19.0.2",
+    "tar": "7.5.16",
+    "uuid": "11.1.1",
+    "postcss": "8.5.15"
   }
 }
