@@ -53,7 +53,7 @@ const DATA_RECORDS: LicenseRow[] = [
     software: "ConBox_2020_RD",
     vehicles: "911, Taycan, Panamera, Cayenne",
     primalSop: "CW 25/2024",
-    softwareHref: "/assets/ossn/ConBox_2020_RD.txt",
+    softwareHref: "/assets/ossn/ConBox2020RD.txt",
     /*
     attachments: [
       { label: "HTML", href: "/assets/ossn/conbox-ossn.html" },
