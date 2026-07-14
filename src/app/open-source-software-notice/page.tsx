@@ -110,7 +110,7 @@ const DATA_RECORDS: LicenseRow[] = [
     */
   },
   {
-    software: "HCP5_RemoteProductionClientPlus (RPC+) CL3 KD2",
+    software: "HCP5 Remote Production Client Plus (RPC+) CL3 KD2",
     vehicles: "Macan",
     primalSop: "CW 06/2026",
     softwareHref: "/assets/ossn/HCP5_RemoteProductionClientPlus.txt",
