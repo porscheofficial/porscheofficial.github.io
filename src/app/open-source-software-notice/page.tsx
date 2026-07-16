@@ -134,6 +134,18 @@ const DATA_RECORDS: LicenseRow[] = [
     ],
     */
   },
+  {
+    software: "[Asterix] [CN CL3B] AI Launcher FOSS Delta",
+    vehicles: "911, Taycan, Panamera, Cayenne",
+    primalSop: "CW 25/2024",
+    softwareHref: "/assets/ossn/Asterix_CN_CL3B.txt",
+    /*
+    attachments: [
+      { label: "HTML", href: "/assets/ossn/Asterix_CN_CL3B.html" },
+      { label: "PDF", href: "/assets/ossn/Asterix_CN_CL3B.pdf" },
+    ],
+    */
+  },
 ];
 
 /* Reuse table component */
