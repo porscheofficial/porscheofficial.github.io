@@ -25,7 +25,7 @@
     "@primer/octicons": "19.12.0",
     "contentlayer2": "0.5.8",
     "date-fns": "2.30.0",
-    "next": "15.5.18",
+    "next": "15.5.21",
     "next-contentlayer2": "0.5.8",
     "next-image-export-optimizer": "1.18.0",
     "prism-react-renderer": "2.4.0",
