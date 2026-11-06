@@ -146,6 +146,18 @@ const DATA_RECORDS: LicenseRow[] = [
     ],
     */
   },
+  {
+    software: "[MLBevo ConBox Low for E3 and 992][CL32 Europe]",
+    vehicles: "911, Cayenne",
+    primalSop: "CW 25/2019",
+    softwareHref: "/assets/ossn/MLBevo_ConBox_Low_E3_992_CL32_Europe.txt",
+    /*
+    attachments: [
+      { label: "HTML", href: "/assets/ossn/MLBevo_ConBox_Low_E3_992_CL32_Europe.html" },
+      { label: "PDF", href: "/assets/ossn/MLBevo_ConBox_Low_E3_992_CL32_Europe.pdf" },
+    ],
+    */
+  },
 ];
 
 /* Reuse table component */
